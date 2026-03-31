@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percentage Calculator — Calculate Any Percentage Instantly</title>
+  <meta name="description" content="Free online percentage calculator. Calculate what percentage one number is of another, find percentage of a value, work out percentage increase or decrease instantly.">
+  <meta name="keywords" content="percentage calculator, calculate percentage, percent calculator, percentage calc, percentage calculator online, percentage calculator australia">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/">
+  <meta property="og:title" content="Percentage Calculator — Calculate Any Percentage Instantly">
+  <meta property="og:description" content="Free online percentage calculator. Find percentages of numbers, calculate increases and decreases, work out what percent one value is of another.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Percentage Calculator">
+  <meta name="twitter:description" content="Free, fast percentage calculator. Work out any percent instantly online.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="CalcPercentage">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Percentage Calculator",
+      "url": "https://calcpercentage.vercel.app/",
+      "description": "Free online percentage calculator to calculate percentages of numbers, percentage increases, decreases, and changes.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "All",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": ["What is X% of Y?","X is what % of Y?","Percentage increase calculator","Percentage decrease calculator","Percentage change calculator"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How do I calculate a percentage?", "acceptedAnswer": { "@type": "Answer", "text": "To calculate a percentage, divide the part by the whole and multiply by 100. Formula: Percentage = (Part / Whole) × 100. For example, 25 out of 200 = (25/200) × 100 = 12.5%." } },
+        { "@type": "Question", "name": "How do I find what percentage one number is of another?", "acceptedAnswer": { "@type": "Answer", "text": "Divide the first number by the second number, then multiply by 100. Example: What percentage is 30 of 150? (30 ÷ 150) × 100 = 20%." } },
+        { "@type": "Question", "name": "How to calculate percentage of a number?", "acceptedAnswer": { "@type": "Answer", "text": "Multiply the number by the percentage and divide by 100. Example: 20% of 80 = (20 × 80) ÷ 100 = 16." } },
+        { "@type": "Question", "name": "What is the percentage formula?", "acceptedAnswer": { "@type": "Answer", "text": "The basic percentage formula is: Percentage (%) = (Value / Total Value) × 100." } }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Percentage Calculator", "item": "https://calcpercentage.vercel.app/" }]
+    }
+  ]
+  </script>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/" class="logo">Calc<span>Percentage</span></a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('nav ul').classList.toggle('open')">☰ Menu</button>
+    <ul>
+      <li><a href="/percentage-increase-calculator">% Increase</a></li>
+      <li><a href="/percentage-decrease-calculator">% Decrease</a></li>
+      <li><a href="/percentage-change-calculator">% Change</a></li>
+      <li><a href="/percentage-off-calculator">% Off</a></li>
+      <li><a href="/percent-error-calculator">% Error</a></li>
+      <li><a href="/discount-calculator">Discount</a></li>
+      <li><a href="/fraction-to-percentage">Fraction→%</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="wide">
+  <div class="page-hero">
+    <h1>Percentage Calculator</h1>
+    <p>Free online tool to calculate any percentage instantly — find percentages of numbers, percentage increases, decreases, and changes.</p>
+  </div>
+
+  <!-- CALCULATOR MODULE 1 -->
+  <div class="calc-card">
+    <h2><span class="icon">①</span> What is X% of Y?</h2>
+    <div class="formula-box"><strong>Result = (Percentage ÷ 100) × Number</strong></div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="m1_pct">Percentage (%)</label>
+        <div class="input-with-symbol has-right">
+          <input type="number" id="m1_pct" placeholder="e.g. 20" step="any" oninput="calcM1()">
+          <span class="symbol-right">%</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="m1_num">Number</label>
+        <input type="number" id="m1_num" placeholder="e.g. 150" step="any" oninput="calcM1()">
+      </div>
+    </div>
+    <div id="m1_result" class="result-box neutral">
+      <div class="result-main blue" id="m1_ans"></div>
+      <div class="result-label" id="m1_formula"></div>
+    </div>
+  </div>
+
+  <!-- CALCULATOR MODULE 2 -->
+  <div class="calc-card">
+    <h2><span class="icon">②</span> X is what % of Y?</h2>
+    <div class="formula-box"><strong>Percentage = (Part ÷ Whole) × 100</strong></div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="m2_part">Part (X)</label>
+        <input type="number" id="m2_part" placeholder="e.g. 30" step="any" oninput="calcM2()">
+      </div>
+      <div class="form-group">
+        <label for="m2_whole">Whole (Y)</label>
+        <input type="number" id="m2_whole" placeholder="e.g. 150" step="any" oninput="calcM2()">
+      </div>
+    </div>
+    <div id="m2_result" class="result-box neutral">
+      <div class="result-main blue" id="m2_ans"></div>
+      <div class="result-label" id="m2_formula"></div>
+    </div>
+  </div>
+
+  <!-- CALCULATOR MODULE 3 -->
+  <div class="calc-card">
+    <h2><span class="icon">③</span> Percentage Change (From → To)</h2>
+    <div class="formula-box"><strong>Change % = ((New − Old) ÷ Old) × 100</strong></div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="m3_from">From (Old Value)</label>
+        <input type="number" id="m3_from" placeholder="e.g. 80" step="any" oninput="calcM3()">
+      </div>
+      <div class="form-group">
+        <label for="m3_to">To (New Value)</label>
+        <input type="number" id="m3_to" placeholder="e.g. 100" step="any" oninput="calcM3()">
+      </div>
+    </div>
+    <div id="m3_result" class="result-box">
+      <div class="result-main" id="m3_ans"></div>
+      <div class="result-label" id="m3_formula"></div>
+    </div>
+  </div>
+
+  <!-- TOOLS GRID -->
+  <div class="content-article">
+    <h2>🧮 All Percentage Calculator Tools</h2>
+    <div class="tools-grid">
+      <a href="/percentage-increase-calculator" class="tool-card">
+        <div class="tool-icon">📈</div>
+        <div class="tool-name">Percentage Increase Calculator</div>
+        <div class="tool-desc">Calculate % increase between two numbers</div>
+      </a>
+      <a href="/percentage-decrease-calculator" class="tool-card">
+        <div class="tool-icon">📉</div>
+        <div class="tool-name">Percentage Decrease Calculator</div>
+        <div class="tool-desc">Find % decrease between two values</div>
+      </a>
+      <a href="/percentage-change-calculator" class="tool-card">
+        <div class="tool-icon">🔄</div>
+        <div class="tool-name">Percentage Change Calculator</div>
+        <div class="tool-desc">% increase or decrease with color coding</div>
+      </a>
+      <a href="/percentage-difference-calculator" class="tool-card">
+        <div class="tool-icon">↔️</div>
+        <div class="tool-name">Percentage Difference</div>
+        <div class="tool-desc">Symmetric difference between two values</div>
+      </a>
+      <a href="/percentage-off-calculator" class="tool-card">
+        <div class="tool-icon">🏷️</div>
+        <div class="tool-name">Percentage Off Calculator</div>
+        <div class="tool-desc">Discounts and sale prices instantly</div>
+      </a>
+      <a href="/percent-error-calculator" class="tool-card">
+        <div class="tool-icon">🔬</div>
+        <div class="tool-name">Percent Error Calculator</div>
+        <div class="tool-desc">For chemistry, physics and science</div>
+      </a>
+      <a href="/what-percentage-of" class="tool-card">
+        <div class="tool-icon">❓</div>
+        <div class="tool-name">What Percentage Of</div>
+        <div class="tool-desc">Find what % one number is of another</div>
+      </a>
+      <a href="/percentage-of-number" class="tool-card">
+        <div class="tool-icon">🔢</div>
+        <div class="tool-name">Percentage of a Number</div>
+        <div class="tool-desc">Find X% of any number instantly</div>
+      </a>
+      <a href="/fraction-to-percentage" class="tool-card">
+        <div class="tool-icon">½</div>
+        <div class="tool-name">Fraction to Percentage</div>
+        <div class="tool-desc">Convert any fraction to a percent</div>
+      </a>
+      <a href="/discount-calculator" class="tool-card">
+        <div class="tool-icon">💰</div>
+        <div class="tool-name">Discount Calculator</div>
+        <div class="tool-desc">Find sale price and savings amount</div>
+      </a>
+      <a href="/sales-percentage-calculator" class="tool-card">
+        <div class="tool-icon">📊</div>
+        <div class="tool-name">Sales Percentage Calculator</div>
+        <div class="tool-desc">Commission, growth, and targets</div>
+      </a>
+      <a href="/money-percentage-calculator" class="tool-card">
+        <div class="tool-icon">💵</div>
+        <div class="tool-name">Money Percentage Calculator</div>
+        <div class="tool-desc">Calculate % of dollar amounts</div>
+      </a>
+      <a href="/percentage-formula" class="tool-card">
+        <div class="tool-icon">📐</div>
+        <div class="tool-name">Percentage Formula</div>
+        <div class="tool-desc">All formulas explained with examples</div>
+      </a>
+      <a href="/how-to-calculate-percentage" class="tool-card">
+        <div class="tool-icon">📚</div>
+        <div class="tool-name">How to Calculate %</div>
+        <div class="tool-desc">Step-by-step guide with examples</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- SEO ARTICLE -->
+  <div class="content-article">
+    <h2>How to Calculate a Percentage</h2>
+    <p>A <strong>percentage</strong> is a way of expressing a number as a fraction of 100. The word comes from the Latin <em>per centum</em>, meaning "by the hundred." Percentages are used everywhere — from shopping discounts and exam scores to financial growth rates and scientific measurements.</p>
+
+    <h3>The Basic Percentage Formula</h3>
+    <div class="formula-highlight">Percentage (%) = (Part ÷ Whole) × 100</div>
+    <p>For example, if you scored 45 out of 60 on a test: <code>(45 ÷ 60) × 100 = 75%</code>. This formula answers the question "what percentage is X of Y?"</p>
+
+    <h3>Three Types of Percentage Questions</h3>
+    <ol style="margin: 0 0 14px 20px; line-height: 2;">
+      <li><strong>Finding the percentage:</strong> What % is 30 of 200? → <code>(30 ÷ 200) × 100 = 15%</code></li>
+      <li><strong>Finding the part:</strong> What is 25% of 80? → <code>(25 ÷ 100) × 80 = 20</code></li>
+      <li><strong>Finding the whole:</strong> 15 is 30% of what? → <code>15 ÷ (30 ÷ 100) = 50</code></li>
+    </ol>
+
+    <h3>Common Percentage Examples</h3>
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead><tr><th>Scenario</th><th>Calculation</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td>20% of $150</td><td>(20/100) × 150</td><td>$30</td></tr>
+          <tr><td>15 is what % of 60?</td><td>(15/60) × 100</td><td>25%</td></tr>
+          <tr><td>10% tip on $85</td><td>(10/100) × 85</td><td>$8.50</td></tr>
+          <tr><td>GST (10%) on $200</td><td>(10/100) × 200</td><td>$20</td></tr>
+          <tr><td>30% discount on $120</td><td>(30/100) × 120</td><td>$36 off → $84</td></tr>
+          <tr><td>Score 18/25 as %</td><td>(18/25) × 100</td><td>72%</td></tr>
+          <tr><td>Score 35/40 as %</td><td>(35/40) × 100</td><td>87.5%</td></tr>
+          <tr><td>Increase from 50 to 75</td><td>((75-50)/50) × 100</td><td>50% increase</td></tr>
+          <tr><td>Decrease from 200 to 160</td><td>((200-160)/200) × 100</td><td>20% decrease</td></tr>
+          <tr><td>5% of $1,000</td><td>(5/100) × 1000</td><td>$50</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Quick Mental Math Tips</h3>
+    <ul style="margin: 0 0 14px 20px; line-height: 2;">
+      <li><strong>10%</strong> — Move the decimal point one place to the left (e.g., 10% of 250 = 25)</li>
+      <li><strong>5%</strong> — Half of 10% (e.g., 5% of 250 = 12.5)</li>
+      <li><strong>25%</strong> — Divide by 4 (e.g., 25% of 200 = 50)</li>
+      <li><strong>50%</strong> — Divide by 2 (e.g., 50% of 180 = 90)</li>
+      <li><strong>1%</strong> — Move the decimal point two places left (e.g., 1% of 500 = 5)</li>
+      <li><strong>15%</strong> — Add 10% + 5% (e.g., 15% of 80 = 8 + 4 = 12)</li>
+    </ul>
+
+    <h3>Why Use a Percentage Calculator?</h3>
+    <p>While mental math shortcuts are useful for round numbers, a percentage calculator eliminates errors and saves time for complex values. Our free online calculator handles decimals, large numbers, and all percentage types instantly. Whether you're calculating a <a href="/percentage-off-calculator">shopping discount</a>, working out a <a href="/percentage-increase-calculator">salary increase</a>, checking your <a href="/percent-error-calculator">lab experiment error</a>, or converting a <a href="/fraction-to-percentage">fraction to a percentage</a>, this tool has you covered.</p>
+
+    <p>Explore all our specialised percentage tools above, or use the three calculators at the top of this page for the most common percentage calculations.</p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">How do I calculate a percentage?</div>
+      <div class="faq-a">Divide the part by the whole and multiply by 100. Formula: <code>Percentage = (Part / Whole) × 100</code>. For example, 25 out of 200 = (25/200) × 100 = 12.5%.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I find what percentage one number is of another?</div>
+      <div class="faq-a">Divide the first number by the second number, then multiply by 100. Example: What percentage is 30 of 150? (30 ÷ 150) × 100 = 20%.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How to calculate percentage of a number?</div>
+      <div class="faq-a">Multiply the number by the percentage and divide by 100. Example: 20% of 80 = (20 × 80) ÷ 100 = 16.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What is the percentage formula?</div>
+      <div class="faq-a">The basic percentage formula is: <code>Percentage (%) = (Value / Total Value) × 100</code>. There are three variations: finding the percentage, finding the part, and finding the whole.</div>
+    </div>
+  </div>
+
+  <div class="related-section">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="/percentage-increase-calculator">Percentage Increase</a>
+      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
+      <a href="/percentage-change-calculator">Percentage Change</a>
+      <a href="/percentage-difference-calculator">Percentage Difference</a>
+      <a href="/percentage-off-calculator">Percentage Off / Discount</a>
+      <a href="/percent-error-calculator">Percent Error</a>
+      <a href="/fraction-to-percentage">Fraction to Percentage</a>
+      <a href="/percentage-formula">All Percentage Formulas</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">Percentage Calculator</a>
+      <a href="/percentage-increase-calculator">Percentage Increase</a>
+      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
+      <a href="/percentage-change-calculator">Percentage Change</a>
+      <a href="/percentage-difference-calculator">Percentage Difference</a>
+      <a href="/percentage-off-calculator">Percentage Off</a>
+      <a href="/percent-error-calculator">Percent Error</a>
+      <a href="/what-percentage-of">What Percentage Of</a>
+      <a href="/percentage-of-number">Percentage of a Number</a>
+      <a href="/money-percentage-calculator">Money Calculator</a>
+      <a href="/discount-calculator">Discount Calculator</a>
+      <a href="/fraction-to-percentage">Fraction to %</a>
+      <a href="/sales-percentage-calculator">Sales Calculator</a>
+      <a href="/percentage-formula">Percentage Formula</a>
+      <a href="/how-to-calculate-percentage">How to Calculate %</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </div>
+    <p>© 2026 CalcPercentage.vercel.app — Free Online Percentage Calculator</p>
+  </div>
+</footer>
+
+<script>
+function fmt(n) {
+  if (n === null || isNaN(n) || !isFinite(n)) return null;
+  return parseFloat(n.toFixed(6)).toLocaleString('en-AU', {maximumFractionDigits: 4});
+}
+
+function calcM1() {
+  var pct = parseFloat(document.getElementById('m1_pct').value);
+  var num = parseFloat(document.getElementById('m1_num').value);
+  var box = document.getElementById('m1_result');
+  var ans = document.getElementById('m1_ans');
+  var fml = document.getElementById('m1_formula');
+  if (isNaN(pct) || isNaN(num)) { box.classList.remove('show'); return; }
+  var result = (pct / 100) * num;
+  ans.textContent = pct + '% of ' + num + ' = ' + fmt(result);
+  fml.textContent = '(' + pct + ' ÷ 100) × ' + num + ' = ' + fmt(result);
+  box.classList.add('show');
+}
+
+function calcM2() {
+  var part = parseFloat(document.getElementById('m2_part').value);
+  var whole = parseFloat(document.getElementById('m2_whole').value);
+  var box = document.getElementById('m2_result');
+  var ans = document.getElementById('m2_ans');
+  var fml = document.getElementById('m2_formula');
+  if (isNaN(part) || isNaN(whole) || whole === 0) { box.classList.remove('show'); return; }
+  var result = (part / whole) * 100;
+  ans.textContent = part + ' is ' + fmt(result) + '% of ' + whole;
+  fml.textContent = '(' + part + ' ÷ ' + whole + ') × 100 = ' + fmt(result) + '%';
+  box.classList.add('show');
+}
+
+function calcM3() {
+  var from = parseFloat(document.getElementById('m3_from').value);
+  var to = parseFloat(document.getElementById('m3_to').value);
+  var box = document.getElementById('m3_result');
+  var ans = document.getElementById('m3_ans');
+  var fml = document.getElementById('m3_formula');
+  if (isNaN(from) || isNaN(to) || from === 0) { box.classList.remove('show'); return; }
+  var change = ((to - from) / Math.abs(from)) * 100;
+  var isInc = change >= 0;
+  ans.className = 'result-main ' + (isInc ? 'green' : 'red');
+  ans.textContent = (isInc ? '▲ Increased' : '▼ Decreased') + ' by ' + Math.abs(fmt(change)).toLocaleString() + '%';
+  fml.textContent = '((' + to + ' − ' + from + ') ÷ ' + from + ') × 100 = ' + fmt(change) + '%';
+  box.className = 'result-box show ' + (isInc ? 'increase' : 'decrease');
+}
+</script>
+</body>
+</html>

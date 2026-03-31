@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percentage Decrease Calculator — Find % Decrease Between Two Numbers</title>
+  <meta name="description" content="Calculate the percentage decrease between two values instantly. Enter original and new values to find the percentage decrease with formula and examples.">
+  <meta name="keywords" content="percentage decrease calculator, calculate percentage decrease, percent decrease calculator, percentage decrease formula">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/percentage-decrease-calculator">
+  <meta property="og:title" content="Percentage Decrease Calculator — Find % Decrease Between Two Numbers">
+  <meta property="og:description" content="Calculate the percentage decrease between two values instantly. Enter original and new values to find the percentage decrease with formula and examples.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/percentage-decrease-calculator">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Percentage Decrease Calculator">
+  <meta name="twitter:description" content="Calculate the percentage decrease between two values with formula and examples.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="CalcPercentage">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  [
+    { "@context": "https://schema.org", "@type": "WebApplication", "name": "Percentage Decrease Calculator", "url": "https://calcpercentage.vercel.app/percentage-decrease-calculator", "description": "Calculate percentage decrease between two numbers with step-by-step formula.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
+    { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+      { "@type": "Question", "name": "How do you calculate percentage decrease?", "acceptedAnswer": { "@type": "Answer", "text": "Percentage Decrease = ((Original Value - New Value) / Original Value) × 100. For example, from 100 to 75: ((100-75)/100) × 100 = 25% decrease." } },
+      { "@type": "Question", "name": "What is the formula for percentage decrease?", "acceptedAnswer": { "@type": "Answer", "text": "% Decrease = ((Original − New) ÷ Original) × 100. The result is expressed as a positive percentage representing how much the value dropped." } }
+    ]},
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Percentage Decrease Calculator", "item": "https://calcpercentage.vercel.app/percentage-decrease-calculator" }
+    ]}
+  ]
+  </script>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/" class="logo">Calc<span>Percentage</span></a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('nav ul').classList.toggle('open')">☰ Menu</button>
+    <ul>
+      <li><a href="/percentage-increase-calculator">% Increase</a></li>
+      <li><a href="/percentage-decrease-calculator">% Decrease</a></li>
+      <li><a href="/percentage-change-calculator">% Change</a></li>
+      <li><a href="/percentage-off-calculator">% Off</a></li>
+      <li><a href="/percent-error-calculator">% Error</a></li>
+      <li><a href="/discount-calculator">Discount</a></li>
+      <li><a href="/fraction-to-percentage">Fraction→%</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <nav class="breadcrumb">
+    <a href="/">Home</a><span class="sep"> › </span><span>Percentage Decrease Calculator</span>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Percentage Decrease Calculator</h1>
+    <p>Find the percentage decrease between two numbers, or calculate the new value after applying a percentage decrease.</p>
+  </div>
+
+  <div class="calc-card">
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('decrease','tab1')">Find % Decrease</button>
+      <button class="tab-btn" onclick="switchTab('decrease','tab2')">Decrease by %</button>
+    </div>
+
+    <div id="decrease_tab1" class="tab-content active">
+      <div class="formula-box"><strong>% Decrease = ((Original − New) ÷ Original) × 100</strong></div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="d1_orig">Original Value</label>
+          <input type="number" id="d1_orig" placeholder="e.g. 100" step="any" oninput="calcDecrease1()">
+        </div>
+        <div class="form-group">
+          <label for="d1_new">New (Lower) Value</label>
+          <input type="number" id="d1_new" placeholder="e.g. 75" step="any" oninput="calcDecrease1()">
+        </div>
+      </div>
+      <div id="d1_result" class="result-box decrease">
+        <div class="result-main red" id="d1_ans"></div>
+        <div class="result-label" id="d1_diff"></div>
+        <div class="result-formula" id="d1_formula"></div>
+      </div>
+    </div>
+
+    <div id="decrease_tab2" class="tab-content">
+      <div class="formula-box"><strong>New Value = Original × (1 − Percentage ÷ 100)</strong></div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="d2_orig">Original Value</label>
+          <input type="number" id="d2_orig" placeholder="e.g. 200" step="any" oninput="calcDecrease2()">
+        </div>
+        <div class="form-group">
+          <label for="d2_pct">Decrease by (%)</label>
+          <div class="input-with-symbol has-right">
+            <input type="number" id="d2_pct" placeholder="e.g. 25" step="any" oninput="calcDecrease2()">
+            <span class="symbol-right">%</span>
+          </div>
+        </div>
+      </div>
+      <div id="d2_result" class="result-box decrease">
+        <div class="result-main red" id="d2_ans"></div>
+        <div class="result-label" id="d2_diff"></div>
+        <div class="result-formula" id="d2_formula"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-article">
+    <h2>How to Calculate Percentage Decrease</h2>
+    <p>A <strong>percentage decrease</strong> tells you how much a value has dropped relative to its original amount, expressed as a positive percentage. This calculation is used for price drops, weight loss, profit decline, and many other real-world scenarios.</p>
+
+    <h3>The Percentage Decrease Formula</h3>
+    <div class="formula-highlight">% Decrease = ((Original Value − New Value) ÷ Original Value) × 100</div>
+
+    <h3>Step-by-Step Example</h3>
+    <ul class="step-list">
+      <li>Identify the original and new lower values. Example: a product dropped from <strong>$80</strong> to <strong>$60</strong>.</li>
+      <li>Subtract: Original − New = $80 − $60 = <strong>$20</strong></li>
+      <li>Divide by original: $20 ÷ $80 = <strong>0.25</strong></li>
+      <li>Multiply by 100: 0.25 × 100 = <strong>25% decrease</strong></li>
+    </ul>
+
+    <h3>Real-World Examples</h3>
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead><tr><th>Scenario</th><th>Original</th><th>New</th><th>% Decrease</th></tr></thead>
+        <tbody>
+          <tr><td>Retail price drop</td><td>$120</td><td>$90</td><td>25%</td></tr>
+          <tr><td>Weight loss (kg)</td><td>90 kg</td><td>81 kg</td><td>10%</td></tr>
+          <tr><td>House price fall (AUD)</td><td>$600,000</td><td>$540,000</td><td>10%</td></tr>
+          <tr><td>Monthly expenses</td><td>$3,000</td><td>$2,700</td><td>10%</td></tr>
+          <tr><td>Stock price drop</td><td>$50</td><td>$35</td><td>30%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Decreasing a Value by a Percentage</h3>
+    <p>To find the new value after a percentage decrease: <code>New Value = Original × (1 − %/100)</code>. For example, 25% off $200 = <code>$200 × 0.75 = $150</code>.</p>
+    <p>For shopping discounts, check out our dedicated <a href="/percentage-off-calculator">percentage off calculator</a> and <a href="/discount-calculator">discount calculator</a>.</p>
+
+    <div class="tip-box"><strong>💡 Note:</strong> If your new value is <em>higher</em> than the original, use our <a href="/percentage-increase-calculator">percentage increase calculator</a> instead.</div>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">How do you calculate percentage decrease?</div>
+      <div class="faq-a"><code>% Decrease = ((Original − New) ÷ Original) × 100</code>. From 100 to 75: ((100−75)/100) × 100 = 25% decrease.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What is the difference between percentage decrease and percentage change?</div>
+      <div class="faq-a">Percentage decrease only applies when the value drops and returns a positive number. Percentage change can be positive or negative — see our <a href="/percentage-change-calculator">percentage change calculator</a>.</div>
+    </div>
+  </div>
+
+  <div class="related-section">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="/">Percentage Calculator</a>
+      <a href="/percentage-increase-calculator">Percentage Increase</a>
+      <a href="/percentage-change-calculator">Percentage Change</a>
+      <a href="/percentage-off-calculator">Percentage Off</a>
+      <a href="/discount-calculator">Discount Calculator</a>
+      <a href="/percentage-formula">Percentage Formulas</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">Percentage Calculator</a>
+      <a href="/percentage-increase-calculator">Percentage Increase</a>
+      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
+      <a href="/percentage-change-calculator">Percentage Change</a>
+      <a href="/percentage-difference-calculator">Percentage Difference</a>
+      <a href="/percentage-off-calculator">Percentage Off</a>
+      <a href="/percent-error-calculator">Percent Error</a>
+      <a href="/what-percentage-of">What Percentage Of</a>
+      <a href="/percentage-of-number">Percentage of a Number</a>
+      <a href="/money-percentage-calculator">Money Calculator</a>
+      <a href="/discount-calculator">Discount Calculator</a>
+      <a href="/fraction-to-percentage">Fraction to %</a>
+      <a href="/sales-percentage-calculator">Sales Calculator</a>
+      <a href="/percentage-formula">Percentage Formula</a>
+      <a href="/how-to-calculate-percentage">How to Calculate %</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </div>
+    <p>© 2026 CalcPercentage.vercel.app — Free Online Percentage Calculator</p>
+  </div>
+</footer>
+
+<script>
+function fmt(n) {
+  if (n === null || isNaN(n) || !isFinite(n)) return null;
+  return parseFloat(n.toFixed(6)).toLocaleString('en-AU', {maximumFractionDigits: 4});
+}
+function switchTab(group, tab) {
+  document.querySelectorAll('#' + group + '_tab1, #' + group + '_tab2').forEach(el => el.classList.remove('active'));
+  document.getElementById(group + '_' + tab).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('onclick').includes(tab));
+  });
+}
+function calcDecrease1() {
+  var orig = parseFloat(document.getElementById('d1_orig').value);
+  var nv = parseFloat(document.getElementById('d1_new').value);
+  var box = document.getElementById('d1_result');
+  if (isNaN(orig) || isNaN(nv) || orig === 0) { box.classList.remove('show'); return; }
+  var pct = ((orig - nv) / Math.abs(orig)) * 100;
+  document.getElementById('d1_ans').textContent = '▼ Decrease: ' + fmt(pct) + '%';
+  document.getElementById('d1_diff').textContent = 'Difference: −' + fmt(orig - nv) + ' (' + fmt(orig) + ' → ' + fmt(nv) + ')';
+  document.getElementById('d1_formula').textContent = '((' + orig + ' − ' + nv + ') ÷ ' + orig + ') × 100 = ' + fmt(pct) + '%';
+  box.classList.add('show');
+}
+function calcDecrease2() {
+  var orig = parseFloat(document.getElementById('d2_orig').value);
+  var pct = parseFloat(document.getElementById('d2_pct').value);
+  var box = document.getElementById('d2_result');
+  if (isNaN(orig) || isNaN(pct)) { box.classList.remove('show'); return; }
+  var nv = orig * (1 - pct / 100);
+  document.getElementById('d2_ans').textContent = 'New Value: ' + fmt(nv);
+  document.getElementById('d2_diff').textContent = 'Decrease amount: −' + fmt(orig - nv);
+  document.getElementById('d2_formula').textContent = fmt(orig) + ' × (1 − ' + pct + '/100) = ' + fmt(nv);
+  box.classList.add('show');
+}
+</script>
+</body>
+</html>

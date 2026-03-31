@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Calculate Percentage — Step-by-Step Guide with Examples</title>
+  <meta name="description" content="Learn how to calculate percentage step by step. Easy guide covering percentage of a number, percentage increase, decrease, and percentage change with worked examples.">
+  <meta name="keywords" content="how to calculate percentage, how to calculate a percentage, how to work out percentage, how to find percentage, how to do percentage, how to work out a percentage, how to work out percentages, working out percentages, calculating percentage, how to work out a percentage of something">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/how-to-calculate-percentage">
+  <meta property="og:title" content="How to Calculate Percentage — Step-by-Step Guide with Examples">
+  <meta property="og:description" content="Learn how to calculate any percentage with step-by-step instructions, mental math shortcuts, and real-world examples.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/how-to-calculate-percentage">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="CalcPercentage">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  [
+    { "@context": "https://schema.org", "@type": "HowTo", "name": "How to Calculate Percentage", "url": "https://calcpercentage.vercel.app/how-to-calculate-percentage", "description": "Step-by-step guide to calculating percentages.", "step": [
+      { "@type": "HowToStep", "name": "Identify the Part and Whole", "text": "Determine what the 'part' is and what the 'whole' (total/reference) is." },
+      { "@type": "HowToStep", "name": "Divide Part by Whole", "text": "Divide the part by the whole: Part ÷ Whole." },
+      { "@type": "HowToStep", "name": "Multiply by 100", "text": "Multiply the result by 100 to convert to a percentage." },
+      { "@type": "HowToStep", "name": "Add the % Symbol", "text": "Add the percentage symbol (%) to your result." }
+    ]},
+    { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+      { "@type": "Question", "name": "How do you calculate a percentage of a total?", "acceptedAnswer": { "@type": "Answer", "text": "Divide the part by the total and multiply by 100. Example: 30 out of 120 = (30/120) × 100 = 25%." } },
+      { "@type": "Question", "name": "How do I work out a percentage without a calculator?", "acceptedAnswer": { "@type": "Answer", "text": "Use mental math: 10% = move decimal one place left. 5% = half of 10%. 25% = divide by 4. 50% = divide by 2. For 15% of 80: 10%=8, 5%=4, so 15%=12." } }
+    ]},
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "How to Calculate Percentage", "item": "https://calcpercentage.vercel.app/how-to-calculate-percentage" }
+    ]}
+  ]
+  </script>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/" class="logo">Calc<span>Percentage</span></a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('nav ul').classList.toggle('open')">☰ Menu</button>
+    <ul>
+      <li><a href="/percentage-increase-calculator">% Increase</a></li>
+      <li><a href="/percentage-decrease-calculator">% Decrease</a></li>
+      <li><a href="/percentage-change-calculator">% Change</a></li>
+      <li><a href="/percentage-off-calculator">% Off</a></li>
+      <li><a href="/percent-error-calculator">% Error</a></li>
+      <li><a href="/discount-calculator">Discount</a></li>
+      <li><a href="/fraction-to-percentage">Fraction→%</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <nav class="breadcrumb">
+    <a href="/">Home</a><span class="sep"> › </span><span>How to Calculate Percentage</span>
+  </nav>
+
+  <div class="page-hero">
+    <h1>How to Calculate Percentage</h1>
+    <p>A complete, beginner-friendly guide to calculating percentages — with step-by-step methods, mental math shortcuts, and real-world examples.</p>
+  </div>
+
+  <!-- Mini calculator at top -->
+  <div class="calc-card">
+    <h2><span class="icon">🧮</span> Quick Percentage Calculator</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="hc_pct">Percentage (%)</label>
+        <div class="input-with-symbol has-right">
+          <input type="number" id="hc_pct" placeholder="e.g. 20" step="any" oninput="calcHowTo()">
+          <span class="symbol-right">%</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="hc_num">of Number</label>
+        <input type="number" id="hc_num" placeholder="e.g. 150" step="any" oninput="calcHowTo()">
+      </div>
+    </div>
+    <div id="hc_result" class="result-box neutral">
+      <div class="result-main blue" id="hc_ans"></div>
+      <div class="result-formula" id="hc_formula"></div>
+    </div>
+  </div>
+
+  <div class="content-article">
+    <h2>What Is a Percentage?</h2>
+    <p>A <strong>percentage</strong> is a number expressed as a fraction of 100. The word comes from Latin <em>per centum</em> meaning "by the hundred." The symbol is <strong>%</strong>.</p>
+    <p>So 50% means 50 out of every 100, or one half. 25% means 25 out of every 100, or one quarter. 100% means the whole thing.</p>
+
+    <h2>The 3 Types of Percentage Problems</h2>
+    <p>Almost every percentage question falls into one of three types:</p>
+
+    <h3>Type 1: Finding the Percentage ("X is what % of Y?")</h3>
+    <div class="formula-highlight">Percentage = (Part ÷ Whole) × 100</div>
+    <ul class="step-list">
+      <li>Example: What percentage is 45 of 180?</li>
+      <li>Divide: 45 ÷ 180 = 0.25</li>
+      <li>Multiply by 100: 0.25 × 100 = <strong>25%</strong></li>
+    </ul>
+
+    <h3>Type 2: Finding the Part ("What is X% of Y?")</h3>
+    <div class="formula-highlight">Part = Whole × (Percentage ÷ 100)</div>
+    <ul class="step-list">
+      <li>Example: What is 30% of 250?</li>
+      <li>Convert % to decimal: 30 ÷ 100 = 0.30</li>
+      <li>Multiply: 250 × 0.30 = <strong>75</strong></li>
+    </ul>
+
+    <h3>Type 3: Finding the Whole ("X is Y% of what?")</h3>
+    <div class="formula-highlight">Whole = Part ÷ (Percentage ÷ 100)</div>
+    <ul class="step-list">
+      <li>Example: 15 is 25% of what number?</li>
+      <li>Convert % to decimal: 25 ÷ 100 = 0.25</li>
+      <li>Divide: 15 ÷ 0.25 = <strong>60</strong></li>
+    </ul>
+
+    <h2>How to Calculate Percentage Increase</h2>
+    <div class="formula-highlight">% Increase = ((New − Old) ÷ Old) × 100</div>
+    <p>Example: Salary increased from $50,000 to $55,000 = ((55000 − 50000) ÷ 50000) × 100 = <strong>10% increase</strong></p>
+    <p>→ <a href="/percentage-increase-calculator">Use the Percentage Increase Calculator</a></p>
+
+    <h2>How to Calculate Percentage Decrease</h2>
+    <div class="formula-highlight">% Decrease = ((Old − New) ÷ Old) × 100</div>
+    <p>Example: Price dropped from $80 to $60 = ((80 − 60) ÷ 80) × 100 = <strong>25% decrease</strong></p>
+    <p>→ <a href="/percentage-decrease-calculator">Use the Percentage Decrease Calculator</a></p>
+
+    <h2>Mental Math Shortcuts for Percentages</h2>
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead><tr><th>Percentage</th><th>Shortcut</th><th>Example (of 80)</th></tr></thead>
+        <tbody>
+          <tr><td>1%</td><td>Divide by 100</td><td>80 ÷ 100 = 0.8</td></tr>
+          <tr><td>5%</td><td>Divide by 20</td><td>80 ÷ 20 = 4</td></tr>
+          <tr><td>10%</td><td>Divide by 10</td><td>80 ÷ 10 = 8</td></tr>
+          <tr><td>15%</td><td>10% + 5%</td><td>8 + 4 = 12</td></tr>
+          <tr><td>20%</td><td>Divide by 5</td><td>80 ÷ 5 = 16</td></tr>
+          <tr><td>25%</td><td>Divide by 4</td><td>80 ÷ 4 = 20</td></tr>
+          <tr><td>50%</td><td>Divide by 2</td><td>80 ÷ 2 = 40</td></tr>
+          <tr><td>75%</td><td>Divide by 4, multiply by 3</td><td>20 × 3 = 60</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Real-World Scenarios</h2>
+    <p><strong>Test score:</strong> You got 36 out of 45. What's your percentage? (36÷45)×100 = <strong>80%</strong></p>
+    <p><strong>GST in Australia:</strong> A $220 item includes 10% GST. The GST = $220 ÷ 11 = <strong>$20</strong> (base price = $200).</p>
+    <p><strong>Sale discount:</strong> A $150 jacket is 30% off. Savings = $150 × 0.30 = $45. Sale price = <strong>$105</strong>.</p>
+    <p><strong>Pay rise:</strong> Your pay went from $62,000 to $65,100. Increase = ((65100−62000)÷62000)×100 = <strong>5%</strong>.</p>
+
+    <div class="tip-box"><strong>💡 Key principle:</strong> Every percentage problem can be solved by setting up the ratio <code>Part / Whole = %/100</code> and solving for the unknown variable.</div>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">How do you calculate a percentage of a total?</div>
+      <div class="faq-a">Divide the part by the total and multiply by 100. Example: 30 out of 120 = (30/120) × 100 = 25%.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I work out a percentage without a calculator?</div>
+      <div class="faq-a">Use mental shortcuts: 10% = move decimal one place left. 5% = half of 10%. 25% = divide by 4. 50% = divide by 2. For example, 15% of 80: 10%=8, 5%=4, so 15%=12.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I calculate a percentage on a phone calculator?</div>
+      <div class="faq-a">Enter the number, press ×, enter the percentage, then press the % button (or ÷100 and =). Example: 20% of 150 → 150 × 20 % = 30.</div>
+    </div>
+  </div>
+
+  <div class="related-section">
+    <h3>All Percentage Calculators</h3>
+    <div class="related-links">
+      <a href="/">Percentage Calculator</a>
+      <a href="/percentage-increase-calculator">Percentage Increase</a>
+      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
+      <a href="/percentage-change-calculator">Percentage Change</a>
+      <a href="/percentage-off-calculator">Percentage Off</a>
+      <a href="/discount-calculator">Discount Calculator</a>
+      <a href="/fraction-to-percentage">Fraction to %</a>
+      <a href="/percentage-formula">All Percentage Formulas</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">Percentage Calculator</a>
+      <a href="/percentage-increase-calculator">Percentage Increase</a>
+      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
+      <a href="/percentage-change-calculator">Percentage Change</a>
+      <a href="/percentage-difference-calculator">Percentage Difference</a>
+      <a href="/percentage-off-calculator">Percentage Off</a>
+      <a href="/percent-error-calculator">Percent Error</a>
+      <a href="/what-percentage-of">What Percentage Of</a>
+      <a href="/percentage-of-number">Percentage of a Number</a>
+      <a href="/money-percentage-calculator">Money Calculator</a>
+      <a href="/discount-calculator">Discount Calculator</a>
+      <a href="/fraction-to-percentage">Fraction to %</a>
+      <a href="/sales-percentage-calculator">Sales Calculator</a>
+      <a href="/percentage-formula">Percentage Formula</a>
+      <a href="/how-to-calculate-percentage">How to Calculate %</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </div>
+    <p>© 2026 CalcPercentage.vercel.app — Free Online Percentage Calculator</p>
+  </div>
+</footer>
+
+<script>
+function fmt(n) {
+  if (n === null || isNaN(n) || !isFinite(n)) return null;
+  return parseFloat(n.toFixed(6)).toLocaleString('en-AU', {maximumFractionDigits: 4});
+}
+function calcHowTo() {
+  var pct = parseFloat(document.getElementById('hc_pct').value);
+  var num = parseFloat(document.getElementById('hc_num').value);
+  var box = document.getElementById('hc_result');
+  if (isNaN(pct) || isNaN(num)) { box.classList.remove('show'); return; }
+  var result = num * (pct / 100);
+  document.getElementById('hc_ans').textContent = pct + '% of ' + num + ' = ' + fmt(result);
+  document.getElementById('hc_formula').textContent = num + ' × (' + pct + ' ÷ 100) = ' + fmt(result);
+  box.classList.add('show');
+}
+</script>
+</body>
+</html>

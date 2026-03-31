@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percent Error Calculator — Calculate Experimental vs Theoretical Error</title>
+  <meta name="description" content="Calculate percent error between experimental and theoretical values. Free percent error calculator used in chemistry, physics, and science. Shows formula and step-by-step solution.">
+  <meta name="keywords" content="percent error calculator, percent error formula, percent error calculator chemistry, percent error formula calculator, average percent error calculator, calculate percent error, relative percent error calculator, absolute percent error calculator, percent error calculator with sig figs">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/percent-error-calculator">
+  <meta property="og:title" content="Percent Error Calculator — Experimental vs Theoretical Error">
+  <meta property="og:description" content="Calculate percent error for chemistry, physics and science. Free tool with formula, sig figs, and step-by-step solution.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/percent-error-calculator">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Percent Error Calculator">
+  <meta name="twitter:description" content="Calculate percent error for chemistry and physics experiments with step-by-step solution.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="CalcPercentage">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  [
+    { "@context": "https://schema.org", "@type": "WebApplication", "name": "Percent Error Calculator", "url": "https://calcpercentage.vercel.app/percent-error-calculator", "description": "Calculate percent error between an experimental value and a theoretical (accepted) value. Used in chemistry, physics, and scientific experiments.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
+    { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+      { "@type": "Question", "name": "What is the percent error formula?", "acceptedAnswer": { "@type": "Answer", "text": "Percent Error = |(Experimental Value − Theoretical Value)| / |Theoretical Value| × 100%. The absolute value ensures a positive result." } },
+      { "@type": "Question", "name": "How do I calculate percent error in chemistry?", "acceptedAnswer": { "@type": "Answer", "text": "In chemistry, percent error = |measured value − accepted value| / accepted value × 100%. Example: accepted density = 1.00 g/mL, measured = 0.97 g/mL: |0.97 − 1.00| / 1.00 × 100 = 3%." } },
+      { "@type": "Question", "name": "What is a good percent error in a science experiment?", "acceptedAnswer": { "@type": "Answer", "text": "Less than 5% is generally acceptable in most high school and undergraduate labs. Physics may require less than 1%, while some chemistry experiments allow up to 10%." } },
+      { "@type": "Question", "name": "What is the difference between percent error and percent difference?", "acceptedAnswer": { "@type": "Answer", "text": "Percent error compares an experimental value to a known theoretical value. Percent difference compares two experimental values without a known reference." } },
+      { "@type": "Question", "name": "How do I calculate average percent error?", "acceptedAnswer": { "@type": "Answer", "text": "Calculate percent error for each measurement, add them all, then divide by the number of measurements." } }
+    ]},
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Percent Error Calculator", "item": "https://calcpercentage.vercel.app/percent-error-calculator" }
+    ]}
+  ]
+  </script>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/" class="logo">Calc<span>Percentage</span></a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('nav ul').classList.toggle('open')">☰ Menu</button>
+    <ul>
+      <li><a href="/percentage-increase-calculator">% Increase</a></li>
+      <li><a href="/percentage-decrease-calculator">% Decrease</a></li>
+      <li><a href="/percentage-change-calculator">% Change</a></li>
+      <li><a href="/percentage-off-calculator">% Off</a></li>
+      <li><a href="/percent-error-calculator">% Error</a></li>
+      <li><a href="/discount-calculator">Discount</a></li>
+      <li><a href="/fraction-to-percentage">Fraction→%</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <nav class="breadcrumb">
+    <a href="/">Home</a><span class="sep"> › </span><span>Percent Error Calculator</span>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Percent Error Calculator</h1>
+    <p>Calculate the percent error between an experimental measurement and the theoretical (accepted) value. Used in chemistry, physics, biology, and all science experiments.</p>
+  </div>
+
+  <!-- Main Calculator -->
+  <div class="calc-card">
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('err','tab1')">Percent Error</button>
+      <button class="tab-btn" onclick="switchTab('err','tab2')">Average Percent Error</button>
+    </div>
+
+    <div id="err_tab1" class="tab-content active">
+      <div class="formula-box"><strong>% Error = |Experimental − Theoretical| ÷ |Theoretical| × 100</strong></div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="pe_exp">Experimental Value (Measured)</label>
+          <input type="number" id="pe_exp" placeholder="e.g. 0.97" step="any" oninput="calcPercentError()">
+        </div>
+        <div class="form-group">
+          <label for="pe_theo">Theoretical Value (Accepted)</label>
+          <input type="number" id="pe_theo" placeholder="e.g. 1.00" step="any" oninput="calcPercentError()">
+        </div>
+      </div>
+      <div class="form-group">
+        <label style="display:flex;align-items:center;gap:8px;cursor:pointer; font-weight:400;">
+          <input type="checkbox" id="pe_sigfig" onchange="calcPercentError()" style="width:16px;height:16px;">
+          <span>Round to significant figures</span>
+        </label>
+      </div>
+      <div id="pe_result" class="result-box neutral">
+        <div class="result-main blue" id="pe_ans"></div>
+        <div style="margin-top:14px; padding:14px; background:rgba(255,255,255,0.7); border-radius:6px;">
+          <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:6px;font-weight:600;">STEP-BY-STEP SOLUTION</div>
+          <div id="pe_steps" style="font-family:monospace;font-size:0.88rem;line-height:2;color:var(--text);"></div>
+        </div>
+        <div class="result-label" id="pe_quality" style="margin-top:12px;font-weight:600;"></div>
+      </div>
+    </div>
+
+    <div id="err_tab2" class="tab-content">
+      <div class="formula-box"><strong>Average % Error = Sum of all % Errors ÷ Number of Measurements</strong></div>
+      <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:16px;">Enter one measurement per line (format: <code>experimental, theoretical</code>)</p>
+      <div class="form-group">
+        <label for="avg_inputs">Measurements (experimental, theoretical — one per line)</label>
+        <textarea id="avg_inputs" rows="5" placeholder="0.97, 1.00&#10;1.02, 1.00&#10;0.98, 1.00" oninput="calcAvgError()" style="width:100%;padding:12px;border:2px solid var(--border);border-radius:var(--radius);font-size:0.9rem;resize:vertical;font-family:monospace;"></textarea>
+      </div>
+      <div id="avg_result" class="result-box neutral">
+        <div class="result-main blue" id="avg_ans"></div>
+        <div id="avg_detail" style="font-size:0.85rem;margin-top:10px;color:var(--text-muted);"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-article">
+    <h2>What is Percent Error?</h2>
+    <p>Percent error (also written as percentage error or % error) is a measure of how far an experimental or measured value deviates from the accepted theoretical value. It is widely used in chemistry, physics, biology, and engineering to evaluate the accuracy of experimental results.</p>
+
+    <h3>The Percent Error Formula</h3>
+    <div class="formula-highlight">% Error = |Experimental Value − Theoretical Value| ÷ |Theoretical Value| × 100%</div>
+    <p>The vertical bars <code>| |</code> denote absolute value — this ensures the result is always positive regardless of whether the experimental value was higher or lower than the theoretical value.</p>
+
+    <h3>Worked Example: Density of Water</h3>
+    <ul class="step-list">
+      <li>Theoretical (accepted) density of water at 20°C: <strong>0.998 g/mL</strong></li>
+      <li>Your experimental measurement: <strong>0.975 g/mL</strong></li>
+      <li>Difference: |0.975 − 0.998| = <strong>0.023</strong></li>
+      <li>Divide by theoretical: 0.023 ÷ 0.998 = <strong>0.02304</strong></li>
+      <li>Multiply by 100: <strong>2.31% error</strong></li>
+    </ul>
+
+    <h3>What Is a Good Percent Error?</h3>
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead><tr><th>Field</th><th>Acceptable % Error</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>High school chemistry</td><td>≤ 5%</td><td>Standard lab tolerance</td></tr>
+          <tr><td>University chemistry</td><td>≤ 2–3%</td><td>More precise equipment</td></tr>
+          <tr><td>Physics experiments</td><td>≤ 1%</td><td>High precision required</td></tr>
+          <tr><td>Engineering</td><td>≤ 0.1–1%</td><td>Depends on application</td></tr>
+          <tr><td>Biology experiments</td><td>≤ 5–10%</td><td>Biological variability</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Percent Error vs Percent Difference</h3>
+    <p><strong>Percent error</strong> uses a known theoretical value as the reference. <strong>Percent difference</strong> compares two experimental values without a known "correct" answer — see our <a href="/percentage-difference-calculator">percentage difference calculator</a>.</p>
+
+    <h3>Significant Figures and Percent Error</h3>
+    <p>In scientific reporting, percent error is typically expressed to the same number of significant figures as your measurements. If your data has 3 sig figs, report your percent error to 3 sig figs as well. Use the "Round to significant figures" checkbox in our calculator above.</p>
+
+    <h3>Sources of Percent Error</h3>
+    <ul style="margin: 0 0 14px 20px; line-height: 2;">
+      <li><strong>Systematic errors:</strong> Consistently off in one direction (e.g., uncalibrated scale)</li>
+      <li><strong>Random errors:</strong> Unpredictable variations in measurement</li>
+      <li><strong>Human error:</strong> Misreading instruments or recording mistakes</li>
+      <li><strong>Environmental factors:</strong> Temperature, pressure, humidity changes</li>
+    </ul>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">What is the percent error formula?</div>
+      <div class="faq-a"><code>% Error = |Experimental − Theoretical| ÷ |Theoretical| × 100%</code></div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can percent error be negative?</div>
+      <div class="faq-a">The standard percent error formula uses absolute values, making the result always positive. Some formulas omit the absolute value to show whether the experimental value was above or below theoretical — check with your teacher or textbook.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I calculate average percent error?</div>
+      <div class="faq-a">Calculate the percent error for each individual measurement, sum them all up, then divide by the total number of measurements. Use the "Average Percent Error" tab above.</div>
+    </div>
+  </div>
+
+  <div class="related-section">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="/">Percentage Calculator</a>
+      <a href="/percentage-difference-calculator">Percentage Difference</a>
+      <a href="/percentage-change-calculator">Percentage Change</a>
+      <a href="/percentage-formula">Percentage Formulas</a>
+      <a href="/what-percentage-of">What Percentage Of</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">Percentage Calculator</a>
+      <a href="/percentage-increase-calculator">Percentage Increase</a>
+      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
+      <a href="/percentage-change-calculator">Percentage Change</a>
+      <a href="/percentage-difference-calculator">Percentage Difference</a>
+      <a href="/percentage-off-calculator">Percentage Off</a>
+      <a href="/percent-error-calculator">Percent Error</a>
+      <a href="/what-percentage-of">What Percentage Of</a>
+      <a href="/percentage-of-number">Percentage of a Number</a>
+      <a href="/money-percentage-calculator">Money Calculator</a>
+      <a href="/discount-calculator">Discount Calculator</a>
+      <a href="/fraction-to-percentage">Fraction to %</a>
+      <a href="/sales-percentage-calculator">Sales Calculator</a>
+      <a href="/percentage-formula">Percentage Formula</a>
+      <a href="/how-to-calculate-percentage">How to Calculate %</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </div>
+    <p>© 2026 CalcPercentage.vercel.app — Free Online Percentage Calculator</p>
+  </div>
+</footer>
+
+<script>
+function fmt(n, d) {
+  if (n === null || isNaN(n) || !isFinite(n)) return null;
+  var dp = d !== undefined ? d : 4;
+  return parseFloat(n.toFixed(dp)).toLocaleString('en-AU', {maximumFractionDigits: dp});
+}
+function sigFig(n, sf) {
+  if (n === 0) return '0';
+  var d = Math.ceil(Math.log10(Math.abs(n)));
+  var p = sf - d;
+  var m = Math.pow(10, p);
+  return (Math.round(n * m) / m).toString();
+}
+function switchTab(group, tab) {
+  document.querySelectorAll('#' + group + '_tab1, #' + group + '_tab2').forEach(el => el.classList.remove('active'));
+  document.getElementById(group + '_' + tab).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('onclick').includes(tab));
+  });
+}
+function calcPercentError() {
+  var exp = parseFloat(document.getElementById('pe_exp').value);
+  var theo = parseFloat(document.getElementById('pe_theo').value);
+  var useSigFig = document.getElementById('pe_sigfig').checked;
+  var box = document.getElementById('pe_result');
+  if (isNaN(exp) || isNaN(theo) || theo === 0) { box.classList.remove('show'); return; }
+  var diff = Math.abs(exp - theo);
+  var err = (diff / Math.abs(theo)) * 100;
+  var displayErr = useSigFig ? sigFig(err, 3) : fmt(err);
+  document.getElementById('pe_ans').textContent = 'Percent Error: ' + displayErr + '%';
+  document.getElementById('pe_steps').innerHTML =
+    'Step 1: |Experimental − Theoretical| = |' + exp + ' − ' + theo + '| = ' + diff + '<br>' +
+    'Step 2: Divide by |Theoretical|: ' + diff + ' ÷ ' + Math.abs(theo) + ' = ' + fmt(diff/Math.abs(theo), 6) + '<br>' +
+    'Step 3: Multiply by 100: ' + fmt(diff/Math.abs(theo), 6) + ' × 100 = <strong>' + displayErr + '%</strong>';
+  var q = '';
+  if (err < 1) q = '✅ Excellent accuracy (< 1% error)';
+  else if (err < 5) q = '✅ Good accuracy (< 5% error — acceptable for most labs)';
+  else if (err < 10) q = '⚠️ Moderate accuracy (5–10% error)';
+  else q = '❌ High error (> 10% — review your experimental method)';
+  document.getElementById('pe_quality').textContent = q;
+  box.classList.add('show');
+}
+function calcAvgError() {
+  var lines = document.getElementById('avg_inputs').value.trim().split('\n');
+  var errors = [], details = [];
+  for (var i = 0; i < lines.length; i++) {
+    var parts = lines[i].split(',');
+    if (parts.length >= 2) {
+      var exp = parseFloat(parts[0].trim());
+      var theo = parseFloat(parts[1].trim());
+      if (!isNaN(exp) && !isNaN(theo) && theo !== 0) {
+        var e = Math.abs(exp - theo) / Math.abs(theo) * 100;
+        errors.push(e);
+        details.push('Measurement ' + (i+1) + ': ' + fmt(e) + '%');
+      }
+    }
+  }
+  var box = document.getElementById('avg_result');
+  if (errors.length === 0) { box.classList.remove('show'); return; }
+  var avg = errors.reduce((a,b) => a+b, 0) / errors.length;
+  document.getElementById('avg_ans').textContent = 'Average Percent Error: ' + fmt(avg) + '%';
+  document.getElementById('avg_detail').innerHTML = details.join('<br>') + '<br><strong>Sum: ' + fmt(errors.reduce((a,b)=>a+b,0)) + '% ÷ ' + errors.length + ' measurements = ' + fmt(avg) + '%</strong>';
+  box.classList.add('show');
+}
+</script>
+</body>
+</html>

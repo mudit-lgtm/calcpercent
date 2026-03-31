@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percentage Difference Calculator — Find % Difference Between Two Numbers</title>
+  <meta name="description" content="Calculate the percentage difference between two numbers. Free online tool using the correct percentage difference formula — not change, but symmetric difference.">
+  <meta name="keywords" content="percentage difference calculator, percentage difference, percent difference calculator, percentage difference between two numbers, percentage difference formula">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/percentage-difference-calculator">
+  <meta property="og:title" content="Percentage Difference Calculator — Find % Difference Between Two Numbers">
+  <meta property="og:description" content="Calculate the percentage difference between two numbers using the correct symmetric formula.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/percentage-difference-calculator">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Percentage Difference Calculator">
+  <meta name="twitter:description" content="Calculate percentage difference between two numbers using the symmetric formula.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="CalcPercentage">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  [
+    { "@context": "https://schema.org", "@type": "WebApplication", "name": "Percentage Difference Calculator", "url": "https://calcpercentage.vercel.app/percentage-difference-calculator", "description": "Calculate the percentage difference between two values using the symmetric percentage difference formula.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
+    { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+      { "@type": "Question", "name": "What is percentage difference?", "acceptedAnswer": { "@type": "Answer", "text": "Percentage difference measures the difference between two values relative to their average. Formula: |V1 - V2| / ((V1 + V2)/2) × 100. It is symmetric — unlike percentage change, order does not matter." } },
+      { "@type": "Question", "name": "What is the difference between percentage change and percentage difference?", "acceptedAnswer": { "@type": "Answer", "text": "Percentage change compares a new value to an old value and has direction. Percentage difference compares two values without implying direction, using their average as the reference." } }
+    ]},
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Percentage Difference Calculator", "item": "https://calcpercentage.vercel.app/percentage-difference-calculator" }
+    ]}
+  ]
+  </script>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/" class="logo">Calc<span>Percentage</span></a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('nav ul').classList.toggle('open')">☰ Menu</button>
+    <ul>
+      <li><a href="/percentage-increase-calculator">% Increase</a></li>
+      <li><a href="/percentage-decrease-calculator">% Decrease</a></li>
+      <li><a href="/percentage-change-calculator">% Change</a></li>
+      <li><a href="/percentage-off-calculator">% Off</a></li>
+      <li><a href="/percent-error-calculator">% Error</a></li>
+      <li><a href="/discount-calculator">Discount</a></li>
+      <li><a href="/fraction-to-percentage">Fraction→%</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <nav class="breadcrumb">
+    <a href="/">Home</a><span class="sep"> › </span><span>Percentage Difference Calculator</span>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Percentage Difference Calculator</h1>
+    <p>Find the percentage difference between two numbers using the symmetric formula — order doesn't matter.</p>
+  </div>
+
+  <div class="calc-card">
+    <h2><span class="icon">↔</span> Percentage Difference</h2>
+    <div class="formula-box"><strong>% Difference = |V1 − V2| ÷ ((V1 + V2) ÷ 2) × 100</strong></div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="pd_v1">Value 1</label>
+        <input type="number" id="pd_v1" placeholder="e.g. 40" step="any" oninput="calcDiff()">
+      </div>
+      <div class="form-group">
+        <label for="pd_v2">Value 2</label>
+        <input type="number" id="pd_v2" placeholder="e.g. 60" step="any" oninput="calcDiff()">
+      </div>
+    </div>
+    <div id="pd_result" class="result-box neutral">
+      <div class="result-main blue" id="pd_ans"></div>
+      <div class="result-label" id="pd_detail"></div>
+      <div class="result-formula" id="pd_formula"></div>
+    </div>
+  </div>
+
+  <div class="content-article">
+    <h2>Percentage Difference vs Percentage Change</h2>
+    <p>Many people confuse <strong>percentage difference</strong> with <strong>percentage change</strong>. Here's the key distinction:</p>
+
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead><tr><th>Property</th><th>Percentage Change</th><th>Percentage Difference</th></tr></thead>
+        <tbody>
+          <tr><td>Reference value</td><td>Old/original value</td><td>Average of both values</td></tr>
+          <tr><td>Direction</td><td>Yes (+ or −)</td><td>No (always positive)</td></tr>
+          <tr><td>Order matters?</td><td>Yes</td><td>No (symmetric)</td></tr>
+          <tr><td>Best used for</td><td>Comparing old vs new</td><td>Comparing two equal values</td></tr>
+          <tr><td>Formula</td><td>((New−Old)/Old)×100</td><td>|V1−V2|/avg×100</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>The Percentage Difference Formula</h3>
+    <div class="formula-highlight">% Difference = |V1 − V2| ÷ ((V1 + V2) ÷ 2) × 100</div>
+
+    <h3>Example: 40 vs 60</h3>
+    <p>Using the formula: |40 − 60| ÷ ((40 + 60) ÷ 2) × 100 = 20 ÷ 50 × 100 = <strong>40%</strong></p>
+    <p>Notice that if you swapped the values (60 and 40), you get the same result — that's what "symmetric" means.</p>
+
+    <h3>When to Use Percentage Difference</h3>
+    <ul style="margin: 0 0 14px 20px; line-height: 2;">
+      <li>Comparing two survey results or poll outcomes</li>
+      <li>Comparing prices from two different suppliers</li>
+      <li>Comparing test scores from two different methods</li>
+      <li>Scientific measurements without a "true" reference value</li>
+    </ul>
+
+    <div class="tip-box"><strong>💡 Key point:</strong> Use percentage difference when neither value is the "original" — you're just comparing two things side by side. If one value is clearly the starting point, use <a href="/percentage-change-calculator">percentage change</a> instead.</div>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">What is the percentage difference formula?</div>
+      <div class="faq-a"><code>|V1 − V2| ÷ ((V1 + V2) ÷ 2) × 100</code>. The result is always positive and symmetric.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Why is percentage difference always positive?</div>
+      <div class="faq-a">Because we take the absolute value of the difference (|V1 − V2|). This means neither value is considered "higher" or "lower" — they're just different.</div>
+    </div>
+  </div>
+
+  <div class="related-section">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="/">Percentage Calculator</a>
+      <a href="/percentage-change-calculator">Percentage Change</a>
+      <a href="/percentage-increase-calculator">Percentage Increase</a>
+      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
+      <a href="/percent-error-calculator">Percent Error</a>
+      <a href="/percentage-formula">Percentage Formulas</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">Percentage Calculator</a>
+      <a href="/percentage-increase-calculator">Percentage Increase</a>
+      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
+      <a href="/percentage-change-calculator">Percentage Change</a>
+      <a href="/percentage-difference-calculator">Percentage Difference</a>
+      <a href="/percentage-off-calculator">Percentage Off</a>
+      <a href="/percent-error-calculator">Percent Error</a>
+      <a href="/what-percentage-of">What Percentage Of</a>
+      <a href="/percentage-of-number">Percentage of a Number</a>
+      <a href="/money-percentage-calculator">Money Calculator</a>
+      <a href="/discount-calculator">Discount Calculator</a>
+      <a href="/fraction-to-percentage">Fraction to %</a>
+      <a href="/sales-percentage-calculator">Sales Calculator</a>
+      <a href="/percentage-formula">Percentage Formula</a>
+      <a href="/how-to-calculate-percentage">How to Calculate %</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </div>
+    <p>© 2026 CalcPercentage.vercel.app — Free Online Percentage Calculator</p>
+  </div>
+</footer>
+
+<script>
+function fmt(n) {
+  if (n === null || isNaN(n) || !isFinite(n)) return null;
+  return parseFloat(n.toFixed(6)).toLocaleString('en-AU', {maximumFractionDigits: 4});
+}
+function calcDiff() {
+  var v1 = parseFloat(document.getElementById('pd_v1').value);
+  var v2 = parseFloat(document.getElementById('pd_v2').value);
+  var box = document.getElementById('pd_result');
+  if (isNaN(v1) || isNaN(v2) || (v1 + v2) === 0) { box.classList.remove('show'); return; }
+  var avg = (v1 + v2) / 2;
+  var diff = Math.abs(v1 - v2) / avg * 100;
+  document.getElementById('pd_ans').textContent = 'Percentage Difference: ' + fmt(diff) + '%';
+  document.getElementById('pd_detail').textContent = '|' + v1 + ' − ' + v2 + '| = ' + fmt(Math.abs(v1-v2)) + '  |  Average = ' + fmt(avg);
+  document.getElementById('pd_formula').textContent = Math.abs(v1-v2).toLocaleString() + ' ÷ ' + avg + ' × 100 = ' + fmt(diff) + '%';
+  box.classList.add('show');
+}
+</script>
+</body>
+</html>

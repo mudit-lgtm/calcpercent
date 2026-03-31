@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money Percentage Calculator — Calculate Percentages of Dollar Amounts</title>
+  <meta name="description" content="Calculate percentages of money amounts instantly. Find X% of any dollar amount, percentage of savings, tax, tip, or discount on any price. Free online tool.">
+  <meta name="keywords" content="money percentage calculator, percentage calculator money, percentage of money, money and percentage calculator, percentage calculator for money, money to percentage calculator, percentage calculator dollars, money percentage, percent of money">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/money-percentage-calculator">
+  <meta property="og:title" content="Money Percentage Calculator — Calculate Percentages of Dollar Amounts">
+  <meta property="og:description" content="Calculate percentage of money amounts — discounts, tips, taxes, savings and more.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/money-percentage-calculator">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="CalcPercentage">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  [
+    { "@context": "https://schema.org", "@type": "WebApplication", "name": "Money Percentage Calculator", "url": "https://calcpercentage.vercel.app/money-percentage-calculator", "description": "Calculate percentage of money amounts — find X% of dollar values, discounts, tips, taxes, and savings.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
+    { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+      { "@type": "Question", "name": "How do I calculate a percentage of a money amount?", "acceptedAnswer": { "@type": "Answer", "text": "Multiply the dollar amount by the percentage divided by 100. Example: 20% of $150 = $150 × 0.20 = $30." } },
+      { "@type": "Question", "name": "How do I calculate GST (10%) in Australia?", "acceptedAnswer": { "@type": "Answer", "text": "To add 10% GST: Price including GST = Original × 1.10. To find the GST in a GST-inclusive price: GST = Price ÷ 11." } },
+      { "@type": "Question", "name": "How do I find what percentage of my money something costs?", "acceptedAnswer": { "@type": "Answer", "text": "Divide the item cost by total budget × 100. Example: $450 rent ÷ $2,000 income × 100 = 22.5%." } }
+    ]},
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Money Percentage Calculator", "item": "https://calcpercentage.vercel.app/money-percentage-calculator" }
+    ]}
+  ]
+  </script>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/" class="logo">Calc<span>Percentage</span></a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('nav ul').classList.toggle('open')">☰ Menu</button>
+    <ul>
+      <li><a href="/percentage-increase-calculator">% Increase</a></li>
+      <li><a href="/percentage-decrease-calculator">% Decrease</a></li>
+      <li><a href="/percentage-change-calculator">% Change</a></li>
+      <li><a href="/percentage-off-calculator">% Off</a></li>
+      <li><a href="/percent-error-calculator">% Error</a></li>
+      <li><a href="/discount-calculator">Discount</a></li>
+      <li><a href="/fraction-to-percentage">Fraction→%</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <nav class="breadcrumb">
+    <a href="/">Home</a><span class="sep"> › </span><span>Money Percentage Calculator</span>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Money Percentage Calculator</h1>
+    <p>Calculate percentages of dollar amounts for tips, taxes, GST, savings, discounts, and more. Works in AUD, USD, or any currency.</p>
+  </div>
+
+  <!-- Module 1: X% of $amount -->
+  <div class="calc-card">
+    <h2><span class="icon">💵</span> Module 1: X% of $ Amount</h2>
+    <div class="formula-box"><strong>Result = Amount × (Percentage ÷ 100)</strong></div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="m1_pct">Percentage (%)</label>
+        <div class="input-with-symbol has-right">
+          <input type="number" id="m1_pct" placeholder="e.g. 15" step="any" oninput="calcMoney1()">
+          <span class="symbol-right">%</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="m1_amt">Amount ($)</label>
+        <div class="input-with-symbol">
+          <span class="symbol">$</span>
+          <input type="number" id="m1_amt" placeholder="e.g. 200" step="any" oninput="calcMoney1()">
+        </div>
+      </div>
+    </div>
+    <div id="m1_result" class="result-box neutral">
+      <div class="result-main blue" id="m1_ans"></div>
+      <div class="result-formula" id="m1_formula"></div>
+    </div>
+  </div>
+
+  <!-- Module 2: What % is $X of $Y -->
+  <div class="calc-card">
+    <h2><span class="icon">❓</span> Module 2: $X is What % of $Y?</h2>
+    <div class="formula-box"><strong>Percentage = (Amount ÷ Total) × 100</strong></div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="m2_part">Amount ($)</label>
+        <div class="input-with-symbol">
+          <span class="symbol">$</span>
+          <input type="number" id="m2_part" placeholder="e.g. 450" step="any" oninput="calcMoney2()">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="m2_total">Total ($)</label>
+        <div class="input-with-symbol">
+          <span class="symbol">$</span>
+          <input type="number" id="m2_total" placeholder="e.g. 2000" step="any" oninput="calcMoney2()">
+        </div>
+      </div>
+    </div>
+    <div id="m2_result" class="result-box neutral">
+      <div class="result-main blue" id="m2_ans"></div>
+      <div class="result-formula" id="m2_formula"></div>
+    </div>
+  </div>
+
+  <!-- Module 3: Add/Subtract % -->
+  <div class="calc-card">
+    <h2><span class="icon">➕</span> Module 3: Add or Subtract % from $ Amount</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="m3_amt">Base Amount ($)</label>
+        <div class="input-with-symbol">
+          <span class="symbol">$</span>
+          <input type="number" id="m3_amt" placeholder="e.g. 100" step="any" oninput="calcMoney3()">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="m3_pct">Percentage (%)</label>
+        <div class="input-with-symbol has-right">
+          <input type="number" id="m3_pct" placeholder="e.g. 10" step="any" oninput="calcMoney3()">
+          <span class="symbol-right">%</span>
+        </div>
+      </div>
+    </div>
+    <div id="m3_result" class="result-box neutral">
+      <div style="display:flex;gap:24px;flex-wrap:wrap;">
+        <div>
+          <div class="result-label">Add %</div>
+          <div class="result-main green" id="m3_add" style="font-size:1.5rem;"></div>
+        </div>
+        <div>
+          <div class="result-label">Subtract %</div>
+          <div class="result-main red" id="m3_sub" style="font-size:1.5rem;"></div>
+        </div>
+        <div>
+          <div class="result-label">% Amount</div>
+          <div class="result-main blue" id="m3_pctamt" style="font-size:1.5rem;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-article">
+    <h2>Financial Percentage Calculations</h2>
+    <p>Percentages come up constantly in personal finance and business. Here are the most common money-related percentage calculations in Australia:</p>
+
+    <h3>GST (Goods and Services Tax) — Australia</h3>
+    <p>Australia's GST rate is <strong>10%</strong>. Here's how to work with it:</p>
+    <ul style="margin: 0 0 14px 20px; line-height: 2;">
+      <li><strong>Add GST:</strong> Price + GST = Price × 1.10. Example: $200 + GST = $220</li>
+      <li><strong>Find GST in inclusive price:</strong> GST = GST-inclusive price ÷ 11. Example: $220 ÷ 11 = $20 GST</li>
+      <li><strong>Remove GST:</strong> Ex-GST price = GST-inclusive ÷ 1.10. Example: $220 ÷ 1.10 = $200</li>
+    </ul>
+
+    <h3>Common Financial Percentages</h3>
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead><tr><th>Calculation</th><th>Amount</th><th>%</th><th>Result</th></tr></thead>
+        <tbody>
+          <tr><td>10% tip on $85</td><td>$85</td><td>10%</td><td>$8.50</td></tr>
+          <tr><td>15% tip on $120</td><td>$120</td><td>15%</td><td>$18.00</td></tr>
+          <tr><td>20% deposit on $500,000</td><td>$500,000</td><td>20%</td><td>$100,000</td></tr>
+          <tr><td>Superannuation (11.5%) on $80k</td><td>$80,000</td><td>11.5%</td><td>$9,200</td></tr>
+          <tr><td>GST on $1,000</td><td>$1,000</td><td>10%</td><td>$100</td></tr>
+          <tr><td>Savings rate: $400 of $3,200</td><td>$400</td><td>of $3,200</td><td>12.5%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tip-box"><strong>🇦🇺 Australian Super:</strong> The superannuation guarantee rate in Australia is 11.5% from July 2024. For a $90,000 salary, your employer contributes $90,000 × 0.115 = $10,350/year to your super fund.</div>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">How do I calculate 10% of a dollar amount?</div>
+      <div class="faq-a">Move the decimal point one place to the left. Example: 10% of $250 = $25. Or use Module 1 above.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I calculate GST in Australia?</div>
+      <div class="faq-a">Add GST: multiply by 1.10. Remove GST from an inclusive price: divide by 1.10. Find GST in inclusive price: divide by 11.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How much is $450 as a percentage of $2,000?</div>
+      <div class="faq-a">(450 ÷ 2000) × 100 = 22.5%. Use Module 2 above to calculate instantly.</div>
+    </div>
+  </div>
+
+  <div class="related-section">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="/">Percentage Calculator</a>
+      <a href="/percentage-off-calculator">Percentage Off</a>
+      <a href="/discount-calculator">Discount Calculator</a>
+      <a href="/sales-percentage-calculator">Sales Calculator</a>
+      <a href="/percentage-increase-calculator">Percentage Increase</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">Percentage Calculator</a>
+      <a href="/percentage-increase-calculator">Percentage Increase</a>
+      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
+      <a href="/percentage-change-calculator">Percentage Change</a>
+      <a href="/percentage-difference-calculator">Percentage Difference</a>
+      <a href="/percentage-off-calculator">Percentage Off</a>
+      <a href="/percent-error-calculator">Percent Error</a>
+      <a href="/what-percentage-of">What Percentage Of</a>
+      <a href="/percentage-of-number">Percentage of a Number</a>
+      <a href="/money-percentage-calculator">Money Calculator</a>
+      <a href="/discount-calculator">Discount Calculator</a>
+      <a href="/fraction-to-percentage">Fraction to %</a>
+      <a href="/sales-percentage-calculator">Sales Calculator</a>
+      <a href="/percentage-formula">Percentage Formula</a>
+      <a href="/how-to-calculate-percentage">How to Calculate %</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </div>
+    <p>© 2026 CalcPercentage.vercel.app — Free Online Percentage Calculator</p>
+  </div>
+</footer>
+
+<script>
+function fmtC(n) {
+  if (n === null || isNaN(n) || !isFinite(n)) return null;
+  return '$' + parseFloat(n.toFixed(2)).toLocaleString('en-AU', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+function fmt(n) {
+  if (n === null || isNaN(n) || !isFinite(n)) return null;
+  return parseFloat(n.toFixed(6)).toLocaleString('en-AU', {maximumFractionDigits: 4});
+}
+function calcMoney1() {
+  var pct = parseFloat(document.getElementById('m1_pct').value);
+  var amt = parseFloat(document.getElementById('m1_amt').value);
+  var box = document.getElementById('m1_result');
+  if (isNaN(pct) || isNaN(amt)) { box.classList.remove('show'); return; }
+  var res = amt * (pct/100);
+  document.getElementById('m1_ans').textContent = pct + '% of ' + fmtC(amt) + ' = ' + fmtC(res);
+  document.getElementById('m1_formula').textContent = fmtC(amt) + ' × (' + pct + ' ÷ 100) = ' + fmtC(res);
+  box.classList.add('show');
+}
+function calcMoney2() {
+  var part = parseFloat(document.getElementById('m2_part').value);
+  var total = parseFloat(document.getElementById('m2_total').value);
+  var box = document.getElementById('m2_result');
+  if (isNaN(part) || isNaN(total) || total === 0) { box.classList.remove('show'); return; }
+  var pct = (part/total)*100;
+  document.getElementById('m2_ans').textContent = fmtC(part) + ' is ' + fmt(pct) + '% of ' + fmtC(total);
+  document.getElementById('m2_formula').textContent = '(' + fmtC(part) + ' ÷ ' + fmtC(total) + ') × 100 = ' + fmt(pct) + '%';
+  box.classList.add('show');
+}
+function calcMoney3() {
+  var amt = parseFloat(document.getElementById('m3_amt').value);
+  var pct = parseFloat(document.getElementById('m3_pct').value);
+  var box = document.getElementById('m3_result');
+  if (isNaN(amt) || isNaN(pct)) { box.classList.remove('show'); return; }
+  var pctAmt = amt * (pct/100);
+  document.getElementById('m3_add').textContent = fmtC(amt + pctAmt);
+  document.getElementById('m3_sub').textContent = fmtC(amt - pctAmt);
+  document.getElementById('m3_pctamt').textContent = fmtC(pctAmt);
+  box.classList.add('show');
+}
+</script>
+</body>
+</html>

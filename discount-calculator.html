@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discount Calculator — Find Sale Price &amp; Savings Instantly</title>
+  <meta name="description" content="Free discount calculator — enter any price and discount percentage to instantly see the sale price and how much you save. Works for any currency including AUD.">
+  <meta name="keywords" content="discount calculator, discount calculator australia, cost difference calculator, percentage discount, calculate percentage discounts, discount percentage, how to work out the percentage discount">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/discount-calculator">
+  <meta property="og:title" content="Discount Calculator — Find Sale Price &amp; Savings Instantly">
+  <meta property="og:description" content="Free discount calculator — enter price and discount percentage to see sale price and savings.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/discount-calculator">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="CalcPercentage">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  [
+    { "@context": "https://schema.org", "@type": "WebApplication", "name": "Discount Calculator", "url": "https://calcpercentage.vercel.app/discount-calculator", "description": "Calculate sale price and savings from any discount percentage.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
+    { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+      { "@type": "Question", "name": "How do I calculate a discount?", "acceptedAnswer": { "@type": "Answer", "text": "Discount Amount = Original × (Discount% ÷ 100). Sale Price = Original − Discount. Example: 25% off $80: Discount = $80 × 0.25 = $20. Sale Price = $60." } },
+      { "@type": "Question", "name": "What is 20% off $100?", "acceptedAnswer": { "@type": "Answer", "text": "20% off $100 = $100 × 0.20 = $20 discount. Sale price = $80." } }
+    ]},
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Discount Calculator", "item": "https://calcpercentage.vercel.app/discount-calculator" }
+    ]}
+  ]
+  </script>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/" class="logo">Calc<span>Percentage</span></a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('nav ul').classList.toggle('open')">☰ Menu</button>
+    <ul>
+      <li><a href="/percentage-increase-calculator">% Increase</a></li>
+      <li><a href="/percentage-decrease-calculator">% Decrease</a></li>
+      <li><a href="/percentage-change-calculator">% Change</a></li>
+      <li><a href="/percentage-off-calculator">% Off</a></li>
+      <li><a href="/percent-error-calculator">% Error</a></li>
+      <li><a href="/discount-calculator">Discount</a></li>
+      <li><a href="/fraction-to-percentage">Fraction→%</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <nav class="breadcrumb">
+    <a href="/">Home</a><span class="sep"> › </span><span>Discount Calculator</span>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Discount Calculator</h1>
+    <p>Calculate sale price and savings from any discount. Find the discount needed to reach a target price. Perfect for shopping in Australia and worldwide.</p>
+  </div>
+
+  <div class="calc-card">
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('disc','tab1')">Calculate Sale Price</button>
+      <button class="tab-btn" onclick="switchTab('disc','tab2')">Find % Discount Needed</button>
+    </div>
+
+    <div id="disc_tab1" class="tab-content active">
+      <div class="formula-box"><strong>Sale Price = Original Price × (1 − Discount% ÷ 100)</strong></div>
+      <div class="form-group" style="margin-bottom:12px;">
+        <label>Quick Discount</label>
+        <div class="quick-btns">
+          <button class="quick-btn" onclick="setD(5)">5%</button>
+          <button class="quick-btn" onclick="setD(10)">10%</button>
+          <button class="quick-btn" onclick="setD(15)">15%</button>
+          <button class="quick-btn" onclick="setD(20)">20%</button>
+          <button class="quick-btn" onclick="setD(25)">25%</button>
+          <button class="quick-btn" onclick="setD(30)">30%</button>
+          <button class="quick-btn" onclick="setD(40)">40%</button>
+          <button class="quick-btn" onclick="setD(50)">50%</button>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="dc_orig">Original Price ($)</label>
+          <div class="input-with-symbol">
+            <span class="symbol">$</span>
+            <input type="number" id="dc_orig" placeholder="e.g. 120" step="any" oninput="calcDisc()">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="dc_pct">Discount (%)</label>
+          <div class="input-with-symbol has-right">
+            <input type="number" id="dc_pct" placeholder="e.g. 25" step="any" oninput="calcDisc()">
+            <span class="symbol-right">%</span>
+          </div>
+        </div>
+      </div>
+      <div id="dc_result" class="result-box success">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+          <div>
+            <div class="result-label">Sale Price</div>
+            <div class="result-main green" id="dc_sale" style="font-size:2rem;"></div>
+          </div>
+          <div>
+            <div class="result-label">You Save</div>
+            <div class="result-main" id="dc_save" style="font-size:1.6rem;color:var(--accent);"></div>
+          </div>
+        </div>
+        <div style="margin-top:12px;display:flex;gap:16px;flex-wrap:wrap;">
+          <div><div class="result-label">Original</div><div id="dc_origshow" style="font-weight:600;"></div></div>
+          <div><div class="result-label">Discount %</div><div id="dc_pctshow" style="font-weight:600;"></div></div>
+        </div>
+        <div class="result-formula" id="dc_formula"></div>
+      </div>
+    </div>
+
+    <div id="disc_tab2" class="tab-content">
+      <div class="formula-box"><strong>Discount% = ((Original − Target) ÷ Original) × 100</strong></div>
+      <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:16px;">What discount is needed to go from $X to $Y?</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="dc2_orig">Original Price ($)</label>
+          <div class="input-with-symbol">
+            <span class="symbol">$</span>
+            <input type="number" id="dc2_orig" placeholder="e.g. 150" step="any" oninput="calcDiscReverse()">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="dc2_target">Target Sale Price ($)</label>
+          <div class="input-with-symbol">
+            <span class="symbol">$</span>
+            <input type="number" id="dc2_target" placeholder="e.g. 99" step="any" oninput="calcDiscReverse()">
+          </div>
+        </div>
+      </div>
+      <div id="dc2_result" class="result-box neutral">
+        <div class="result-main blue" id="dc2_ans"></div>
+        <div class="result-label" id="dc2_saving"></div>
+        <div class="result-formula" id="dc2_formula"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-article">
+    <h2>How to Calculate a Discount</h2>
+    <p>Calculating discounts is one of the most practical applications of percentage maths. Whether you're shopping at Myer, catching an Amazon Prime Day deal, or comparing trade quotes, knowing the real sale price and savings amount helps you make better decisions.</p>
+
+    <h3>The Discount Formulas</h3>
+    <div class="formula-highlight">Discount Amount = Original Price × (Discount% ÷ 100)</div>
+    <div class="formula-highlight" style="margin-top:8px;">Sale Price = Original Price × (1 − Discount% ÷ 100)</div>
+
+    <h3>Worked Example</h3>
+    <ul class="step-list">
+      <li>A jacket is originally priced at <strong>$180</strong> with a <strong>25% discount</strong>.</li>
+      <li>Discount amount: $180 × 0.25 = <strong>$45</strong></li>
+      <li>Sale price: $180 × 0.75 = <strong>$135</strong></li>
+      <li>Or: $180 − $45 = <strong>$135</strong></li>
+    </ul>
+
+    <h3>Common Australian Retail Discounts</h3>
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead><tr><th>Original Price</th><th>Discount</th><th>Savings</th><th>Sale Price</th></tr></thead>
+        <tbody>
+          <tr><td>$49.99</td><td>10%</td><td>$5.00</td><td>$44.99</td></tr>
+          <tr><td>$99.00</td><td>20%</td><td>$19.80</td><td>$79.20</td></tr>
+          <tr><td>$199.00</td><td>25%</td><td>$49.75</td><td>$149.25</td></tr>
+          <tr><td>$350.00</td><td>30%</td><td>$105.00</td><td>$245.00</td></tr>
+          <tr><td>$1,299.00</td><td>15%</td><td>$194.85</td><td>$1,104.15</td></tr>
+          <tr><td>$2,500.00</td><td>40%</td><td>$1,000.00</td><td>$1,500.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tip-box"><strong>💡 Beware of false discounts:</strong> In Australia, the ACCC requires retailers to have genuinely offered the "original" price before marking it down. If a price has only been offered at the "original" for a brief period, the discount claim may be misleading.</div>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">How do I calculate 20% off?</div>
+      <div class="faq-a">Multiply the price by 0.80. Example: 20% off $90 = $90 × 0.80 = $72. You save $18.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What discount do I need to bring a $150 item to $99?</div>
+      <div class="faq-a">((150 − 99) ÷ 150) × 100 = (51 ÷ 150) × 100 = 34% discount. Use the "Find % Discount Needed" tab above.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What's the difference between this and the Percentage Off Calculator?</div>
+      <div class="faq-a">They calculate the same thing. This page also includes the reverse calculator — "What discount % is needed to go from $X to $Y?" — which is useful for pricing decisions. See also: <a href="/percentage-off-calculator">Percentage Off Calculator</a>.</div>
+    </div>
+  </div>
+
+  <div class="related-section">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="/percentage-off-calculator">Percentage Off Calculator</a>
+      <a href="/money-percentage-calculator">Money Percentage</a>
+      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
+      <a href="/sales-percentage-calculator">Sales Calculator</a>
+      <a href="/">Percentage Calculator</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">Percentage Calculator</a>
+      <a href="/percentage-increase-calculator">Percentage Increase</a>
+      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
+      <a href="/percentage-change-calculator">Percentage Change</a>
+      <a href="/percentage-difference-calculator">Percentage Difference</a>
+      <a href="/percentage-off-calculator">Percentage Off</a>
+      <a href="/percent-error-calculator">Percent Error</a>
+      <a href="/what-percentage-of">What Percentage Of</a>
+      <a href="/percentage-of-number">Percentage of a Number</a>
+      <a href="/money-percentage-calculator">Money Calculator</a>
+      <a href="/discount-calculator">Discount Calculator</a>
+      <a href="/fraction-to-percentage">Fraction to %</a>
+      <a href="/sales-percentage-calculator">Sales Calculator</a>
+      <a href="/percentage-formula">Percentage Formula</a>
+      <a href="/how-to-calculate-percentage">How to Calculate %</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </div>
+    <p>© 2026 CalcPercentage.vercel.app — Free Online Percentage Calculator</p>
+  </div>
+</footer>
+
+<script>
+function fmtC(n) {
+  return '$' + parseFloat(n.toFixed(2)).toLocaleString('en-AU', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+function fmt(n) {
+  return parseFloat(n.toFixed(6)).toLocaleString('en-AU', {maximumFractionDigits: 4});
+}
+function switchTab(group, tab) {
+  document.querySelectorAll('#' + group + '_tab1, #' + group + '_tab2').forEach(el => el.classList.remove('active'));
+  document.getElementById(group + '_' + tab).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('onclick').includes(tab));
+  });
+}
+function setD(pct) {
+  document.getElementById('dc_pct').value = pct;
+  document.querySelectorAll('.quick-btn').forEach(b => b.classList.toggle('active', b.textContent === pct+'%'));
+  calcDisc();
+}
+function calcDisc() {
+  var orig = parseFloat(document.getElementById('dc_orig').value);
+  var pct = parseFloat(document.getElementById('dc_pct').value);
+  var box = document.getElementById('dc_result');
+  if (isNaN(orig) || isNaN(pct)) { box.classList.remove('show'); return; }
+  var save = orig * (pct/100);
+  var sale = orig - save;
+  document.getElementById('dc_sale').textContent = fmtC(sale);
+  document.getElementById('dc_save').textContent = '−' + fmtC(save);
+  document.getElementById('dc_origshow').textContent = fmtC(orig);
+  document.getElementById('dc_pctshow').textContent = pct + '% off';
+  document.getElementById('dc_formula').textContent = fmtC(orig) + ' × (1 − ' + pct + '/100) = ' + fmtC(sale) + '  |  Saving: ' + fmtC(save);
+  box.classList.add('show');
+}
+function calcDiscReverse() {
+  var orig = parseFloat(document.getElementById('dc2_orig').value);
+  var target = parseFloat(document.getElementById('dc2_target').value);
+  var box = document.getElementById('dc2_result');
+  if (isNaN(orig) || isNaN(target) || orig === 0) { box.classList.remove('show'); return; }
+  var pct = ((orig - target) / orig) * 100;
+  document.getElementById('dc2_ans').textContent = 'Discount needed: ' + fmt(pct) + '% off';
+  document.getElementById('dc2_saving').textContent = 'Savings: ' + fmtC(orig - target);
+  document.getElementById('dc2_formula').textContent = '((' + fmtC(orig) + ' − ' + fmtC(target) + ') ÷ ' + fmtC(orig) + ') × 100 = ' + fmt(pct) + '%';
+  box.classList.add('show');
+}
+</script>
+</body>
+</html>

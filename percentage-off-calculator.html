@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percentage Off Calculator — Calculate Discounts &amp; Sale Prices</title>
+  <meta name="description" content="Calculate percentage off a price instantly. Find the discounted price and how much you save. Free discount and percentage off calculator for shopping and sales.">
+  <meta name="keywords" content="percentage off calculator, percent off calculator, discount calculator, percentage off, discount calculator australia, sales percentage calculator, percentage off price, percentage discount calculator">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/percentage-off-calculator">
+  <meta property="og:title" content="Percentage Off Calculator — Calculate Discounts &amp; Sale Prices">
+  <meta property="og:description" content="Calculate percentage off a price instantly. Find the discounted price and how much you save.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/percentage-off-calculator">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Percentage Off Calculator">
+  <meta name="twitter:description" content="Calculate percentage off — find sale price and savings instantly.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="CalcPercentage">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  [
+    { "@context": "https://schema.org", "@type": "WebApplication", "name": "Percentage Off Calculator", "url": "https://calcpercentage.vercel.app/percentage-off-calculator", "description": "Calculate the sale price after a percentage discount. Find how much you save on any purchase.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
+    { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+      { "@type": "Question", "name": "How do I calculate percentage off a price?", "acceptedAnswer": { "@type": "Answer", "text": "Discounted Price = Original Price × (1 - Discount%/100). Saving = Original Price × (Discount%/100). Example: 20% off $80 = $16 saved. Final price = $64." } },
+      { "@type": "Question", "name": "How do I calculate 30% off a price?", "acceptedAnswer": { "@type": "Answer", "text": "Multiply the original price by 0.70 (1 - 30/100). For example, 30% off $120 = $120 × 0.70 = $84." } },
+      { "@type": "Question", "name": "What is a discount calculator?", "acceptedAnswer": { "@type": "Answer", "text": "A discount calculator helps you find the final price after applying a percentage discount. Enter the original price and the discount percentage to instantly see the sale price and savings amount." } }
+    ]},
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Percentage Off Calculator", "item": "https://calcpercentage.vercel.app/percentage-off-calculator" }
+    ]}
+  ]
+  </script>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/" class="logo">Calc<span>Percentage</span></a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('nav ul').classList.toggle('open')">☰ Menu</button>
+    <ul>
+      <li><a href="/percentage-increase-calculator">% Increase</a></li>
+      <li><a href="/percentage-decrease-calculator">% Decrease</a></li>
+      <li><a href="/percentage-change-calculator">% Change</a></li>
+      <li><a href="/percentage-off-calculator">% Off</a></li>
+      <li><a href="/percent-error-calculator">% Error</a></li>
+      <li><a href="/discount-calculator">Discount</a></li>
+      <li><a href="/fraction-to-percentage">Fraction→%</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <nav class="breadcrumb">
+    <a href="/">Home</a><span class="sep"> › </span><span>Percentage Off Calculator</span>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Percentage Off Calculator</h1>
+    <p>Find the sale price and savings amount after any percentage discount. Perfect for shopping, Black Friday sales, and everyday bargains in Australia and worldwide.</p>
+  </div>
+
+  <div class="calc-card">
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('off','tab1')">Find Sale Price</button>
+      <button class="tab-btn" onclick="switchTab('off','tab2')">What % Off?</button>
+    </div>
+
+    <div id="off_tab1" class="tab-content active">
+      <div class="formula-box"><strong>Sale Price = Original × (1 − Discount% ÷ 100)</strong></div>
+      <div class="form-group" style="margin-bottom:12px;">
+        <label>Quick Discount</label>
+        <div class="quick-btns">
+          <button class="quick-btn" onclick="setDiscount(10)">10% off</button>
+          <button class="quick-btn" onclick="setDiscount(20)">20% off</button>
+          <button class="quick-btn" onclick="setDiscount(25)">25% off</button>
+          <button class="quick-btn" onclick="setDiscount(30)">30% off</button>
+          <button class="quick-btn" onclick="setDiscount(50)">50% off</button>
+          <button class="quick-btn" onclick="setDiscount(70)">70% off</button>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="off_price">Original Price ($)</label>
+          <div class="input-with-symbol">
+            <span class="symbol">$</span>
+            <input type="number" id="off_price" placeholder="e.g. 80.00" step="any" oninput="calcOff()">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="off_pct">Discount (%)</label>
+          <div class="input-with-symbol has-right">
+            <input type="number" id="off_pct" placeholder="e.g. 20" step="any" oninput="calcOff()">
+            <span class="symbol-right">%</span>
+          </div>
+        </div>
+      </div>
+      <div id="off_result" class="result-box success">
+        <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+          <div>
+            <div class="result-label">Sale Price</div>
+            <div class="result-main green" id="off_sale" style="font-size:2.2rem;"></div>
+          </div>
+          <div>
+            <div class="result-label">You Save</div>
+            <div class="result-main" id="off_save" style="font-size:1.6rem; color:var(--accent);"></div>
+          </div>
+        </div>
+        <div class="result-formula" id="off_formula"></div>
+      </div>
+    </div>
+
+    <div id="off_tab2" class="tab-content">
+      <div class="formula-box"><strong>Discount % = ((Original − Sale Price) ÷ Original) × 100</strong></div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="off2_orig">Original Price ($)</label>
+          <div class="input-with-symbol">
+            <span class="symbol">$</span>
+            <input type="number" id="off2_orig" placeholder="e.g. 100" step="any" oninput="calcOffReverse()">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="off2_sale">Sale Price ($)</label>
+          <div class="input-with-symbol">
+            <span class="symbol">$</span>
+            <input type="number" id="off2_sale" placeholder="e.g. 75" step="any" oninput="calcOffReverse()">
+          </div>
+        </div>
+      </div>
+      <div id="off2_result" class="result-box neutral">
+        <div class="result-main blue" id="off2_ans"></div>
+        <div class="result-label" id="off2_detail"></div>
+        <div class="result-formula" id="off2_formula"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-article">
+    <h2>How to Calculate Percentage Off</h2>
+    <p>Whether you're shopping at Kmart, JB Hi-Fi, or any online retailer, knowing how to calculate percentage off helps you compare deals and understand your true savings.</p>
+
+    <h3>The Formula</h3>
+    <div class="formula-highlight">Sale Price = Original Price × (1 − Discount% ÷ 100)</div>
+    <div class="formula-highlight" style="margin-top:8px;">Savings = Original Price × (Discount% ÷ 100)</div>
+
+    <h3>Common Discount Examples (AUD)</h3>
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead><tr><th>Original Price</th><th>Discount</th><th>You Save</th><th>Sale Price</th></tr></thead>
+        <tbody>
+          <tr><td>$50</td><td>10% off</td><td>$5.00</td><td>$45.00</td></tr>
+          <tr><td>$120</td><td>20% off</td><td>$24.00</td><td>$96.00</td></tr>
+          <tr><td>$80</td><td>25% off</td><td>$20.00</td><td>$60.00</td></tr>
+          <tr><td>$200</td><td>30% off</td><td>$60.00</td><td>$140.00</td></tr>
+          <tr><td>$150</td><td>50% off</td><td>$75.00</td><td>$75.00</td></tr>
+          <tr><td>$300</td><td>70% off</td><td>$210.00</td><td>$90.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Quick Mental Math</h3>
+    <p>To calculate 20% off in your head: find 10% (move decimal left), then double it. Subtract from original. For 25% off: divide by 4, then subtract.</p>
+
+    <div class="tip-box"><strong>🛍️ Shopping Tip:</strong> Always compare the <em>sale price</em>, not just the discount percentage. A 50% off item that was overpriced may still be more expensive than a competing product at full price.</div>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">How do I calculate 20% off?</div>
+      <div class="faq-a">Multiply the price by 0.80 (1 − 20/100). Example: 20% off $75 = $75 × 0.80 = $60. Or: find 20% = $75 × 0.20 = $15, then $75 − $15 = $60.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I find what % off a price is?</div>
+      <div class="faq-a">Use: <code>Discount % = ((Original − Sale) ÷ Original) × 100</code>. Use the "What % Off?" tab above.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is this the same as a discount calculator?</div>
+      <div class="faq-a">Yes — also see our dedicated <a href="/discount-calculator">discount calculator</a> which includes a reverse calculator: "What discount is needed to go from $X to $Y?"</div>
+    </div>
+  </div>
+
+  <div class="related-section">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="/discount-calculator">Discount Calculator</a>
+      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
+      <a href="/money-percentage-calculator">Money Percentage</a>
+      <a href="/sales-percentage-calculator">Sales Calculator</a>
+      <a href="/">Percentage Calculator</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">Percentage Calculator</a>
+      <a href="/percentage-increase-calculator">Percentage Increase</a>
+      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
+      <a href="/percentage-change-calculator">Percentage Change</a>
+      <a href="/percentage-difference-calculator">Percentage Difference</a>
+      <a href="/percentage-off-calculator">Percentage Off</a>
+      <a href="/percent-error-calculator">Percent Error</a>
+      <a href="/what-percentage-of">What Percentage Of</a>
+      <a href="/percentage-of-number">Percentage of a Number</a>
+      <a href="/money-percentage-calculator">Money Calculator</a>
+      <a href="/discount-calculator">Discount Calculator</a>
+      <a href="/fraction-to-percentage">Fraction to %</a>
+      <a href="/sales-percentage-calculator">Sales Calculator</a>
+      <a href="/percentage-formula">Percentage Formula</a>
+      <a href="/how-to-calculate-percentage">How to Calculate %</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </div>
+    <p>© 2026 CalcPercentage.vercel.app — Free Online Percentage Calculator</p>
+  </div>
+</footer>
+
+<script>
+function fmt(n, currency) {
+  if (n === null || isNaN(n) || !isFinite(n)) return null;
+  if (currency) return '$' + parseFloat(n.toFixed(2)).toLocaleString('en-AU', {minimumFractionDigits:2, maximumFractionDigits:2});
+  return parseFloat(n.toFixed(6)).toLocaleString('en-AU', {maximumFractionDigits: 4});
+}
+function switchTab(group, tab) {
+  document.querySelectorAll('#' + group + '_tab1, #' + group + '_tab2').forEach(el => el.classList.remove('active'));
+  document.getElementById(group + '_' + tab).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('onclick').includes(tab));
+  });
+}
+function setDiscount(pct) {
+  document.getElementById('off_pct').value = pct;
+  document.querySelectorAll('.quick-btn').forEach(b => b.classList.toggle('active', b.textContent.includes(pct+'%')));
+  calcOff();
+}
+function calcOff() {
+  var price = parseFloat(document.getElementById('off_price').value);
+  var pct = parseFloat(document.getElementById('off_pct').value);
+  var box = document.getElementById('off_result');
+  if (isNaN(price) || isNaN(pct)) { box.classList.remove('show'); return; }
+  var sale = price * (1 - pct/100);
+  var save = price - sale;
+  document.getElementById('off_sale').textContent = fmt(sale, true);
+  document.getElementById('off_save').textContent = '−' + fmt(save, true);
+  document.getElementById('off_formula').textContent = '$' + price + ' × (1 − ' + pct + '/100) = ' + fmt(sale, true) + '  |  Savings: ' + fmt(save, true);
+  box.classList.add('show');
+}
+function calcOffReverse() {
+  var orig = parseFloat(document.getElementById('off2_orig').value);
+  var sale = parseFloat(document.getElementById('off2_sale').value);
+  var box = document.getElementById('off2_result');
+  if (isNaN(orig) || isNaN(sale) || orig === 0) { box.classList.remove('show'); return; }
+  var pct = ((orig - sale) / orig) * 100;
+  document.getElementById('off2_ans').textContent = 'Discount: ' + fmt(pct) + '% off';
+  document.getElementById('off2_detail').textContent = 'Savings: ' + fmt(orig - sale, true);
+  document.getElementById('off2_formula').textContent = '((' + orig + ' − ' + sale + ') ÷ ' + orig + ') × 100 = ' + fmt(pct) + '%';
+  box.classList.add('show');
+}
+</script>
+</body>
+</html>

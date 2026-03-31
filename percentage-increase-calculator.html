@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percentage Increase Calculator — Calculate % Increase Instantly</title>
+  <meta name="description" content="Calculate percentage increase between two numbers instantly. Free online percentage increase calculator with formula, examples, and step-by-step explanation.">
+  <meta name="keywords" content="percentage increase calculator, calculate percentage increase, percent increase calculator, how to calculate percentage increase, percentage increase formula, increase calculator">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/percentage-increase-calculator">
+  <meta property="og:title" content="Percentage Increase Calculator — Calculate % Increase Instantly">
+  <meta property="og:description" content="Calculate percentage increase between two numbers instantly. Free online percentage increase calculator with formula, examples, and step-by-step explanation.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/percentage-increase-calculator">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Percentage Increase Calculator">
+  <meta name="twitter:description" content="Calculate percentage increase between two numbers with formula and examples.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="CalcPercentage">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Percentage Increase Calculator",
+      "url": "https://calcpercentage.vercel.app/percentage-increase-calculator",
+      "description": "Calculate the percentage increase from one number to another using our free online tool.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "All",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How do I calculate percentage increase?", "acceptedAnswer": { "@type": "Answer", "text": "Percentage Increase = ((New Value - Old Value) / Old Value) × 100. For example, from 50 to 75: ((75-50)/50) × 100 = 50% increase." } },
+        { "@type": "Question", "name": "What is the percentage increase formula?", "acceptedAnswer": { "@type": "Answer", "text": "The formula is: % Increase = ((New Value − Original Value) ÷ Original Value) × 100. The result is positive when there is an increase." } },
+        { "@type": "Question", "name": "How do I find the new value after a percentage increase?", "acceptedAnswer": { "@type": "Answer", "text": "New Value = Original Value × (1 + Percentage/100). For example, 200 increased by 15%: 200 × 1.15 = 230." } }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Percentage Increase Calculator", "item": "https://calcpercentage.vercel.app/percentage-increase-calculator" }
+      ]
+    }
+  ]
+  </script>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/" class="logo">Calc<span>Percentage</span></a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('nav ul').classList.toggle('open')">☰ Menu</button>
+    <ul>
+      <li><a href="/percentage-increase-calculator">% Increase</a></li>
+      <li><a href="/percentage-decrease-calculator">% Decrease</a></li>
+      <li><a href="/percentage-change-calculator">% Change</a></li>
+      <li><a href="/percentage-off-calculator">% Off</a></li>
+      <li><a href="/percent-error-calculator">% Error</a></li>
+      <li><a href="/discount-calculator">Discount</a></li>
+      <li><a href="/fraction-to-percentage">Fraction→%</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <nav class="breadcrumb">
+    <a href="/">Home</a><span class="sep"> › </span><span>Percentage Increase Calculator</span>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Percentage Increase Calculator</h1>
+    <p>Calculate the percentage increase between two numbers, or find the new value after applying a percentage increase.</p>
+  </div>
+
+  <!-- TABS -->
+  <div class="calc-card">
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('increase','tab1')">Find % Increase</button>
+      <button class="tab-btn" onclick="switchTab('increase','tab2')">Increase by %</button>
+    </div>
+
+    <!-- TAB 1: Find % increase -->
+    <div id="increase_tab1" class="tab-content active">
+      <div class="formula-box"><strong>% Increase = ((New − Original) ÷ Original) × 100</strong></div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="i1_orig">Original Value</label>
+          <input type="number" id="i1_orig" placeholder="e.g. 50" step="any" oninput="calcIncrease1()">
+        </div>
+        <div class="form-group">
+          <label for="i1_new">New Value</label>
+          <input type="number" id="i1_new" placeholder="e.g. 75" step="any" oninput="calcIncrease1()">
+        </div>
+      </div>
+      <div id="i1_result" class="result-box increase">
+        <div class="result-main green" id="i1_ans"></div>
+        <div class="result-label" id="i1_diff"></div>
+        <div class="result-formula" id="i1_formula"></div>
+      </div>
+    </div>
+
+    <!-- TAB 2: Increase by % -->
+    <div id="increase_tab2" class="tab-content">
+      <div class="formula-box"><strong>New Value = Original × (1 + Percentage ÷ 100)</strong></div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="i2_orig">Original Value</label>
+          <input type="number" id="i2_orig" placeholder="e.g. 200" step="any" oninput="calcIncrease2()">
+        </div>
+        <div class="form-group">
+          <label for="i2_pct">Increase by (%)</label>
+          <div class="input-with-symbol has-right">
+            <input type="number" id="i2_pct" placeholder="e.g. 15" step="any" oninput="calcIncrease2()">
+            <span class="symbol-right">%</span>
+          </div>
+        </div>
+      </div>
+      <div id="i2_result" class="result-box increase">
+        <div class="result-main green" id="i2_ans"></div>
+        <div class="result-label" id="i2_diff"></div>
+        <div class="result-formula" id="i2_formula"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTICLE -->
+  <div class="content-article">
+    <h2>How to Calculate Percentage Increase</h2>
+    <p>A <strong>percentage increase</strong> measures how much a value has grown relative to its original amount. It's expressed as a positive percentage and is one of the most common calculations in everyday life — from salary raises and price changes to population growth and investment returns.</p>
+
+    <h3>The Percentage Increase Formula</h3>
+    <div class="formula-highlight">% Increase = ((New Value − Original Value) ÷ Original Value) × 100</div>
+
+    <h3>Step-by-Step Example</h3>
+    <ul class="step-list">
+      <li>Identify the original value and the new value. Example: salary increased from <strong>$50,000</strong> to <strong>$57,500</strong>.</li>
+      <li>Subtract: New − Original = $57,500 − $50,000 = <strong>$7,500</strong></li>
+      <li>Divide by original: $7,500 ÷ $50,000 = <strong>0.15</strong></li>
+      <li>Multiply by 100: 0.15 × 100 = <strong>15% increase</strong></li>
+    </ul>
+
+    <h3>Real-World Examples</h3>
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead><tr><th>Scenario</th><th>Original</th><th>New</th><th>% Increase</th></tr></thead>
+        <tbody>
+          <tr><td>Salary raise</td><td>$60,000</td><td>$66,000</td><td>10%</td></tr>
+          <tr><td>Property price</td><td>$450,000</td><td>$495,000</td><td>10%</td></tr>
+          <tr><td>House rent (AUD)</td><td>$380/wk</td><td>$418/wk</td><td>10%</td></tr>
+          <tr><td>Supermarket price</td><td>$4.00</td><td>$5.00</td><td>25%</td></tr>
+          <tr><td>Investment return</td><td>$10,000</td><td>$12,500</td><td>25%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>How to Increase a Number by a Percentage</h3>
+    <p>To find the new value after a percentage increase, use: <code>New Value = Original × (1 + %/100)</code>. For example, to increase $200 by 15%: <code>$200 × 1.15 = $230</code>.</p>
+
+    <div class="tip-box"><strong>💡 Tip:</strong> To quickly increase a value by 10%, simply add one-tenth of it. To increase by 25%, add one-quarter. These mental shortcuts work great for common percentages.</div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">How do I calculate percentage increase?</div>
+      <div class="faq-a">Use the formula: <code>% Increase = ((New Value − Old Value) ÷ Old Value) × 100</code>. For example, from 50 to 75: ((75−50)/50) × 100 = 50% increase.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What if the result is negative?</div>
+      <div class="faq-a">A negative result means the value actually decreased. In that case, you should use our <a href="/percentage-decrease-calculator">percentage decrease calculator</a> for correct framing.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I find the new value after a percentage increase?</div>
+      <div class="faq-a"><code>New Value = Original Value × (1 + Percentage/100)</code>. For example, 200 increased by 15%: 200 × 1.15 = 230.</div>
+    </div>
+  </div>
+
+  <div class="related-section">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="/">Percentage Calculator</a>
+      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
+      <a href="/percentage-change-calculator">Percentage Change</a>
+      <a href="/percentage-difference-calculator">Percentage Difference</a>
+      <a href="/percentage-formula">Percentage Formulas</a>
+      <a href="/how-to-calculate-percentage">How to Calculate %</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">Percentage Calculator</a>
+      <a href="/percentage-increase-calculator">Percentage Increase</a>
+      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
+      <a href="/percentage-change-calculator">Percentage Change</a>
+      <a href="/percentage-difference-calculator">Percentage Difference</a>
+      <a href="/percentage-off-calculator">Percentage Off</a>
+      <a href="/percent-error-calculator">Percent Error</a>
+      <a href="/what-percentage-of">What Percentage Of</a>
+      <a href="/percentage-of-number">Percentage of a Number</a>
+      <a href="/money-percentage-calculator">Money Calculator</a>
+      <a href="/discount-calculator">Discount Calculator</a>
+      <a href="/fraction-to-percentage">Fraction to %</a>
+      <a href="/sales-percentage-calculator">Sales Calculator</a>
+      <a href="/percentage-formula">Percentage Formula</a>
+      <a href="/how-to-calculate-percentage">How to Calculate %</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </div>
+    <p>© 2026 CalcPercentage.vercel.app — Free Online Percentage Calculator</p>
+  </div>
+</footer>
+
+<script>
+function fmt(n) {
+  if (n === null || isNaN(n) || !isFinite(n)) return null;
+  return parseFloat(n.toFixed(6)).toLocaleString('en-AU', {maximumFractionDigits: 4});
+}
+function switchTab(group, tab) {
+  document.querySelectorAll('#' + group + '_tab1, #' + group + '_tab2').forEach(el => el.classList.remove('active'));
+  document.getElementById(group + '_' + tab).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+    btn.classList.toggle('active', btn.getAttribute('onclick').includes(tab));
+  });
+}
+function calcIncrease1() {
+  var orig = parseFloat(document.getElementById('i1_orig').value);
+  var nv = parseFloat(document.getElementById('i1_new').value);
+  var box = document.getElementById('i1_result');
+  if (isNaN(orig) || isNaN(nv) || orig === 0) { box.classList.remove('show'); return; }
+  var pct = ((nv - orig) / Math.abs(orig)) * 100;
+  var diff = nv - orig;
+  document.getElementById('i1_ans').textContent = '▲ Increase: ' + fmt(pct) + '%';
+  document.getElementById('i1_diff').textContent = 'Difference: ' + fmt(diff) + ' (' + fmt(orig) + ' → ' + fmt(nv) + ')';
+  document.getElementById('i1_formula').textContent = '((' + nv + ' − ' + orig + ') ÷ ' + orig + ') × 100 = ' + fmt(pct) + '%';
+  box.classList.add('show');
+}
+function calcIncrease2() {
+  var orig = parseFloat(document.getElementById('i2_orig').value);
+  var pct = parseFloat(document.getElementById('i2_pct').value);
+  var box = document.getElementById('i2_result');
+  if (isNaN(orig) || isNaN(pct)) { box.classList.remove('show'); return; }
+  var nv = orig * (1 + pct / 100);
+  var diff = nv - orig;
+  document.getElementById('i2_ans').textContent = 'New Value: ' + fmt(nv);
+  document.getElementById('i2_diff').textContent = 'Increase amount: +' + fmt(diff);
+  document.getElementById('i2_formula').textContent = fmt(orig) + ' × (1 + ' + pct + '/100) = ' + fmt(nv);
+  box.classList.add('show');
+}
+</script>
+</body>
+</html>

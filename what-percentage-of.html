@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Percentage Of Calculator — Find What % One Number Is of Another</title>
+  <meta name="description" content="Find what percentage one number is of another instantly. Free calculator: X is what % of Y? Works for any numbers, money amounts, or totals.">
+  <meta name="keywords" content="what percentage of, what percentage is, what percentage, is what percentage of, what percentage of calculator, what percentage of my, what percentage are we through 2026">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/what-percentage-of">
+  <meta property="og:title" content="What Percentage Of Calculator — Find What % One Number Is of Another">
+  <meta property="og:description" content="Find what percentage one number is of another instantly.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/what-percentage-of">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="CalcPercentage">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  [
+    { "@context": "https://schema.org", "@type": "WebApplication", "name": "What Percentage Of Calculator", "url": "https://calcpercentage.vercel.app/what-percentage-of", "description": "Calculate what percentage one number is of another. Find X is what percent of Y.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
+    { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+      { "@type": "Question", "name": "How do I find what percentage one number is of another?", "acceptedAnswer": { "@type": "Answer", "text": "Divide the part by the whole and multiply by 100. Formula: (Part ÷ Whole) × 100 = Percentage. Example: What percentage is 45 of 180? (45 ÷ 180) × 100 = 25%." } },
+      { "@type": "Question", "name": "What percentage of 2026 has passed?", "acceptedAnswer": { "@type": "Answer", "text": "As of March 30, 2026, approximately 24.1% of 2026 has passed (89 days out of 365)." } }
+    ]},
+    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "What Percentage Of", "item": "https://calcpercentage.vercel.app/what-percentage-of" }
+    ]}
+  ]
+  </script>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/" class="logo">Calc<span>Percentage</span></a>
+    <button class="mobile-menu-btn" onclick="document.querySelector('nav ul').classList.toggle('open')">☰ Menu</button>
+    <ul>
+      <li><a href="/percentage-increase-calculator">% Increase</a></li>
+      <li><a href="/percentage-decrease-calculator">% Decrease</a></li>
+      <li><a href="/percentage-change-calculator">% Change</a></li>
+      <li><a href="/percentage-off-calculator">% Off</a></li>
+      <li><a href="/percent-error-calculator">% Error</a></li>
+      <li><a href="/discount-calculator">Discount</a></li>
+      <li><a href="/fraction-to-percentage">Fraction→%</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <nav class="breadcrumb">
+    <a href="/">Home</a><span class="sep"> › </span><span>What Percentage Of</span>
+  </nav>
+
+  <div class="page-hero">
+    <h1>What Percentage Of Calculator</h1>
+    <p>Find what percentage X is of Y — instantly. Works for scores, money, quantities, and anything else.</p>
+  </div>
+
+  <!-- Year Progress Feature -->
+  <div class="calc-card" style="border: 2px solid var(--primary-light); background: linear-gradient(135deg, #E3F2FD, #fff);">
+    <h2><span class="icon">📅</span> What % of 2026 Has Passed?</h2>
+    <div id="year_progress" style="padding:16px 0;">
+      <div class="result-main blue" id="year_pct" style="font-size:2.4rem;"></div>
+      <div class="result-label" id="year_detail" style="margin-top:6px;"></div>
+      <div style="margin-top:16px; background:var(--border); border-radius:20px; height:14px; overflow:hidden;">
+        <div id="year_bar" style="background:linear-gradient(90deg,var(--primary),var(--primary-light)); height:100%; border-radius:20px; transition:width 1s;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-card">
+    <h2><span class="icon">?</span> X is What % of Y?</h2>
+    <div class="formula-box"><strong>Percentage = (Part ÷ Whole) × 100</strong></div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="wp_part">Part (X)</label>
+        <input type="number" id="wp_part" placeholder="e.g. 45" step="any" oninput="calcWhatPct()">
+      </div>
+      <div class="form-group">
+        <label for="wp_whole">Whole (Y)</label>
+        <input type="number" id="wp_whole" placeholder="e.g. 180" step="any" oninput="calcWhatPct()">
+      </div>
+    </div>
+    <div id="wp_result" class="result-box neutral">
+      <div class="result-main blue" id="wp_ans"></div>
+      <div class="result-formula" id="wp_formula"></div>
+    </div>
+  </div>
+
+  <div class="content-article">
+    <h2>How to Find What Percentage One Number Is of Another</h2>
+    <p>This is the most fundamental percentage question: <em>"X is what percent of Y?"</em> It's used for test scores, budget percentages, survey results, nutritional information, and countless everyday calculations.</p>
+
+    <h3>The Formula</h3>
+    <div class="formula-highlight">Percentage = (Part ÷ Whole) × 100</div>
+
+    <h3>Common Examples</h3>
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead><tr><th>Question</th><th>Calculation</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>What % is 30 of 120?</td><td>(30÷120)×100</td><td>25%</td></tr>
+          <tr><td>What % is $45 of $200?</td><td>(45÷200)×100</td><td>22.5%</td></tr>
+          <tr><td>What % is 18 of 25?</td><td>(18÷25)×100</td><td>72%</td></tr>
+          <tr><td>What % is 16 of 20?</td><td>(16÷20)×100</td><td>80%</td></tr>
+          <tr><td>What % is 89 of 365? (days)</td><td>(89÷365)×100</td><td>24.4%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tip-box"><strong>💡 Tip:</strong> Use our <a href="/fraction-to-percentage">fraction to percentage calculator</a> to convert any fraction like 18/25 or 35/40 directly to a percentage.</div>
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q">What percentage of 2026 has passed?</div>
+      <div class="faq-a">See the live counter above — it automatically calculates based on today's date.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What percentage is 50 of 200?</div>
+      <div class="faq-a">(50 ÷ 200) × 100 = 25%</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I calculate what percentage of my income goes to rent?</div>
+      <div class="faq-a">Divide your rent by your income and multiply by 100. Example: $450 rent ÷ $2,000 income × 100 = 22.5%.</div>
+    </div>
+  </div>
+
+  <div class="related-section">
+    <h3>Related Calculators</h3>
+    <div class="related-links">
+      <a href="/">Percentage Calculator</a>
+      <a href="/percentage-of-number">Percentage of a Number</a>
+      <a href="/fraction-to-percentage">Fraction to Percentage</a>
+      <a href="/percentage-formula">Percentage Formulas</a>
+      <a href="/how-to-calculate-percentage">How to Calculate %</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/">Percentage Calculator</a>
+      <a href="/percentage-increase-calculator">Percentage Increase</a>
+      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
+      <a href="/percentage-change-calculator">Percentage Change</a>
+      <a href="/percentage-difference-calculator">Percentage Difference</a>
+      <a href="/percentage-off-calculator">Percentage Off</a>
+      <a href="/percent-error-calculator">Percent Error</a>
+      <a href="/what-percentage-of">What Percentage Of</a>
+      <a href="/percentage-of-number">Percentage of a Number</a>
+      <a href="/money-percentage-calculator">Money Calculator</a>
+      <a href="/discount-calculator">Discount Calculator</a>
+      <a href="/fraction-to-percentage">Fraction to %</a>
+      <a href="/sales-percentage-calculator">Sales Calculator</a>
+      <a href="/percentage-formula">Percentage Formula</a>
+      <a href="/how-to-calculate-percentage">How to Calculate %</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </div>
+    <p>© 2026 CalcPercentage.vercel.app — Free Online Percentage Calculator</p>
+  </div>
+</footer>
+
+<script>
+function fmt(n) {
+  if (n === null || isNaN(n) || !isFinite(n)) return null;
+  return parseFloat(n.toFixed(6)).toLocaleString('en-AU', {maximumFractionDigits: 4});
+}
+// Year progress
+(function() {
+  var now = new Date();
+  var start = new Date(now.getFullYear(), 0, 1);
+  var end = new Date(now.getFullYear() + 1, 0, 1);
+  var pct = ((now - start) / (end - start)) * 100;
+  var dayOfYear = Math.floor((now - start) / 86400000) + 1;
+  var totalDays = (end - start) / 86400000;
+  document.getElementById('year_pct').textContent = fmt(pct) + '% of ' + now.getFullYear() + ' has passed';
+  document.getElementById('year_detail').textContent = 'Day ' + dayOfYear + ' of ' + Math.floor(totalDays) + ' (' + now.toLocaleDateString('en-AU', {day:'numeric',month:'long',year:'numeric'}) + ')';
+  setTimeout(function() {
+    document.getElementById('year_bar').style.width = pct + '%';
+  }, 100);
+})();
+function calcWhatPct() {
+  var part = parseFloat(document.getElementById('wp_part').value);
+  var whole = parseFloat(document.getElementById('wp_whole').value);
+  var box = document.getElementById('wp_result');
+  if (isNaN(part) || isNaN(whole) || whole === 0) { box.classList.remove('show'); return; }
+  var pct = (part / whole) * 100;
+  document.getElementById('wp_ans').textContent = part + ' is ' + fmt(pct) + '% of ' + whole;
+  document.getElementById('wp_formula').textContent = '(' + part + ' ÷ ' + whole + ') × 100 = ' + fmt(pct) + '%';
+  box.classList.add('show');
+}
+</script>
+</body>
+</html>
