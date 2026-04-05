@@ -4,233 +4,1210 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fraction to Percentage Calculator — Convert Any Fraction to Percent</title>
-  <meta name="description" content="Convert any fraction to a percentage instantly. Free fraction to percentage calculator with a reference table for common fractions like 18/25, 35/40, 16/20 and more.">
-  <meta name="keywords" content="fraction to percentage, fractions as percentages, 18 out of 25 as a percentage, 30/40 as a percentage, 35/40 as a percentage, 18/25 as a percentage, 16 out of 20 as a percentage, 27 out of 40 as a percentage, 28 out of 40 as a percentage, 1/5 as a percentage">
-  <link rel="canonical" href="https://calcpercentage.vercel.app/fraction-to-percentage">
+  <meta name="description" content="Free fraction to percentage calculator. Convert any fraction to a percentage instantly — supports simple fractions, mixed numbers, and improper fractions. Includes formula, step-by-step working & common fractions table.">
+  <meta name="keywords" content="fraction to percentage calculator, fraction to percent converter, convert fraction to percentage, fraction to percent, mixed number to percentage, how to convert fraction to percent">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/fraction-to-percentage/">
+
   <meta property="og:title" content="Fraction to Percentage Calculator — Convert Any Fraction to Percent">
-  <meta property="og:description" content="Convert any fraction to a percentage instantly with reference table for 18/25, 35/40, 16/20 and more.">
-  <meta property="og:url" content="https://calcpercentage.vercel.app/fraction-to-percentage">
+  <meta property="og:description" content="Convert any fraction to a percentage instantly. Supports simple fractions, mixed numbers, and improper fractions with full step-by-step working.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/fraction-to-percentage/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CalcPercentage">
+
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="CalcPercentage">
-  <link rel="stylesheet" href="/css/style.css">
+  <meta name="twitter:title" content="Fraction to Percentage Calculator — Convert Any Fraction to Percent">
+  <meta name="twitter:description" content="Free fraction to percent converter — simple fractions, mixed numbers, improper fractions. Step-by-step working included.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23DA2576'/%3E%3Ctext x='12' y='78' font-size='72' font-family='Arial,sans-serif' font-weight='900' fill='white'%3E%25%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23DA2576'/%3E%3Ctext x='12' y='78' font-size='72' font-family='Arial,sans-serif' font-weight='900' fill='white'%3E%25%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <script type="application/ld+json">
-  [
-    { "@context": "https://schema.org", "@type": "WebApplication", "name": "Fraction to Percentage Calculator", "url": "https://calcpercentage.vercel.app/fraction-to-percentage", "description": "Convert fractions to percentages instantly.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
-    { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-      { "@type": "Question", "name": "How do I convert a fraction to a percentage?", "acceptedAnswer": { "@type": "Answer", "text": "Divide the numerator by the denominator and multiply by 100. Formula: Percentage = (Numerator ÷ Denominator) × 100. Example: 3/4 = (3 ÷ 4) × 100 = 75%." } },
-      { "@type": "Question", "name": "What is 18 out of 25 as a percentage?", "acceptedAnswer": { "@type": "Answer", "text": "18 out of 25 = (18 ÷ 25) × 100 = 72%." } },
-      { "@type": "Question", "name": "What is 30/40 as a percentage?", "acceptedAnswer": { "@type": "Answer", "text": "30/40 = (30 ÷ 40) × 100 = 75%." } },
-      { "@type": "Question", "name": "What is 1/5 as a percentage?", "acceptedAnswer": { "@type": "Answer", "text": "1/5 = (1 ÷ 5) × 100 = 20%." } },
-      { "@type": "Question", "name": "What is 35/40 as a percentage?", "acceptedAnswer": { "@type": "Answer", "text": "35/40 = (35 ÷ 40) × 100 = 87.5%." } },
-      { "@type": "Question", "name": "What is 27 out of 40 as a percentage?", "acceptedAnswer": { "@type": "Answer", "text": "27 out of 40 = (27 ÷ 40) × 100 = 67.5%." } }
-    ]},
-    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
-      { "@type": "ListItem", "position": 2, "name": "Fraction to Percentage", "item": "https://calcpercentage.vercel.app/fraction-to-percentage" }
-    ]}
-  ]
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://calcpercentage.vercel.app/#website",
+        "url": "https://calcpercentage.vercel.app/",
+        "name": "CalcPercentage",
+        "publisher": { "@type": "Organization", "name": "CalcPercentage", "logo": { "@type": "ImageObject", "url": "https://calcpercentage.vercel.app/logo.svg" } }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Fraction to Percentage Calculator", "item": "https://calcpercentage.vercel.app/fraction-to-percentage/" }
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://calcpercentage.vercel.app/fraction-to-percentage/#app",
+        "name": "Fraction to Percentage Calculator",
+        "url": "https://calcpercentage.vercel.app/fraction-to-percentage/",
+        "description": "Convert any fraction — simple, improper, or mixed number — to a percentage. Shows decimal equivalent, simplified fraction, and full step-by-step working.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": [
+          "Simple Fraction to Percentage",
+          "Mixed Number to Percentage",
+          "Improper Fraction to Percentage",
+          "Decimal to Percentage",
+          "Repeating Decimal Detection",
+          "Visual Pie Chart",
+          "Step-by-Step Working",
+          "Common Fractions Reference Table"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do you convert a fraction to a percentage?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Divide the numerator by the denominator, then multiply by 100. Example: 3/4 → 3 ÷ 4 = 0.75 → 0.75 × 100 = 75%. Or equivalently, multiply the fraction by 100/1 and simplify: (3/4) × 100 = 300/4 = 75%." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you convert a mixed number to a percentage?",
+            "acceptedAnswer": { "@type": "Answer", "text": "First convert the mixed number to an improper fraction: Whole × Denominator + Numerator, over the Denominator. Then divide and multiply by 100. Example: 2 3/4 → (2×4+3)/4 = 11/4 → 11 ÷ 4 = 2.75 → 2.75 × 100 = 275%." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is 1/3 as a percentage?",
+            "acceptedAnswer": { "@type": "Answer", "text": "1/3 as a percentage is 33.333...% (33.3̄%). It is a repeating decimal: 1 ÷ 3 = 0.333... × 100 = 33.333...%. Often rounded to 33.33% or 33⅓%." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is 3/4 as a percentage?",
+            "acceptedAnswer": { "@type": "Answer", "text": "3/4 as a percentage is 75%. Calculation: 3 ÷ 4 = 0.75, then 0.75 × 100 = 75%." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can a fraction be more than 100% as a percentage?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes — if the numerator is greater than the denominator (an improper fraction) or if it is a mixed number greater than 1, the percentage will exceed 100%. For example: 5/4 = 125%, and 2 1/2 = 250%." }
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to Convert a Fraction to a Percentage",
+        "description": "Step-by-step guide to converting any fraction to a percentage",
+        "totalTime": "PT1M",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Identify the Fraction", "text": "Note the numerator (top number) and denominator (bottom number). For mixed numbers, convert to an improper fraction first." },
+          { "@type": "HowToStep", "position": 2, "name": "Divide Numerator by Denominator", "text": "Perform the division: Numerator ÷ Denominator to get the decimal form." },
+          { "@type": "HowToStep", "position": 3, "name": "Multiply by 100", "text": "Multiply the decimal result by 100 to convert to a percentage." },
+          { "@type": "HowToStep", "position": 4, "name": "Add the % Symbol", "text": "Append the % symbol. The result is your fraction expressed as a percentage." }
+        ]
+      }
+    ]
+  }
   </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink: #DA2576;
+      --pink-dark: #b81e62;
+      --pink-light: #fce7f3;
+      --pink-xlight: #fff0f7;
+      --black: #0d0d0d;
+      --near-black: #111827;
+      --dark: #1f2937;
+      --mid: #4b5563;
+      --gray: #6b7280;
+      --light-gray: #f3f4f6;
+      --border: #e5e7eb;
+      --white: #ffffff;
+      --green: #059669;
+      --green-light: #d1fae5;
+      --green-bg: #f0fdf4;
+      --blue: #2563eb;
+      --blue-light: #dbeafe;
+      --blue-bg: #eff6ff;
+      --purple: #7c3aed;
+      --purple-light: #ede9fe;
+      --shadow: 0 4px 24px rgba(218,37,118,0.10);
+      --shadow-lg: 0 12px 40px rgba(218,37,118,0.15);
+      --radius: 14px;
+      --radius-lg: 20px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); color: var(--near-black); background: var(--white); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: var(--pink); text-decoration: none; }
+    a:hover { color: var(--pink-dark); text-decoration: underline; }
+
+    /* ===== HEADER ===== */
+    header { background: var(--white); border-bottom: 1.5px solid var(--border); position: sticky; top: 0; z-index: 999; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
+    .header-wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 38px; height: 38px; background: var(--pink); border-radius: 10px; color: white; font-size: 1.15rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .logo-name { font-size: 1.15rem; font-weight: 800; color: var(--black); letter-spacing: -0.4px; }
+    .logo-name span { color: var(--pink); }
+    .main-nav { display: flex; align-items: center; gap: 2px; }
+    .main-nav a { text-decoration: none; color: var(--dark); font-size: 0.83rem; font-weight: 600; padding: 7px 11px; border-radius: 8px; transition: background 0.18s, color 0.18s; white-space: nowrap; }
+    .main-nav a:hover, .main-nav a.active { background: var(--pink-light); color: var(--pink); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; border-radius: 8px; flex-shrink: 0; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    .mobile-nav { display: none; flex-direction: column; background: var(--white); border-top: 1px solid var(--border); padding: 8px 20px 16px; gap: 2px; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { display: block; padding: 11px 12px; text-decoration: none; color: var(--dark); font-size: 0.9rem; font-weight: 600; border-radius: 8px; transition: background 0.15s; }
+    .mobile-nav a:hover, .mobile-nav a.active { background: var(--pink-xlight); color: var(--pink); }
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb-bar { max-width: 1200px; margin: 0 auto; padding: 14px 20px 0; }
+    .breadcrumb { display: flex; align-items: center; gap: 6px; list-style: none; flex-wrap: wrap; }
+    .breadcrumb li { display: flex; align-items: center; gap: 6px; }
+    .breadcrumb li + li::before { content: '/'; color: var(--gray); font-size: 0.78rem; }
+    .breadcrumb a { font-size: 0.78rem; color: var(--gray); text-decoration: none; font-weight: 500; }
+    .breadcrumb a:hover { color: var(--pink); }
+    .breadcrumb span { font-size: 0.78rem; color: var(--near-black); font-weight: 600; }
+
+    /* ===== HERO ===== */
+    .hero { background: linear-gradient(160deg, #fff 0%, var(--pink-xlight) 55%, #fff 100%); padding: 52px 20px 40px; text-align: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--pink-light); color: var(--pink); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 5px 14px; border-radius: 100px; margin-bottom: 18px; }
+    .hero h1 { font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 900; color: var(--black); line-height: 1.12; letter-spacing: -1.5px; max-width: 740px; margin: 0 auto 16px; }
+    .hero h1 em { font-style: normal; color: var(--pink); }
+    .hero-sub { font-size: 1.02rem; color: var(--gray); max-width: 560px; margin: 0 auto; line-height: 1.65; }
+
+    /* ===== CALCULATOR ===== */
+    .calc-wrap { max-width: 820px; margin: 0 auto; padding: 36px 20px 16px; }
+    .calc-card { background: var(--white); border: 2px solid var(--border); border-radius: var(--radius-lg); padding: 36px 32px 30px; box-shadow: var(--shadow); transition: box-shadow 0.2s; }
+    .calc-card:hover { box-shadow: var(--shadow-lg); }
+
+    /* Mode tabs */
+    .mode-switch { display: flex; background: var(--light-gray); border-radius: 12px; padding: 4px; margin-bottom: 28px; gap: 4px; }
+    .mode-btn { flex: 1; padding: 10px 8px; border: none; border-radius: 9px; font-family: var(--font); font-size: 0.82rem; font-weight: 700; cursor: pointer; background: transparent; color: var(--gray); transition: all 0.2s; text-align: center; line-height: 1.35; }
+    .mode-btn.active { background: var(--white); color: var(--pink); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .mode-btn:hover:not(.active) { color: var(--dark); }
+    .mode-pane { display: none; }
+    .mode-pane.active { display: block; }
+
+    .calc-subtitle { font-size: 0.85rem; color: var(--gray); margin-bottom: 20px; line-height: 1.55; }
+    .formula-strip { background: var(--light-gray); border-left: 4px solid var(--pink); border-radius: 0 8px 8px 0; padding: 10px 16px; font-size: 0.84rem; color: var(--mid); font-family: 'Courier New', monospace; font-weight: 600; margin-bottom: 24px; }
+
+    /* Fraction input visual */
+    .frac-input-wrap { display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
+    .frac-stack { display: flex; flex-direction: column; align-items: center; gap: 0; }
+    .frac-input { width: 120px; padding: 14px 12px; border: 2px solid var(--border); border-radius: var(--radius); font-size: 1.4rem; font-family: var(--font); font-weight: 800; color: var(--black); text-align: center; background: var(--white); transition: border-color 0.18s, box-shadow 0.18s; -webkit-appearance: none; }
+    .frac-input::placeholder { color: #d1d5db; font-size: 1rem; font-weight: 400; }
+    .frac-input:focus { outline: none; border-color: var(--pink); box-shadow: 0 0 0 4px rgba(218,37,118,0.09); }
+    .frac-line { width: 120px; height: 3px; background: var(--dark); border-radius: 2px; margin: 4px 0; }
+    .frac-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray); margin-top: 6px; }
+    .frac-sep { font-size: 2rem; font-weight: 900; color: var(--gray); align-self: center; padding: 0 4px; }
+
+    /* Mixed number inputs */
+    .mixed-wrap { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+    .mixed-whole { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .mixed-input { width: 90px; padding: 14px 10px; border: 2px solid var(--border); border-radius: var(--radius); font-size: 1.4rem; font-family: var(--font); font-weight: 800; color: var(--black); text-align: center; background: var(--white); transition: border-color 0.18s, box-shadow 0.18s; -webkit-appearance: none; }
+    .mixed-input::placeholder { color: #d1d5db; font-size: 0.95rem; font-weight: 400; }
+    .mixed-input:focus { outline: none; border-color: var(--pink); box-shadow: 0 0 0 4px rgba(218,37,118,0.09); }
+    .mixed-plus { font-size: 1.6rem; font-weight: 900; color: var(--gray); align-self: center; }
+
+    /* Decimal input */
+    .dec-wrap { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 20px; }
+    .dec-input { width: 200px; padding: 16px 18px; border: 2px solid var(--border); border-radius: var(--radius); font-size: 1.4rem; font-family: var(--font); font-weight: 800; color: var(--black); text-align: center; background: var(--white); transition: border-color 0.18s, box-shadow 0.18s; -webkit-appearance: none; }
+    .dec-input::placeholder { color: #d1d5db; font-size: 1rem; font-weight: 400; }
+    .dec-input:focus { outline: none; border-color: var(--pink); box-shadow: 0 0 0 4px rgba(218,37,118,0.09); }
+
+    .calc-btn { width: 100%; padding: 16px; background: var(--pink); color: white; border: none; border-radius: var(--radius); font-size: 1.02rem; font-weight: 800; font-family: var(--font); cursor: pointer; letter-spacing: 0.3px; transition: background 0.18s, transform 0.1s, box-shadow 0.18s; margin-top: 4px; }
+    .calc-btn:hover { background: var(--pink-dark); box-shadow: 0 6px 20px rgba(218,37,118,0.28); }
+    .calc-btn:active { transform: scale(0.99); }
+
+    /* ===== RESULT ===== */
+    .result-box { display: none; margin-top: 22px; border-radius: var(--radius); overflow: hidden; animation: fadeIn 0.28s ease; }
+    .result-box.show { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Triple result row */
+    .res-triple { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .res-t-item { padding: 22px 14px; text-align: center; }
+    .res-t-item:nth-child(1) { background: linear-gradient(135deg, var(--pink) 0%, var(--pink-dark) 100%); }
+    .res-t-item:nth-child(2) { background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); }
+    .res-t-item:nth-child(3) { background: linear-gradient(135deg, #059669 0%, #047857 100%); }
+    .res-t-label { font-size: 0.67rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: rgba(255,255,255,0.7); margin-bottom: 5px; }
+    .res-t-val   { font-size: 1.65rem; font-weight: 900; color: white; letter-spacing: -1px; line-height: 1; }
+    .res-t-sub   { font-size: 0.72rem; color: rgba(255,255,255,0.65); margin-top: 5px; }
+
+    /* Pie chart visual */
+    .res-visual { background: var(--light-gray); padding: 20px; display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap; border-top: 1px solid var(--border); }
+    .pie-wrap { position: relative; width: 90px; height: 90px; flex-shrink: 0; }
+    .pie-svg { width: 90px; height: 90px; transform: rotate(-90deg); }
+    .pie-bg   { fill: none; stroke: var(--border); stroke-width: 18; }
+    .pie-fill { fill: none; stroke: var(--pink); stroke-width: 18; stroke-linecap: butt; transition: stroke-dasharray 0.5s ease; }
+    .pie-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 0.78rem; font-weight: 800; color: var(--black); }
+    .vis-facts { display: flex; flex-direction: column; gap: 6px; }
+    .vf-row { display: flex; gap: 10px; align-items: center; font-size: 0.84rem; }
+    .vf-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .vf-key { color: var(--gray); font-weight: 600; min-width: 90px; }
+    .vf-val { color: var(--dark); font-weight: 800; }
+
+    .res-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 2px solid var(--border); border-top: none; }
+    .res-meta-item { background: var(--light-gray); padding: 12px 14px; text-align: center; }
+    .res-meta-label { font-size: 0.67rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray); margin-bottom: 4px; }
+    .res-meta-val { font-size: 0.95rem; font-weight: 800; color: var(--black); }
+    .repeating-badge { display: inline-block; background: var(--amber-light, #fef3c7); color: #92400e; font-size: 0.67rem; font-weight: 700; padding: 2px 7px; border-radius: 100px; margin-left: 4px; }
+
+    .res-steps { background: var(--light-gray); padding: 18px 22px; border: 2px solid var(--border); border-top: none; border-radius: 0 0 var(--radius) var(--radius); }
+    .res-steps-title { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 10px; }
+    .res-steps ol { list-style: none; display: flex; flex-direction: column; gap: 7px; counter-reset: step; padding: 0; }
+    .res-steps ol li { counter-increment: step; display: flex; gap: 10px; font-size: 0.85rem; color: var(--dark); line-height: 1.55; }
+    .res-steps ol li::before { content: counter(step); min-width: 22px; height: 22px; background: var(--pink); color: white; border-radius: 50%; font-size: 0.72rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+
+    .err-msg { display: none; margin-top: 14px; padding: 11px 14px; background: #fef2f2; border: 1.5px solid #fecaca; border-radius: 10px; color: #dc2626; font-size: 0.84rem; font-weight: 500; }
+    .err-msg.show { display: block; }
+
+    /* ===== QUICK FRACTIONS ===== */
+    .examples-sec { max-width: 820px; margin: 0 auto; padding: 10px 20px 0; }
+    .examples-title { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray); margin-bottom: 10px; }
+    .examples-grid { display: flex; gap: 8px; flex-wrap: wrap; }
+    .ex-chip { padding: 7px 14px; background: var(--white); border: 1.5px solid var(--border); border-radius: 100px; font-size: 0.82rem; font-weight: 700; color: var(--dark); cursor: pointer; transition: all 0.18s; font-family: var(--font); }
+    .ex-chip:hover { border-color: var(--pink); color: var(--pink); background: var(--pink-xlight); }
+
+    /* ===== COMMON FRACTIONS TABLE ===== */
+    .ref-table-sec { max-width: 820px; margin: 0 auto; padding: 28px 20px 0; }
+    .ref-table-title { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray); margin-bottom: 12px; }
+    .ref-table-wrap { overflow-x: auto; border-radius: var(--radius); border: 2px solid var(--border); }
+    .ref-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+    .ref-table thead tr { background: var(--black); color: white; }
+    .ref-table thead th { padding: 11px 14px; text-align: left; font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .ref-table tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; cursor: pointer; }
+    .ref-table tbody tr:last-child { border-bottom: none; }
+    .ref-table tbody tr:hover { background: var(--pink-xlight); }
+    .ref-table tbody td { padding: 11px 14px; color: var(--dark); }
+    .ref-table tbody td:first-child { font-weight: 900; color: var(--pink); font-size: 1rem; }
+    .ref-table .pct-col { font-weight: 800; color: var(--black); }
+    .ref-table .dec-col { font-family: 'Courier New', monospace; color: var(--mid); }
+    .rep-dot { display: inline-block; border-bottom: 2px solid var(--dark); }
+    .try-btn { font-size: 0.72rem; padding: 3px 9px; background: var(--pink-light); color: var(--pink); border: none; border-radius: 100px; font-weight: 700; cursor: pointer; font-family: var(--font); transition: background 0.15s; }
+    .try-btn:hover { background: var(--pink); color: white; }
+
+    /* ===== CONTENT ===== */
+    .content-wrap { max-width: 880px; margin: 0 auto; padding: 56px 20px 16px; }
+    .content-wrap h2 { font-size: clamp(1.3rem, 3vw, 1.85rem); font-weight: 900; color: var(--black); letter-spacing: -0.6px; margin-bottom: 16px; }
+    .content-wrap h3 { font-size: 1.08rem; font-weight: 800; color: var(--black); margin: 32px 0 12px; }
+    .content-wrap p { color: var(--dark); line-height: 1.78; margin-bottom: 16px; font-size: 0.97rem; }
+    .content-wrap strong { color: var(--black); }
+
+    .formula-block { background: var(--light-gray); border: 2px solid var(--border); border-radius: var(--radius); padding: 18px 22px; margin: 20px 0; }
+    .formula-block .fb-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 8px; }
+    .formula-block code { font-size: 1rem; color: var(--black); font-family: 'Courier New', monospace; font-weight: 700; display: block; margin-bottom: 4px; }
+    .formula-block p { font-size: 0.84rem; color: var(--gray); margin: 0; line-height: 1.55; }
+
+    .example-block { background: var(--pink-xlight); border: 2px solid var(--pink-light); border-radius: var(--radius); padding: 22px 24px; margin: 20px 0; }
+    .example-block .eb-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 12px; }
+    .example-block p { margin-bottom: 8px; font-size: 0.92rem; line-height: 1.7; }
+    .example-block p:last-child { margin-bottom: 0; }
+
+    .steps { counter-reset: step; list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 16px 0; }
+    .steps li { display: flex; gap: 14px; align-items: flex-start; counter-increment: step; }
+    .steps li::before { content: counter(step); min-width: 28px; height: 28px; background: var(--pink); color: white; border-radius: 50%; font-size: 0.8rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .steps li span { color: var(--dark); font-size: 0.95rem; line-height: 1.65; }
+
+    .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0; }
+    .method-card { background: var(--white); border: 2px solid var(--border); border-radius: var(--radius); padding: 20px 18px; }
+    .mc-num { width: 32px; height: 32px; background: var(--pink); color: white; border-radius: 50%; font-size: 0.85rem; font-weight: 900; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+    .mc-title { font-size: 0.87rem; font-weight: 800; color: var(--black); margin-bottom: 8px; }
+    .mc-desc { font-size: 0.8rem; color: var(--gray); line-height: 1.55; }
+    .mc-eg { font-size: 0.8rem; color: var(--pink); font-weight: 700; margin-top: 6px; }
+
+    .table-wrap { overflow-x: auto; margin: 20px 0; border-radius: var(--radius); border: 2px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.89rem; }
+    thead tr { background: var(--black); color: white; }
+    thead th { padding: 13px 16px; text-align: left; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; }
+    tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: var(--pink-xlight); }
+    tbody td { padding: 13px 16px; color: var(--dark); line-height: 1.5; }
+    tbody td:first-child { font-weight: 700; color: var(--pink); }
+
+    .info-box { background: var(--blue-bg); border: 2px solid var(--blue-light); border-radius: var(--radius); padding: 20px 24px; margin: 20px 0; }
+    .info-box .ib-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--blue); margin-bottom: 10px; }
+    .info-box p { font-size: 0.91rem; color: #1e3a5f; margin-bottom: 8px; line-height: 1.65; }
+    .info-box p:last-child { margin-bottom: 0; }
+
+    .link-box { background: var(--black); border-radius: var(--radius); padding: 24px 26px; margin: 28px 0; color: white; }
+    .link-box h3 { color: var(--pink); margin-top: 0; margin-bottom: 14px; font-size: 0.97rem; }
+    .link-box ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .link-box ul li { font-size: 0.87rem; color: rgba(255,255,255,0.78); padding-left: 20px; position: relative; }
+    .link-box ul li::before { content: '→'; position: absolute; left: 0; color: var(--pink); font-weight: 700; }
+    .link-box ul li a { color: var(--pink); text-decoration: none; font-weight: 700; }
+    .link-box ul li a:hover { text-decoration: underline; }
+
+    /* ===== FAQ ===== */
+    .faq-sec { max-width: 880px; margin: 0 auto; padding: 0 20px 64px; }
+    .sec-head { text-align: center; margin-bottom: 32px; }
+    .sec-tag { display: inline-block; background: var(--pink-light); color: var(--pink); font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; padding: 4px 12px; border-radius: 100px; margin-bottom: 12px; }
+    .sec-head h2 { font-size: clamp(1.35rem, 3vw, 2rem); font-weight: 900; color: var(--black); letter-spacing: -0.6px; margin-bottom: 6px; }
+    .sec-head p { font-size: 0.96rem; color: var(--gray); }
+    .faq-item { border: 2px solid var(--border); border-radius: var(--radius); margin-bottom: 10px; overflow: hidden; transition: border-color 0.2s; }
+    .faq-item.open { border-color: var(--pink); }
+    .faq-q { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 17px 20px; cursor: pointer; font-weight: 700; font-size: 0.93rem; color: var(--black); user-select: none; transition: background 0.15s; }
+    .faq-q:hover { background: var(--light-gray); }
+    .faq-ico { width: 26px; height: 26px; background: var(--pink-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--pink); font-size: 1.2rem; font-weight: 700; flex-shrink: 0; transition: transform 0.25s; }
+    .faq-item.open .faq-ico { transform: rotate(45deg); background: var(--pink); color: white; }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.32s ease, padding 0.32s; padding: 0 20px; }
+    .faq-item.open .faq-a { max-height: 500px; padding: 0 20px 18px; }
+    .faq-a p { color: var(--dark); font-size: 0.89rem; line-height: 1.72; }
+    .faq-a a { color: var(--pink); font-weight: 600; }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--black); color: white; padding: 60px 20px 36px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .f-brand .logo { margin-bottom: 14px; }
+    .f-brand .logo .logo-name { color: white; }
+    .f-brand p { font-size: 0.84rem; color: rgba(255,255,255,0.55); line-height: 1.7; max-width: 260px; }
+    .f-col h4 { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+    .f-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .f-col ul li a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.85rem; transition: color 0.18s; }
+    .f-col ul li a:hover { color: var(--pink); }
+    .footer-bottom { padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+    .footer-bottom a { color: var(--pink); text-decoration: none; }
+    .hr-line { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .hr-line hr { border: none; border-top: 1px solid var(--border); }
+
+    @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } .three-col { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) {
+      .main-nav { display: none; }
+      .hamburger { display: flex; }
+      .hero { padding: 40px 20px 28px; }
+      .calc-card { padding: 24px 18px 20px; }
+      .res-triple { grid-template-columns: 1fr; }
+      .res-meta { grid-template-columns: 1fr; }
+      .frac-input { width: 100px; font-size: 1.2rem; }
+      .mixed-input { width: 80px; font-size: 1.2rem; }
+    }
+    @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
+
+<!-- ========== HEADER ========== -->
 <header>
-  <nav>
-    <a href="/" class="logo">Calc<span>Percentage</span></a>
-    <button class="mobile-menu-btn" onclick="document.querySelector('nav ul').classList.toggle('open')">☰ Menu</button>
-    <ul>
-      <li><a href="/percentage-increase-calculator">% Increase</a></li>
-      <li><a href="/percentage-decrease-calculator">% Decrease</a></li>
-      <li><a href="/percentage-change-calculator">% Change</a></li>
-      <li><a href="/percentage-off-calculator">% Off</a></li>
-      <li><a href="/percent-error-calculator">% Error</a></li>
-      <li><a href="/discount-calculator">Discount</a></li>
-      <li><a href="/fraction-to-percentage">Fraction→%</a></li>
-    </ul>
+  <div class="header-wrap">
+    <a href="/" class="logo" aria-label="CalcPercentage — Home">
+      <div class="logo-icon">%</div>
+      <span class="logo-name"><span>Calc</span>Percentage</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/percentage-increase-calculator/">% Increase</a>
+      <a href="/percentage-decrease-calculator/">% Decrease</a>
+      <a href="/percentage-change-calculator/">% Change</a>
+      <a href="/fraction-to-percentage/" class="active" aria-current="page">Fraction → %</a>
+      <a href="/percent-off-calculator/">% Off</a>
+      <a href="/percent-error-calculator/">% Error</a>
+    </nav>
+    <button class="hamburger" id="hambBtn" aria-label="Open menu" aria-expanded="false" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="/">🏠 Percentage Calculator (Home)</a>
+    <a href="/fraction-to-percentage/" class="active">½ Fraction to Percentage Calculator</a>
+    <a href="/percentage-increase-calculator/">📈 Percentage Increase Calculator</a>
+    <a href="/percentage-decrease-calculator/">📉 Percentage Decrease Calculator</a>
+    <a href="/percentage-change-calculator/">🔄 Percentage Change Calculator</a>
+    <a href="/percentage-difference-calculator/">↔️ Percentage Difference Calculator</a>
+    <a href="/percent-error-calculator/">🔬 Percent Error Calculator</a>
+    <a href="/percent-off-calculator/">🏷️ Percent Off / Discount Calculator</a>
+    <a href="/what-is-percentage/">📖 What is a Percentage?</a>
+    <a href="/percentage-formula/">📐 Percentage Formulas</a>
   </nav>
 </header>
 
-<main>
-  <nav class="breadcrumb">
-    <a href="/">Home</a><span class="sep"> › </span><span>Fraction to Percentage</span>
-  </nav>
+<!-- ========== BREADCRUMB ========== -->
+<div class="breadcrumb-bar">
+  <ol class="breadcrumb" aria-label="Breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><span>Fraction to Percentage Calculator</span></li>
+  </ol>
+</div>
 
-  <div class="page-hero">
-    <h1>Fraction to Percentage Calculator</h1>
-    <p>Convert any fraction to a percentage instantly — enter numerator and denominator to get the exact percentage with step-by-step working.</p>
-  </div>
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-badge">½ → % Fraction Converter</div>
+  <h1>Fraction to<br><em>Percentage Calculator</em></h1>
+  <p class="hero-sub">Convert any fraction to a percentage instantly — simple fractions, mixed numbers, improper fractions, or decimals. Get the percentage, decimal, and simplified form with full step-by-step working.</p>
+</section>
 
+<!-- ========== CALCULATOR ========== -->
+<section class="calc-wrap" aria-label="Fraction to percentage calculator">
   <div class="calc-card">
-    <h2><span class="icon">½</span> Convert Fraction to Percentage</h2>
-    <div class="formula-box"><strong>Percentage = (Numerator ÷ Denominator) × 100</strong></div>
-    <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px;">
-      <div class="form-group" style="flex:1;margin-bottom:0;">
-        <label for="ftp_num">Numerator (top)</label>
-        <input type="number" id="ftp_num" placeholder="e.g. 18" step="any" oninput="calcFTP()" style="text-align:center;font-size:1.4rem;font-weight:700;">
+
+    <div class="mode-switch" role="tablist" aria-label="Input type">
+      <button class="mode-btn active" role="tab" aria-selected="true" onclick="switchMode('simple', this)">
+        Simple Fraction<br><small style="font-weight:500;opacity:0.7">e.g. 3/4 or 5/3</small>
+      </button>
+      <button class="mode-btn" role="tab" aria-selected="false" onclick="switchMode('mixed', this)">
+        Mixed Number<br><small style="font-weight:500;opacity:0.7">e.g. 2 3/4</small>
+      </button>
+      <button class="mode-btn" role="tab" aria-selected="false" onclick="switchMode('decimal', this)">
+        Decimal<br><small style="font-weight:500;opacity:0.7">e.g. 0.375</small>
+      </button>
+    </div>
+
+    <!-- MODE 1: Simple Fraction -->
+    <div class="mode-pane active" id="mode-simple">
+      <p class="calc-subtitle">Enter the numerator (top) and denominator (bottom) of your fraction. Works for proper fractions, improper fractions, and negative fractions.</p>
+      <div class="formula-strip" id="formula-simple">Percentage = (Numerator ÷ Denominator) × 100</div>
+      <div class="frac-input-wrap">
+        <div class="frac-stack">
+          <input type="number" id="s-num" class="frac-input" placeholder="3" step="any" inputmode="decimal" aria-label="Numerator">
+          <div class="frac-line"></div>
+          <input type="number" id="s-den" class="frac-input" placeholder="4" step="any" inputmode="decimal" aria-label="Denominator">
+          <div class="frac-label">Numerator / Denominator</div>
+        </div>
+        <div style="font-size:2.5rem;font-weight:900;color:var(--gray);align-self:center;">=</div>
+        <div style="font-size:2.5rem;font-weight:900;color:var(--pink);align-self:center;" id="live-preview">?%</div>
       </div>
-      <div style="text-align:center;padding-top:24px;">
-        <div style="font-size:2.5rem;color:var(--primary);font-weight:800;line-height:0.8;">—</div>
-        <div style="font-size:0.75rem;color:var(--text-muted);margin-top:2px;">÷</div>
+      <button class="calc-btn" onclick="calcSimple()">Convert Fraction to % →</button>
+      <div class="err-msg" id="s-err">⚠ Please enter valid numbers. Denominator cannot be zero.</div>
+      <div class="result-box" id="s-res">
+        <div class="res-triple">
+          <div class="res-t-item">
+            <div class="res-t-label">🎯 Percentage</div>
+            <div class="res-t-val" id="s-pct">—</div>
+            <div class="res-t-sub" id="s-pct-sub"></div>
+          </div>
+          <div class="res-t-item">
+            <div class="res-t-label">🔢 Decimal</div>
+            <div class="res-t-val" id="s-dec">—</div>
+            <div class="res-t-sub" id="s-dec-sub"></div>
+          </div>
+          <div class="res-t-item">
+            <div class="res-t-label">✂️ Simplified</div>
+            <div class="res-t-val" id="s-simp">—</div>
+            <div class="res-t-sub" id="s-simp-sub"></div>
+          </div>
+        </div>
+        <div class="res-visual">
+          <div class="pie-wrap">
+            <svg class="pie-svg" viewBox="0 0 36 36">
+              <circle class="pie-bg" cx="18" cy="18" r="9"/>
+              <circle class="pie-fill" cx="18" cy="18" r="9" id="s-pie-fill" stroke-dasharray="0 56.549"/>
+            </svg>
+            <div class="pie-label" id="s-pie-label">—</div>
+          </div>
+          <div class="vis-facts">
+            <div class="vf-row"><div class="vf-dot" style="background:var(--pink);"></div><div class="vf-key">Fraction:</div><div class="vf-val" id="s-vf-frac">—</div></div>
+            <div class="vf-row"><div class="vf-dot" style="background:var(--purple);"></div><div class="vf-key">As Decimal:</div><div class="vf-val" id="s-vf-dec">—</div></div>
+            <div class="vf-row"><div class="vf-dot" style="background:var(--green);"></div><div class="vf-key">As Percent:</div><div class="vf-val" id="s-vf-pct">—</div></div>
+            <div class="vf-row"><div class="vf-dot" style="background:var(--gray);"></div><div class="vf-key">Type:</div><div class="vf-val" id="s-vf-type">—</div></div>
+          </div>
+        </div>
+        <div class="res-meta">
+          <div class="res-meta-item">
+            <div class="res-meta-label">Original Fraction</div>
+            <div class="res-meta-val" id="s-meta-orig">—</div>
+          </div>
+          <div class="res-meta-item">
+            <div class="res-meta-label">Repeating Decimal?</div>
+            <div class="res-meta-val" id="s-meta-rep">—</div>
+          </div>
+          <div class="res-meta-item">
+            <div class="res-meta-label">Rounded (2 d.p.)</div>
+            <div class="res-meta-val" id="s-meta-round">—</div>
+          </div>
+        </div>
+        <div class="res-steps">
+          <div class="res-steps-title">📐 Step-by-Step Working</div>
+          <ol id="s-steps-list"></ol>
+        </div>
       </div>
-      <div class="form-group" style="flex:1;margin-bottom:0;">
-        <label for="ftp_den">Denominator (bottom)</label>
-        <input type="number" id="ftp_den" placeholder="e.g. 25" step="any" oninput="calcFTP()" style="text-align:center;font-size:1.4rem;font-weight:700;">
+    </div>
+
+    <!-- MODE 2: Mixed Number -->
+    <div class="mode-pane" id="mode-mixed">
+      <p class="calc-subtitle">Enter a mixed number — a whole number plus a fraction. For example: 2 and 3/4 means 2¾. The calculator converts it to an improper fraction first, then to a percentage.</p>
+      <div class="formula-strip">Mixed → Improper: (Whole × Den + Num) / Den → ÷ Den × 100</div>
+      <div class="mixed-wrap">
+        <div class="mixed-whole">
+          <input type="number" id="m-whole" class="mixed-input" placeholder="2" min="0" step="1" inputmode="numeric" aria-label="Whole number">
+          <div class="frac-label">Whole</div>
+        </div>
+        <div class="mixed-plus">+</div>
+        <div class="frac-stack">
+          <input type="number" id="m-num" class="mixed-input" placeholder="3" step="any" inputmode="decimal" aria-label="Numerator">
+          <div class="frac-line" style="width:90px;"></div>
+          <input type="number" id="m-den" class="mixed-input" placeholder="4" step="any" inputmode="decimal" aria-label="Denominator">
+          <div class="frac-label">Num / Den</div>
+        </div>
+        <div style="font-size:2rem;font-weight:900;color:var(--gray);align-self:center;">=</div>
+        <div style="font-size:2rem;font-weight:900;color:var(--pink);align-self:center;min-width:60px;" id="m-live-preview">?%</div>
+      </div>
+      <button class="calc-btn" onclick="calcMixed()">Convert Mixed Number to % →</button>
+      <div class="err-msg" id="m-err">⚠ Please enter valid numbers. Denominator cannot be zero.</div>
+      <div class="result-box" id="m-res">
+        <div class="res-triple">
+          <div class="res-t-item">
+            <div class="res-t-label">🎯 Percentage</div>
+            <div class="res-t-val" id="m-pct">—</div>
+            <div class="res-t-sub" id="m-pct-sub"></div>
+          </div>
+          <div class="res-t-item">
+            <div class="res-t-label">🔢 Improper Fraction</div>
+            <div class="res-t-val" id="m-improp">—</div>
+            <div class="res-t-sub">Converted form</div>
+          </div>
+          <div class="res-t-item">
+            <div class="res-t-label">📊 Decimal</div>
+            <div class="res-t-val" id="m-dec">—</div>
+            <div class="res-t-sub" id="m-dec-sub"></div>
+          </div>
+        </div>
+        <div class="res-meta">
+          <div class="res-meta-item">
+            <div class="res-meta-label">Mixed Number</div>
+            <div class="res-meta-val" id="m-meta-mixed">—</div>
+          </div>
+          <div class="res-meta-item">
+            <div class="res-meta-label">Improper Fraction</div>
+            <div class="res-meta-val" id="m-meta-improp">—</div>
+          </div>
+          <div class="res-meta-item">
+            <div class="res-meta-label">Final %</div>
+            <div class="res-meta-val" id="m-meta-pct">—</div>
+          </div>
+        </div>
+        <div class="res-steps">
+          <div class="res-steps-title">📐 Step-by-Step Working</div>
+          <ol id="m-steps-list"></ol>
+        </div>
       </div>
     </div>
-    <div id="ftp_result" class="result-box neutral">
-      <div class="result-main blue" id="ftp_ans" style="font-size:2.4rem;"></div>
-      <div class="result-label" id="ftp_decimal" style="margin-top:6px;"></div>
-      <div class="result-formula" id="ftp_formula" style="margin-top:10px;"></div>
+
+    <!-- MODE 3: Decimal -->
+    <div class="mode-pane" id="mode-decimal">
+      <p class="calc-subtitle">Enter any decimal number to instantly convert it to a percentage and find its simplified fraction form.</p>
+      <div class="formula-strip">Percentage = Decimal × 100 &nbsp;|&nbsp; Fraction = Decimal → p/q simplified</div>
+      <div class="dec-wrap">
+        <input type="number" id="d-val" class="dec-input" placeholder="0.75" step="any" inputmode="decimal" aria-label="Decimal value">
+        <div style="font-size:2rem;font-weight:900;color:var(--gray);">=</div>
+        <div style="font-size:2rem;font-weight:900;color:var(--pink);min-width:80px;" id="d-live-preview">?%</div>
+      </div>
+      <button class="calc-btn" onclick="calcDecimal()">Convert Decimal to % →</button>
+      <div class="err-msg" id="d-err">⚠ Please enter a valid decimal number.</div>
+      <div class="result-box" id="d-res">
+        <div class="res-triple">
+          <div class="res-t-item">
+            <div class="res-t-label">🎯 Percentage</div>
+            <div class="res-t-val" id="d-pct">—</div>
+            <div class="res-t-sub" id="d-pct-sub"></div>
+          </div>
+          <div class="res-t-item">
+            <div class="res-t-label">✂️ As Fraction</div>
+            <div class="res-t-val" id="d-frac">—</div>
+            <div class="res-t-sub">Simplified</div>
+          </div>
+          <div class="res-t-item">
+            <div class="res-t-label">🔢 Original Decimal</div>
+            <div class="res-t-val" id="d-dec">—</div>
+            <div class="res-t-sub" id="d-dec-sub"></div>
+          </div>
+        </div>
+        <div class="res-meta">
+          <div class="res-meta-item">
+            <div class="res-meta-label">Decimal Input</div>
+            <div class="res-meta-val" id="d-meta-dec">—</div>
+          </div>
+          <div class="res-meta-item">
+            <div class="res-meta-label">Fraction Form</div>
+            <div class="res-meta-val" id="d-meta-frac">—</div>
+          </div>
+          <div class="res-meta-item">
+            <div class="res-meta-label">Percentage</div>
+            <div class="res-meta-val" id="d-meta-pct">—</div>
+          </div>
+        </div>
+        <div class="res-steps">
+          <div class="res-steps-title">📐 Step-by-Step Working</div>
+          <ol id="d-steps-list"></ol>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== QUICK FRACTIONS ========== -->
+<div class="examples-sec">
+  <div class="examples-title">⚡ Common Fractions — Click to Convert</div>
+  <div class="examples-grid">
+    <button class="ex-chip" onclick="loadSimple(1,2)">½</button>
+    <button class="ex-chip" onclick="loadSimple(1,3)">⅓</button>
+    <button class="ex-chip" onclick="loadSimple(2,3)">⅔</button>
+    <button class="ex-chip" onclick="loadSimple(1,4)">¼</button>
+    <button class="ex-chip" onclick="loadSimple(3,4)">¾</button>
+    <button class="ex-chip" onclick="loadSimple(1,5)">1/5</button>
+    <button class="ex-chip" onclick="loadSimple(2,5)">2/5</button>
+    <button class="ex-chip" onclick="loadSimple(3,5)">3/5</button>
+    <button class="ex-chip" onclick="loadSimple(4,5)">4/5</button>
+    <button class="ex-chip" onclick="loadSimple(1,8)">1/8</button>
+    <button class="ex-chip" onclick="loadSimple(3,8)">3/8</button>
+    <button class="ex-chip" onclick="loadSimple(5,8)">5/8</button>
+    <button class="ex-chip" onclick="loadSimple(7,8)">7/8</button>
+    <button class="ex-chip" onclick="loadSimple(1,6)">1/6</button>
+    <button class="ex-chip" onclick="loadSimple(5,6)">5/6</button>
+    <button class="ex-chip" onclick="loadSimple(7,4)">7/4</button>
+    <button class="ex-chip" onclick="loadMixed(1,1,2)">1½</button>
+    <button class="ex-chip" onclick="loadMixed(2,3,4)">2¾</button>
+  </div>
+</div>
+
+<!-- ========== REFERENCE TABLE ========== -->
+<div class="ref-table-sec">
+  <div class="ref-table-title">📊 Common Fractions → Percentages Reference Table</div>
+  <div class="ref-table-wrap">
+    <table class="ref-table">
+      <thead>
+        <tr>
+          <th>Fraction</th>
+          <th>Percentage</th>
+          <th>Decimal</th>
+          <th>Simplified</th>
+          <th>Try It</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1/2</td><td class="pct-col">50%</td><td class="dec-col">0.5</td><td>1/2</td><td><button class="try-btn" onclick="loadSimple(1,2)">→ Try</button></td></tr>
+        <tr><td>1/3</td><td class="pct-col">33.3̄%</td><td class="dec-col">0.3̄</td><td>1/3</td><td><button class="try-btn" onclick="loadSimple(1,3)">→ Try</button></td></tr>
+        <tr><td>2/3</td><td class="pct-col">66.6̄%</td><td class="dec-col">0.6̄</td><td>2/3</td><td><button class="try-btn" onclick="loadSimple(2,3)">→ Try</button></td></tr>
+        <tr><td>1/4</td><td class="pct-col">25%</td><td class="dec-col">0.25</td><td>1/4</td><td><button class="try-btn" onclick="loadSimple(1,4)">→ Try</button></td></tr>
+        <tr><td>3/4</td><td class="pct-col">75%</td><td class="dec-col">0.75</td><td>3/4</td><td><button class="try-btn" onclick="loadSimple(3,4)">→ Try</button></td></tr>
+        <tr><td>1/5</td><td class="pct-col">20%</td><td class="dec-col">0.2</td><td>1/5</td><td><button class="try-btn" onclick="loadSimple(1,5)">→ Try</button></td></tr>
+        <tr><td>2/5</td><td class="pct-col">40%</td><td class="dec-col">0.4</td><td>2/5</td><td><button class="try-btn" onclick="loadSimple(2,5)">→ Try</button></td></tr>
+        <tr><td>3/5</td><td class="pct-col">60%</td><td class="dec-col">0.6</td><td>3/5</td><td><button class="try-btn" onclick="loadSimple(3,5)">→ Try</button></td></tr>
+        <tr><td>4/5</td><td class="pct-col">80%</td><td class="dec-col">0.8</td><td>4/5</td><td><button class="try-btn" onclick="loadSimple(4,5)">→ Try</button></td></tr>
+        <tr><td>1/6</td><td class="pct-col">16.6̄%</td><td class="dec-col">0.1̄6̄</td><td>1/6</td><td><button class="try-btn" onclick="loadSimple(1,6)">→ Try</button></td></tr>
+        <tr><td>5/6</td><td class="pct-col">83.3̄%</td><td class="dec-col">0.8̄3̄</td><td>5/6</td><td><button class="try-btn" onclick="loadSimple(5,6)">→ Try</button></td></tr>
+        <tr><td>1/7</td><td class="pct-col">14.285714…%</td><td class="dec-col">0.142857…</td><td>1/7</td><td><button class="try-btn" onclick="loadSimple(1,7)">→ Try</button></td></tr>
+        <tr><td>1/8</td><td class="pct-col">12.5%</td><td class="dec-col">0.125</td><td>1/8</td><td><button class="try-btn" onclick="loadSimple(1,8)">→ Try</button></td></tr>
+        <tr><td>3/8</td><td class="pct-col">37.5%</td><td class="dec-col">0.375</td><td>3/8</td><td><button class="try-btn" onclick="loadSimple(3,8)">→ Try</button></td></tr>
+        <tr><td>5/8</td><td class="pct-col">62.5%</td><td class="dec-col">0.625</td><td>5/8</td><td><button class="try-btn" onclick="loadSimple(5,8)">→ Try</button></td></tr>
+        <tr><td>7/8</td><td class="pct-col">87.5%</td><td class="dec-col">0.875</td><td>7/8</td><td><button class="try-btn" onclick="loadSimple(7,8)">→ Try</button></td></tr>
+        <tr><td>1/9</td><td class="pct-col">11.1̄%</td><td class="dec-col">0.1̄</td><td>1/9</td><td><button class="try-btn" onclick="loadSimple(1,9)">→ Try</button></td></tr>
+        <tr><td>1/10</td><td class="pct-col">10%</td><td class="dec-col">0.1</td><td>1/10</td><td><button class="try-btn" onclick="loadSimple(1,10)">→ Try</button></td></tr>
+        <tr><td>3/10</td><td class="pct-col">30%</td><td class="dec-col">0.3</td><td>3/10</td><td><button class="try-btn" onclick="loadSimple(3,10)">→ Try</button></td></tr>
+        <tr><td>7/10</td><td class="pct-col">70%</td><td class="dec-col">0.7</td><td>7/10</td><td><button class="try-btn" onclick="loadSimple(7,10)">→ Try</button></td></tr>
+        <tr><td>5/4</td><td class="pct-col">125%</td><td class="dec-col">1.25</td><td>5/4</td><td><button class="try-btn" onclick="loadSimple(5,4)">→ Try</button></td></tr>
+        <tr><td>3/2</td><td class="pct-col">150%</td><td class="dec-col">1.5</td><td>3/2</td><td><button class="try-btn" onclick="loadSimple(3,2)">→ Try</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ========== CONTENT ========== -->
+<div class="hr-line" style="margin-top:44px;"><hr></div>
+<section class="content-wrap">
+
+  <h2>How to Convert a Fraction to a Percentage</h2>
+
+  <p>Converting a fraction to a percentage is one of the most frequently used maths conversions in school, everyday life, and professional work. The core principle is simple: a percentage is a fraction <em>with a denominator of 100</em>. So converting any fraction to a percentage is just a matter of rescaling it so the denominator becomes 100.</p>
+
+  <p>There are two equivalent methods to do this — both give the same result.</p>
+
+  <div class="three-col">
+    <div class="method-card">
+      <div class="mc-num">1</div>
+      <div class="mc-title">Divide & Multiply</div>
+      <div class="mc-desc">Divide numerator by denominator to get the decimal, then multiply by 100. Works for all fractions.</div>
+      <div class="mc-eg">3/4 → 3÷4=0.75 → 0.75×100 = 75%</div>
+    </div>
+    <div class="method-card">
+      <div class="mc-num">2</div>
+      <div class="mc-title">Multiply Fraction by 100</div>
+      <div class="mc-desc">Multiply the entire fraction by 100 and simplify. Best for fractions with "nice" denominators.</div>
+      <div class="mc-eg">3/4 × 100 = 300/4 = 75%</div>
+    </div>
+    <div class="method-card">
+      <div class="mc-num">3</div>
+      <div class="mc-title">Scale to /100</div>
+      <div class="mc-desc">Scale the fraction so denominator equals 100 by multiplying both parts by (100 ÷ denominator).</div>
+      <div class="mc-eg">3/4: factor=25 → 75/100 = 75%</div>
     </div>
   </div>
 
-  <!-- Large Reference Table -->
-  <div class="content-article">
-    <h2>Common Fractions as Percentages — Reference Table</h2>
+  <h3>The Fraction to Percentage Formula</h3>
 
-    <h3>Halves, Thirds, Quarters, Fifths</h3>
-    <div class="table-wrapper">
-      <table class="data-table">
-        <thead><tr><th>Fraction</th><th>Decimal</th><th>Percentage</th></tr></thead>
-        <tbody>
-          <tr><td>1/2</td><td>0.5</td><td>50%</td></tr>
-          <tr><td>1/3</td><td>0.3333...</td><td>33.33%</td></tr>
-          <tr><td>2/3</td><td>0.6667...</td><td>66.67%</td></tr>
-          <tr><td>1/4</td><td>0.25</td><td>25%</td></tr>
-          <tr><td>3/4</td><td>0.75</td><td>75%</td></tr>
-          <tr><td>1/5</td><td>0.2</td><td>20%</td></tr>
-          <tr><td>2/5</td><td>0.4</td><td>40%</td></tr>
-          <tr><td>3/5</td><td>0.6</td><td>60%</td></tr>
-          <tr><td>4/5</td><td>0.8</td><td>80%</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3>Out of 20, 25, 40 (Common in Tests &amp; Exams)</h3>
-    <div class="table-wrapper">
-      <table class="data-table">
-        <thead><tr><th>Fraction</th><th>Calculation</th><th>Percentage</th></tr></thead>
-        <tbody>
-          <tr><td>12/20 (12 out of 20)</td><td>(12÷20)×100</td><td>60%</td></tr>
-          <tr><td>14/20</td><td>(14÷20)×100</td><td>70%</td></tr>
-          <tr><td>16/20</td><td>(16÷20)×100</td><td>80%</td></tr>
-          <tr><td>18/20</td><td>(18÷20)×100</td><td>90%</td></tr>
-          <tr><td>15/25</td><td>(15÷25)×100</td><td>60%</td></tr>
-          <tr><td>18/25</td><td>(18÷25)×100</td><td>72%</td></tr>
-          <tr><td>20/25</td><td>(20÷25)×100</td><td>80%</td></tr>
-          <tr><td>22/25</td><td>(22÷25)×100</td><td>88%</td></tr>
-          <tr><td>24/40</td><td>(24÷40)×100</td><td>60%</td></tr>
-          <tr><td>27/40</td><td>(27÷40)×100</td><td>67.5%</td></tr>
-          <tr><td>28/40</td><td>(28÷40)×100</td><td>70%</td></tr>
-          <tr><td>30/40</td><td>(30÷40)×100</td><td>75%</td></tr>
-          <tr><td>32/40</td><td>(32÷40)×100</td><td>80%</td></tr>
-          <tr><td>35/40</td><td>(35÷40)×100</td><td>87.5%</td></tr>
-          <tr><td>38/40</td><td>(38÷40)×100</td><td>95%</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3>Eighths</h3>
-    <div class="table-wrapper">
-      <table class="data-table">
-        <thead><tr><th>Fraction</th><th>Percentage</th></tr></thead>
-        <tbody>
-          <tr><td>1/8</td><td>12.5%</td></tr>
-          <tr><td>3/8</td><td>37.5%</td></tr>
-          <tr><td>5/8</td><td>62.5%</td></tr>
-          <tr><td>7/8</td><td>87.5%</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3>How to Convert a Fraction to a Percentage</h3>
-    <div class="formula-highlight">Step 1: Divide numerator by denominator<br>Step 2: Multiply by 100<br>Step 3: Add the % symbol</div>
-    <p><strong>Example:</strong> Convert 18/25 to a percentage:<br><code>18 ÷ 25 = 0.72</code> → <code>0.72 × 100 = 72%</code></p>
-
-    <div class="tip-box"><strong>💡 School tip:</strong> For test scores, divide your score by the total marks and multiply by 100. Got 27 out of 40? <code>27 ÷ 40 × 100 = 67.5%</code>.</div>
+  <div class="formula-block">
+    <div class="fb-label">Standard Formula</div>
+    <code>Percentage = (Numerator ÷ Denominator) × 100</code>
+    <p>Or equivalently: Percentage = (Numerator / Denominator) × 100%</p>
   </div>
 
-  <div class="faq-section">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <div class="faq-q">What is 18 out of 25 as a percentage?</div>
-      <div class="faq-a">(18 ÷ 25) × 100 = <strong>72%</strong></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What is 35 out of 40 as a percentage?</div>
-      <div class="faq-a">(35 ÷ 40) × 100 = <strong>87.5%</strong></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What is 16 out of 20 as a percentage?</div>
-      <div class="faq-a">(16 ÷ 20) × 100 = <strong>80%</strong></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What is 27 out of 40 as a percentage?</div>
-      <div class="faq-a">(27 ÷ 40) × 100 = <strong>67.5%</strong></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What is 28 out of 40 as a percentage?</div>
-      <div class="faq-a">(28 ÷ 40) × 100 = <strong>70%</strong></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What is 1/5 as a percentage?</div>
-      <div class="faq-a">(1 ÷ 5) × 100 = <strong>20%</strong></div>
-    </div>
+  <div class="formula-block">
+    <div class="fb-label">Mixed Number Formula</div>
+    <code>Step 1 — Improper fraction: ((Whole × Denominator) + Numerator) / Denominator</code>
+    <code>Step 2 — Percentage: Improper Fraction × 100</code>
+    <p>Example: 2 3/4 → ((2×4)+3)/4 = 11/4 → 11÷4×100 = 275%</p>
   </div>
 
-  <div class="related-section">
-    <h3>Related Calculators</h3>
-    <div class="related-links">
-      <a href="/">Percentage Calculator</a>
-      <a href="/what-percentage-of">What Percentage Of</a>
-      <a href="/percentage-of-number">Percentage of a Number</a>
-      <a href="/percentage-formula">Percentage Formulas</a>
-      <a href="/how-to-calculate-percentage">How to Calculate %</a>
-    </div>
-  </div>
-</main>
+  <h3>Step-by-Step: How to Convert a Fraction to a Percentage</h3>
 
+  <ol class="steps">
+    <li><span><strong>Identify the numerator and denominator.</strong> In 3/4, the numerator is 3 and the denominator is 4.</span></li>
+    <li><span><strong>Divide:</strong> Numerator ÷ Denominator → 3 ÷ 4 = 0.75.</span></li>
+    <li><span><strong>Multiply by 100:</strong> 0.75 × 100 = 75.</span></li>
+    <li><span><strong>Add the % symbol:</strong> The answer is <strong>75%</strong>.</span></li>
+  </ol>
+
+  <div class="example-block">
+    <div class="eb-label">✦ Worked Example — 7/8 to Percentage</div>
+    <p><strong>Fraction:</strong> 7/8</p>
+    <p><strong>Step 1 — Divide:</strong> 7 ÷ 8 = <strong>0.875</strong></p>
+    <p><strong>Step 2 — Multiply:</strong> 0.875 × 100 = <strong>87.5%</strong></p>
+    <p><strong>Verify (scale method):</strong> 8 × 12.5 = 100, so 7 × 12.5 = 87.5 → 87.5/100 = <strong>87.5% ✓</strong></p>
+  </div>
+
+  <div class="example-block">
+    <div class="eb-label">✦ Worked Example — Mixed Number 3 2/5 to Percentage</div>
+    <p><strong>Mixed Number:</strong> 3 2/5</p>
+    <p><strong>Step 1 — Convert to improper fraction:</strong> (3 × 5) + 2 = 17 → <strong>17/5</strong></p>
+    <p><strong>Step 2 — Divide:</strong> 17 ÷ 5 = <strong>3.4</strong></p>
+    <p><strong>Step 3 — Multiply:</strong> 3.4 × 100 = <strong>340%</strong></p>
+    <p>(Mixed numbers always exceed 100% since they are greater than 1)</p>
+  </div>
+
+  <h3>Repeating Decimals — When the Conversion Doesn't Terminate</h3>
+
+  <div class="info-box">
+    <div class="ib-label">♾️ Fractions That Produce Repeating Decimals</div>
+    <p>Some fractions, when divided, produce a decimal that repeats indefinitely: 1/3 = 0.333… = 33.333…%. These are called <strong>repeating decimals</strong>. They occur whenever the denominator has prime factors other than 2 and 5 (which are the prime factors of 10).</p>
+    <p><strong>Common repeating examples:</strong> 1/3 = 33.3̄%, 1/6 = 16.6̄%, 1/7 ≈ 14.2857%, 1/9 = 11.1̄%, 2/3 = 66.6̄%</p>
+    <p><strong>Terminating examples</strong> (denominator has only 2s and 5s): 1/2 = 50%, 1/4 = 25%, 1/5 = 20%, 1/8 = 12.5%, 3/20 = 15% — these divide cleanly.</p>
+    <p>Our calculator detects repeating decimals and marks them automatically.</p>
+  </div>
+
+  <h3>Improper Fractions (Percentages Over 100%)</h3>
+
+  <p>An <strong>improper fraction</strong> has a numerator larger than its denominator — such as 5/3, 7/4, or 11/8. When converted to a percentage, these always yield a value <strong>greater than 100%</strong>. This is perfectly valid: it simply means the fraction represents more than one whole.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Fraction</th><th>Division</th><th>Percentage</th><th>Mixed Number</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>5/4</td><td>5 ÷ 4 = 1.25</td><td><strong>125%</strong></td><td>1¼</td></tr>
+        <tr><td>3/2</td><td>3 ÷ 2 = 1.50</td><td><strong>150%</strong></td><td>1½</td></tr>
+        <tr><td>7/4</td><td>7 ÷ 4 = 1.75</td><td><strong>175%</strong></td><td>1¾</td></tr>
+        <tr><td>8/3</td><td>8 ÷ 3 = 2.666…</td><td><strong>266.7%</strong></td><td>2⅔</td></tr>
+        <tr><td>11/4</td><td>11 ÷ 4 = 2.75</td><td><strong>275%</strong></td><td>2¾</td></tr>
+        <tr><td>5/2</td><td>5 ÷ 2 = 2.50</td><td><strong>250%</strong></td><td>2½</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>How to Simplify a Fraction Before Converting</h3>
+
+  <p>While simplifying a fraction before converting is optional (you get the same percentage either way), it is good mathematical practice. To simplify, find the <strong>Greatest Common Divisor (GCD)</strong> of the numerator and denominator and divide both by it.</p>
+
+  <div class="example-block">
+    <div class="eb-label">✦ Simplify First: 12/16 to Percentage</div>
+    <p><strong>GCD(12, 16):</strong> Factors of 12: 1, 2, 3, 4, 6, 12 | Factors of 16: 1, 2, 4, 8, 16 → GCD = <strong>4</strong></p>
+    <p><strong>Simplified:</strong> 12÷4 / 16÷4 = <strong>3/4</strong></p>
+    <p><strong>Convert:</strong> 3 ÷ 4 × 100 = <strong>75%</strong></p>
+    <p><strong>Or directly:</strong> 12 ÷ 16 × 100 = <strong>75%</strong> — same answer, either way.</p>
+  </div>
+
+  <div class="link-box">
+    <h3>🔗 Related Calculators</h3>
+    <ul>
+      <li>Calculate what % one number is of another — <a href="/">Percentage Calculator (Home)</a></li>
+      <li>A value increased? Use the <a href="/percentage-increase-calculator/">Percentage Increase Calculator</a></li>
+      <li>Shopping discount? Use the <a href="/percent-off-calculator/">Percent Off / Discount Calculator</a></li>
+      <li>Before-and-after change? Use the <a href="/percentage-change-calculator/">Percentage Change Calculator</a></li>
+      <li>Compare two values? Use the <a href="/percentage-difference-calculator/">Percentage Difference Calculator</a></li>
+      <li>Understand the basics — <a href="/what-is-percentage/">What is a Percentage?</a></li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- ========== FAQ ========== -->
+<div class="hr-line"><hr></div>
+<section class="faq-sec" aria-label="FAQ Fraction to Percentage">
+  <div class="sec-head">
+    <div class="sec-tag">FAQ</div>
+    <h2>Fraction to Percentage — FAQs</h2>
+    <p>Common questions about converting fractions to percentages</p>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do you convert a fraction to a percentage?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Divide the numerator by the denominator, then multiply by 100. Formula: <strong>% = (Numerator ÷ Denominator) × 100</strong>. Example: 3/4 → 3 ÷ 4 = 0.75 → 0.75 × 100 = <strong>75%</strong>. Use the calculator above for any fraction instantly.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What is 3/4 as a percentage?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>3/4 as a percentage is <strong>75%</strong>. Working: 3 ÷ 4 = 0.75, then 0.75 × 100 = 75%. Alternatively: scale to /100 — multiply both by 25 → 75/100 = 75%.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What is 1/3 as a percentage?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>1/3 as a percentage is <strong>33.333…%</strong> (often written 33⅓% or 33.3̄%). It is a repeating decimal: 1 ÷ 3 = 0.3̄, then × 100 = 33.3̄%. It cannot be expressed as an exact terminating decimal, so it is commonly rounded to 33.33% or 33.3%.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What is 2/3 as a percentage?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>2/3 as a percentage is <strong>66.666…%</strong> (66⅔% or 66.6̄%). Working: 2 ÷ 3 = 0.666…, then × 100 = 66.6̄%. Commonly rounded to 66.67% or 66.7%.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do you convert a mixed number to a percentage?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Step 1 — Convert to an improper fraction: multiply the whole number by the denominator and add the numerator, keeping the same denominator. Step 2 — Divide by denominator and multiply by 100. Example: 2 3/4 → (2×4+3)/4 = 11/4 → 11÷4×100 = <strong>275%</strong>. Use the "Mixed Number" tab above.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What fractions give repeating decimals when converted to percentages?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>A fraction produces a repeating decimal whenever the denominator (in its fully simplified form) has prime factors <em>other than</em> 2 and 5. Common examples: <strong>1/3 = 33.3̄%, 1/6 = 16.6̄%, 1/7 ≈ 14.285714%, 1/9 = 11.1̄%, 2/3 = 66.6̄%</strong>. Fractions with denominators of 2, 4, 5, 8, 10, 16, 20, 25 always terminate.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">Can a fraction to percentage conversion exceed 100%?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Yes — any improper fraction (numerator > denominator) or mixed number (whole part ≥ 1) will produce a percentage greater than 100%. Examples: 5/4 = 125%, 7/3 = 233.3̄%, 2½ = 250%. This is completely valid — it simply means the value is more than one whole.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What is 1/8 as a percentage?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>1/8 as a percentage is <strong>12.5%</strong>. Working: 1 ÷ 8 = 0.125, then 0.125 × 100 = 12.5%. This is a terminating decimal because 8 = 2³ (only has 2 as a prime factor).</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">Does simplifying a fraction change the percentage?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>No — simplifying a fraction never changes its value, and therefore never changes the percentage. 12/16 = 3/4 = 75%, whether you simplify first or not. The simplified form is just easier to work with mentally. Our calculator automatically shows the simplified form alongside the percentage result.</p></div>
+  </div>
+
+</section>
+
+<!-- ========== FOOTER ========== -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-links">
-      <a href="/">Percentage Calculator</a>
-      <a href="/percentage-increase-calculator">Percentage Increase</a>
-      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
-      <a href="/percentage-change-calculator">Percentage Change</a>
-      <a href="/percentage-difference-calculator">Percentage Difference</a>
-      <a href="/percentage-off-calculator">Percentage Off</a>
-      <a href="/percent-error-calculator">Percent Error</a>
-      <a href="/what-percentage-of">What Percentage Of</a>
-      <a href="/percentage-of-number">Percentage of a Number</a>
-      <a href="/money-percentage-calculator">Money Calculator</a>
-      <a href="/discount-calculator">Discount Calculator</a>
-      <a href="/fraction-to-percentage">Fraction to %</a>
-      <a href="/sales-percentage-calculator">Sales Calculator</a>
-      <a href="/percentage-formula">Percentage Formula</a>
-      <a href="/how-to-calculate-percentage">How to Calculate %</a>
-      <a href="/sitemap.xml">Sitemap</a>
+    <div class="footer-grid">
+      <div class="f-brand">
+        <a href="/" class="logo" aria-label="CalcPercentage Home">
+          <div class="logo-icon">%</div>
+          <span class="logo-name"><span style="color:var(--pink)">Calc</span>Percentage</span>
+        </a>
+        <p>Free online percentage calculators for every percentage problem. Fast, accurate, mobile-friendly — no ads blocking your results.</p>
+      </div>
+      <div class="f-col">
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/">Percentage Calculator</a></li>
+          <li><a href="/fraction-to-percentage/">Fraction to Percentage</a></li>
+          <li><a href="/percentage-increase-calculator/">% Increase Calculator</a></li>
+          <li><a href="/percentage-decrease-calculator/">% Decrease Calculator</a></li>
+          <li><a href="/percentage-change-calculator/">% Change Calculator</a></li>
+          <li><a href="/percent-off-calculator/">% Off / Discount Calculator</a></li>
+          <li><a href="/percent-error-calculator/">% Error Calculator</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/what-is-percentage/">What is a Percentage?</a></li>
+          <li><a href="/percentage-formula/">Percentage Formulas</a></li>
+          <li><a href="/how-to-calculate-percentage/">How to Calculate %</a></li>
+          <li><a href="/percentage-difference-calculator/">% Difference vs % Change</a></li>
+          <li><a href="/percent-error-calculator/">How to Calculate % Error</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>More</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <p>© 2026 CalcPercentage.vercel.app — Free Online Percentage Calculator</p>
+    <div class="footer-bottom">
+      <p>© <span id="yr"></span> CalcPercentage.vercel.app — All rights reserved.</p>
+      <p>Made with ♥ for fast, free percentage calculations.</p>
+    </div>
   </div>
 </footer>
 
+<!-- ========== JAVASCRIPT ========== -->
 <script>
-function fmt(n) {
-  if (n === null || isNaN(n) || !isFinite(n)) return null;
-  return parseFloat(n.toFixed(6)).toLocaleString('en-AU', {maximumFractionDigits: 4});
-}
-function calcFTP() {
-  var num = parseFloat(document.getElementById('ftp_num').value);
-  var den = parseFloat(document.getElementById('ftp_den').value);
-  var box = document.getElementById('ftp_result');
-  if (isNaN(num) || isNaN(den) || den === 0) { box.classList.remove('show'); return; }
-  var decimal = num / den;
-  var pct = decimal * 100;
-  document.getElementById('ftp_ans').textContent = num + '/' + den + ' = ' + fmt(pct) + '%';
-  document.getElementById('ftp_decimal').textContent = 'Decimal form: ' + fmt(decimal);
-  document.getElementById('ftp_formula').textContent = '(' + num + ' ÷ ' + den + ') × 100 = ' + fmt(decimal) + ' × 100 = ' + fmt(pct) + '%';
-  box.classList.add('show');
-}
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // ---- NAV ----
+  function toggleNav() {
+    const nav = document.getElementById('mobileNav'), btn = document.getElementById('hambBtn');
+    const isOpen = nav.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen);
+  }
+  document.addEventListener('click', function(e) {
+    const nav = document.getElementById('mobileNav'), btn = document.getElementById('hambBtn');
+    if (!nav.contains(e.target) && !btn.contains(e.target)) {
+      nav.classList.remove('open'); btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // ---- MODE SWITCH ----
+  function switchMode(id, btn) {
+    document.querySelectorAll('.mode-pane').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.mode-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+    document.getElementById('mode-' + id).classList.add('active');
+    btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+  }
+
+  // ---- HELPERS ----
+  function gcd(a, b) { a = Math.abs(a); b = Math.abs(b); return b < 0.0001 ? a : gcd(b, a % b); }
+
+  function simplify(num, den) {
+    if (den === 0) return [num, den];
+    const g = gcd(Math.abs(Math.round(num)), Math.abs(Math.round(den)));
+    return [Math.round(num) / g, Math.round(den) / g];
+  }
+
+  function fmtNum(n, dp = 6) {
+    if (Number.isInteger(n)) return n.toString();
+    return parseFloat(n.toFixed(dp)).toString().replace(/\.?0+$/, '');
+  }
+
+  function isRepeating(num, den) {
+    let d = Math.abs(Math.round(den));
+    const g = gcd(Math.abs(Math.round(num)), d);
+    d = d / g;
+    while (d % 2 === 0) d /= 2;
+    while (d % 5 === 0) d /= 5;
+    return d !== 1;
+  }
+
+  function renderSteps(id, steps) {
+    const ol = document.getElementById(id);
+    if (ol) ol.innerHTML = steps.map(s => `<li>${s}</li>`).join('');
+  }
+
+  function updatePie(fillId, labelId, pct) {
+    const clamped = Math.min(Math.max(pct, 0), 100);
+    const circ = 2 * Math.PI * 9;
+    const filled = (clamped / 100) * circ;
+    const el = document.getElementById(fillId);
+    if (el) el.setAttribute('stroke-dasharray', `${filled.toFixed(3)} ${(circ - filled).toFixed(3)}`);
+    const lbl = document.getElementById(labelId);
+    if (lbl) lbl.textContent = fmtNum(pct, 1) + '%';
+  }
+
+  function getFractionType(num, den) {
+    const absNum = Math.abs(num), absDen = Math.abs(den);
+    if (num < 0 || den < 0) return 'Negative';
+    if (absNum === absDen) return 'Whole (= 1)';
+    if (absNum < absDen) return 'Proper Fraction';
+    return 'Improper Fraction';
+  }
+
+  // ---- LIVE PREVIEW ----
+  document.getElementById('s-num').addEventListener('input', livePreviewSimple);
+  document.getElementById('s-den').addEventListener('input', livePreviewSimple);
+  function livePreviewSimple() {
+    const n = parseFloat(document.getElementById('s-num').value);
+    const d = parseFloat(document.getElementById('s-den').value);
+    if (!isNaN(n) && !isNaN(d) && d !== 0) {
+      document.getElementById('live-preview').textContent = fmtNum((n / d) * 100, 4) + '%';
+    } else {
+      document.getElementById('live-preview').textContent = '?%';
+    }
+  }
+
+  ['m-whole','m-num','m-den'].forEach(id => document.getElementById(id).addEventListener('input', livePreviewMixed));
+  function livePreviewMixed() {
+    const w = parseFloat(document.getElementById('m-whole').value) || 0;
+    const n = parseFloat(document.getElementById('m-num').value) || 0;
+    const d = parseFloat(document.getElementById('m-den').value);
+    if (!isNaN(d) && d !== 0) {
+      const impropNum = w * d + n;
+      document.getElementById('m-live-preview').textContent = fmtNum((impropNum / d) * 100, 4) + '%';
+    } else {
+      document.getElementById('m-live-preview').textContent = '?%';
+    }
+  }
+
+  document.getElementById('d-val').addEventListener('input', livePreviewDec);
+  function livePreviewDec() {
+    const v = parseFloat(document.getElementById('d-val').value);
+    if (!isNaN(v)) document.getElementById('d-live-preview').textContent = fmtNum(v * 100, 4) + '%';
+    else document.getElementById('d-live-preview').textContent = '?%';
+  }
+
+  // ---- MODE 1: Simple Fraction ----
+  function calcSimple() {
+    const num = parseFloat(document.getElementById('s-num').value);
+    const den = parseFloat(document.getElementById('s-den').value);
+    if (isNaN(num) || isNaN(den) || den === 0) {
+      document.getElementById('s-err').classList.add('show');
+      document.getElementById('s-res').classList.remove('show');
+      return;
+    }
+    document.getElementById('s-err').classList.remove('show');
+
+    const decimal = num / den;
+    const pct     = decimal * 100;
+    const rep     = isRepeating(num, den);
+    const [sn, sd] = simplify(num, den);
+    const type    = getFractionType(num, den);
+    const pctClamped = Math.min(Math.abs(pct), 100);
+
+    document.getElementById('s-res').classList.add('show');
+
+    // Triple
+    document.getElementById('s-pct').textContent     = fmtNum(pct, 4) + '%';
+    document.getElementById('s-pct-sub').textContent  = rep ? '(Repeating decimal)' : '(Exact)';
+    document.getElementById('s-dec').textContent      = fmtNum(decimal, 6);
+    document.getElementById('s-dec-sub').textContent  = rep ? 'Repeating' : 'Terminating';
+    document.getElementById('s-simp').textContent     = (sn === Math.round(num) && sd === Math.round(den)) ? 'Already simplified' : `${sn}/${sd}`;
+    document.getElementById('s-simp-sub').textContent = `= ${fmtNum((sn / sd) * 100, 4)}%`;
+
+    // Pie
+    updatePie('s-pie-fill', 's-pie-label', pctClamped);
+
+    // Vis facts
+    document.getElementById('s-vf-frac').textContent = `${fmtNum(num)}/${fmtNum(den)}`;
+    document.getElementById('s-vf-dec').textContent  = fmtNum(decimal, 8);
+    document.getElementById('s-vf-pct').textContent  = fmtNum(pct, 4) + '%';
+    document.getElementById('s-vf-type').textContent = type;
+
+    // Meta
+    document.getElementById('s-meta-orig').textContent  = `${fmtNum(num)} / ${fmtNum(den)}`;
+    document.getElementById('s-meta-rep').textContent   = rep ? '⚠️ Yes — repeating' : '✅ No — terminates';
+    document.getElementById('s-meta-round').textContent = parseFloat(pct.toFixed(2)) + '%';
+
+    renderSteps('s-steps-list', [
+      `Identify: numerator = <strong>${fmtNum(num)}</strong>, denominator = <strong>${fmtNum(den)}</strong>`,
+      `Divide: ${fmtNum(num)} ÷ ${fmtNum(den)} = <strong>${fmtNum(decimal, 8)}</strong>${rep ? ' (repeating)' : ''}`,
+      `Multiply by 100: ${fmtNum(decimal, 8)} × 100 = <strong>${fmtNum(pct, 6)}%</strong>`,
+      `Simplified fraction: <strong>${sn}/${sd}</strong>`,
+      `Type: <strong>${type}</strong>${pct > 100 ? ' — percentage exceeds 100% (value > 1)' : ''}`
+    ]);
+  }
+
+  // ---- MODE 2: Mixed Number ----
+  function calcMixed() {
+    const w   = parseFloat(document.getElementById('m-whole').value) || 0;
+    const num = parseFloat(document.getElementById('m-num').value);
+    const den = parseFloat(document.getElementById('m-den').value);
+    if (isNaN(num) || isNaN(den) || den === 0) {
+      document.getElementById('m-err').classList.add('show');
+      document.getElementById('m-res').classList.remove('show');
+      return;
+    }
+    document.getElementById('m-err').classList.remove('show');
+
+    const impropNum = Math.round(w) * Math.round(den) + Math.round(num);
+    const impropDen = Math.round(den);
+    const decimal   = impropNum / impropDen;
+    const pct       = decimal * 100;
+
+    document.getElementById('m-res').classList.add('show');
+    document.getElementById('m-pct').textContent      = fmtNum(pct, 4) + '%';
+    document.getElementById('m-pct-sub').textContent  = 'Mixed number result';
+    document.getElementById('m-improp').textContent   = `${impropNum}/${impropDen}`;
+    document.getElementById('m-dec').textContent      = fmtNum(decimal, 6);
+    document.getElementById('m-dec-sub').textContent  = 'Decimal form';
+    document.getElementById('m-meta-mixed').textContent  = `${Math.round(w)} ${Math.round(num)}/${Math.round(den)}`;
+    document.getElementById('m-meta-improp').textContent = `${impropNum}/${impropDen}`;
+    document.getElementById('m-meta-pct').textContent    = fmtNum(pct, 4) + '%';
+
+    renderSteps('m-steps-list', [
+      `Mixed number: <strong>${Math.round(w)} ${Math.round(num)}/${Math.round(den)}</strong>`,
+      `Convert to improper fraction: (${Math.round(w)} × ${Math.round(den)}) + ${Math.round(num)} = <strong>${impropNum}</strong> → <strong>${impropNum}/${impropDen}</strong>`,
+      `Divide: ${impropNum} ÷ ${impropDen} = <strong>${fmtNum(decimal, 6)}</strong>`,
+      `Multiply by 100: ${fmtNum(decimal, 6)} × 100 = <strong>${fmtNum(pct, 4)}%</strong>`,
+      `Mixed numbers always produce percentages <strong>> 100%</strong> since their value exceeds 1`
+    ]);
+  }
+
+  // ---- MODE 3: Decimal ----
+  function calcDecimal() {
+    const val = parseFloat(document.getElementById('d-val').value);
+    if (isNaN(val)) {
+      document.getElementById('d-err').classList.add('show');
+      document.getElementById('d-res').classList.remove('show');
+      return;
+    }
+    document.getElementById('d-err').classList.remove('show');
+
+    const pct = val * 100;
+    // Convert decimal to fraction
+    const decStr = val.toString();
+    const decPlaces = (decStr.split('.')[1] || '').length;
+    const denom = Math.pow(10, decPlaces);
+    const numer = Math.round(val * denom);
+    const [sn, sd] = simplify(numer, denom);
+
+    document.getElementById('d-res').classList.add('show');
+    document.getElementById('d-pct').textContent      = fmtNum(pct, 4) + '%';
+    document.getElementById('d-pct-sub').textContent  = 'Decimal × 100';
+    document.getElementById('d-frac').textContent     = `${sn}/${sd}`;
+    document.getElementById('d-dec').textContent      = fmtNum(val, 8);
+    document.getElementById('d-dec-sub').textContent  = 'Your input';
+    document.getElementById('d-meta-dec').textContent  = fmtNum(val, 8);
+    document.getElementById('d-meta-frac').textContent = `${sn}/${sd}`;
+    document.getElementById('d-meta-pct').textContent  = fmtNum(pct, 4) + '%';
+
+    renderSteps('d-steps-list', [
+      `Decimal input: <strong>${fmtNum(val, 8)}</strong>`,
+      `Multiply by 100: ${fmtNum(val, 8)} × 100 = <strong>${fmtNum(pct, 4)}%</strong>`,
+      `Convert to fraction: ${fmtNum(val, 8)} = ${numer}/${denom}`,
+      `Simplify: GCD(${numer}, ${denom}) = ${gcd(Math.abs(numer), Math.abs(denom))} → simplified = <strong>${sn}/${sd}</strong>`,
+      `Result: <strong>${fmtNum(val, 8)} = ${sn}/${sd} = ${fmtNum(pct, 4)}%</strong>`
+    ]);
+  }
+
+  // ---- QUICK LOAD ----
+  function loadSimple(n, d) {
+    switchMode('simple', document.querySelectorAll('.mode-btn')[0]);
+    document.getElementById('s-num').value = n;
+    document.getElementById('s-den').value = d;
+    livePreviewSimple();
+    calcSimple();
+    document.querySelector('.calc-wrap').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  function loadMixed(w, n, d) {
+    switchMode('mixed', document.querySelectorAll('.mode-btn')[1]);
+    document.getElementById('m-whole').value = w;
+    document.getElementById('m-num').value   = n;
+    document.getElementById('m-den').value   = d;
+    livePreviewMixed();
+    calcMixed();
+    document.querySelector('.calc-wrap').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  // ---- ENTER KEY ----
+  document.getElementById('s-num').addEventListener('keydown', e => { if (e.key === 'Enter') calcSimple(); });
+  document.getElementById('s-den').addEventListener('keydown', e => { if (e.key === 'Enter') calcSimple(); });
+  document.getElementById('m-whole').addEventListener('keydown', e => { if (e.key === 'Enter') calcMixed(); });
+  document.getElementById('m-num').addEventListener('keydown', e => { if (e.key === 'Enter') calcMixed(); });
+  document.getElementById('m-den').addEventListener('keydown', e => { if (e.key === 'Enter') calcMixed(); });
+  document.getElementById('d-val').addEventListener('keydown', e => { if (e.key === 'Enter') calcDecimal(); });
+
+  // ---- FAQ ----
+  function toggleFaq(item) {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
 </script>
 </body>
 </html>
