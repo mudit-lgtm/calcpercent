@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — CalcPercentage</title>
+  <meta name="description" content="Contact CalcPercentage — report a bug, suggest a new calculator, ask a maths question, or send any feedback. We read and reply to every message.">
+  <meta name="keywords" content="contact calcpercentage, percentage calculator feedback, report bug percentage calculator">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/contact/">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Contact Us — CalcPercentage">
+  <meta property="og:description" content="Get in touch with CalcPercentage. Bug reports, feature requests, maths questions, or general feedback — we reply to everything.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/contact/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CalcPercentage">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23DA2576'/%3E%3Ctext x='12' y='78' font-size='72' font-family='Arial,sans-serif' font-weight='900' fill='white'%3E%25%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://calcpercentage.vercel.app/#website",
+        "url": "https://calcpercentage.vercel.app/",
+        "name": "CalcPercentage"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://calcpercentage.vercel.app/contact/" }
+        ]
+      },
+      {
+        "@type": "ContactPage",
+        "@id": "https://calcpercentage.vercel.app/contact/#page",
+        "name": "Contact CalcPercentage",
+        "url": "https://calcpercentage.vercel.app/contact/",
+        "description": "Contact CalcPercentage for bug reports, feature requests, maths questions, or general feedback.",
+        "publisher": { "@type": "Organization", "name": "CalcPercentage", "url": "https://calcpercentage.vercel.app/" }
+      },
+      {
+        "@type": "Organization",
+        "name": "CalcPercentage",
+        "url": "https://calcpercentage.vercel.app/",
+        "contactPoint": [
+          { "@type": "ContactPoint", "contactType": "customer support", "email": "hello@calcpercentage.app", "availableLanguage": "English" },
+          { "@type": "ContactPoint", "contactType": "technical support", "email": "bugs@calcpercentage.app", "availableLanguage": "English" }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --pink: #DA2576; --pink-dark: #b81e62; --pink-light: #fce7f3; --pink-xlight: #fff0f7;
+      --black: #0d0d0d; --near-black: #111827; --dark: #1f2937; --gray: #6b7280;
+      --light-gray: #f3f4f6; --border: #e5e7eb; --white: #ffffff;
+      --green: #059669; --green-light: #d1fae5; --green-bg: #f0fdf4;
+      --blue: #2563eb; --blue-light: #dbeafe; --blue-bg: #eff6ff;
+      --amber: #d97706; --amber-light: #fef3c7; --amber-bg: #fffbeb;
+      --shadow: 0 4px 24px rgba(218,37,118,0.10);
+      --radius: 14px; --radius-lg: 20px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); color: var(--near-black); background: var(--white); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: var(--pink); text-decoration: none; }
+    a:hover { color: var(--pink-dark); text-decoration: underline; }
+
+    /* HEADER */
+    header { background: var(--white); border-bottom: 1.5px solid var(--border); position: sticky; top: 0; z-index: 999; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
+    .header-wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 38px; height: 38px; background: var(--pink); border-radius: 10px; color: white; font-size: 1.15rem; font-weight: 900; display: flex; align-items: center; justify-content: center; }
+    .logo-name { font-size: 1.15rem; font-weight: 800; color: var(--black); letter-spacing: -0.4px; }
+    .logo-name span { color: var(--pink); }
+    .main-nav { display: flex; align-items: center; gap: 2px; }
+    .main-nav a { text-decoration: none; color: var(--dark); font-size: 0.83rem; font-weight: 600; padding: 7px 11px; border-radius: 8px; transition: background 0.18s, color 0.18s; white-space: nowrap; }
+    .main-nav a:hover, .main-nav a.active { background: var(--pink-light); color: var(--pink); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; border-radius: 8px; flex-shrink: 0; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+    .mobile-nav { display: none; flex-direction: column; background: var(--white); border-top: 1px solid var(--border); padding: 8px 20px 16px; gap: 2px; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { display: block; padding: 11px 12px; text-decoration: none; color: var(--dark); font-size: 0.9rem; font-weight: 600; border-radius: 8px; transition: background 0.15s; }
+    .mobile-nav a:hover, .mobile-nav a.active { background: var(--pink-xlight); color: var(--pink); }
+
+    /* BREADCRUMB */
+    .breadcrumb-bar { max-width: 1200px; margin: 0 auto; padding: 14px 20px 0; }
+    .breadcrumb { display: flex; align-items: center; gap: 6px; list-style: none; flex-wrap: wrap; }
+    .breadcrumb li { display: flex; align-items: center; gap: 6px; }
+    .breadcrumb li + li::before { content: '/'; color: var(--gray); font-size: 0.78rem; }
+    .breadcrumb a { font-size: 0.78rem; color: var(--gray); text-decoration: none; font-weight: 500; }
+    .breadcrumb a:hover { color: var(--pink); }
+    .breadcrumb span { font-size: 0.78rem; color: var(--near-black); font-weight: 600; }
+
+    /* HERO */
+    .hero { background: linear-gradient(160deg, #fff 0%, var(--pink-xlight) 55%, #fff 100%); padding: 56px 20px 44px; text-align: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--pink-light); color: var(--pink); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 5px 14px; border-radius: 100px; margin-bottom: 18px; }
+    .hero h1 { font-size: clamp(1.9rem, 5vw, 3rem); font-weight: 900; color: var(--black); line-height: 1.1; letter-spacing: -1.2px; margin-bottom: 14px; }
+    .hero h1 em { font-style: normal; color: var(--pink); }
+    .hero-sub { font-size: 1rem; color: var(--gray); max-width: 540px; margin: 0 auto; line-height: 1.7; }
+
+    /* PAGE LAYOUT */
+    .page-wrap { max-width: 1060px; margin: 0 auto; padding: 56px 20px 72px; display: grid; grid-template-columns: 1fr 340px; gap: 40px; align-items: start; }
+
+    /* CONTACT FORM SIDE */
+    .form-side {}
+    .form-card { background: var(--white); border: 2px solid var(--border); border-radius: var(--radius-lg); padding: 32px 30px; }
+    .fc-title { font-size: 1.1rem; font-weight: 900; color: var(--black); margin-bottom: 6px; }
+    .fc-sub { font-size: 0.88rem; color: var(--gray); margin-bottom: 24px; line-height: 1.6; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.82rem; font-weight: 700; color: var(--dark); margin-bottom: 6px; letter-spacing: 0.2px; }
+    .form-group label span { color: var(--pink); }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 11px 14px; border: 2px solid var(--border); border-radius: var(--radius);
+      font-family: var(--font); font-size: 0.92rem; color: var(--near-black); background: var(--white);
+      transition: border-color 0.18s, box-shadow 0.18s; outline: none; appearance: none;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--pink); box-shadow: 0 0 0 3px rgba(218,37,118,0.1);
+    }
+    .form-group textarea { min-height: 130px; resize: vertical; line-height: 1.65; }
+    .form-group select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236b7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .char-count { font-size: 0.73rem; color: var(--gray); text-align: right; margin-top: 4px; }
+    .privacy-note { font-size: 0.78rem; color: var(--gray); line-height: 1.6; margin-top: 6px; }
+    .privacy-note a { color: var(--pink); font-weight: 600; }
+    .submit-btn { width: 100%; padding: 14px 24px; background: var(--pink); color: white; border: none; border-radius: 100px; font-family: var(--font); font-size: 0.95rem; font-weight: 800; cursor: pointer; transition: background 0.2s, transform 0.15s, box-shadow 0.2s; letter-spacing: 0.1px; margin-top: 6px; }
+    .submit-btn:hover { background: var(--pink-dark); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(218,37,118,0.30); }
+    .submit-btn:active { transform: translateY(0); }
+    .submit-btn:disabled { background: var(--gray); cursor: not-allowed; transform: none; box-shadow: none; }
+
+    /* Success message */
+    .success-msg { display: none; background: var(--green-bg); border: 2px solid var(--green-light); border-radius: var(--radius); padding: 18px 20px; margin-top: 16px; text-align: center; }
+    .success-msg .sm-icon { font-size: 2rem; margin-bottom: 8px; }
+    .success-msg .sm-title { font-size: 1rem; font-weight: 800; color: #064e3b; margin-bottom: 5px; }
+    .success-msg .sm-desc { font-size: 0.87rem; color: #065f46; line-height: 1.6; }
+    .success-msg.show { display: block; }
+
+    /* RIGHT SIDEBAR */
+    .contact-sidebar { display: flex; flex-direction: column; gap: 16px; }
+    .cs-card { background: var(--white); border: 2px solid var(--border); border-radius: var(--radius); padding: 20px 18px; }
+    .cs-card.dark { background: var(--black); border-color: var(--black); }
+    .cs-card.pink { background: var(--pink-xlight); border-color: var(--pink-light); }
+    .cs-head { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.9px; color: var(--pink); margin-bottom: 14px; }
+    .cs-head.white { color: rgba(255,255,255,0.5); }
+    .channel-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .channel-item { display: flex; gap: 13px; align-items: flex-start; }
+    .ch-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 1px; }
+    .ch-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray); margin-bottom: 2px; }
+    .ch-val { font-size: 0.84rem; font-weight: 700; color: var(--black); }
+    .ch-val.white { color: white; }
+    .ch-desc { font-size: 0.76rem; color: var(--gray); line-height: 1.5; margin-top: 1px; }
+    .ch-desc.white { color: rgba(255,255,255,0.5); }
+
+    /* Response time card */
+    .rt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .rt-item { background: var(--light-gray); border-radius: 10px; padding: 12px 12px; text-align: center; }
+    .rt-time { font-size: 1.2rem; font-weight: 900; color: var(--pink); letter-spacing: -0.5px; margin-bottom: 3px; }
+    .rt-label { font-size: 0.7rem; font-weight: 600; color: var(--gray); line-height: 1.4; }
+
+    /* FAQ mini */
+    .faq-mini { display: flex; flex-direction: column; gap: 8px; }
+    .fmi { border: 1.5px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+    .fmi-q { padding: 11px 14px; font-size: 0.83rem; font-weight: 700; color: var(--black); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 8px; user-select: none; transition: background 0.15s; }
+    .fmi-q:hover { background: var(--light-gray); }
+    .fmi-ico { color: var(--pink); font-size: 1.1rem; font-weight: 700; flex-shrink: 0; transition: transform 0.22s; }
+    .fmi.open .fmi-ico { transform: rotate(45deg); }
+    .fmi-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; font-size: 0.82rem; color: var(--dark); line-height: 1.68; }
+    .fmi.open .fmi-a { max-height: 300px; }
+    .fmi-a-inner { padding: 0 14px 12px; }
+    .fmi-a-inner a { color: var(--pink); font-weight: 600; }
+
+    /* Divider */
+    .sec-divider { border: none; border-top: 2px solid var(--border); margin: 36px 0; }
+
+    /* FOOTER */
+    footer { background: var(--black); color: white; padding: 60px 20px 36px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .f-brand .logo { margin-bottom: 14px; }
+    .f-brand .logo .logo-name { color: white; }
+    .f-brand p { font-size: 0.84rem; color: rgba(255,255,255,0.55); line-height: 1.7; max-width: 260px; }
+    .f-col h4 { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+    .f-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .f-col ul li a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.85rem; transition: color 0.18s; }
+    .f-col ul li a:hover { color: var(--pink); }
+    .footer-bottom { padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+
+    @media (max-width: 860px) {
+      .page-wrap { grid-template-columns: 1fr; }
+      .contact-sidebar { order: -1; }
+      .rt-grid { grid-template-columns: repeat(4,1fr); }
+    }
+    @media (max-width: 768px) {
+      .main-nav { display: none; }
+      .hamburger { display: flex; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .rt-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .form-card { padding: 22px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-wrap">
+    <a href="/" class="logo" aria-label="CalcPercentage — Home">
+      <div class="logo-icon">%</div>
+      <span class="logo-name"><span>Calc</span>Percentage</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/percentage-increase-calculator/">% Increase</a>
+      <a href="/percentage-decrease-calculator/">% Decrease</a>
+      <a href="/discount-calculator/">🏷️ Discount</a>
+      <a href="/percentage-formula/">📐 Formulas</a>
+      <a href="/how-to-calculate-percentage/">📖 How To</a>
+      <a href="/about/">About</a>
+      <a href="/contact/" class="active" aria-current="page">Contact</a>
+    </nav>
+    <button class="hamburger" id="hambBtn" aria-label="Open menu" aria-expanded="false" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="/">🏠 Percentage Calculator</a>
+    <a href="/how-to-calculate-percentage/">📖 How to Calculate %</a>
+    <a href="/percentage-formula/">📐 Percentage Formulas</a>
+    <a href="/percentage-increase-calculator/">📈 % Increase</a>
+    <a href="/percentage-decrease-calculator/">📉 % Decrease</a>
+    <a href="/percentage-change-calculator/">🔄 % Change</a>
+    <a href="/discount-calculator/">🏷️ Discount Calculator</a>
+    <a href="/money-percentage-calculator/">💰 Money %</a>
+    <a href="/about/">ℹ️ About</a>
+    <a href="/privacy-policy/">🔐 Privacy Policy</a>
+    <a href="/contact/" class="active">📬 Contact</a>
+  </nav>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb-bar">
+  <ol class="breadcrumb" aria-label="Breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><span>Contact</span></li>
+  </ol>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">📬 Get in Touch</div>
+  <h1>We'd Love to<br><em>Hear From You</em></h1>
+  <p class="hero-sub">Bug report, feature request, formula question, or just a note — we read every message and reply personally. Nothing gets auto-closed.</p>
+</section>
+
+<!-- MAIN -->
+<div class="page-wrap">
+
+  <!-- FORM SIDE -->
+  <div class="form-side">
+    <div class="form-card">
+      <div class="fc-title">📝 Send Us a Message</div>
+      <div class="fc-sub">Fill in the form below or email us directly. All fields marked <span style="color:var(--pink)">*</span> are required.</div>
+
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name <span>*</span></label>
+            <input type="text" id="fname" name="fname" placeholder="Your first name" autocomplete="given-name" required>
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Your last name" autocomplete="family-name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address <span>*</span></label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject / Reason <span>*</span></label>
+          <select id="subject" name="subject" required>
+            <option value="" disabled selected>— Select a reason —</option>
+            <option value="bug">🐛 Bug Report — a calculator is giving wrong results</option>
+            <option value="feature">💡 Feature Request — suggest a new calculator or tool</option>
+            <option value="formula">📐 Formula Question — about a percentage formula or method</option>
+            <option value="content">📖 Content Feedback — about an article or guide</option>
+            <option value="accessibility">♿ Accessibility Issue — something is hard to use</option>
+            <option value="partnership">🤝 Partnership / Collaboration</option>
+            <option value="media">📰 Press / Media Enquiry</option>
+            <option value="legal">⚖️ Legal / Privacy Matter</option>
+            <option value="other">💬 Other</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="bugUrlGroup" style="display:none;">
+          <label for="bugUrl">Calculator URL (if reporting a bug)</label>
+          <input type="url" id="bugUrl" name="bugUrl" placeholder="https://calcpercentage.vercel.app/...">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message <span>*</span></label>
+          <textarea id="message" name="message" placeholder="Please describe your question, issue, or suggestion in as much detail as possible…" required maxlength="2000"></textarea>
+          <div class="char-count"><span id="charCount">0</span> / 2000 characters</div>
+        </div>
+
+        <div class="form-group">
+          <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:0.82rem;font-weight:600;color:var(--dark);">
+            <input type="checkbox" id="consent" name="consent" required style="width:auto;margin-top:3px;flex-shrink:0;accent-color:var(--pink);">
+            I agree that CalcPercentage may store my name and email to reply to this message, as described in the <a href="/privacy-policy/" target="_blank">Privacy Policy</a>. <span style="color:var(--pink)">*</span>
+          </label>
+        </div>
+
+        <p class="privacy-note">🔐 We never share your details with third parties. See our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+
+        <button type="submit" class="submit-btn" id="submitBtn">Send Message →</button>
+
+        <div class="success-msg" id="successMsg">
+          <div class="sm-icon">✅</div>
+          <div class="sm-title">Message sent! Thank you.</div>
+          <div class="sm-desc">We've received your message and will reply to <strong id="replyEmail"></strong> within 1–3 business days.</div>
+        </div>
+
+        <div id="errorMsg" style="display:none;background:var(--amber-bg);border:2px solid var(--amber-light);border-radius:var(--radius);padding:14px 18px;margin-top:14px;font-size:0.88rem;color:#78350f;"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="contact-sidebar">
+
+    <!-- Direct email channels -->
+    <div class="cs-card dark">
+      <div class="cs-head white">📧 Direct Email Channels</div>
+      <ul class="channel-list">
+        <li class="channel-item">
+          <div class="ch-icon">💬</div>
+          <div>
+            <div class="ch-label" style="color:rgba(255,255,255,0.4)">General</div>
+            <div class="ch-val white">hello@calcpercentage.app</div>
+            <div class="ch-desc white">Anything that doesn't fit another category</div>
+          </div>
+        </li>
+        <li class="channel-item">
+          <div class="ch-icon">🐛</div>
+          <div>
+            <div class="ch-label" style="color:rgba(255,255,255,0.4)">Bug Reports</div>
+            <div class="ch-val white">bugs@calcpercentage.app</div>
+            <div class="ch-desc white">Wrong calculation results, broken features</div>
+          </div>
+        </li>
+        <li class="channel-item">
+          <div class="ch-icon">💡</div>
+          <div>
+            <div class="ch-label" style="color:rgba(255,255,255,0.4)">Feature Requests</div>
+            <div class="ch-val white">ideas@calcpercentage.app</div>
+            <div class="ch-desc white">New calculators, tools, or improvements</div>
+          </div>
+        </li>
+        <li class="channel-item">
+          <div class="ch-icon">⚖️</div>
+          <div>
+            <div class="ch-label" style="color:rgba(255,255,255,0.4)">Legal / Privacy</div>
+            <div class="ch-val white">legal@calcpercentage.app</div>
+            <div class="ch-desc white">GDPR, CCPA, data requests, copyright</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Response times -->
+    <div class="cs-card">
+      <div class="cs-head">⏱️ Response Times</div>
+      <div class="rt-grid">
+        <div class="rt-item">
+          <div class="rt-time">&lt;24h</div>
+          <div class="rt-label">Bug Reports</div>
+        </div>
+        <div class="rt-item">
+          <div class="rt-time">1–3</div>
+          <div class="rt-label">Days — General</div>
+        </div>
+        <div class="rt-item">
+          <div class="rt-time">30</div>
+          <div class="rt-label">Days — Legal / GDPR</div>
+        </div>
+        <div class="rt-item">
+          <div class="rt-time">5</div>
+          <div class="rt-label">Days — All other</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- What to include for bugs -->
+    <div class="cs-card pink">
+      <div class="cs-head">🐛 Reporting a Bug?</div>
+      <p style="font-size:0.83rem;color:var(--dark);line-height:1.65;margin-bottom:10px;">To help us fix it faster, please include:</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:6px;">
+        <li style="font-size:0.82rem;color:var(--dark);display:flex;gap:8px;"><span style="color:var(--pink);font-weight:900;">→</span> The calculator URL</li>
+        <li style="font-size:0.82rem;color:var(--dark);display:flex;gap:8px;"><span style="color:var(--pink);font-weight:900;">→</span> The values you entered</li>
+        <li style="font-size:0.82rem;color:var(--dark);display:flex;gap:8px;"><span style="color:var(--pink);font-weight:900;">→</span> The result you got</li>
+        <li style="font-size:0.82rem;color:var(--dark);display:flex;gap:8px;"><span style="color:var(--pink);font-weight:900;">→</span> What you expected to get</li>
+        <li style="font-size:0.82rem;color:var(--dark);display:flex;gap:8px;"><span style="color:var(--pink);font-weight:900;">→</span> Your device / browser (optional)</li>
+      </ul>
+    </div>
+
+    <!-- Mini FAQ -->
+    <div class="cs-card">
+      <div class="cs-head">❓ Quick FAQs</div>
+      <div class="faq-mini">
+        <div class="fmi" onclick="toggleFmi(this)">
+          <div class="fmi-q">Is CalcPercentage free to use?<span class="fmi-ico">+</span></div>
+          <div class="fmi-a"><div class="fmi-a-inner">Yes — 100% free, forever. No sign-up, no subscription, no hidden fees. All calculators are and always will be free.</div></div>
+        </div>
+        <div class="fmi" onclick="toggleFmi(this)">
+          <div class="fmi-q">Can I suggest a new calculator?<span class="fmi-ico">+</span></div>
+          <div class="fmi-a"><div class="fmi-a-inner">Absolutely. Use the form above or email <strong>ideas@calcpercentage.app</strong>. We love good feature suggestions and have built tools based on user requests.</div></div>
+        </div>
+        <div class="fmi" onclick="toggleFmi(this)">
+          <div class="fmi-q">Why is my calculation wrong?<span class="fmi-ico">+</span></div>
+          <div class="fmi-a"><div class="fmi-a-inner">It could be a real bug — please report it using the Bug Report option above with the values you entered. Or see the <a href="/percentage-formula/">formula guide</a> — sometimes the issue is which formula applies to your specific problem.</div></div>
+        </div>
+        <div class="fmi" onclick="toggleFmi(this)">
+          <div class="fmi-q">Do you offer an API?<span class="fmi-ico">+</span></div>
+          <div class="fmi-a"><div class="fmi-a-inner">Not currently. If you'd like a percentage calculation API, email us at <strong>ideas@calcpercentage.app</strong> — if there's enough interest we'll build one.</div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <a href="/" class="logo" aria-label="CalcPercentage Home">
+          <div class="logo-icon">%</div>
+          <span class="logo-name"><span style="color:var(--pink)">Calc</span>Percentage</span>
+        </a>
+        <p>Free online percentage calculators for every percentage problem. Fast, accurate, mobile-friendly — no ads blocking your results.</p>
+      </div>
+      <div class="f-col">
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/">Percentage Calculator</a></li>
+          <li><a href="/percentage-increase-calculator/">% Increase</a></li>
+          <li><a href="/percentage-decrease-calculator/">% Decrease</a></li>
+          <li><a href="/percentage-change-calculator/">% Change</a></li>
+          <li><a href="/discount-calculator/">Discount</a></li>
+          <li><a href="/percent-off-calculator/">% Off</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>More Tools</h4>
+        <ul>
+          <li><a href="/money-percentage-calculator/">Money %</a></li>
+          <li><a href="/percentage-difference-calculator/">% Difference</a></li>
+          <li><a href="/fraction-to-percentage/">Fraction → %</a></li>
+          <li><a href="/percent-error-calculator/">% Error</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Learn & Info</h4>
+        <ul>
+          <li><a href="/how-to-calculate-percentage/">How to Calculate %</a></li>
+          <li><a href="/percentage-formula/">Percentage Formulas</a></li>
+          <li><a href="/what-is-percentage/">What is a Percentage?</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="yr"></span> CalcPercentage.vercel.app — All rights reserved.</p>
+      <p>Made with ♥ for fast, free percentage calculations.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  function toggleNav() {
+    const n = document.getElementById('mobileNav'), b = document.getElementById('hambBtn');
+    const o = n.classList.toggle('open');
+    b.classList.toggle('open', o);
+    b.setAttribute('aria-expanded', o);
+  }
+  document.addEventListener('click', e => {
+    const n = document.getElementById('mobileNav'), b = document.getElementById('hambBtn');
+    if (!n.contains(e.target) && !b.contains(e.target)) {
+      n.classList.remove('open'); b.classList.remove('open'); b.setAttribute('aria-expanded','false');
+    }
+  });
+
+  function toggleFmi(el) {
+    const was = el.classList.contains('open');
+    document.querySelectorAll('.fmi.open').forEach(i => i.classList.remove('open'));
+    if (!was) el.classList.add('open');
+  }
+
+  // Show bug URL field when bug is selected
+  document.getElementById('subject').addEventListener('change', function() {
+    document.getElementById('bugUrlGroup').style.display = this.value === 'bug' ? 'block' : 'none';
+  });
+
+  // Live char count
+  const msgArea = document.getElementById('message');
+  const charCount = document.getElementById('charCount');
+  msgArea.addEventListener('input', () => {
+    const len = msgArea.value.length;
+    charCount.textContent = len;
+    charCount.style.color = len > 1800 ? 'var(--amber)' : len > 1950 ? '#dc2626' : 'var(--gray)';
+  });
+
+  // Form submit (demo — no backend)
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    const errBox = document.getElementById('errorMsg');
+    errBox.style.display = 'none';
+
+    // Basic validation
+    const fname = document.getElementById('fname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value.trim();
+    const consent = document.getElementById('consent').checked;
+
+    if (!fname) { showErr('Please enter your first name.'); return; }
+    if (!email || !email.includes('@')) { showErr('Please enter a valid email address.'); return; }
+    if (!subject) { showErr('Please select a subject/reason.'); return; }
+    if (message.length < 10) { showErr('Please enter a message of at least 10 characters.'); return; }
+    if (!consent) { showErr('Please check the consent box to continue.'); return; }
+
+    // Simulate submission
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    setTimeout(() => {
+      document.getElementById('replyEmail').textContent = email;
+      document.getElementById('successMsg').classList.add('show');
+      btn.style.display = 'none';
+      this.querySelectorAll('input:not([type=checkbox]), select, textarea').forEach(f => f.disabled = true);
+    }, 900);
+
+    function showErr(msg) {
+      errBox.textContent = '⚠️ ' + msg;
+      errBox.style.display = 'block';
+      errBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  });
+</script>
+</body>
+</html>
