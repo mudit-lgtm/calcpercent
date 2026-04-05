@@ -1,1154 +1,1278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Money Percentage Calculator — Calculate Percentages of Dollar Amounts</title>
-  <meta name="description" content="Free money percentage calculator. Find X% of any dollar amount, calculate what percentage one amount is of another, add or subtract GST, tips, commission and more. Fast and free." />
-  <meta name="keywords" content="money percentage calculator, percentage calculator money, percentage of money, money and percentage calculator, percentage calculator for money, money to percentage calculator, percentage calculator dollars, percent of money, money percentage, percentage of money calculator" />
-  <link rel="canonical" href="https://calcpercentage.vercel.app/money-percentage-calculator" />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="CalcPercentage" />
+  <meta name="description" content="Free money percentage calculator. Find percentages of dollar amounts — tip calculator, sales tax, discount, salary raise, percentage of a money amount, and more. Instant results with step-by-step working.">
+  <meta name="keywords" content="money percentage calculator, percentage of dollar amount, tip calculator, sales tax calculator, discount calculator money, calculate percentage of money, percent of dollar amount, salary raise calculator">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/money-percentage-calculator/">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Money Percentage Calculator — Calculate Percentages of Dollar Amounts" />
-  <meta property="og:description" content="Calculate X% of any dollar amount, find what % one amount is of another, add GST, tips, commissions and more. Free online money percentage calculator." />
-  <meta property="og:url" content="https://calcpercentage.vercel.app/money-percentage-calculator" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="CalcPercentage" />
+  <meta property="og:title" content="Money Percentage Calculator — Calculate Percentages of Dollar Amounts">
+  <meta property="og:description" content="Calculate percentages of money amounts instantly — tips, tax, discounts, salary raises, and more. Step-by-step working included.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/money-percentage-calculator/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CalcPercentage">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Money Percentage Calculator" />
-  <meta name="twitter:description" content="Find X% of any dollar amount, calculate what % one amount is of another. Free, instant, no sign-up." />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Money Percentage Calculator — Calculate Percentages of Dollar Amounts">
+  <meta name="twitter:description" content="Tip calculator, tax calculator, discount, salary raise and more. Free money % calculator with step-by-step working.">
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23DA2576'/><text y='.9em' font-size='72' x='50%25' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' fill='white'>%25</text></svg>" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23DA2576'/%3E%3Ctext x='12' y='78' font-size='72' font-family='Arial,sans-serif' font-weight='900' fill='white'%3E%25%3C/text%3E%3C/svg%3E">
 
-  <!-- JSON-LD Schemas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Money Percentage Calculator",
-    "url": "https://calcpercentage.vercel.app/money-percentage-calculator",
-    "description": "Free online money percentage calculator. Find X% of any dollar amount, calculate what percentage one money amount is of another, and add or subtract percentages from prices.",
-    "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "All",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "featureList": [
-      "Find X% of a dollar amount",
-      "Find what percentage one amount is of another",
-      "Add a percentage to an amount (GST, tip, markup)",
-      "Subtract a percentage from an amount (discount, tax relief)"
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "How do I calculate a percentage of a money amount?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Multiply the dollar amount by the percentage divided by 100. Example: 20% of $150 = $150 × 0.20 = $30."
-        }
+        "@type": "WebSite",
+        "@id": "https://calcpercentage.vercel.app/#website",
+        "url": "https://calcpercentage.vercel.app/",
+        "name": "CalcPercentage",
+        "publisher": { "@type": "Organization", "name": "CalcPercentage", "logo": { "@type": "ImageObject", "url": "https://calcpercentage.vercel.app/logo.svg" } }
       },
       {
-        "@type": "Question",
-        "name": "How do I calculate GST (10%) in Australia?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To add 10% GST: GST-inclusive price = Original Price × 1.10. To find the GST component in a GST-inclusive price: GST = Price ÷ 11. Example: $220 including GST means $220 ÷ 11 = $20 GST, $200 base price."
-        }
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Money Percentage Calculator", "item": "https://calcpercentage.vercel.app/money-percentage-calculator/" }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "How do I find what percentage of my income something costs?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Divide the item cost by your total income and multiply by 100. Example: $450 rent out of $2,000 income = (450 ÷ 2000) × 100 = 22.5% of income."
-        }
+        "@type": "WebApplication",
+        "@id": "https://calcpercentage.vercel.app/money-percentage-calculator/#app",
+        "name": "Money Percentage Calculator",
+        "url": "https://calcpercentage.vercel.app/money-percentage-calculator/",
+        "description": "Calculate percentages of money amounts — tips, sales tax, discounts, salary raises, investment returns. Supports 6 calculation modes with step-by-step working.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": [
+          "Find % of a Dollar Amount",
+          "What % is X of Y (Money)",
+          "Tip Calculator with Split",
+          "Sales Tax Calculator",
+          "Discount / Sale Price Calculator",
+          "Salary Raise Calculator",
+          "Multi-currency Symbol Support",
+          "Step-by-Step Working"
+        ]
       },
       {
-        "@type": "Question",
-        "name": "How do I calculate a tip as a percentage of a bill?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Tip Amount = Bill Total × (Tip% ÷ 100). Example: 15% tip on a $85 restaurant bill = $85 × 0.15 = $12.75. Total to pay = $85 + $12.75 = $97.75."
-        }
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do you calculate a percentage of a dollar amount?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Multiply the dollar amount by the percentage divided by 100. Formula: Amount = Dollar Value × (% ÷ 100). Example: 20% of $150 = $150 × 0.20 = $30." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you calculate a 20% tip?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Multiply the bill total by 0.20. Example: 20% tip on $65 = $65 × 0.20 = $13 tip. Total with tip = $65 + $13 = $78. You can also move the decimal one place left (10% = $6.50) then double it to get 20% = $13." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you add sales tax to a price?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Total with tax = Price × (1 + Tax Rate ÷ 100). Example: $80 with 8% sales tax = $80 × 1.08 = $86.40. Tax amount = $80 × 0.08 = $6.40." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you calculate a salary raise percentage?",
+            "acceptedAnswer": { "@type": "Answer", "text": "New Salary = Current Salary × (1 + Raise% ÷ 100). Raise Amount = Current Salary × (Raise% ÷ 100). Example: $55,000 salary with a 7% raise: Raise = $55,000 × 0.07 = $3,850. New salary = $55,000 + $3,850 = $58,850." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you find what percentage one money amount is of another?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Divide the part by the whole and multiply by 100. Formula: % = (Part ÷ Whole) × 100. Example: $45 is what % of $180? → (45 ÷ 180) × 100 = 25%." }
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "How do I calculate commission on a sale amount?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Commission = Sale Amount × (Commission Rate% ÷ 100). Example: 5% commission on a $12,000 sale = $12,000 × 0.05 = $600 commission."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I calculate a percentage markup on cost price?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Selling Price = Cost Price × (1 + Markup% ÷ 100). Example: 40% markup on a $25 cost = $25 × 1.40 = $35 selling price. The profit is $35 − $25 = $10."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much is 5% of $1 million?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "5% of $1,000,000 = $1,000,000 × 0.05 = $50,000."
-        }
+        "@type": "HowTo",
+        "name": "How to Calculate a Percentage of a Money Amount",
+        "totalTime": "PT1M",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Enter the Dollar Amount", "text": "Type the base money amount (e.g., $200)." },
+          { "@type": "HowToStep", "position": 2, "name": "Enter the Percentage", "text": "Type the percentage you want to find (e.g., 15%)." },
+          { "@type": "HowToStep", "position": 3, "name": "Multiply", "text": "Multiply: $200 × (15 ÷ 100) = $200 × 0.15 = $30." },
+          { "@type": "HowToStep", "position": 4, "name": "Read the Result", "text": "15% of $200 is $30." }
+        ]
       }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
-      { "@type": "ListItem", "position": 2, "name": "Money Percentage Calculator", "item": "https://calcpercentage.vercel.app/money-percentage-calculator" }
     ]
   }
   </script>
 
   <style>
-    /* ============================================================
-       RESET & BASE
-    ============================================================ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --pink:           #DA2576;
-      --pink-dark:      #b81e61;
-      --pink-light:     #f5d0e4;
-      --pink-bg:        #fff5f9;
-      --black:          #0a0a0a;
-      --gray-900:       #111111;
-      --gray-800:       #222222;
-      --gray-700:       #444444;
-      --gray-600:       #666666;
-      --gray-200:       #e8e8e8;
-      --gray-100:       #f4f4f4;
-      --white:          #ffffff;
-      --success:        #16a34a;
-      --success-bg:     #f0fdf4;
-      --success-border: #bbf7d0;
-      --danger:         #dc2626;
-      --danger-bg:      #fff1f2;
-      --danger-border:  #fecdd3;
-      --amber:          #d97706;
-      --amber-bg:       #fffbeb;
-      --amber-border:   #fde68a;
-      --radius-sm:      6px;
-      --radius:         10px;
-      --radius-lg:      16px;
-      --shadow-sm:      0 1px 3px rgba(0,0,0,0.08);
-      --shadow:         0 4px 16px rgba(0,0,0,0.10);
-      --font:           'Segoe UI', system-ui, -apple-system, sans-serif;
-      --transition:     0.2s ease;
+      --pink: #DA2576;
+      --pink-dark: #b81e62;
+      --pink-light: #fce7f3;
+      --pink-xlight: #fff0f7;
+      --black: #0d0d0d;
+      --near-black: #111827;
+      --dark: #1f2937;
+      --mid: #4b5563;
+      --gray: #6b7280;
+      --light-gray: #f3f4f6;
+      --border: #e5e7eb;
+      --white: #ffffff;
+      --green: #059669;
+      --green-dark: #047857;
+      --green-light: #d1fae5;
+      --green-bg: #f0fdf4;
+      --blue: #2563eb;
+      --blue-light: #dbeafe;
+      --blue-bg: #eff6ff;
+      --amber: #d97706;
+      --amber-light: #fef3c7;
+      --amber-bg: #fffbeb;
+      --purple: #7c3aed;
+      --purple-light: #ede9fe;
+      --shadow: 0 4px 24px rgba(218,37,118,0.10);
+      --shadow-lg: 0 12px 40px rgba(218,37,118,0.15);
+      --radius: 14px;
+      --radius-lg: 20px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     }
 
     html { scroll-behavior: smooth; }
-    body { font-family: var(--font); color: var(--gray-800); background: var(--white); line-height: 1.6; font-size: 16px; }
+    body { font-family: var(--font); color: var(--near-black); background: var(--white); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
     a { color: var(--pink); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a:hover { color: var(--pink-dark); text-decoration: underline; }
 
-    /* ============================================================
-       HEADER
-    ============================================================ */
-    .site-header { background: var(--black); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 12px rgba(0,0,0,0.35); }
-    .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 24px; }
-
+    /* ===== HEADER ===== */
+    header { background: var(--white); border-bottom: 1.5px solid var(--border); position: sticky; top: 0; z-index: 999; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
+    .header-wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
     .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
-    .logo-icon { width: 38px; height: 38px; background: var(--pink); border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 900; color: var(--white); font-family: Arial Black, sans-serif; line-height: 1; }
-    .logo-text { font-size: 18px; font-weight: 700; color: var(--white); letter-spacing: -0.3px; }
-    .logo-text span { color: var(--pink); }
+    .logo-icon { width: 38px; height: 38px; background: var(--pink); border-radius: 10px; color: white; font-size: 1.15rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .logo-name { font-size: 1.15rem; font-weight: 800; color: var(--black); letter-spacing: -0.4px; }
+    .logo-name span { color: var(--pink); }
+    .main-nav { display: flex; align-items: center; gap: 2px; }
+    .main-nav a { text-decoration: none; color: var(--dark); font-size: 0.83rem; font-weight: 600; padding: 7px 11px; border-radius: 8px; transition: background 0.18s, color 0.18s; white-space: nowrap; }
+    .main-nav a:hover, .main-nav a.active { background: var(--pink-light); color: var(--pink); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; border-radius: 8px; flex-shrink: 0; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    .mobile-nav { display: none; flex-direction: column; background: var(--white); border-top: 1px solid var(--border); padding: 8px 20px 16px; gap: 2px; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { display: block; padding: 11px 12px; text-decoration: none; color: var(--dark); font-size: 0.9rem; font-weight: 600; border-radius: 8px; transition: background 0.15s; }
+    .mobile-nav a:hover, .mobile-nav a.active { background: var(--pink-xlight); color: var(--pink); }
 
-    .site-nav { display: flex; align-items: center; gap: 4px; list-style: none; }
-    .site-nav a { display: block; padding: 7px 13px; border-radius: var(--radius-sm); font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,0.82); text-decoration: none; transition: background var(--transition), color var(--transition); white-space: nowrap; }
-    .site-nav a:hover, .site-nav a.active { background: rgba(218,37,118,0.18); color: var(--white); }
-
-    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; border-radius: var(--radius-sm); }
-    .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; }
-
-    .mobile-menu { display: none; background: var(--gray-900); border-top: 1px solid rgba(255,255,255,0.08); padding: 12px 20px 16px; }
-    .mobile-menu.open { display: block; }
-    .mobile-menu ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
-    .mobile-menu a { display: block; padding: 10px 14px; border-radius: var(--radius-sm); font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,0.82); text-decoration: none; transition: background var(--transition); }
-    .mobile-menu a:hover { background: rgba(218,37,118,0.2); color: var(--white); }
-
-    /* ============================================================
-       PAGE HERO
-    ============================================================ */
-    .page-hero { background: linear-gradient(135deg, var(--black) 0%, #1a1a2e 60%, #2d0a1e 100%); padding: 44px 20px 40px; position: relative; overflow: hidden; }
-    .page-hero::before { content: '$'; position: absolute; font-size: 300px; font-weight: 900; font-family: Arial Black, sans-serif; color: rgba(218,37,118,0.05); top: 50%; right: 3%; transform: translateY(-50%); pointer-events: none; user-select: none; line-height: 1; }
-    .page-hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
-
-    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 16px; flex-wrap: wrap; }
-    .breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color var(--transition); }
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb-bar { max-width: 1200px; margin: 0 auto; padding: 14px 20px 0; }
+    .breadcrumb { display: flex; align-items: center; gap: 6px; list-style: none; flex-wrap: wrap; }
+    .breadcrumb li { display: flex; align-items: center; gap: 6px; }
+    .breadcrumb li + li::before { content: '/'; color: var(--gray); font-size: 0.78rem; }
+    .breadcrumb a { font-size: 0.78rem; color: var(--gray); text-decoration: none; font-weight: 500; }
     .breadcrumb a:hover { color: var(--pink); }
-    .breadcrumb span { color: rgba(255,255,255,0.3); }
-    .breadcrumb strong { color: rgba(255,255,255,0.75); font-weight: 500; }
+    .breadcrumb span { font-size: 0.78rem; color: var(--near-black); font-weight: 600; }
 
-    .page-hero h1 { font-size: clamp(24px, 4vw, 38px); font-weight: 800; color: var(--white); letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 10px; }
-    .page-hero h1 em { font-style: normal; color: var(--pink); }
-    .page-hero p { font-size: 16px; color: rgba(255,255,255,0.65); max-width: 600px; }
+    /* ===== HERO ===== */
+    .hero { background: linear-gradient(160deg, #fff 0%, var(--pink-xlight) 55%, #fff 100%); padding: 52px 20px 40px; text-align: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--pink-light); color: var(--pink); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 5px 14px; border-radius: 100px; margin-bottom: 18px; }
+    .hero h1 { font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 900; color: var(--black); line-height: 1.12; letter-spacing: -1.5px; max-width: 740px; margin: 0 auto 16px; }
+    .hero h1 em { font-style: normal; color: var(--pink); }
+    .hero-sub { font-size: 1.02rem; color: var(--gray); max-width: 580px; margin: 0 auto 28px; line-height: 1.65; }
+    .hero-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+    .hero-pill { display: inline-flex; align-items: center; gap: 5px; padding: 6px 14px; background: var(--white); border: 1.5px solid var(--border); border-radius: 100px; font-size: 0.78rem; font-weight: 700; color: var(--dark); cursor: pointer; transition: all 0.18s; font-family: var(--font); }
+    .hero-pill:hover { border-color: var(--pink); color: var(--pink); background: var(--pink-xlight); }
 
-    /* ============================================================
-       LAYOUT
-    ============================================================ */
-    .page-wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    .page-grid { display: grid; grid-template-columns: 1fr 320px; gap: 40px; align-items: start; padding: 48px 0 56px; }
+    /* ===== CURRENCY SELECTOR ===== */
+    .currency-bar { max-width: 820px; margin: 0 auto; padding: 20px 20px 0; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .currency-bar label { font-size: 0.78rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; }
+    .currency-btn { padding: 7px 14px; background: var(--light-gray); border: 2px solid var(--border); border-radius: 9px; font-size: 0.88rem; font-weight: 800; color: var(--dark); cursor: pointer; font-family: var(--font); transition: all 0.18s; }
+    .currency-btn.active { background: var(--pink); border-color: var(--pink); color: white; }
+    .currency-btn:hover:not(.active) { border-color: var(--pink); color: var(--pink); }
 
-    /* ============================================================
-       CALCULATOR TABS
-    ============================================================ */
-    .calc-card { background: var(--white); border: 1.5px solid var(--gray-200); border-radius: var(--radius-lg); box-shadow: var(--shadow); overflow: hidden; }
+    /* ===== CALC TABS (vertical on left, content right) ===== */
+    .calc-outer { max-width: 820px; margin: 0 auto; padding: 24px 20px 0; }
+    .calc-tabs-layout { display: grid; grid-template-columns: 200px 1fr; gap: 16px; }
+    .calc-tab-nav { display: flex; flex-direction: column; gap: 4px; }
+    .calc-tab-btn { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border: 2px solid var(--border); border-radius: var(--radius); background: var(--white); font-family: var(--font); font-size: 0.83rem; font-weight: 700; color: var(--gray); cursor: pointer; text-align: left; transition: all 0.18s; width: 100%; }
+    .calc-tab-btn .tab-icon { font-size: 1.1rem; flex-shrink: 0; }
+    .calc-tab-btn .tab-label { line-height: 1.3; }
+    .calc-tab-btn .tab-sub { font-size: 0.68rem; font-weight: 500; color: var(--gray); display: block; margin-top: 1px; }
+    .calc-tab-btn:hover { border-color: var(--pink); color: var(--dark); }
+    .calc-tab-btn.active { border-color: var(--pink); background: var(--pink-xlight); color: var(--pink); }
+    .calc-tab-btn.active .tab-sub { color: var(--pink-dark); opacity: 0.7; }
 
-    .calc-tabs { display: grid; grid-template-columns: repeat(3, 1fr); border-bottom: 1.5px solid var(--gray-200); background: var(--gray-100); }
-    .calc-tab { padding: 13px 10px; font-size: 13px; font-weight: 700; color: var(--gray-600); background: none; border: none; cursor: pointer; transition: background var(--transition), color var(--transition); border-bottom: 3px solid transparent; margin-bottom: -1.5px; text-align: center; line-height: 1.3; }
-    .calc-tab:hover { color: var(--pink); background: var(--pink-bg); }
-    .calc-tab.active { color: var(--pink); background: var(--white); border-bottom-color: var(--pink); }
+    .calc-card { background: var(--white); border: 2px solid var(--border); border-radius: var(--radius-lg); padding: 32px 28px 26px; box-shadow: var(--shadow); }
+    .calc-pane { display: none; }
+    .calc-pane.active { display: block; }
 
-    .calc-panel { display: none; padding: 26px 26px 22px; }
-    .calc-panel.active { display: block; }
-    .calc-panel h2 { font-size: 17px; font-weight: 700; color: var(--black); margin-bottom: 6px; }
+    .pane-title { font-size: 1.1rem; font-weight: 900; color: var(--black); margin-bottom: 6px; letter-spacing: -0.3px; }
+    .pane-sub { font-size: 0.84rem; color: var(--gray); margin-bottom: 20px; line-height: 1.55; }
+    .formula-strip { background: var(--light-gray); border-left: 4px solid var(--pink); border-radius: 0 8px 8px 0; padding: 9px 14px; font-size: 0.82rem; color: var(--mid); font-family: 'Courier New', monospace; font-weight: 600; margin-bottom: 22px; }
 
-    .formula-tag { display: block; font-family: 'Courier New', monospace; font-size: 12.5px; color: var(--gray-600); background: var(--gray-100); border-radius: var(--radius-sm); padding: 6px 12px; margin-bottom: 22px; }
+    /* Input rows */
+    .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+    .input-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+    .fg { display: flex; flex-direction: column; gap: 6px; }
+    .fg label { font-size: 0.72rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; }
+    .money-input-wrap { position: relative; }
+    .money-symbol { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); font-size: 1.05rem; font-weight: 800; color: var(--gray); pointer-events: none; z-index: 1; }
+    .money-input { padding: 13px 14px 13px 34px; border: 2px solid var(--border); border-radius: var(--radius); font-size: 1.05rem; font-family: var(--font); font-weight: 700; color: var(--black); background: var(--white); width: 100%; transition: border-color 0.18s, box-shadow 0.18s; -webkit-appearance: none; }
+    .money-input::placeholder { color: #d1d5db; font-weight: 400; font-size: 0.95rem; }
+    .money-input:focus { outline: none; border-color: var(--pink); box-shadow: 0 0 0 4px rgba(218,37,118,0.09); }
+    .pct-input-wrap { position: relative; }
+    .pct-suffix { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-size: 1.05rem; font-weight: 800; color: var(--gray); pointer-events: none; }
+    .pct-input { padding: 13px 36px 13px 14px; border: 2px solid var(--border); border-radius: var(--radius); font-size: 1.05rem; font-family: var(--font); font-weight: 700; color: var(--black); background: var(--white); width: 100%; transition: border-color 0.18s, box-shadow 0.18s; -webkit-appearance: none; }
+    .pct-input::placeholder { color: #d1d5db; font-weight: 400; font-size: 0.95rem; }
+    .pct-input:focus { outline: none; border-color: var(--pink); box-shadow: 0 0 0 4px rgba(218,37,118,0.09); }
 
-    /* Preset buttons */
-    .preset-row { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 20px; }
-    .preset-btn { padding: 6px 13px; border-radius: 999px; font-size: 12.5px; font-weight: 700; background: var(--pink-bg); border: 1.5px solid var(--pink-light); color: var(--pink); cursor: pointer; transition: background var(--transition), color var(--transition); }
-    .preset-btn:hover, .preset-btn.active { background: var(--pink); color: var(--white); border-color: var(--pink); }
+    .calc-btn { width: 100%; padding: 15px; background: var(--pink); color: white; border: none; border-radius: var(--radius); font-size: 1rem; font-weight: 800; font-family: var(--font); cursor: pointer; letter-spacing: 0.3px; transition: background 0.18s, transform 0.1s, box-shadow 0.18s; margin-top: 4px; }
+    .calc-btn:hover { background: var(--pink-dark); box-shadow: 0 6px 20px rgba(218,37,118,0.28); }
+    .calc-btn:active { transform: scale(0.99); }
 
-    /* Input groups */
-    .input-group { margin-bottom: 15px; }
-    .input-group label { display: block; font-size: 13px; font-weight: 600; color: var(--gray-700); margin-bottom: 6px; }
-    .input-group small { display: block; font-size: 12px; color: var(--gray-600); margin-top: 4px; }
-    .input-wrap { position: relative; }
-    .input-prefix { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); font-size: 15px; font-weight: 700; color: var(--gray-600); pointer-events: none; }
-    .input-suffix-abs { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-size: 14px; font-weight: 700; color: var(--gray-600); pointer-events: none; }
-    .input-wrap input { width: 100%; height: 48px; border: 1.5px solid var(--gray-200); border-radius: var(--radius); font-size: 17px; font-weight: 600; font-family: var(--font); color: var(--black); background: var(--white); transition: border-color var(--transition), box-shadow var(--transition); -webkit-appearance: none; }
-    .input-wrap input.has-prefix { padding: 0 42px 0 38px; }
-    .input-wrap input.has-suffix { padding: 0 42px 0 16px; }
-    .input-wrap input.bare { padding: 0 16px; }
-    .input-wrap input:focus { outline: none; border-color: var(--pink); box-shadow: 0 0 0 3px rgba(218,37,118,0.12); }
+    .err-msg { display: none; margin-top: 12px; padding: 10px 14px; background: #fef2f2; border: 1.5px solid #fecaca; border-radius: 10px; color: #dc2626; font-size: 0.84rem; font-weight: 500; }
+    .err-msg.show { display: block; }
 
-    /* Toggle add/subtract */
-    .toggle-row { display: flex; gap: 0; margin-bottom: 15px; border-radius: var(--radius); overflow: hidden; border: 1.5px solid var(--gray-200); }
-    .toggle-btn { flex: 1; padding: 10px; font-size: 13.5px; font-weight: 700; background: var(--white); border: none; cursor: pointer; color: var(--gray-600); transition: background var(--transition), color var(--transition); }
-    .toggle-btn:first-child { border-right: 1px solid var(--gray-200); }
-    .toggle-btn.active { background: var(--pink); color: var(--white); }
+    /* ===== RESULT BOX ===== */
+    .result-box { display: none; margin-top: 20px; border-radius: var(--radius); overflow: hidden; animation: fadeIn 0.28s ease; border: 2px solid var(--border); }
+    .result-box.show { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 
-    /* Calculate button */
-    .calc-btn { width: 100%; height: 50px; background: var(--pink); color: var(--white); border: none; border-radius: var(--radius); font-size: 15px; font-weight: 700; cursor: pointer; letter-spacing: 0.3px; transition: background var(--transition), transform 0.1s; margin-top: 6px; display: flex; align-items: center; justify-content: center; gap: 8px; }
-    .calc-btn:hover { background: var(--pink-dark); }
-    .calc-btn:active { transform: scale(0.98); }
+    /* Main result */
+    .res-main { background: linear-gradient(135deg, var(--pink) 0%, var(--pink-dark) 100%); padding: 22px 22px 18px; text-align: center; }
+    .res-main-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: rgba(255,255,255,0.72); margin-bottom: 5px; }
+    .res-main-val { font-size: 2.6rem; font-weight: 900; color: white; letter-spacing: -2px; line-height: 1; }
+    .res-main-sub { font-size: 0.82rem; color: rgba(255,255,255,0.7); margin-top: 7px; }
 
-    /* Results */
-    .results-box { margin-top: 18px; display: none; }
-    .results-box.show { display: block; }
+    /* Split results (2 or 3 columns) */
+    .res-split-2 { display: grid; grid-template-columns: 1fr 1fr; }
+    .res-split-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+    .res-cell { padding: 18px 14px; text-align: center; border-right: 1px solid var(--border); }
+    .res-cell:last-child { border-right: none; }
+    .rc-label { font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7px; color: var(--gray); margin-bottom: 5px; }
+    .rc-val { font-size: 1.35rem; font-weight: 900; color: var(--black); letter-spacing: -0.5px; line-height: 1; }
+    .rc-sub { font-size: 0.73rem; color: var(--gray); margin-top: 4px; }
+    .rc-val.green { color: var(--green); }
+    .rc-val.pink { color: var(--pink); }
+    .rc-val.amber { color: var(--amber); }
+    .rc-val.blue { color: var(--blue); }
 
-    .result-main { background: var(--success-bg); border: 1.5px solid var(--success-border); border-radius: var(--radius); padding: 18px 20px; text-align: center; margin-bottom: 12px; }
-    .result-main .rm-label { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--success); margin-bottom: 8px; }
-    .result-main .rm-value { font-size: 34px; font-weight: 900; color: var(--black); line-height: 1; }
-    .result-main .rm-value.pink { color: var(--pink); }
+    /* Breakdown strip */
+    .res-breakdown { background: var(--light-gray); padding: 14px 20px; border-top: 1px solid var(--border); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 0.83rem; color: var(--dark); }
+    .bd-tag { font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.7px; color: var(--pink); margin-right: 4px; }
+    .bd-eq { font-family: 'Courier New', monospace; font-weight: 700; color: var(--dark); background: var(--white); border: 1px solid var(--border); padding: 3px 8px; border-radius: 6px; font-size: 0.8rem; }
 
-    .result-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
-    .result-tile { border-radius: var(--radius); padding: 14px 16px; text-align: center; }
-    .result-tile.green { background: var(--success-bg); border: 1.5px solid var(--success-border); }
-    .result-tile.pk { background: var(--pink-bg); border: 1.5px solid var(--pink-light); }
-    .result-tile.gray { background: var(--gray-100); border: 1.5px solid var(--gray-200); }
-    .result-tile .rt-label { font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray-600); margin-bottom: 6px; }
-    .result-tile.green .rt-label { color: var(--success); }
-    .result-tile.pk .rt-label { color: var(--pink); }
-    .result-tile .rt-value { font-size: 22px; font-weight: 800; color: var(--black); }
-    .result-tile.green .rt-value { color: var(--success); }
-    .result-tile.pk .rt-value { color: var(--pink); }
+    /* Steps */
+    .res-steps { background: var(--light-gray); padding: 16px 20px 18px; border-top: 1px solid var(--border); }
+    .res-steps-title { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 10px; }
+    .res-steps ol { list-style: none; counter-reset: step; display: flex; flex-direction: column; gap: 6px; padding: 0; }
+    .res-steps ol li { counter-increment: step; display: flex; gap: 10px; font-size: 0.83rem; color: var(--dark); line-height: 1.55; }
+    .res-steps ol li::before { content: counter(step); min-width: 20px; height: 20px; background: var(--pink); color: white; border-radius: 50%; font-size: 0.7rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
 
-    .result-formula { background: var(--gray-100); border-radius: var(--radius-sm); padding: 10px 14px; font-size: 13px; color: var(--gray-700); text-align: center; font-family: 'Courier New', monospace; }
+    /* ===== TIP QUICK BTNS ===== */
+    .quick-btns { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .quick-btn { padding: 7px 13px; background: var(--light-gray); border: 2px solid var(--border); border-radius: 9px; font-size: 0.82rem; font-weight: 800; color: var(--dark); cursor: pointer; font-family: var(--font); transition: all 0.18s; }
+    .quick-btn:hover { border-color: var(--pink); color: var(--pink); background: var(--pink-xlight); }
+    .quick-btn.active-q { border-color: var(--pink); background: var(--pink); color: white; }
 
-    .calc-error { margin-top: 12px; padding: 10px 14px; background: var(--danger-bg); border: 1px solid var(--danger-border); border-radius: var(--radius); font-size: 13.5px; color: var(--danger); display: none; text-align: center; }
-    .calc-error.show { display: block; }
+    /* ===== SPLIT BILL TABLE ===== */
+    .split-result-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-top: 14px; }
+    .split-result-table th { text-align: left; padding: 8px 12px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--gray); border-bottom: 2px solid var(--border); }
+    .split-result-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--dark); font-weight: 600; }
+    .split-result-table td:last-child { font-weight: 800; color: var(--pink); text-align: right; }
+    .split-result-table tr:last-child td { border-bottom: none; background: var(--pink-xlight); font-weight: 800; }
 
-    /* ============================================================
-       SIDEBAR
-    ============================================================ */
-    .sidebar { display: flex; flex-direction: column; gap: 20px; }
+    /* ===== QUICK SCENARIOS ===== */
+    .scenarios-sec { max-width: 820px; margin: 0 auto; padding: 28px 20px 0; }
+    .scenarios-title { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray); margin-bottom: 12px; }
+    .scenarios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .sc-card { background: var(--white); border: 2px solid var(--border); border-radius: var(--radius); padding: 14px 14px; cursor: pointer; transition: all 0.18s; text-align: left; font-family: var(--font); }
+    .sc-card:hover { border-color: var(--pink); box-shadow: var(--shadow); }
+    .sc-icon { font-size: 1.4rem; margin-bottom: 6px; }
+    .sc-q { font-size: 0.8rem; font-weight: 800; color: var(--black); margin-bottom: 3px; line-height: 1.35; }
+    .sc-ans { font-size: 0.75rem; color: var(--pink); font-weight: 700; }
 
-    .sidebar-card { background: var(--white); border: 1.5px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; }
-    .sidebar-card-head { background: var(--black); padding: 14px 18px; }
-    .sidebar-card-head h3 { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--white); }
-    .sidebar-card-body { padding: 16px 18px; }
+    /* ===== TIP REFERENCE TABLE ===== */
+    .ref-sec { max-width: 820px; margin: 0 auto; padding: 28px 20px 0; }
+    .ref-title { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray); margin-bottom: 12px; }
+    .ref-tabs { display: flex; gap: 6px; margin-bottom: 14px; flex-wrap: wrap; }
+    .ref-tab-btn { padding: 7px 14px; background: var(--light-gray); border: 2px solid var(--border); border-radius: 9px; font-size: 0.8rem; font-weight: 700; color: var(--gray); cursor: pointer; font-family: var(--font); transition: all 0.18s; }
+    .ref-tab-btn.active { background: var(--black); border-color: var(--black); color: white; }
+    .ref-tab-pane { display: none; }
+    .ref-tab-pane.active { display: block; }
+    .ref-table-wrap { overflow-x: auto; border-radius: var(--radius); border: 2px solid var(--border); }
+    .ref-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    .ref-table thead tr { background: var(--black); color: white; }
+    .ref-table thead th { padding: 10px 14px; text-align: left; font-size: 0.73rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .ref-table tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; cursor: pointer; }
+    .ref-table tbody tr:last-child { border-bottom: none; }
+    .ref-table tbody tr:hover { background: var(--pink-xlight); }
+    .ref-table tbody td { padding: 10px 14px; color: var(--dark); }
+    .ref-table tbody td:first-child { font-weight: 800; color: var(--pink); }
+    .ref-table .hi { font-weight: 800; color: var(--green); }
+    .try-btn { font-size: 0.72rem; padding: 3px 9px; background: var(--pink-light); color: var(--pink); border: none; border-radius: 100px; font-weight: 700; cursor: pointer; font-family: var(--font); transition: background 0.15s; }
+    .try-btn:hover { background: var(--pink); color: white; }
 
-    .sidebar-links { list-style: none; display: flex; flex-direction: column; gap: 4px; }
-    .sidebar-links a { display: flex; align-items: center; gap: 10px; font-size: 13.5px; font-weight: 600; color: var(--gray-700); text-decoration: none; padding: 9px 10px; border-radius: var(--radius-sm); transition: background var(--transition), color var(--transition); }
-    .sidebar-links a:hover { background: var(--pink-bg); color: var(--pink); }
-    .sidebar-links a .sl-icon { font-size: 14px; flex-shrink: 0; }
-    .sidebar-links a.current { background: var(--pink-bg); color: var(--pink); border-left: 3px solid var(--pink); }
+    /* ===== CONTENT ===== */
+    .content-wrap { max-width: 880px; margin: 0 auto; padding: 56px 20px 16px; }
+    .content-wrap h2 { font-size: clamp(1.3rem, 3vw, 1.85rem); font-weight: 900; color: var(--black); letter-spacing: -0.6px; margin-bottom: 16px; }
+    .content-wrap h3 { font-size: 1.08rem; font-weight: 800; color: var(--black); margin: 32px 0 12px; }
+    .content-wrap p { color: var(--dark); line-height: 1.78; margin-bottom: 16px; font-size: 0.97rem; }
+    .content-wrap strong { color: var(--black); }
+    .content-wrap ul, .content-wrap ol { margin: 10px 0 18px; display: flex; flex-direction: column; gap: 8px; }
+    .content-wrap ul { list-style: none; }
+    .content-wrap ul li { padding-left: 20px; position: relative; font-size: 0.95rem; color: var(--dark); line-height: 1.6; }
+    .content-wrap ul li::before { content: '•'; color: var(--pink); position: absolute; left: 0; font-weight: 900; font-size: 1.1rem; top: -1px; }
 
-    /* AUS reference card */
-    .aus-card { background: linear-gradient(135deg, #0a2240, #1a3a5c); border-radius: var(--radius-lg); padding: 20px; color: var(--white); }
-    .aus-card h4 { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #60b4ff; margin-bottom: 14px; }
-    .aus-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,0.08); font-size: 13.5px; }
-    .aus-row:last-child { border-bottom: none; }
-    .aus-row .ar-label { color: rgba(255,255,255,0.75); font-weight: 600; }
-    .aus-row .ar-val { color: rgba(255,255,255,0.45); font-size: 12.5px; }
-    .aus-row .ar-badge { background: var(--pink); color: var(--white); font-size: 11px; font-weight: 800; padding: 3px 9px; border-radius: 999px; }
+    .formula-block { background: var(--light-gray); border: 2px solid var(--border); border-radius: var(--radius); padding: 18px 22px; margin: 18px 0; }
+    .formula-block .fb-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 8px; }
+    .formula-block code { font-size: 0.98rem; color: var(--black); font-family: 'Courier New', monospace; font-weight: 700; display: block; margin-bottom: 4px; }
+    .formula-block p { font-size: 0.84rem; color: var(--gray); margin: 0; line-height: 1.55; }
 
-    /* Common amounts card */
-    .amounts-card { background: var(--white); border: 1.5px solid var(--gray-200); border-radius: var(--radius-lg); padding: 18px; }
-    .amounts-card h4 { font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--black); border-bottom: 2px solid var(--pink); padding-bottom: 10px; margin-bottom: 14px; }
-    .amounts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-    .amount-chip { background: var(--gray-100); border: 1px solid var(--gray-200); border-radius: var(--radius-sm); padding: 8px 10px; text-align: center; font-size: 12.5px; color: var(--gray-700); cursor: pointer; transition: background var(--transition), border-color var(--transition); line-height: 1.4; }
-    .amount-chip strong { display: block; font-size: 14px; color: var(--black); }
-    .amount-chip:hover { background: var(--pink-bg); border-color: var(--pink); color: var(--pink); }
+    .example-block { background: var(--pink-xlight); border: 2px solid var(--pink-light); border-radius: var(--radius); padding: 20px 22px; margin: 18px 0; }
+    .example-block .eb-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 10px; }
+    .example-block p { margin-bottom: 7px; font-size: 0.91rem; line-height: 1.7; }
+    .example-block p:last-child { margin-bottom: 0; }
 
-    /* ============================================================
-       ARTICLE
-    ============================================================ */
-    .article-section { padding-top: 40px; }
-    .article-section h2 { font-size: clamp(20px, 2.5vw, 26px); font-weight: 800; color: var(--black); margin-bottom: 14px; letter-spacing: -0.3px; }
-    .article-section h3 { font-size: 18px; font-weight: 700; color: var(--black); margin: 28px 0 10px; }
-    .article-section p { color: var(--gray-700); margin-bottom: 16px; font-size: 15.5px; line-height: 1.7; }
-    .article-section a { color: var(--pink); font-weight: 600; }
-    .article-section a:hover { text-decoration: underline; }
+    .green-box { background: var(--green-bg); border: 2px solid var(--green-light); border-radius: var(--radius); padding: 18px 22px; margin: 18px 0; }
+    .green-box .gb-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--green); margin-bottom: 8px; }
+    .green-box p { font-size: 0.91rem; color: #064e3b; margin-bottom: 7px; line-height: 1.65; }
+    .green-box p:last-child { margin-bottom: 0; }
 
-    .formula-box { background: var(--gray-100); border-left: 4px solid var(--pink); border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 18px; margin: 18px 0; font-family: 'Courier New', monospace; font-size: 14.5px; color: var(--black); font-weight: 600; display: flex; flex-direction: column; gap: 5px; }
-    .formula-box span { font-size: 13px; font-weight: 400; color: var(--gray-600); font-family: var(--font); }
+    .table-wrap { overflow-x: auto; margin: 18px 0; border-radius: var(--radius); border: 2px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.89rem; }
+    thead tr { background: var(--black); color: white; }
+    thead th { padding: 12px 16px; text-align: left; font-size: 0.76rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; }
+    tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: var(--pink-xlight); }
+    tbody td { padding: 12px 16px; color: var(--dark); line-height: 1.5; }
+    tbody td:first-child { font-weight: 700; color: var(--pink); }
 
-    .use-case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 22px 0; }
-    .use-case-card { background: var(--white); border: 1.5px solid var(--gray-200); border-radius: var(--radius-lg); padding: 18px 16px; }
-    .use-case-card .uc-icon { font-size: 26px; margin-bottom: 10px; }
-    .use-case-card h4 { font-size: 14px; font-weight: 700; color: var(--black); margin-bottom: 6px; }
-    .use-case-card p { font-size: 13px; color: var(--gray-600); line-height: 1.5; margin: 0; }
-    .use-case-card .uc-formula { font-family: 'Courier New', monospace; font-size: 12px; background: var(--gray-100); padding: 4px 8px; border-radius: 4px; color: var(--pink-dark); margin-top: 8px; display: block; }
+    .link-box { background: var(--black); border-radius: var(--radius); padding: 22px 24px; margin: 26px 0; color: white; }
+    .link-box h3 { color: var(--pink); margin-top: 0; margin-bottom: 12px; font-size: 0.95rem; }
+    .link-box ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .link-box ul li { font-size: 0.87rem; color: rgba(255,255,255,0.78); padding-left: 20px; position: relative; }
+    .link-box ul li::before { content: '→'; position: absolute; left: 0; color: var(--pink); font-weight: 700; }
+    .link-box ul li a { color: var(--pink); text-decoration: none; font-weight: 700; }
+    .link-box ul li a:hover { text-decoration: underline; }
 
-    .data-table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1.5px solid var(--gray-200); margin: 20px 0; }
-    .data-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-    .data-table thead { background: var(--black); color: var(--white); }
-    .data-table th { padding: 12px 16px; text-align: left; font-weight: 700; font-size: 13px; white-space: nowrap; }
-    .data-table td { padding: 11px 16px; border-bottom: 1px solid var(--gray-200); color: var(--gray-700); }
-    .data-table tr:last-child td { border-bottom: none; }
-    .data-table tr:nth-child(even) td { background: var(--gray-100); }
-    .data-table .td-result { font-weight: 700; color: var(--success); }
-    .data-table .td-pink { font-weight: 700; color: var(--pink); }
+    /* ===== FAQ ===== */
+    .faq-sec { max-width: 880px; margin: 0 auto; padding: 0 20px 64px; }
+    .sec-head { text-align: center; margin-bottom: 32px; }
+    .sec-tag { display: inline-block; background: var(--pink-light); color: var(--pink); font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; padding: 4px 12px; border-radius: 100px; margin-bottom: 12px; }
+    .sec-head h2 { font-size: clamp(1.35rem, 3vw, 2rem); font-weight: 900; color: var(--black); letter-spacing: -0.6px; margin-bottom: 6px; }
+    .sec-head p { font-size: 0.96rem; color: var(--gray); }
+    .faq-item { border: 2px solid var(--border); border-radius: var(--radius); margin-bottom: 10px; overflow: hidden; transition: border-color 0.2s; }
+    .faq-item.open { border-color: var(--pink); }
+    .faq-q { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; cursor: pointer; font-weight: 700; font-size: 0.92rem; color: var(--black); user-select: none; transition: background 0.15s; }
+    .faq-q:hover { background: var(--light-gray); }
+    .faq-ico { width: 26px; height: 26px; background: var(--pink-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--pink); font-size: 1.2rem; font-weight: 700; flex-shrink: 0; transition: transform 0.25s; }
+    .faq-item.open .faq-ico { transform: rotate(45deg); background: var(--pink); color: white; }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.32s ease, padding 0.32s; padding: 0 20px; }
+    .faq-item.open .faq-a { max-height: 500px; padding: 0 20px 16px; }
+    .faq-a p { color: var(--dark); font-size: 0.89rem; line-height: 1.72; }
+    .faq-a a { color: var(--pink); font-weight: 600; }
 
-    .info-banner { display: flex; gap: 14px; background: var(--amber-bg); border: 1.5px solid var(--amber-border); border-radius: var(--radius); padding: 16px 18px; margin: 22px 0; }
-    .info-banner .ib-icon { font-size: 20px; flex-shrink: 0; }
-    .info-banner p { font-size: 14.5px; color: #78350f; line-height: 1.6; margin: 0; }
-
-    /* ============================================================
-       FAQ
-    ============================================================ */
-    .faq-section { background: var(--gray-100); padding: 52px 20px; margin: 0 -20px; }
-    .faq-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-    .faq-heading { font-size: clamp(20px, 3vw, 28px); font-weight: 800; color: var(--black); margin-bottom: 8px; letter-spacing: -0.3px; }
-    .faq-subhead { font-size: 15px; color: var(--gray-600); }
-    .faq-col-left { padding-top: 4px; }
-    .faq-list { display: flex; flex-direction: column; gap: 10px; }
-    .faq-item { background: var(--white); border: 1.5px solid var(--gray-200); border-radius: var(--radius); overflow: hidden; }
-    .faq-question { width: 100%; background: none; border: none; padding: 16px 18px; text-align: left; font-size: 15px; font-weight: 700; color: var(--black); cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: background var(--transition); }
-    .faq-question:hover { background: var(--gray-100); }
-    .faq-icon { min-width: 26px; height: 26px; border-radius: 50%; background: var(--pink-bg); color: var(--pink); font-size: 16px; font-weight: 900; display: flex; align-items: center; justify-content: center; transition: transform var(--transition), background var(--transition); flex-shrink: 0; }
-    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--pink); color: var(--white); }
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 18px; }
-    .faq-item.open .faq-answer { max-height: 400px; padding: 0 18px 16px; }
-    .faq-answer p { font-size: 14.5px; color: var(--gray-700); line-height: 1.7; margin: 0; }
-    .faq-answer code { background: var(--gray-100); padding: 2px 7px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 13px; color: var(--pink-dark); }
-    .faq-answer a { color: var(--pink); font-weight: 600; }
-
-    /* ============================================================
-       RELATED TOOLS
-    ============================================================ */
-    .related-section { padding: 48px 0 56px; }
-    .related-section h2 { font-size: 20px; font-weight: 800; color: var(--black); margin-bottom: 20px; }
-    .related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-    .related-card { background: var(--white); border: 1.5px solid var(--gray-200); border-radius: var(--radius-lg); padding: 18px 16px; text-decoration: none; display: flex; flex-direction: column; gap: 7px; transition: box-shadow var(--transition), border-color var(--transition), transform var(--transition); }
-    .related-card:hover { box-shadow: var(--shadow); border-color: var(--pink); transform: translateY(-2px); text-decoration: none; }
-    .related-card .rc-icon { font-size: 22px; }
-    .related-card h3 { font-size: 13.5px; font-weight: 700; color: var(--black); line-height: 1.3; }
-    .related-card p { font-size: 12px; color: var(--gray-600); line-height: 1.4; }
-    .related-card .rc-arrow { font-size: 12px; color: var(--pink); font-weight: 700; margin-top: auto; }
-
-    /* ============================================================
-       FOOTER
-    ============================================================ */
-    .site-footer { background: var(--black); color: rgba(255,255,255,0.65); padding: 48px 20px 28px; }
+    /* ===== FOOTER ===== */
+    footer { background: var(--black); color: white; padding: 60px 20px 36px; }
     .footer-inner { max-width: 1200px; margin: 0 auto; }
-    .footer-top { display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-    .footer-brand .logo { margin-bottom: 14px; display: inline-flex; }
-    .footer-brand p { font-size: 13.5px; line-height: 1.6; max-width: 260px; }
-    .footer-col h5 { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--white); margin-bottom: 14px; }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .footer-col a { font-size: 13.5px; color: rgba(255,255,255,0.6); text-decoration: none; transition: color var(--transition); }
-    .footer-col a:hover { color: var(--pink); }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-    .footer-bottom p { font-size: 13px; }
-    .footer-bottom a { color: rgba(255,255,255,0.5); font-size: 13px; text-decoration: none; }
-    .footer-bottom a:hover { color: var(--pink); }
-    .footer-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(218,37,118,0.12); border: 1px solid rgba(218,37,118,0.25); color: var(--pink); font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: 999px; }
+    .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .f-brand .logo { margin-bottom: 14px; }
+    .f-brand .logo .logo-name { color: white; }
+    .f-brand p { font-size: 0.84rem; color: rgba(255,255,255,0.55); line-height: 1.7; max-width: 260px; }
+    .f-col h4 { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+    .f-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .f-col ul li a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.85rem; transition: color 0.18s; }
+    .f-col ul li a:hover { color: var(--pink); }
+    .footer-bottom { padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+    .footer-bottom a { color: var(--pink); text-decoration: none; }
+    .hr-line { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .hr-line hr { border: none; border-top: 1px solid var(--border); }
 
-    /* ============================================================
-       RESPONSIVE
-    ============================================================ */
-    @media (max-width: 1024px) {
-      .footer-top { grid-template-columns: 1fr 1fr; }
-      .related-grid { grid-template-columns: repeat(2, 1fr); }
-      .use-case-grid { grid-template-columns: repeat(2, 1fr); }
-    }
     @media (max-width: 900px) {
-      .page-grid { grid-template-columns: 1fr; }
-      .sidebar { display: grid; grid-template-columns: 1fr 1fr; }
-      .faq-inner { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .scenarios-grid { grid-template-columns: 1fr 1fr; }
+      .calc-tabs-layout { grid-template-columns: 1fr; }
+      .calc-tab-nav { flex-direction: row; flex-wrap: wrap; }
+      .calc-tab-btn { width: auto; flex: 1 1 calc(50% - 4px); min-width: 140px; }
     }
     @media (max-width: 768px) {
-      .site-nav { display: none; }
-      .nav-toggle { display: flex; }
-      .calc-tabs { grid-template-columns: 1fr; }
-      .calc-tab { border-bottom: none; border-right: 3px solid transparent; margin-bottom: 0; text-align: left; padding: 12px 16px; }
-      .calc-tab.active { border-right-color: var(--pink); border-bottom-color: transparent; }
-      .result-tiles { grid-template-columns: 1fr; }
+      .main-nav { display: none; }
+      .hamburger { display: flex; }
+      .hero { padding: 36px 20px 26px; }
+      .res-split-3 { grid-template-columns: 1fr; }
+      .res-split-2 { grid-template-columns: 1fr; }
+      .res-cell { border-right: none; border-bottom: 1px solid var(--border); }
+      .input-row { grid-template-columns: 1fr; }
+      .input-row-3 { grid-template-columns: 1fr 1fr; }
+      .scenarios-grid { grid-template-columns: 1fr; }
     }
-    @media (max-width: 600px) {
-      .sidebar { grid-template-columns: 1fr; }
-      .calc-panel { padding: 18px 16px; }
-      .footer-top { grid-template-columns: 1fr; }
-      .mobile-menu ul { grid-template-columns: 1fr; }
-      .use-case-grid { grid-template-columns: 1fr; }
-      .amounts-grid { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .calc-card { padding: 20px 16px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ====================================================
-       HEADER
-  ==================================================== -->
-  <header class="site-header" role="banner">
-    <div class="header-inner">
-      <a href="/" class="logo" aria-label="CalcPercentage Home">
-        <div class="logo-icon" aria-hidden="true">%</div>
-        <span class="logo-text">Calc<span>Percentage</span></span>
-      </a>
+<!-- ========== HEADER ========== -->
+<header>
+  <div class="header-wrap">
+    <a href="/" class="logo" aria-label="CalcPercentage — Home">
+      <div class="logo-icon">%</div>
+      <span class="logo-name"><span>Calc</span>Percentage</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/percentage-increase-calculator/">% Increase</a>
+      <a href="/percentage-decrease-calculator/">% Decrease</a>
+      <a href="/percentage-change-calculator/">% Change</a>
+      <a href="/percent-off-calculator/">% Off</a>
+      <a href="/fraction-to-percentage/">Fraction→%</a>
+      <a href="/money-percentage-calculator/" class="active" aria-current="page">💰 Money %</a>
+    </nav>
+    <button class="hamburger" id="hambBtn" aria-label="Open menu" aria-expanded="false" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="/">🏠 Percentage Calculator (Home)</a>
+    <a href="/money-percentage-calculator/" class="active">💰 Money Percentage Calculator</a>
+    <a href="/percent-off-calculator/">🏷️ Percent Off / Discount Calculator</a>
+    <a href="/percentage-increase-calculator/">📈 Percentage Increase Calculator</a>
+    <a href="/percentage-decrease-calculator/">📉 Percentage Decrease Calculator</a>
+    <a href="/percentage-change-calculator/">🔄 Percentage Change Calculator</a>
+    <a href="/fraction-to-percentage/">½ Fraction to Percentage</a>
+    <a href="/percent-error-calculator/">🔬 Percent Error Calculator</a>
+    <a href="/what-is-percentage/">📖 What is a Percentage?</a>
+  </nav>
+</header>
 
-      <nav role="navigation" aria-label="Main navigation">
-        <ul class="site-nav">
-          <li><a href="/percentage-increase-calculator">% Increase</a></li>
-          <li><a href="/percentage-decrease-calculator">% Decrease</a></li>
-          <li><a href="/percentage-change-calculator">% Change</a></li>
-          <li><a href="/percentage-difference-calculator">% Difference</a></li>
-          <li><a href="/percentage-off-calculator">% Off</a></li>
-          <li><a href="/percent-error-calculator">% Error</a></li>
-          <li><a href="/discount-calculator">Discount</a></li>
-          <li><a href="/percentage-formula">Formulas</a></li>
-        </ul>
-      </nav>
+<!-- ========== BREADCRUMB ========== -->
+<div class="breadcrumb-bar">
+  <ol class="breadcrumb" aria-label="Breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><span>Money Percentage Calculator</span></li>
+  </ol>
+</div>
 
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
-        <span></span><span></span><span></span>
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-badge">💰 Money & Finance Calculator</div>
+  <h1>Money<br><em>Percentage Calculator</em></h1>
+  <p class="hero-sub">Calculate percentages of dollar amounts in seconds — tips, sales tax, discounts, salary raises, investment returns, and more. Full step-by-step working for every calculation.</p>
+  <div class="hero-pills">
+    <button class="hero-pill" onclick="jumpToTab('pct-of')">💵 % of Amount</button>
+    <button class="hero-pill" onclick="jumpToTab('what-pct')">❓ What % is X of Y</button>
+    <button class="hero-pill" onclick="jumpToTab('tip')">🍽️ Tip Calculator</button>
+    <button class="hero-pill" onclick="jumpToTab('tax')">🏛️ Sales Tax</button>
+    <button class="hero-pill" onclick="jumpToTab('discount')">🛍️ Discount</button>
+    <button class="hero-pill" onclick="jumpToTab('salary')">📈 Salary Raise</button>
+  </div>
+</section>
+
+<!-- ========== CURRENCY SELECTOR ========== -->
+<div class="currency-bar" aria-label="Select currency symbol">
+  <label>Currency:</label>
+  <button class="currency-btn active" data-sym="$" onclick="setCurrency(this,'$')">$ USD</button>
+  <button class="currency-btn" data-sym="£" onclick="setCurrency(this,'£')">£ GBP</button>
+  <button class="currency-btn" data-sym="€" onclick="setCurrency(this,'€')">€ EUR</button>
+  <button class="currency-btn" data-sym="₹" onclick="setCurrency(this,'₹')">₹ INR</button>
+  <button class="currency-btn" data-sym="¥" onclick="setCurrency(this,'¥')">¥ JPY</button>
+  <button class="currency-btn" data-sym="A$" onclick="setCurrency(this,'A$')">A$ AUD</button>
+</div>
+
+<!-- ========== CALCULATOR ========== -->
+<section class="calc-outer" aria-label="Money percentage calculators">
+  <div class="calc-tabs-layout">
+
+    <!-- LEFT NAV -->
+    <div class="calc-tab-nav" role="tablist">
+      <button class="calc-tab-btn active" role="tab" aria-selected="true" id="tab-pct-of" onclick="switchTab('pct-of', this)">
+        <span class="tab-icon">💵</span>
+        <span class="tab-label">% of Amount<span class="tab-sub">Find the dollar value</span></span>
+      </button>
+      <button class="calc-tab-btn" role="tab" aria-selected="false" id="tab-what-pct" onclick="switchTab('what-pct', this)">
+        <span class="tab-icon">❓</span>
+        <span class="tab-label">What % is X of Y<span class="tab-sub">Find the percent</span></span>
+      </button>
+      <button class="calc-tab-btn" role="tab" aria-selected="false" id="tab-tip" onclick="switchTab('tip', this)">
+        <span class="tab-icon">🍽️</span>
+        <span class="tab-label">Tip Calculator<span class="tab-sub">With bill split</span></span>
+      </button>
+      <button class="calc-tab-btn" role="tab" aria-selected="false" id="tab-tax" onclick="switchTab('tax', this)">
+        <span class="tab-icon">🏛️</span>
+        <span class="tab-label">Sales Tax<span class="tab-sub">Add or remove tax</span></span>
+      </button>
+      <button class="calc-tab-btn" role="tab" aria-selected="false" id="tab-discount" onclick="switchTab('discount', this)">
+        <span class="tab-icon">🛍️</span>
+        <span class="tab-label">Discount<span class="tab-sub">Sale price & savings</span></span>
+      </button>
+      <button class="calc-tab-btn" role="tab" aria-selected="false" id="tab-salary" onclick="switchTab('salary', this)">
+        <span class="tab-icon">📈</span>
+        <span class="tab-label">Salary Raise<span class="tab-sub">New salary & raise</span></span>
       </button>
     </div>
 
-    <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
-      <ul>
-        <li><a href="/percentage-increase-calculator">📈 % Increase</a></li>
-        <li><a href="/percentage-decrease-calculator">📉 % Decrease</a></li>
-        <li><a href="/percentage-change-calculator">🔄 % Change</a></li>
-        <li><a href="/percentage-difference-calculator">↔️ % Difference</a></li>
-        <li><a href="/percentage-off-calculator">🏷️ % Off</a></li>
-        <li><a href="/percent-error-calculator">🔬 % Error</a></li>
-        <li><a href="/discount-calculator">💰 Discount</a></li>
-        <li><a href="/fraction-to-percentage">½ Fraction → %</a></li>
-        <li><a href="/what-percentage-of">❓ What % Of</a></li>
-        <li><a href="/percentage-of-number">🔢 % of Number</a></li>
-        <li><a href="/money-percentage-calculator">💵 Money %</a></li>
-        <li><a href="/sales-percentage-calculator">📊 Sales %</a></li>
-        <li><a href="/percentage-formula">📐 Formulas</a></li>
-        <li><a href="/how-to-calculate-percentage">📚 How to Calculate</a></li>
-      </ul>
-    </div>
-  </header>
+    <!-- RIGHT CARD -->
+    <div class="calc-card">
 
-  <!-- ====================================================
-       HERO
-  ==================================================== -->
-  <div class="page-hero">
-    <div class="page-hero-inner">
-      <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="/">Home</a>
-        <span>›</span>
-        <strong>Money Percentage Calculator</strong>
-      </nav>
-      <h1>Free <em>Money Percentage Calculator</em></h1>
-      <p>Find X% of any dollar amount, calculate what percentage one amount is of another, and add or subtract percentages — GST, tips, commission, markups and more.</p>
+      <!-- PANE 1: % of Amount -->
+      <div class="calc-pane active" id="pane-pct-of">
+        <div class="pane-title">What is X% of a Dollar Amount?</div>
+        <div class="pane-sub">Enter any percentage and any dollar amount to find the exact dollar value of that percentage.</div>
+        <div class="formula-strip" id="formula-pct-of">Result = Amount × (% ÷ 100)</div>
+        <div class="input-row">
+          <div class="fg">
+            <label for="po-pct">Percentage</label>
+            <div class="pct-input-wrap">
+              <input type="number" id="po-pct" class="pct-input" placeholder="15" step="any" min="0" inputmode="decimal">
+              <span class="pct-suffix">%</span>
+            </div>
+          </div>
+          <div class="fg">
+            <label for="po-amt">Dollar Amount</label>
+            <div class="money-input-wrap">
+              <span class="money-symbol" id="sym-po">$</span>
+              <input type="number" id="po-amt" class="money-input" placeholder="200.00" step="any" min="0" inputmode="decimal">
+            </div>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcPctOf()">Calculate →</button>
+        <div class="err-msg" id="po-err">⚠ Please enter a valid percentage and amount.</div>
+        <div class="result-box" id="po-res">
+          <div class="res-main">
+            <div class="res-main-label" id="po-res-label">Result</div>
+            <div class="res-main-val" id="po-res-val">—</div>
+            <div class="res-main-sub" id="po-res-sub"></div>
+          </div>
+          <div class="res-breakdown">
+            <span class="bd-tag">Formula:</span>
+            <span class="bd-eq" id="po-eq">—</span>
+          </div>
+          <div class="res-steps">
+            <div class="res-steps-title">📐 Step-by-Step</div>
+            <ol id="po-steps"></ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 2: What % is X of Y -->
+      <div class="calc-pane" id="pane-what-pct">
+        <div class="pane-title">What Percentage is One Amount of Another?</div>
+        <div class="pane-sub">Find what percent a dollar amount is of a larger (or smaller) dollar amount.</div>
+        <div class="formula-strip">% = (Part Amount ÷ Total Amount) × 100</div>
+        <div class="input-row">
+          <div class="fg">
+            <label for="wp-part">Part Amount</label>
+            <div class="money-input-wrap">
+              <span class="money-symbol" id="sym-wp-part">$</span>
+              <input type="number" id="wp-part" class="money-input" placeholder="45.00" step="any" min="0" inputmode="decimal">
+            </div>
+          </div>
+          <div class="fg">
+            <label for="wp-total">Total Amount</label>
+            <div class="money-input-wrap">
+              <span class="money-symbol" id="sym-wp-total">$</span>
+              <input type="number" id="wp-total" class="money-input" placeholder="180.00" step="any" min="0" inputmode="decimal">
+            </div>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcWhatPct()">Calculate Percentage →</button>
+        <div class="err-msg" id="wp-err">⚠ Please enter valid amounts. Total cannot be zero.</div>
+        <div class="result-box" id="wp-res">
+          <div class="res-main">
+            <div class="res-main-label" id="wp-res-label">Percentage</div>
+            <div class="res-main-val" id="wp-res-val">—</div>
+            <div class="res-main-sub" id="wp-res-sub"></div>
+          </div>
+          <div class="res-breakdown">
+            <span class="bd-tag">Formula:</span>
+            <span class="bd-eq" id="wp-eq">—</span>
+          </div>
+          <div class="res-steps">
+            <div class="res-steps-title">📐 Step-by-Step</div>
+            <ol id="wp-steps"></ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 3: Tip Calculator -->
+      <div class="calc-pane" id="pane-tip">
+        <div class="pane-title">Tip Calculator</div>
+        <div class="pane-sub">Calculate tip amount, total bill, and per-person split. Use quick buttons or enter any tip %.</div>
+        <div class="formula-strip">Tip = Bill × (Tip% ÷ 100) &nbsp;|&nbsp; Per Person = Total ÷ People</div>
+        <div class="quick-btns" id="tip-quick-btns">
+          <button class="quick-btn" onclick="setTipPct(10, this)">10%</button>
+          <button class="quick-btn" onclick="setTipPct(15, this)">15%</button>
+          <button class="quick-btn active-q" onclick="setTipPct(18, this)">18%</button>
+          <button class="quick-btn" onclick="setTipPct(20, this)">20%</button>
+          <button class="quick-btn" onclick="setTipPct(25, this)">25%</button>
+          <button class="quick-btn" onclick="setTipPct(30, this)">30%</button>
+        </div>
+        <div class="input-row-3">
+          <div class="fg">
+            <label for="tip-bill">Bill Amount</label>
+            <div class="money-input-wrap">
+              <span class="money-symbol" id="sym-tip">$</span>
+              <input type="number" id="tip-bill" class="money-input" placeholder="65.00" step="any" min="0" inputmode="decimal" oninput="calcTipLive()">
+            </div>
+          </div>
+          <div class="fg">
+            <label for="tip-pct">Tip %</label>
+            <div class="pct-input-wrap">
+              <input type="number" id="tip-pct" class="pct-input" value="18" step="any" min="0" inputmode="decimal" oninput="calcTipLive()">
+              <span class="pct-suffix">%</span>
+            </div>
+          </div>
+          <div class="fg">
+            <label for="tip-people">Split Between</label>
+            <div class="pct-input-wrap">
+              <input type="number" id="tip-people" class="pct-input" value="1" step="1" min="1" max="50" inputmode="numeric" oninput="calcTipLive()">
+              <span class="pct-suffix" style="font-size:0.75rem;right:10px;">ppl</span>
+            </div>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcTip()">Calculate Tip →</button>
+        <div class="err-msg" id="tip-err">⚠ Please enter a valid bill amount.</div>
+        <div class="result-box" id="tip-res">
+          <div class="res-split-3">
+            <div class="res-cell">
+              <div class="rc-label">💰 Tip Amount</div>
+              <div class="rc-val pink" id="tip-res-tip">—</div>
+              <div class="rc-sub" id="tip-res-tip-sub"></div>
+            </div>
+            <div class="res-cell">
+              <div class="rc-label">🧾 Total Bill</div>
+              <div class="rc-val" id="tip-res-total">—</div>
+              <div class="rc-sub">Including tip</div>
+            </div>
+            <div class="res-cell">
+              <div class="rc-label">👤 Per Person</div>
+              <div class="rc-val green" id="tip-res-per">—</div>
+              <div class="rc-sub" id="tip-res-per-sub"></div>
+            </div>
+          </div>
+          <div class="res-breakdown">
+            <span class="bd-tag">Breakdown:</span>
+            <span class="bd-eq" id="tip-eq">—</span>
+          </div>
+          <div class="res-steps">
+            <div class="res-steps-title">📐 Step-by-Step</div>
+            <ol id="tip-steps"></ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 4: Sales Tax -->
+      <div class="calc-pane" id="pane-tax">
+        <div class="pane-title">Sales Tax Calculator</div>
+        <div class="pane-sub">Add tax to a price to find the total, or remove tax from a total to find the pre-tax price.</div>
+        <div class="formula-strip">Total = Price × (1 + Tax% ÷ 100) &nbsp;|&nbsp; Pre-tax = Total ÷ (1 + Tax% ÷ 100)</div>
+        <!-- Tax mode toggle -->
+        <div style="display:flex;gap:8px;margin-bottom:18px;">
+          <button class="quick-btn active-q" id="tax-mode-add" onclick="setTaxMode('add',this)">➕ Add Tax</button>
+          <button class="quick-btn" id="tax-mode-remove" onclick="setTaxMode('remove',this)">➖ Remove Tax</button>
+        </div>
+        <div class="input-row">
+          <div class="fg">
+            <label for="tax-price" id="tax-price-label">Pre-Tax Price</label>
+            <div class="money-input-wrap">
+              <span class="money-symbol" id="sym-tax">$</span>
+              <input type="number" id="tax-price" class="money-input" placeholder="100.00" step="any" min="0" inputmode="decimal">
+            </div>
+          </div>
+          <div class="fg">
+            <label for="tax-pct">Tax Rate</label>
+            <div class="pct-input-wrap">
+              <input type="number" id="tax-pct" class="pct-input" placeholder="8.5" step="any" min="0" inputmode="decimal">
+              <span class="pct-suffix">%</span>
+            </div>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcTax()">Calculate Tax →</button>
+        <div class="err-msg" id="tax-err">⚠ Please enter a valid price and tax rate.</div>
+        <div class="result-box" id="tax-res">
+          <div class="res-split-3">
+            <div class="res-cell">
+              <div class="rc-label" id="tax-lbl-pretax">Pre-Tax Price</div>
+              <div class="rc-val" id="tax-res-pretax">—</div>
+              <div class="rc-sub">Your input</div>
+            </div>
+            <div class="res-cell">
+              <div class="rc-label">🏛️ Tax Amount</div>
+              <div class="rc-val amber" id="tax-res-tax">—</div>
+              <div class="rc-sub" id="tax-res-tax-sub"></div>
+            </div>
+            <div class="res-cell">
+              <div class="rc-label" id="tax-lbl-total">Total with Tax</div>
+              <div class="rc-val pink" id="tax-res-total">—</div>
+              <div class="rc-sub">Final price</div>
+            </div>
+          </div>
+          <div class="res-breakdown">
+            <span class="bd-tag">Formula:</span>
+            <span class="bd-eq" id="tax-eq">—</span>
+          </div>
+          <div class="res-steps">
+            <div class="res-steps-title">📐 Step-by-Step</div>
+            <ol id="tax-steps"></ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 5: Discount -->
+      <div class="calc-pane" id="pane-discount">
+        <div class="pane-title">Discount / Sale Price Calculator</div>
+        <div class="pane-sub">Enter the original price and discount percentage to find the sale price and how much you save.</div>
+        <div class="formula-strip">Sale Price = Original × (1 − Discount% ÷ 100)</div>
+        <div class="input-row">
+          <div class="fg">
+            <label for="disc-price">Original Price</label>
+            <div class="money-input-wrap">
+              <span class="money-symbol" id="sym-disc">$</span>
+              <input type="number" id="disc-price" class="money-input" placeholder="120.00" step="any" min="0" inputmode="decimal">
+            </div>
+          </div>
+          <div class="fg">
+            <label for="disc-pct">Discount %</label>
+            <div class="pct-input-wrap">
+              <input type="number" id="disc-pct" class="pct-input" placeholder="25" step="any" min="0" max="100" inputmode="decimal">
+              <span class="pct-suffix">%</span>
+            </div>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcDiscount()">Calculate Sale Price →</button>
+        <div class="err-msg" id="disc-err">⚠ Please enter a valid price and discount (0–100%).</div>
+        <div class="result-box" id="disc-res">
+          <div class="res-split-2">
+            <div class="res-cell" style="background:linear-gradient(135deg,var(--pink),var(--pink-dark));padding:20px 16px;text-align:center;border-right:none;">
+              <div class="rc-label" style="color:rgba(255,255,255,0.72);">🏷️ Sale Price</div>
+              <div class="rc-val" style="color:white;font-size:1.9rem;" id="disc-res-sale">—</div>
+              <div class="rc-sub" style="color:rgba(255,255,255,0.65);" id="disc-res-sale-sub"></div>
+            </div>
+            <div class="res-cell" style="background:linear-gradient(135deg,var(--green),var(--green-dark));padding:20px 16px;text-align:center;">
+              <div class="rc-label" style="color:rgba(255,255,255,0.72);">💰 You Save</div>
+              <div class="rc-val" style="color:white;font-size:1.9rem;" id="disc-res-save">—</div>
+              <div class="rc-sub" style="color:rgba(255,255,255,0.65);" id="disc-res-save-sub"></div>
+            </div>
+          </div>
+          <div class="res-breakdown">
+            <span class="bd-tag">Formula:</span>
+            <span class="bd-eq" id="disc-eq">—</span>
+          </div>
+          <div class="res-steps">
+            <div class="res-steps-title">📐 Step-by-Step</div>
+            <ol id="disc-steps"></ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANE 6: Salary Raise -->
+      <div class="calc-pane" id="pane-salary">
+        <div class="pane-title">Salary Raise Calculator</div>
+        <div class="pane-sub">Calculate your new salary after a percentage raise — see the annual increase, monthly change, and hourly difference.</div>
+        <div class="formula-strip">New Salary = Current Salary × (1 + Raise% ÷ 100)</div>
+        <div class="input-row">
+          <div class="fg">
+            <label for="sal-current">Current Salary</label>
+            <div class="money-input-wrap">
+              <span class="money-symbol" id="sym-sal">$</span>
+              <input type="number" id="sal-current" class="money-input" placeholder="55000" step="any" min="0" inputmode="decimal">
+            </div>
+          </div>
+          <div class="fg">
+            <label for="sal-pct">Raise %</label>
+            <div class="pct-input-wrap">
+              <input type="number" id="sal-pct" class="pct-input" placeholder="7" step="any" min="0" inputmode="decimal">
+              <span class="pct-suffix">%</span>
+            </div>
+          </div>
+        </div>
+        <!-- Salary type -->
+        <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;">
+          <button class="quick-btn active-q" id="sal-type-annual" onclick="setSalType('annual',this)">Annual</button>
+          <button class="quick-btn" id="sal-type-monthly" onclick="setSalType('monthly',this)">Monthly</button>
+          <button class="quick-btn" id="sal-type-hourly" onclick="setSalType('hourly',this)">Hourly</button>
+        </div>
+        <button class="calc-btn" onclick="calcSalary()">Calculate New Salary →</button>
+        <div class="err-msg" id="sal-err">⚠ Please enter a valid salary and raise percentage.</div>
+        <div class="result-box" id="sal-res">
+          <div class="res-main">
+            <div class="res-main-label" id="sal-res-label">New Salary</div>
+            <div class="res-main-val" id="sal-res-val">—</div>
+            <div class="res-main-sub" id="sal-res-sub"></div>
+          </div>
+          <div class="res-split-3">
+            <div class="res-cell">
+              <div class="rc-label">💼 Raise Amount</div>
+              <div class="rc-val green" id="sal-res-raise">—</div>
+              <div class="rc-sub" id="sal-res-raise-sub">Per year</div>
+            </div>
+            <div class="res-cell">
+              <div class="rc-label">📅 Monthly Change</div>
+              <div class="rc-val blue" id="sal-res-monthly">—</div>
+              <div class="rc-sub">Extra per month</div>
+            </div>
+            <div class="res-cell">
+              <div class="rc-label">⏱️ Weekly Change</div>
+              <div class="rc-val amber" id="sal-res-weekly">—</div>
+              <div class="rc-sub">Extra per week</div>
+            </div>
+          </div>
+          <div class="res-steps">
+            <div class="res-steps-title">📐 Step-by-Step</div>
+            <ol id="sal-steps"></ol>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end calc-card -->
+  </div><!-- end calc-tabs-layout -->
+</section>
+
+<!-- ========== QUICK SCENARIOS ========== -->
+<div class="scenarios-sec">
+  <div class="scenarios-title">⚡ Common Money % Scenarios — Click to Calculate</div>
+  <div class="scenarios-grid">
+    <button class="sc-card" onclick="runScenario('po',15,100)">
+      <div class="sc-icon">☕</div>
+      <div class="sc-q">15% of $100 bill</div>
+      <div class="sc-ans">Click to calculate</div>
+    </button>
+    <button class="sc-card" onclick="runScenario('tip',20,85,2)">
+      <div class="sc-icon">🍕</div>
+      <div class="sc-q">20% tip on $85, split 2</div>
+      <div class="sc-ans">Click to calculate</div>
+    </button>
+    <button class="sc-card" onclick="runScenario('tax',8.5,60)">
+      <div class="sc-icon">🛒</div>
+      <div class="sc-q">8.5% tax on $60</div>
+      <div class="sc-ans">Click to calculate</div>
+    </button>
+    <button class="sc-card" onclick="runScenario('disc',30,250)">
+      <div class="sc-icon">👟</div>
+      <div class="sc-q">30% off $250 shoes</div>
+      <div class="sc-ans">Click to calculate</div>
+    </button>
+    <button class="sc-card" onclick="runScenario('sal',5,50000)">
+      <div class="sc-icon">💼</div>
+      <div class="sc-q">5% raise on $50,000</div>
+      <div class="sc-ans">Click to calculate</div>
+    </button>
+    <button class="sc-card" onclick="runScenario('wp',30,200)">
+      <div class="sc-icon">💳</div>
+      <div class="sc-q">$30 is what % of $200?</div>
+      <div class="sc-ans">Click to calculate</div>
+    </button>
+  </div>
+</div>
+
+<!-- ========== REFERENCE TABLES ========== -->
+<div class="ref-sec">
+  <div class="ref-title">📊 Quick Reference Tables</div>
+  <div class="ref-tabs">
+    <button class="ref-tab-btn active" onclick="switchRefTab('tips', this)">Tip Guide</button>
+    <button class="ref-tab-btn" onclick="switchRefTab('tax', this)">Common Tax Rates</button>
+    <button class="ref-tab-btn" onclick="switchRefTab('pct100', this)">% of $100</button>
+    <button class="ref-tab-btn" onclick="switchRefTab('pct1000', this)">% of $1,000</button>
+  </div>
+
+  <!-- Tips Reference -->
+  <div class="ref-tab-pane active" id="reftab-tips">
+    <div class="ref-table-wrap">
+      <table class="ref-table">
+        <thead><tr><th>Tip %</th><th>$20 Bill</th><th>$40 Bill</th><th>$60 Bill</th><th>$80 Bill</th><th>$100 Bill</th><th>Try It</th></tr></thead>
+        <tbody>
+          <tr><td>10%</td><td>$2.00</td><td>$4.00</td><td>$6.00</td><td>$8.00</td><td>$10.00</td><td><button class="try-btn" onclick="runScenario('tip',10,60,1)">→ Try</button></td></tr>
+          <tr><td>15%</td><td>$3.00</td><td>$6.00</td><td>$9.00</td><td>$12.00</td><td class="hi">$15.00</td><td><button class="try-btn" onclick="runScenario('tip',15,80,1)">→ Try</button></td></tr>
+          <tr><td>18%</td><td>$3.60</td><td>$7.20</td><td>$10.80</td><td>$14.40</td><td class="hi">$18.00</td><td><button class="try-btn" onclick="runScenario('tip',18,100,1)">→ Try</button></td></tr>
+          <tr><td>20%</td><td>$4.00</td><td>$8.00</td><td>$12.00</td><td>$16.00</td><td class="hi">$20.00</td><td><button class="try-btn" onclick="runScenario('tip',20,80,2)">→ Try</button></td></tr>
+          <tr><td>25%</td><td>$5.00</td><td>$10.00</td><td>$15.00</td><td>$20.00</td><td>$25.00</td><td><button class="try-btn" onclick="runScenario('tip',25,60,1)">→ Try</button></td></tr>
+          <tr><td>30%</td><td>$6.00</td><td>$12.00</td><td>$18.00</td><td>$24.00</td><td>$30.00</td><td><button class="try-btn" onclick="runScenario('tip',30,100,1)">→ Try</button></td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
-  <!-- ====================================================
-       MAIN
-  ==================================================== -->
-  <main role="main">
-    <div class="page-wrap">
-      <div class="page-grid">
-
-        <!-- ── LEFT COLUMN ── -->
-        <div>
-
-          <!-- CALCULATOR CARD -->
-          <div class="calc-card" id="calculator">
-            <div class="calc-tabs" role="tablist">
-              <button class="calc-tab active" role="tab" aria-selected="true" onclick="switchTab(0)">
-                💵 X% of $Amount
-              </button>
-              <button class="calc-tab" role="tab" aria-selected="false" onclick="switchTab(1)">
-                🔢 $X is what % of $Y?
-              </button>
-              <button class="calc-tab" role="tab" aria-selected="false" onclick="switchTab(2)">
-                ➕ Add / Subtract %
-              </button>
-            </div>
-
-            <!-- ── PANEL 1: X% of Amount ── -->
-            <div class="calc-panel active" id="panel-0">
-              <h2>What is X% of a Dollar Amount?</h2>
-              <code class="formula-tag">Result = Amount × (Percentage ÷ 100)</code>
-
-              <label style="font-size:13px;font-weight:700;color:var(--gray-700);display:block;margin-bottom:8px;">Common Percentages</label>
-              <div class="preset-row" id="presets-0">
-                <button class="preset-btn" onclick="setPreset(this,'p0-pct',5)">5% GST relief</button>
-                <button class="preset-btn" onclick="setPreset(this,'p0-pct',10)">10% GST</button>
-                <button class="preset-btn" onclick="setPreset(this,'p0-pct',15)">15% tip</button>
-                <button class="preset-btn" onclick="setPreset(this,'p0-pct',20)">20%</button>
-                <button class="preset-btn" onclick="setPreset(this,'p0-pct',25)">25%</button>
-                <button class="preset-btn" onclick="setPreset(this,'p0-pct',50)">50%</button>
-              </div>
-
-              <div class="input-group">
-                <label for="p0-pct">Percentage</label>
-                <div class="input-wrap">
-                  <input type="number" id="p0-pct" class="has-suffix" placeholder="e.g. 20" min="0" step="any" inputmode="decimal" />
-                  <span class="input-suffix-abs">%</span>
-                </div>
-              </div>
-              <div class="input-group">
-                <label for="p0-amt">Dollar Amount</label>
-                <div class="input-wrap">
-                  <span class="input-prefix">$</span>
-                  <input type="number" id="p0-amt" class="has-prefix" placeholder="e.g. 1500" min="0" step="any" inputmode="decimal" />
-                </div>
-                <small>Enter any amount — works for AUD, USD, or any currency</small>
-              </div>
-
-              <button class="calc-btn" onclick="calcPanel0()">Calculate →</button>
-
-              <div class="results-box" id="r0">
-                <div class="result-main">
-                  <div class="rm-label">Result</div>
-                  <div class="rm-value" id="r0-main">—</div>
-                </div>
-                <div class="result-formula" id="r0-formula"></div>
-              </div>
-              <div class="calc-error" id="e0">Please enter valid numbers.</div>
-            </div>
-
-            <!-- ── PANEL 2: $X is what % of $Y ── -->
-            <div class="calc-panel" id="panel-1">
-              <h2>$X is What Percentage of $Y?</h2>
-              <code class="formula-tag">% = (Amount A ÷ Amount B) × 100</code>
-
-              <div class="input-group">
-                <label for="p1-part">Amount A ($)</label>
-                <div class="input-wrap">
-                  <span class="input-prefix">$</span>
-                  <input type="number" id="p1-part" class="has-prefix" placeholder="e.g. 450" min="0" step="any" inputmode="decimal" />
-                </div>
-                <small>e.g. rent, expense, or partial amount</small>
-              </div>
-              <div class="input-group">
-                <label for="p1-whole">Amount B — Total ($)</label>
-                <div class="input-wrap">
-                  <span class="input-prefix">$</span>
-                  <input type="number" id="p1-whole" class="has-prefix" placeholder="e.g. 2000" min="0" step="any" inputmode="decimal" />
-                </div>
-                <small>e.g. total income, budget, or full amount</small>
-              </div>
-
-              <button class="calc-btn" onclick="calcPanel1()">Calculate →</button>
-
-              <div class="results-box" id="r1">
-                <div class="result-main">
-                  <div class="rm-label">Percentage</div>
-                  <div class="rm-value pink" id="r1-main">—</div>
-                </div>
-                <div class="result-formula" id="r1-formula"></div>
-              </div>
-              <div class="calc-error" id="e1">Please enter valid amounts (Total must be greater than 0).</div>
-            </div>
-
-            <!-- ── PANEL 3: Add/Subtract % ── -->
-            <div class="calc-panel" id="panel-2">
-              <h2>Add or Subtract a Percentage from an Amount</h2>
-              <code class="formula-tag" id="p2-formula-tag">New Amount = Original × (1 + % ÷ 100)</code>
-
-              <div class="input-group">
-                <label>Operation</label>
-                <div class="toggle-row">
-                  <button class="toggle-btn active" id="toggle-add" onclick="setOperation('add')">➕ Add (GST, tip, markup)</button>
-                  <button class="toggle-btn" id="toggle-sub" onclick="setOperation('sub')">➖ Subtract (discount, deduction)</button>
-                </div>
-              </div>
-
-              <div class="input-group">
-                <label style="font-size:13px;font-weight:700;color:var(--gray-700);display:block;margin-bottom:8px;">Common Rates</label>
-                <div class="preset-row">
-                  <button class="preset-btn" onclick="setPreset(this,'p2-pct',10)">10% GST</button>
-                  <button class="preset-btn" onclick="setPreset(this,'p2-pct',15)">15% tip</button>
-                  <button class="preset-btn" onclick="setPreset(this,'p2-pct',20)">20%</button>
-                  <button class="preset-btn" onclick="setPreset(this,'p2-pct',25)">25% markup</button>
-                  <button class="preset-btn" onclick="setPreset(this,'p2-pct',50)">50%</button>
-                </div>
-              </div>
-
-              <div class="input-group">
-                <label for="p2-orig">Original Amount</label>
-                <div class="input-wrap">
-                  <span class="input-prefix">$</span>
-                  <input type="number" id="p2-orig" class="has-prefix" placeholder="e.g. 200" min="0" step="any" inputmode="decimal" />
-                </div>
-              </div>
-              <div class="input-group">
-                <label for="p2-pct">Percentage</label>
-                <div class="input-wrap">
-                  <input type="number" id="p2-pct" class="has-suffix" placeholder="e.g. 10" min="0" step="any" inputmode="decimal" />
-                  <span class="input-suffix-abs">%</span>
-                </div>
-              </div>
-
-              <button class="calc-btn" onclick="calcPanel2()">Calculate →</button>
-
-              <div class="results-box" id="r2">
-                <div class="result-tiles">
-                  <div class="result-tile green">
-                    <div class="rt-label" id="r2-label-a">New Amount</div>
-                    <div class="rt-value" id="r2-new">—</div>
-                  </div>
-                  <div class="result-tile pk">
-                    <div class="rt-label" id="r2-label-b">Difference</div>
-                    <div class="rt-value" id="r2-diff">—</div>
-                  </div>
-                </div>
-                <div class="result-formula" id="r2-formula"></div>
-              </div>
-              <div class="calc-error" id="e2">Please enter valid numbers.</div>
-            </div>
-
-          </div><!-- /calc-card -->
-
-          <!-- ARTICLE -->
-          <div class="article-section">
-
-            <h2>How to Calculate Percentages of Money Amounts</h2>
-            <p>Percentage calculations come up constantly in everyday financial decisions — calculating a restaurant tip, working out GST on a purchase, figuring out what percentage of your income goes on rent, or calculating a sales commission. This free money percentage calculator handles all of these in seconds.</p>
-
-            <h3>Common Use Cases</h3>
-            <div class="use-case-grid">
-              <div class="use-case-card">
-                <div class="uc-icon">🛒</div>
-                <h4>GST in Australia</h4>
-                <p>Add 10% GST to a base price, or extract the GST component from a GST-inclusive total.</p>
-                <code class="uc-formula">GST = Price ÷ 11</code>
-              </div>
-              <div class="use-case-card">
-                <div class="uc-icon">🍽️</div>
-                <h4>Restaurant Tips</h4>
-                <p>Calculate a tip as a percentage of a food or drinks bill and find the total to pay.</p>
-                <code class="uc-formula">Tip = Bill × Tip% ÷ 100</code>
-              </div>
-              <div class="use-case-card">
-                <div class="uc-icon">💼</div>
-                <h4>Sales Commission</h4>
-                <p>Calculate your commission earnings from any sale amount at any commission rate.</p>
-                <code class="uc-formula">Commission = Sale × Rate ÷ 100</code>
-              </div>
-              <div class="use-case-card">
-                <div class="uc-icon">🏠</div>
-                <h4>Budget Percentages</h4>
-                <p>Find what percentage rent, food, or any expense is of your total income or budget.</p>
-                <code class="uc-formula">% = (Expense ÷ Income) × 100</code>
-              </div>
-              <div class="use-case-card">
-                <div class="uc-icon">📈</div>
-                <h4>Investment Returns</h4>
-                <p>Calculate the percentage return on an investment or the dollar value of a % gain.</p>
-                <code class="uc-formula">Return = Principal × Rate ÷ 100</code>
-              </div>
-              <div class="use-case-card">
-                <div class="uc-icon">🏷️</div>
-                <h4>Price Markups</h4>
-                <p>Apply a markup percentage to a cost price to find the selling price and profit margin.</p>
-                <code class="uc-formula">Price = Cost × (1 + Markup ÷ 100)</code>
-              </div>
-            </div>
-
-            <h3>The Core Money Percentage Formulas</h3>
-
-            <div class="formula-box">
-              Find the dollar amount: Result ($) = Amount × (Percentage ÷ 100)
-              <span>Example: 20% of $150 = $150 × 0.20 = $30</span>
-            </div>
-
-            <div class="formula-box">
-              Find the percentage: % = (Part Amount ÷ Total Amount) × 100
-              <span>Example: $450 of $2,000 income = (450 ÷ 2000) × 100 = 22.5%</span>
-            </div>
-
-            <div class="formula-box">
-              Add a percentage: New Amount = Original × (1 + % ÷ 100)
-              <span>Example: $200 + 10% GST = $200 × 1.10 = $220</span>
-              Subtract a percentage: New Amount = Original × (1 − % ÷ 100)
-              <span>Example: $220 − 20% discount = $220 × 0.80 = $176</span>
-            </div>
-
-            <h3>Worked Examples — Real Money Calculations</h3>
-
-            <div class="data-table-wrap">
-              <table class="data-table">
-                <thead>
-                  <tr><th>Scenario</th><th>Calculation</th><th>Result</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>20% of $150</td><td>$150 × 0.20</td><td class="td-result">$30.00</td></tr>
-                  <tr><td>15% tip on $85 restaurant bill</td><td>$85 × 0.15</td><td class="td-result">$12.75</td></tr>
-                  <tr><td>10% GST on $180 item (AUD)</td><td>$180 × 0.10</td><td class="td-result">$18.00 GST → $198 total</td></tr>
-                  <tr><td>GST in a $220 price (extract)</td><td>$220 ÷ 11</td><td class="td-result">$20.00 GST</td></tr>
-                  <tr><td>5% of $1,000,000</td><td>$1,000,000 × 0.05</td><td class="td-result">$50,000</td></tr>
-                  <tr><td>$450 rent as % of $2,000 income</td><td>($450 ÷ $2,000) × 100</td><td class="td-pink">22.5%</td></tr>
-                  <tr><td>$13,000 car sold / $18,550 original</td><td>($13,000 ÷ $18,550) × 100</td><td class="td-pink">70.1% (29.9% loss)</td></tr>
-                  <tr><td>5% commission on $12,000 sale</td><td>$12,000 × 0.05</td><td class="td-result">$600</td></tr>
-                  <tr><td>30% markup on $25 cost price</td><td>$25 × 1.30</td><td class="td-result">$32.50 sell price</td></tr>
-                  <tr><td>20% of $20,650,480</td><td>$20,650,480 × 0.20</td><td class="td-result">$4,130,096</td></tr>
-                </tbody>
-              </table>
-            </div>
-
-            <h3>GST Calculations in Australia (AUD)</h3>
-            <p>The Australian Goods and Services Tax (GST) is 10%. There are three common GST calculations you'll encounter:</p>
-
-            <div class="formula-box">
-              Add GST to a base price: GST-inclusive = Base Price × 1.10
-              <span>e.g. $300 base + GST = $300 × 1.10 = $330</span>
-              Extract GST from a GST-inclusive price: GST = GST-inclusive ÷ 11
-              <span>e.g. GST in $330 = $330 ÷ 11 = $30 (base = $300)</span>
-              Find base price from GST-inclusive: Base = GST-inclusive ÷ 1.10
-              <span>e.g. Base of $330 GST-inclusive = $330 ÷ 1.10 = $300</span>
-            </div>
-
-            <div class="info-banner">
-              <span class="ib-icon">🇦🇺</span>
-              <p><strong>Australian note:</strong> Most retail prices displayed in Australia already include GST. The price on the shelf is the total you pay. When a business quotes a price "ex-GST," you need to add 10% to find the final price. Use the <strong>Add % to Amount</strong> tab above with 10% to calculate this instantly.</p>
-            </div>
-
-            <h3>What Percentage of Your Income Are Your Expenses?</h3>
-            <p>Personal budgeting often comes down to understanding what percentage of your income each expense represents. Financial planners commonly recommend the 50/30/20 rule: 50% of after-tax income on needs (housing, food, transport), 30% on wants, and 20% on savings. Use <strong>Calculator Tab 2</strong> above — enter your expense amount and total income — to instantly see what percentage any expense is of your income.</p>
-
-            <p>For example, if your rent is $1,800/month and your take-home income is $5,200/month: ($1,800 ÷ $5,200) × 100 = <strong>34.6%</strong> of income on rent. This is above the commonly suggested 30% threshold, which many Australians currently face given housing costs.</p>
-
-            <h3>Calculating Money Percentage vs Percentage Off</h3>
-            <p>There's a subtle distinction worth noting: "percentage of money" refers to finding a portion of a dollar amount (e.g. 20% of $150 = $30), while "percentage off" means reducing a price by a percentage (e.g. 20% off $150 = $120 final price). For shopping discounts and sale prices, use our dedicated <a href="/discount-calculator">discount calculator</a> or <a href="/percentage-off-calculator">percentage off calculator</a>. For general dollar-amount percentage questions, use the calculators on this page.</p>
-
-          </div>
-
-        </div><!-- /left column -->
-
-        <!-- ── SIDEBAR ── -->
-        <aside class="sidebar" aria-label="Related tools and reference">
-
-          <!-- AUS Reference -->
-          <div class="aus-card">
-            <h4>🇦🇺 Australian Reference Rates</h4>
-            <div class="aus-row">
-              <span class="ar-label">GST</span>
-              <span class="ar-val">Add × 1.10</span>
-              <span class="ar-badge">10%</span>
-            </div>
-            <div class="aus-row">
-              <span class="ar-label">Extract GST</span>
-              <span class="ar-val">Divide by 11</span>
-              <span class="ar-badge">÷11</span>
-            </div>
-            <div class="aus-row">
-              <span class="ar-label">Medicare Levy</span>
-              <span class="ar-val">of taxable income</span>
-              <span class="ar-badge">2%</span>
-            </div>
-            <div class="aus-row">
-              <span class="ar-label">Standard tip</span>
-              <span class="ar-val">restaurant / café</span>
-              <span class="ar-badge">10–15%</span>
-            </div>
-            <div class="aus-row">
-              <span class="ar-label">Real estate fee</span>
-              <span class="ar-val">of sale price (approx)</span>
-              <span class="ar-badge">2–3%</span>
-            </div>
-            <div class="aus-row">
-              <span class="ar-label">Super contribution</span>
-              <span class="ar-val">of gross salary</span>
-              <span class="ar-badge">11.5%</span>
-            </div>
-          </div>
-
-          <!-- Common amounts -->
-          <div class="amounts-card">
-            <h4>⚡ Quick Examples</h4>
-            <p style="font-size:12.5px;color:var(--gray-600);margin-bottom:12px;">Click any to load into calculator ①</p>
-            <div class="amounts-grid">
-              <div class="amount-chip" onclick="quickLoad(10,200)"><strong>10% of $200</strong>= $20</div>
-              <div class="amount-chip" onclick="quickLoad(20,150)"><strong>20% of $150</strong>= $30</div>
-              <div class="amount-chip" onclick="quickLoad(5,1000000)"><strong>5% of $1M</strong>= $50K</div>
-              <div class="amount-chip" onclick="quickLoad(15,85)"><strong>15% of $85</strong>= $12.75</div>
-              <div class="amount-chip" onclick="quickLoad(10,180)"><strong>GST on $180</strong>= $18</div>
-              <div class="amount-chip" onclick="quickLoad(25,400)"><strong>25% of $400</strong>= $100</div>
-            </div>
-          </div>
-
-          <!-- Related calculators -->
-          <div class="sidebar-card">
-            <div class="sidebar-card-head">
-              <h3>🔗 Related Calculators</h3>
-            </div>
-            <div class="sidebar-card-body">
-              <ul class="sidebar-links">
-                <li><a href="/money-percentage-calculator" class="current"><span class="sl-icon">💵</span> Money % Calculator</a></li>
-                <li><a href="/discount-calculator"><span class="sl-icon">💰</span> Discount Calculator</a></li>
-                <li><a href="/percentage-off-calculator"><span class="sl-icon">🏷️</span> Percentage Off</a></li>
-                <li><a href="/sales-percentage-calculator"><span class="sl-icon">📊</span> Sales % Calculator</a></li>
-                <li><a href="/percentage-increase-calculator"><span class="sl-icon">📈</span> % Increase</a></li>
-                <li><a href="/percentage-decrease-calculator"><span class="sl-icon">📉</span> % Decrease</a></li>
-                <li><a href="/percentage-of-number"><span class="sl-icon">🔢</span> % of a Number</a></li>
-                <li><a href="/"><span class="sl-icon">🧮</span> All Calculators</a></li>
-              </ul>
-            </div>
-          </div>
-
-        </aside>
-
-      </div><!-- /page-grid -->
-    </div><!-- /page-wrap -->
-
-    <!-- FAQ -->
-    <section class="faq-section" aria-label="Frequently asked questions">
-      <div class="faq-inner">
-        <div class="faq-col-left">
-          <h2 class="faq-heading">Frequently Asked Questions</h2>
-          <p class="faq-subhead">Common questions about calculating percentages of dollar amounts, GST, tips, and commissions.</p>
-        </div>
-
-        <div class="faq-list">
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-              How do I calculate a percentage of a money amount?
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Multiply the dollar amount by the percentage divided by 100. <code>Result = Amount × (% ÷ 100)</code>. Example: 20% of $150 = $150 × 0.20 = <strong>$30</strong>. Use Tab ① above for any values instantly.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-              How do I calculate GST (10%) in Australia?
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>To <strong>add</strong> 10% GST: multiply the base price by 1.10. Example: $300 base → $300 × 1.10 = $330 GST-inclusive. To <strong>extract</strong> GST from a GST-inclusive price: divide by 11. Example: $330 ÷ 11 = $30 GST (base = $300). Use the <em>Add % to Amount</em> tab above with 10%.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-              How much is 5% of $1 million?
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>5% of $1,000,000 = $1,000,000 × 0.05 = <strong>$50,000</strong>. Use Tab ① — enter 5 in the percentage field and 1000000 in the amount field, or click the "5% of $1M" quick example in the sidebar.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-              How do I find what percentage of my income something costs?
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Use Tab ②. Enter the expense as Amount A and your total income as Amount B. Formula: <code>(Expense ÷ Income) × 100</code>. Example: $450 rent out of $2,000 income = (450 ÷ 2000) × 100 = <strong>22.5%</strong>.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-              How do I calculate commission on a sale amount?
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer">
-              <p><code>Commission = Sale Amount × (Commission Rate ÷ 100)</code>. Example: 5% commission on a $12,000 sale = $12,000 × 0.05 = <strong>$600</strong>. Enter your commission rate in Tab ① with the sale amount as the dollar figure. See also: <a href="/sales-percentage-calculator">Sales Percentage Calculator</a>.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-              How do I calculate a tip as a percentage of a bill?
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Use the <em>Add % to Amount</em> tab. Enter the bill amount and tip percentage — the calculator shows both the tip amount and the total to pay. Example: 15% tip on $85 → tip = $12.75, total = $97.75.</p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-              How do I calculate a percentage markup on cost price?
-              <span class="faq-icon" aria-hidden="true">+</span>
-            </button>
-            <div class="faq-answer">
-              <p><code>Selling Price = Cost Price × (1 + Markup% ÷ 100)</code>. Example: 40% markup on $25 cost = $25 × 1.40 = <strong>$35</strong> selling price. Profit = $35 − $25 = $10. Use Tab ③ with "Add" selected and enter your cost price and markup %.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Related tools -->
-    <div class="page-wrap">
-      <section class="related-section" aria-label="More percentage calculators">
-        <h2>More Percentage Calculators</h2>
-        <div class="related-grid">
-          <a href="/discount-calculator" class="related-card">
-            <span class="rc-icon">💰</span>
-            <h3>Discount Calculator</h3>
-            <p>Calculate sale prices and find what % discount you need.</p>
-            <span class="rc-arrow">Use tool →</span>
-          </a>
-          <a href="/sales-percentage-calculator" class="related-card">
-            <span class="rc-icon">📊</span>
-            <h3>Sales % Calculator</h3>
-            <p>Commission, revenue growth, and target achievement.</p>
-            <span class="rc-arrow">Use tool →</span>
-          </a>
-          <a href="/percentage-increase-calculator" class="related-card">
-            <span class="rc-icon">📈</span>
-            <h3>Percentage Increase</h3>
-            <p>Calculate % increase between two dollar amounts.</p>
-            <span class="rc-arrow">Use tool →</span>
-          </a>
-          <a href="/percentage-off-calculator" class="related-card">
-            <span class="rc-icon">🏷️</span>
-            <h3>Percentage Off</h3>
-            <p>Find the discounted price and exact savings amount.</p>
-            <span class="rc-arrow">Use tool →</span>
-          </a>
-        </div>
-      </section>
+  <!-- Tax Rates Reference -->
+  <div class="ref-tab-pane" id="reftab-tax">
+    <div class="ref-table-wrap">
+      <table class="ref-table">
+        <thead><tr><th>Rate</th><th>Location Example</th><th>Tax on $50</th><th>Tax on $100</th><th>Tax on $500</th><th>Try It</th></tr></thead>
+        <tbody>
+          <tr><td>5%</td><td>Canada GST</td><td>$2.50</td><td>$5.00</td><td>$25.00</td><td><button class="try-btn" onclick="runScenario('tax',5,100)">→ Try</button></td></tr>
+          <tr><td>6%</td><td>Michigan, US</td><td>$3.00</td><td>$6.00</td><td>$30.00</td><td><button class="try-btn" onclick="runScenario('tax',6,100)">→ Try</button></td></tr>
+          <tr><td>7%</td><td>South Carolina, US</td><td>$3.50</td><td>$7.00</td><td>$35.00</td><td><button class="try-btn" onclick="runScenario('tax',7,100)">→ Try</button></td></tr>
+          <tr><td>8%</td><td>New York, US</td><td>$4.00</td><td>$8.00</td><td>$40.00</td><td><button class="try-btn" onclick="runScenario('tax',8,100)">→ Try</button></td></tr>
+          <tr><td>8.5%</td><td>California avg, US</td><td>$4.25</td><td class="hi">$8.50</td><td>$42.50</td><td><button class="try-btn" onclick="runScenario('tax',8.5,100)">→ Try</button></td></tr>
+          <tr><td>10%</td><td>Australia GST</td><td>$5.00</td><td>$10.00</td><td>$50.00</td><td><button class="try-btn" onclick="runScenario('tax',10,100)">→ Try</button></td></tr>
+          <tr><td>18%</td><td>India GST (standard)</td><td>$9.00</td><td>$18.00</td><td>$90.00</td><td><button class="try-btn" onclick="runScenario('tax',18,100)">→ Try</button></td></tr>
+          <tr><td>20%</td><td>UK VAT</td><td>$10.00</td><td>$20.00</td><td>$100.00</td><td><button class="try-btn" onclick="runScenario('tax',20,100)">→ Try</button></td></tr>
+        </tbody>
+      </table>
     </div>
+  </div>
 
-  </main>
+  <!-- % of $100 -->
+  <div class="ref-tab-pane" id="reftab-pct100">
+    <div class="ref-table-wrap">
+      <table class="ref-table">
+        <thead><tr><th>Percentage</th><th>Of $100</th><th>Of $200</th><th>Of $500</th><th>Of $1,000</th><th>Try It</th></tr></thead>
+        <tbody>
+          <tr><td>5%</td><td class="hi">$5.00</td><td>$10.00</td><td>$25.00</td><td>$50.00</td><td><button class="try-btn" onclick="runScenario('po',5,100)">→ Try</button></td></tr>
+          <tr><td>10%</td><td class="hi">$10.00</td><td>$20.00</td><td>$50.00</td><td>$100.00</td><td><button class="try-btn" onclick="runScenario('po',10,100)">→ Try</button></td></tr>
+          <tr><td>15%</td><td class="hi">$15.00</td><td>$30.00</td><td>$75.00</td><td>$150.00</td><td><button class="try-btn" onclick="runScenario('po',15,100)">→ Try</button></td></tr>
+          <tr><td>20%</td><td class="hi">$20.00</td><td>$40.00</td><td>$100.00</td><td>$200.00</td><td><button class="try-btn" onclick="runScenario('po',20,100)">→ Try</button></td></tr>
+          <tr><td>25%</td><td class="hi">$25.00</td><td>$50.00</td><td>$125.00</td><td>$250.00</td><td><button class="try-btn" onclick="runScenario('po',25,100)">→ Try</button></td></tr>
+          <tr><td>30%</td><td class="hi">$30.00</td><td>$60.00</td><td>$150.00</td><td>$300.00</td><td><button class="try-btn" onclick="runScenario('po',30,100)">→ Try</button></td></tr>
+          <tr><td>50%</td><td class="hi">$50.00</td><td>$100.00</td><td>$250.00</td><td>$500.00</td><td><button class="try-btn" onclick="runScenario('po',50,100)">→ Try</button></td></tr>
+          <tr><td>75%</td><td class="hi">$75.00</td><td>$150.00</td><td>$375.00</td><td>$750.00</td><td><button class="try-btn" onclick="runScenario('po',75,100)">→ Try</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-  <!-- ====================================================
-       FOOTER
-  ==================================================== -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="/" class="logo" aria-label="CalcPercentage Home">
-            <div class="logo-icon" aria-hidden="true">%</div>
-            <span class="logo-text">Calc<span>Percentage</span></span>
-          </a>
-          <p>Free online percentage calculators for every calculation need. Fast, accurate, and works on all devices — no sign-up required.</p>
-        </div>
-        <div class="footer-col">
-          <h5>Calculators</h5>
-          <ul>
-            <li><a href="/percentage-increase-calculator">% Increase Calculator</a></li>
-            <li><a href="/percentage-decrease-calculator">% Decrease Calculator</a></li>
-            <li><a href="/percentage-change-calculator">% Change Calculator</a></li>
-            <li><a href="/percentage-difference-calculator">% Difference Calculator</a></li>
-            <li><a href="/percentage-off-calculator">% Off Calculator</a></li>
-            <li><a href="/percent-error-calculator">% Error Calculator</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>More Tools</h5>
-          <ul>
-            <li><a href="/discount-calculator">Discount Calculator</a></li>
-            <li><a href="/money-percentage-calculator">Money % Calculator</a></li>
-            <li><a href="/sales-percentage-calculator">Sales % Calculator</a></li>
-            <li><a href="/fraction-to-percentage">Fraction to %</a></li>
-            <li><a href="/what-percentage-of">What % Of</a></li>
-            <li><a href="/percentage-of-number">% of a Number</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Guides</h5>
-          <ul>
-            <li><a href="/percentage-formula">All Percentage Formulas</a></li>
-            <li><a href="/how-to-calculate-percentage">How to Calculate %</a></li>
-            <li><a href="/">Percentage Calculator</a></li>
-            <li><a href="/sitemap.xml">Sitemap</a></li>
-          </ul>
-        </div>
+  <!-- % of $1,000 -->
+  <div class="ref-tab-pane" id="reftab-pct1000">
+    <div class="ref-table-wrap">
+      <table class="ref-table">
+        <thead><tr><th>Percentage</th><th>Of $1,000</th><th>Of $5,000</th><th>Of $10,000</th><th>Of $50,000</th><th>Try It</th></tr></thead>
+        <tbody>
+          <tr><td>1%</td><td class="hi">$10.00</td><td>$50.00</td><td>$100.00</td><td>$500.00</td><td><button class="try-btn" onclick="runScenario('po',1,1000)">→ Try</button></td></tr>
+          <tr><td>2%</td><td class="hi">$20.00</td><td>$100.00</td><td>$200.00</td><td>$1,000.00</td><td><button class="try-btn" onclick="runScenario('po',2,1000)">→ Try</button></td></tr>
+          <tr><td>3%</td><td class="hi">$30.00</td><td>$150.00</td><td>$300.00</td><td>$1,500.00</td><td><button class="try-btn" onclick="runScenario('po',3,1000)">→ Try</button></td></tr>
+          <tr><td>5%</td><td class="hi">$50.00</td><td>$250.00</td><td>$500.00</td><td>$2,500.00</td><td><button class="try-btn" onclick="runScenario('po',5,1000)">→ Try</button></td></tr>
+          <tr><td>7%</td><td class="hi">$70.00</td><td>$350.00</td><td>$700.00</td><td>$3,500.00</td><td><button class="try-btn" onclick="runScenario('po',7,1000)">→ Try</button></td></tr>
+          <tr><td>10%</td><td class="hi">$100.00</td><td>$500.00</td><td>$1,000.00</td><td>$5,000.00</td><td><button class="try-btn" onclick="runScenario('po',10,1000)">→ Try</button></td></tr>
+          <tr><td>15%</td><td class="hi">$150.00</td><td>$750.00</td><td>$1,500.00</td><td>$7,500.00</td><td><button class="try-btn" onclick="runScenario('po',15,1000)">→ Try</button></td></tr>
+          <tr><td>25%</td><td class="hi">$250.00</td><td>$1,250.00</td><td>$2,500.00</td><td>$12,500.00</td><td><button class="try-btn" onclick="runScenario('po',25,1000)">→ Try</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ========== CONTENT ========== -->
+<div class="hr-line" style="margin-top:44px;"><hr></div>
+<section class="content-wrap">
+
+  <h2>How to Calculate a Percentage of a Money Amount</h2>
+  <p>The single most common money percentage calculation is finding a dollar amount from a percentage: <em>"What is 20% of $150?"</em> This applies to tips, tax, discounts, commissions, and salary changes. The formula is always the same — multiply the amount by the decimal form of the percentage.</p>
+
+  <div class="formula-block">
+    <div class="fb-label">Core Formula</div>
+    <code>Dollar Amount = Base Amount × (Percentage ÷ 100)</code>
+    <p>Or equivalently: Dollar Amount = Base Amount × Percentage as Decimal</p>
+  </div>
+
+  <div class="example-block">
+    <div class="eb-label">✦ Example — 15% of $240</div>
+    <p><strong>Step 1:</strong> Convert 15% to decimal → 15 ÷ 100 = <strong>0.15</strong></p>
+    <p><strong>Step 2:</strong> Multiply → $240 × 0.15 = <strong>$36.00</strong></p>
+    <p><strong>Mental shortcut:</strong> 10% of $240 = $24.00 · Half of that = $12.00 · Add: $24 + $12 = <strong>$36.00 ✓</strong></p>
+  </div>
+
+  <h3>Tip Calculation — The Restaurant Guide</h3>
+  <p>Calculating a tip is one of the most daily uses of money percentages. In the US, standard tipping ranges from 15% to 20% at sit-down restaurants, 18%–22% for full-service dining, and 10%–15% for counter service. The fastest mental method is the <strong>10% anchor technique</strong>:</p>
+  <ul>
+    <li><strong>10% tip:</strong> Move the decimal one place left → $78 bill → $7.80 tip</li>
+    <li><strong>15% tip:</strong> Take 10% and add half → $7.80 + $3.90 = $11.70</li>
+    <li><strong>20% tip:</strong> Take 10% and double it → $7.80 × 2 = $15.60</li>
+    <li><strong>18% tip:</strong> Take 20% and subtract 10% of 20% → $15.60 − $1.56 = $14.04</li>
+  </ul>
+
+  <div class="example-block">
+    <div class="eb-label">✦ Tip Example — $87.50 Dinner for 3 People, 20% Tip</div>
+    <p><strong>Tip amount:</strong> $87.50 × 0.20 = <strong>$17.50</strong></p>
+    <p><strong>Total bill:</strong> $87.50 + $17.50 = <strong>$105.00</strong></p>
+    <p><strong>Per person (3 people):</strong> $105.00 ÷ 3 = <strong>$35.00 each</strong></p>
+  </div>
+
+  <h3>Sales Tax — Adding and Removing</h3>
+  <p>Adding sales tax to a price: multiply by <strong>(1 + tax rate)</strong>. Removing tax from a tax-inclusive price (back-calculating): divide by <strong>(1 + tax rate)</strong>.</p>
+
+  <div class="formula-block">
+    <div class="fb-label">Sales Tax Formulas</div>
+    <code>Total = Pre-Tax Price × (1 + Tax% ÷ 100)</code>
+    <code>Pre-Tax = Total ÷ (1 + Tax% ÷ 100)</code>
+    <p>To find just the tax amount: Tax = Pre-Tax Price × (Tax% ÷ 100)</p>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Scenario</th><th>Price</th><th>Tax Rate</th><th>Tax Amount</th><th>Total</th></tr></thead>
+      <tbody>
+        <tr><td>US Average</td><td>$100.00</td><td>7.12%</td><td>$7.12</td><td>$107.12</td></tr>
+        <tr><td>California (LA)</td><td>$100.00</td><td>10.25%</td><td>$10.25</td><td>$110.25</td></tr>
+        <tr><td>UK VAT</td><td>£100.00</td><td>20%</td><td>£20.00</td><td>£120.00</td></tr>
+        <tr><td>India GST</td><td>₹1,000</td><td>18%</td><td>₹180</td><td>₹1,180</td></tr>
+        <tr><td>Australia GST</td><td>A$100</td><td>10%</td><td>A$10.00</td><td>A$110.00</td></tr>
+        <tr><td>Canada GST</td><td>CA$100</td><td>5%</td><td>CA$5.00</td><td>CA$105.00</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Salary Raise Calculator — What Your Raise is Really Worth</h3>
+  <p>A percentage raise sounds simple but understanding its true dollar impact — monthly, weekly, and daily — gives you a clearer picture at negotiation time. The formula is straightforward: new salary equals current salary multiplied by one plus the raise rate.</p>
+
+  <div class="formula-block">
+    <div class="fb-label">Salary Raise Formula</div>
+    <code>New Salary = Current Salary × (1 + Raise% ÷ 100)</code>
+    <code>Raise Amount = Current Salary × (Raise% ÷ 100)</code>
+    <p>Monthly increase = Annual raise ÷ 12 | Weekly = Annual raise ÷ 52</p>
+  </div>
+
+  <div class="green-box">
+    <div class="gb-label">💡 Negotiation Tip</div>
+    <p>The difference between a 3% and a 5% raise on a $60,000 salary seems small — $1,800 vs $3,000. But compounded over 10 years (if raises compound annually), that 2% difference grows to a gap of over $30,000 in cumulative extra earnings.</p>
+    <p>Always calculate the <strong>dollar amount</strong> of a raise, not just the percentage — it anchors the conversation in real money.</p>
+  </div>
+
+  <h3>Mental Maths Shortcuts for Money Percentages</h3>
+  <p>These shortcuts let you calculate common money percentages in your head without a calculator:</p>
+  <ul>
+    <li><strong>10%:</strong> Move the decimal point one place left — 10% of $73.40 = $7.34</li>
+    <li><strong>5%:</strong> Find 10% then halve it — 5% of $80 = $8 ÷ 2 = $4</li>
+    <li><strong>20%:</strong> Find 10% then double — 20% of $65 = $6.50 × 2 = $13</li>
+    <li><strong>25%:</strong> Divide by 4 — 25% of $120 = $120 ÷ 4 = $30</li>
+    <li><strong>50%:</strong> Divide by 2 — 50% of $94 = $47</li>
+    <li><strong>1%:</strong> Move decimal two places left — 1% of $847 = $8.47</li>
+    <li><strong>15%:</strong> Find 10% + half of 10% — 15% of $60: $6 + $3 = $9</li>
+    <li><strong>75%:</strong> Find 50% + 25% — 75% of $200: $100 + $50 = $150</li>
+  </ul>
+
+  <div class="link-box">
+    <h3>🔗 Related Calculators</h3>
+    <ul>
+      <li>Simple % discount on any price — <a href="/percent-off-calculator/">Percent Off / Discount Calculator</a></li>
+      <li>Price went up? — <a href="/percentage-increase-calculator/">Percentage Increase Calculator</a></li>
+      <li>Price went down? — <a href="/percentage-decrease-calculator/">Percentage Decrease Calculator</a></li>
+      <li>Before-and-after change? — <a href="/percentage-change-calculator/">Percentage Change Calculator</a></li>
+      <li>Understand the basics — <a href="/what-is-percentage/">What is a Percentage?</a></li>
+      <li>Convert fractions to % — <a href="/fraction-to-percentage/">Fraction to Percentage Calculator</a></li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- ========== FAQ ========== -->
+<div class="hr-line"><hr></div>
+<section class="faq-sec" aria-label="Money percentage FAQs">
+  <div class="sec-head">
+    <div class="sec-tag">FAQ</div>
+    <h2>Money Percentage Calculator — FAQs</h2>
+    <p>Common questions about calculating percentages of dollar amounts</p>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do I calculate 20% of a dollar amount?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Multiply the dollar amount by 0.20. Example: 20% of $85 = $85 × 0.20 = <strong>$17.00</strong>. Mental shortcut: take 10% (move decimal left: $8.50) and double it ($17.00). Use the "% of Amount" tab above for any amount instantly.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do I calculate a 15% tip?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Multiply the bill by 0.15. Example: 15% tip on a $60 bill = $60 × 0.15 = <strong>$9.00</strong>. Mental shortcut: 10% = $6.00, then add half ($3.00) = $9.00. For the total bill: $60 + $9 = $69. Use the Tip Calculator tab to split among multiple people.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do I add sales tax to a price?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Multiply the pre-tax price by (1 + tax rate as decimal). Formula: <strong>Total = Price × (1 + Tax% ÷ 100)</strong>. Example: $50 with 8% tax = $50 × 1.08 = <strong>$54.00</strong>. Tax amount alone = $50 × 0.08 = $4.00. Use the Sales Tax tab to add or remove tax.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do I find the price before tax was added?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Divide the tax-inclusive total by (1 + tax rate as decimal). Formula: <strong>Pre-Tax = Total ÷ (1 + Tax% ÷ 100)</strong>. Example: You paid $108 and tax was 8% → $108 ÷ 1.08 = <strong>$100.00</strong> pre-tax. Use the Sales Tax tab and select "Remove Tax" mode.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What is the formula for a salary raise percentage?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p><strong>New Salary = Current Salary × (1 + Raise% ÷ 100)</strong>. Example: $55,000 with a 6% raise = $55,000 × 1.06 = <strong>$58,300</strong>. The raise amount is $55,000 × 0.06 = $3,300 per year, or $275 per month. Use the Salary Raise tab for full breakdown.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do I find what percentage one dollar amount is of another?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Divide the part by the whole and multiply by 100. Formula: <strong>% = (Part ÷ Total) × 100</strong>. Example: $45 out of $180 = (45 ÷ 180) × 100 = <strong>25%</strong>. Use the "What % is X of Y" tab above for instant results.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What is the fastest way to calculate 10% of any price?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Move the decimal point one place to the left. Examples: 10% of $79.90 = <strong>$7.99</strong>. 10% of $1,250 = <strong>$125.00</strong>. 10% of $0.80 = <strong>$0.08</strong>. This works for any amount and is the foundation of the mental maths shortcut for 15%, 20%, and 5% as well.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do I calculate 1% of a dollar amount quickly?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Move the decimal point two places to the left. Example: 1% of $3,500 = <strong>$35.00</strong>. 1% of $249.99 = <strong>$2.50</strong>. This is the base for calculating any percentage: for 3%, find 1% and multiply by 3; for 7%, multiply 1% by 7.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How is a commission calculated as a percentage?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Commission = Sale Amount × (Commission Rate% ÷ 100). Example: 5% commission on a $12,000 sale = $12,000 × 0.05 = <strong>$600</strong>. For a tiered commission (e.g., 3% up to $10,000, then 5% above), calculate each tier separately and add. Use the "% of Amount" tab with your sale value and commission rate.</p></div>
+  </div>
+
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <a href="/" class="logo" aria-label="CalcPercentage Home">
+          <div class="logo-icon">%</div>
+          <span class="logo-name"><span style="color:var(--pink)">Calc</span>Percentage</span>
+        </a>
+        <p>Free online percentage calculators for every percentage problem. Fast, accurate, mobile-friendly — no ads blocking your results.</p>
       </div>
-      <div class="footer-bottom">
-        <p>© 2026 <a href="/">CalcPercentage.vercel.app</a> — Free Online Percentage Calculator</p>
-        <span class="footer-badge">⚡ Free &amp; No Sign-Up</span>
+      <div class="f-col">
+        <h4>Money Calculators</h4>
+        <ul>
+          <li><a href="/money-percentage-calculator/">Money Percentage Calculator</a></li>
+          <li><a href="/percent-off-calculator/">% Off / Discount Calculator</a></li>
+          <li><a href="/percentage-increase-calculator/">% Increase Calculator</a></li>
+          <li><a href="/percentage-decrease-calculator/">% Decrease Calculator</a></li>
+          <li><a href="/percentage-change-calculator/">% Change Calculator</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>More Calculators</h4>
+        <ul>
+          <li><a href="/">Percentage Calculator</a></li>
+          <li><a href="/fraction-to-percentage/">Fraction to Percentage</a></li>
+          <li><a href="/percentage-difference-calculator/">% Difference Calculator</a></li>
+          <li><a href="/percent-error-calculator/">% Error Calculator</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/what-is-percentage/">What is a Percentage?</a></li>
+          <li><a href="/percentage-formula/">Percentage Formulas</a></li>
+          <li><a href="/how-to-calculate-percentage/">How to Calculate %</a></li>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <p>© <span id="yr"></span> CalcPercentage.vercel.app — All rights reserved.</p>
+      <p>Made with ♥ for fast, free percentage calculations.</p>
+    </div>
+  </div>
+</footer>
 
-  <!-- ====================================================
-       JAVASCRIPT
-  ==================================================== -->
-  <script>
-    /* ── Nav Toggle ── */
-    const navToggle = document.getElementById('navToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    navToggle.addEventListener('click', () => {
-      const open = mobileMenu.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', open);
-    });
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  let currSym = '$';
+  let taxMode = 'add';
+  let salType = 'annual';
 
-    /* ── Tab Switching ── */
-    const tabs   = document.querySelectorAll('.calc-tab');
-    const panels = document.querySelectorAll('.calc-panel');
-
-    function switchTab(idx) {
-      tabs.forEach((t, i) => {
-        t.classList.toggle('active', i === idx);
-        t.setAttribute('aria-selected', i === idx);
-      });
-      panels.forEach((p, i) => p.classList.toggle('active', i === idx));
+  // ---- NAV ----
+  function toggleNav() {
+    const nav = document.getElementById('mobileNav'), btn = document.getElementById('hambBtn');
+    const isOpen = nav.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen);
+  }
+  document.addEventListener('click', function(e) {
+    const nav = document.getElementById('mobileNav'), btn = document.getElementById('hambBtn');
+    if (!nav.contains(e.target) && !btn.contains(e.target)) {
+      nav.classList.remove('open'); btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
     }
+  });
 
-    /* ── Operation toggle (Panel 2) ── */
-    let operation = 'add';
-    function setOperation(op) {
-      operation = op;
-      document.getElementById('toggle-add').classList.toggle('active', op === 'add');
-      document.getElementById('toggle-sub').classList.toggle('active', op === 'sub');
-      document.getElementById('p2-formula-tag').textContent =
-        op === 'add'
-          ? 'New Amount = Original × (1 + % ÷ 100)'
-          : 'New Amount = Original × (1 − % ÷ 100)';
-      // clear results
-      hideEl('r2'); hideEl('e2');
-    }
+  // ---- CURRENCY ----
+  function setCurrency(btn, sym) {
+    currSym = sym;
+    document.querySelectorAll('.currency-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.money-symbol').forEach(el => el.textContent = sym);
+  }
 
-    /* ── Preset buttons ── */
-    function setPreset(btn, inputId, val) {
-      btn.closest('.preset-row').querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById(inputId).value = val;
-    }
+  // ---- TABS ----
+  function switchTab(id, btn) {
+    document.querySelectorAll('.calc-pane').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.calc-tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+    document.getElementById('pane-' + id).classList.add('active');
+    btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+  }
+  function jumpToTab(id) {
+    const btn = document.getElementById('tab-' + id);
+    if (btn) { switchTab(id, btn); document.querySelector('.calc-outer').scrollIntoView({ behavior:'smooth', block:'center' }); }
+  }
 
-    /* ── Quick load sidebar chips (Tab 0) ── */
-    function quickLoad(pct, amt) {
-      switchTab(0);
-      document.getElementById('p0-pct').value = pct;
-      document.getElementById('p0-amt').value = amt;
-      calcPanel0();
-      document.getElementById('calculator').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+  // ---- REF TABS ----
+  function switchRefTab(id, btn) {
+    document.querySelectorAll('.ref-tab-pane').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.ref-tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('reftab-' + id).classList.add('active');
+    btn.classList.add('active');
+  }
 
-    /* ── Helpers ── */
-    function fmtMoney(n) {
-      return '$' + parseFloat(n.toFixed(2)).toLocaleString('en-AU', {
-        minimumFractionDigits: 2, maximumFractionDigits: 2
-      });
-    }
-    function fmtPct(n) {
-      const r = parseFloat(n.toFixed(6));
-      return r % 1 === 0 ? r + '%' : parseFloat(r.toFixed(4)) + '%';
-    }
-    function showEl(id) { document.getElementById(id).classList.add('show'); }
-    function hideEl(id) { document.getElementById(id).classList.remove('show'); }
+  // ---- HELPERS ----
+  function fmtMoney(n, sym) {
+    sym = sym || currSym;
+    return sym + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  function fmtNum(n, dp) {
+    dp = dp === undefined ? 4 : dp;
+    return parseFloat(n.toFixed(dp)).toString().replace(/\.?0+$/, '');
+  }
+  function renderSteps(id, steps) {
+    const ol = document.getElementById(id);
+    if (ol) ol.innerHTML = steps.map(s => '<li>' + s + '</li>').join('');
+  }
+  function showResult(id) { document.getElementById(id).classList.add('show'); }
+  function hideResult(id) { document.getElementById(id).classList.remove('show'); }
+  function showErr(id)   { document.getElementById(id).classList.add('show'); }
+  function hideErr(id)   { document.getElementById(id).classList.remove('show'); }
 
-    /* ── Panel 0: X% of Amount ── */
-    function calcPanel0() {
-      hideEl('r0'); hideEl('e0');
-      const pct = parseFloat(document.getElementById('p0-pct').value);
-      const amt = parseFloat(document.getElementById('p0-amt').value);
-      if (isNaN(pct) || isNaN(amt) || amt < 0 || pct < 0) { showEl('e0'); return; }
-      const result = amt * (pct / 100);
-      document.getElementById('r0-main').textContent = fmtMoney(result);
-      document.getElementById('r0-formula').innerHTML =
-        `${fmtMoney(amt)} &times; (${pct} &divide; 100) = <strong>${fmtMoney(result)}</strong>`;
-      showEl('r0');
-    }
+  // ---- PANE 1: % of Amount ----
+  function calcPctOf() {
+    const pct = parseFloat(document.getElementById('po-pct').value);
+    const amt = parseFloat(document.getElementById('po-amt').value);
+    if (isNaN(pct) || isNaN(amt)) { showErr('po-err'); hideResult('po-res'); return; }
+    hideErr('po-err');
+    const result = amt * (pct / 100);
+    document.getElementById('po-res-label').textContent = pct + '% of ' + currSym + fmtNum(amt,2);
+    document.getElementById('po-res-val').textContent   = fmtMoney(result);
+    document.getElementById('po-res-sub').textContent   = fmtNum(amt,2) + ' × ' + fmtNum(pct/100,4) + ' = ' + fmtNum(result,4);
+    document.getElementById('po-eq').textContent = currSym + fmtNum(amt,2) + ' × (' + fmtNum(pct,4) + ' ÷ 100) = ' + fmtMoney(result);
+    renderSteps('po-steps', [
+      'Convert percentage to decimal: ' + fmtNum(pct,4) + '% ÷ 100 = <strong>' + fmtNum(pct/100,6) + '</strong>',
+      'Multiply: ' + currSym + fmtNum(amt,2) + ' × ' + fmtNum(pct/100,6) + ' = <strong>' + fmtMoney(result) + '</strong>',
+      fmtNum(pct,4) + '% of ' + fmtMoney(amt) + ' is <strong>' + fmtMoney(result) + '</strong>'
+    ]);
+    showResult('po-res');
+  }
 
-    /* ── Panel 1: $X is what % of $Y ── */
-    function calcPanel1() {
-      hideEl('r1'); hideEl('e1');
-      const part  = parseFloat(document.getElementById('p1-part').value);
-      const whole = parseFloat(document.getElementById('p1-whole').value);
-      if (isNaN(part) || isNaN(whole) || whole <= 0 || part < 0) { showEl('e1'); return; }
-      const pct = (part / whole) * 100;
-      document.getElementById('r1-main').textContent = fmtPct(pct);
-      document.getElementById('r1-formula').innerHTML =
-        `(${fmtMoney(part)} &divide; ${fmtMoney(whole)}) &times; 100 = <strong>${fmtPct(pct)}</strong>`;
-      showEl('r1');
-    }
+  // ---- PANE 2: What % is X of Y ----
+  function calcWhatPct() {
+    const part  = parseFloat(document.getElementById('wp-part').value);
+    const total = parseFloat(document.getElementById('wp-total').value);
+    if (isNaN(part) || isNaN(total) || total === 0) { showErr('wp-err'); hideResult('wp-res'); return; }
+    hideErr('wp-err');
+    const pct = (part / total) * 100;
+    document.getElementById('wp-res-label').textContent = fmtMoney(part) + ' is what % of ' + fmtMoney(total) + '?';
+    document.getElementById('wp-res-val').textContent   = fmtNum(pct,4) + '%';
+    document.getElementById('wp-res-sub').textContent   = '(' + fmtNum(part,2) + ' ÷ ' + fmtNum(total,2) + ') × 100';
+    document.getElementById('wp-eq').textContent = '(' + fmtMoney(part) + ' ÷ ' + fmtMoney(total) + ') × 100 = ' + fmtNum(pct,4) + '%';
+    renderSteps('wp-steps', [
+      'Divide part by total: ' + fmtMoney(part) + ' ÷ ' + fmtMoney(total) + ' = <strong>' + fmtNum(part/total,8) + '</strong>',
+      'Multiply by 100: ' + fmtNum(part/total,8) + ' × 100 = <strong>' + fmtNum(pct,4) + '%</strong>',
+      fmtMoney(part) + ' is <strong>' + fmtNum(pct,4) + '%</strong> of ' + fmtMoney(total)
+    ]);
+    showResult('wp-res');
+  }
 
-    /* ── Panel 2: Add/Subtract % ── */
-    function calcPanel2() {
-      hideEl('r2'); hideEl('e2');
-      const orig = parseFloat(document.getElementById('p2-orig').value);
-      const pct  = parseFloat(document.getElementById('p2-pct').value);
-      if (isNaN(orig) || isNaN(pct) || orig < 0 || pct < 0) { showEl('e2'); return; }
-
-      const isAdd  = operation === 'add';
-      const diff   = orig * (pct / 100);
-      const newAmt = isAdd ? orig + diff : orig - diff;
-
-      document.getElementById('r2-label-a').textContent = isAdd ? 'New Amount' : 'Reduced Amount';
-      document.getElementById('r2-label-b').textContent = isAdd ? 'Amount Added' : 'Amount Removed';
-      document.getElementById('r2-new').textContent  = fmtMoney(newAmt);
-      document.getElementById('r2-diff').textContent = fmtMoney(diff);
-      document.getElementById('r2-formula').innerHTML = isAdd
-        ? `${fmtMoney(orig)} &times; (1 + ${pct}/100) = <strong>${fmtMoney(newAmt)}</strong>&nbsp; (+${fmtMoney(diff)})`
-        : `${fmtMoney(orig)} &times; (1 &minus; ${pct}/100) = <strong>${fmtMoney(newAmt)}</strong>&nbsp; (&minus;${fmtMoney(diff)})`;
-
-      showEl('r2');
-    }
-
-    /* ── Enter key support ── */
-    ['p0-pct','p0-amt'].forEach(id =>
-      document.getElementById(id).addEventListener('keydown', e => { if (e.key === 'Enter') calcPanel0(); })
-    );
-    ['p1-part','p1-whole'].forEach(id =>
-      document.getElementById(id).addEventListener('keydown', e => { if (e.key === 'Enter') calcPanel1(); })
-    );
-    ['p2-orig','p2-pct'].forEach(id =>
-      document.getElementById(id).addEventListener('keydown', e => { if (e.key === 'Enter') calcPanel2(); })
-    );
-
-    /* ── FAQ Toggle ── */
-    function toggleFaq(btn) {
-      const item = btn.closest('.faq-item');
-      const open = item.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open);
-    }
-  </script>
-
-</body>
-</html>
+  // ---- PANE 3: Tip ----
+  function setTipPct(val, btn) {
+    document.getElementById('tip-pct').value = val;
+    document.querySelectorAll('#tip-quick-btns .quick-btn').forEach(b => b
