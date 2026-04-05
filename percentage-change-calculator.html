@@ -3,184 +3,811 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Percentage Change Calculator — Calculate % Increase or Decrease</title>
-  <meta name="description" content="Find the percentage change between two numbers — whether it's an increase or decrease. Free percentage change calculator with formula and step-by-step examples.">
-  <meta name="keywords" content="percentage change calculator, percent change calculator, percentage change formula, calculate percentage change, percentage change between two numbers">
-  <link rel="canonical" href="https://calcpercentage.vercel.app/percentage-change-calculator">
-  <meta property="og:title" content="Percentage Change Calculator — Calculate % Increase or Decrease">
-  <meta property="og:description" content="Find the percentage change between two numbers with formula and step-by-step examples.">
-  <meta property="og:url" content="https://calcpercentage.vercel.app/percentage-change-calculator">
+  <title>Percentage Change Calculator — Calculate % Change Instantly</title>
+  <meta name="description" content="Free percentage change calculator. Find the percentage change between any two values — increase or decrease. Includes formula, step-by-step working, reverse calculator & examples.">
+  <meta name="keywords" content="percentage change calculator, calculate percentage change, percent change calculator, percentage change formula, how to calculate percentage change, percent change formula">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/percentage-change-calculator/">
+
+  <meta property="og:title" content="Percentage Change Calculator — Calculate % Change Instantly">
+  <meta property="og:description" content="Find the percentage change between any two values. Auto-detects increase or decrease. Free tool with formula, step-by-step working & examples.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/percentage-change-calculator/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CalcPercentage">
+
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Percentage Change Calculator">
-  <meta name="twitter:description" content="Calculate percentage change between two numbers — increase or decrease with color coding.">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="CalcPercentage">
-  <link rel="stylesheet" href="/css/style.css">
+  <meta name="twitter:title" content="Percentage Change Calculator — Calculate % Change Instantly">
+  <meta name="twitter:description" content="Free percentage change calculator with auto increase/decrease detection, formula & step-by-step working.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23DA2576'/%3E%3Ctext x='12' y='78' font-size='72' font-family='Arial,sans-serif' font-weight='900' fill='white'%3E%25%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23DA2576'/%3E%3Ctext x='12' y='78' font-size='72' font-family='Arial,sans-serif' font-weight='900' fill='white'%3E%25%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <script type="application/ld+json">
-  [
-    { "@context": "https://schema.org", "@type": "WebApplication", "name": "Percentage Change Calculator", "url": "https://calcpercentage.vercel.app/percentage-change-calculator", "description": "Calculate percentage change (increase or decrease) between two values.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
-    { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-      { "@type": "Question", "name": "How do I calculate percentage change?", "acceptedAnswer": { "@type": "Answer", "text": "Percentage Change = ((New Value - Old Value) / |Old Value|) × 100. A positive result means an increase, a negative result means a decrease." } },
-      { "@type": "Question", "name": "What is the percentage change formula?", "acceptedAnswer": { "@type": "Answer", "text": "% Change = ((New − Old) ÷ Old) × 100. For example, from 80 to 100: ((100-80)/80) × 100 = 25% increase." } }
-    ]},
-    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
-      { "@type": "ListItem", "position": 2, "name": "Percentage Change Calculator", "item": "https://calcpercentage.vercel.app/percentage-change-calculator" }
-    ]}
-  ]
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://calcpercentage.vercel.app/#website",
+        "url": "https://calcpercentage.vercel.app/",
+        "name": "CalcPercentage",
+        "publisher": { "@type": "Organization", "name": "CalcPercentage", "logo": { "@type": "ImageObject", "url": "https://calcpercentage.vercel.app/logo.svg" } }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Percentage Change Calculator", "item": "https://calcpercentage.vercel.app/percentage-change-calculator/" }
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://calcpercentage.vercel.app/percentage-change-calculator/#app",
+        "name": "Percentage Change Calculator",
+        "url": "https://calcpercentage.vercel.app/percentage-change-calculator/",
+        "description": "Calculate the percentage change between two values. Auto-detects whether the change is an increase or decrease and shows full step-by-step working.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": ["Percentage Change Calculation", "Auto Increase/Decrease Detection", "Find New Value After % Change", "Reverse Calculate Original Value"]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the percentage change formula?",
+            "acceptedAnswer": { "@type": "Answer", "text": "% Change = ((New Value − Old Value) ÷ |Old Value|) × 100. A positive result means an increase; a negative result means a decrease." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you calculate percentage change?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Subtract the old value from the new value, divide by the absolute value of the old value, then multiply by 100. Example: old = 50, new = 65 → ((65−50)÷50)×100 = 30% increase." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between percentage change and percentage difference?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Percentage change has a clear before/after reference — it divides by the original (old) value. Percentage difference compares two independent values with no reference point, dividing by their average. Use percentage change for before-and-after scenarios; use percentage difference for two equal-standing values." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can percentage change be negative?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. A negative percentage change means the value decreased. For example, old = 100, new = 75 → ((75−100)÷100)×100 = −25%, which means a 25% decrease." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between percentage change and percentage increase?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Percentage increase only applies when the new value is higher and is always expressed as a positive number. Percentage change covers both directions: positive = increase, negative = decrease. They use the same formula but percentage change labels the direction in the result." }
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to Calculate Percentage Change",
+        "description": "Step-by-step guide to calculating the percentage change between two values",
+        "totalTime": "PT1M",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Identify Old and New Values", "text": "Note the original (old) value and the new value." },
+          { "@type": "HowToStep", "position": 2, "name": "Find the Difference", "text": "Subtract the old value from the new value: Difference = New − Old." },
+          { "@type": "HowToStep", "position": 3, "name": "Divide by the Old Value", "text": "Divide the difference by the absolute value of the old value." },
+          { "@type": "HowToStep", "position": 4, "name": "Multiply by 100", "text": "Multiply by 100. A positive result = increase; negative = decrease." }
+        ]
+      }
+    ]
+  }
   </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink: #DA2576;
+      --pink-dark: #b81e62;
+      --pink-light: #fce7f3;
+      --pink-xlight: #fff0f7;
+      --black: #0d0d0d;
+      --near-black: #111827;
+      --dark: #1f2937;
+      --mid: #4b5563;
+      --gray: #6b7280;
+      --light-gray: #f3f4f6;
+      --border: #e5e7eb;
+      --white: #ffffff;
+      --green: #059669;
+      --green-light: #d1fae5;
+      --red: #dc2626;
+      --red-light: #fee2e2;
+      --shadow: 0 4px 24px rgba(218,37,118,0.10);
+      --shadow-lg: 0 12px 40px rgba(218,37,118,0.15);
+      --radius: 14px;
+      --radius-lg: 20px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); color: var(--near-black); background: var(--white); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: var(--pink); }
+    a:hover { color: var(--pink-dark); }
+
+    /* HEADER */
+    header { background: var(--white); border-bottom: 1.5px solid var(--border); position: sticky; top: 0; z-index: 999; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
+    .header-wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 38px; height: 38px; background: var(--pink); border-radius: 10px; color: white; font-size: 1.15rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .logo-name { font-size: 1.15rem; font-weight: 800; color: var(--black); letter-spacing: -0.4px; }
+    .logo-name span { color: var(--pink); }
+    .main-nav { display: flex; align-items: center; gap: 2px; }
+    .main-nav a { text-decoration: none; color: var(--dark); font-size: 0.83rem; font-weight: 600; padding: 7px 11px; border-radius: 8px; transition: background 0.18s, color 0.18s; white-space: nowrap; }
+    .main-nav a:hover, .main-nav a.active { background: var(--pink-light); color: var(--pink); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; border-radius: 8px; flex-shrink: 0; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    .mobile-nav { display: none; flex-direction: column; background: var(--white); border-top: 1px solid var(--border); padding: 8px 20px 16px; gap: 2px; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { display: block; padding: 11px 12px; text-decoration: none; color: var(--dark); font-size: 0.9rem; font-weight: 600; border-radius: 8px; transition: background 0.15s; }
+    .mobile-nav a:hover, .mobile-nav a.active { background: var(--pink-xlight); color: var(--pink); }
+
+    /* BREADCRUMB */
+    .breadcrumb-bar { max-width: 1200px; margin: 0 auto; padding: 14px 20px 0; }
+    .breadcrumb { display: flex; align-items: center; gap: 6px; list-style: none; flex-wrap: wrap; }
+    .breadcrumb li { display: flex; align-items: center; gap: 6px; }
+    .breadcrumb li + li::before { content: '/'; color: var(--gray); font-size: 0.78rem; }
+    .breadcrumb a { font-size: 0.78rem; color: var(--gray); text-decoration: none; font-weight: 500; }
+    .breadcrumb a:hover { color: var(--pink); }
+    .breadcrumb span { font-size: 0.78rem; color: var(--near-black); font-weight: 600; }
+
+    /* HERO */
+    .hero { background: linear-gradient(160deg, #fff 0%, var(--pink-xlight) 55%, #fff 100%); padding: 52px 20px 40px; text-align: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--pink-light); color: var(--pink); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 5px 14px; border-radius: 100px; margin-bottom: 18px; }
+    .hero h1 { font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 900; color: var(--black); line-height: 1.12; letter-spacing: -1.5px; max-width: 700px; margin: 0 auto 16px; }
+    .hero h1 em { font-style: normal; color: var(--pink); }
+    .hero-sub { font-size: 1.02rem; color: var(--gray); max-width: 540px; margin: 0 auto; line-height: 1.65; }
+
+    /* CALCULATOR */
+    .calc-wrap { max-width: 760px; margin: 0 auto; padding: 36px 20px 16px; }
+    .calc-card { background: var(--white); border: 2px solid var(--border); border-radius: var(--radius-lg); padding: 36px 32px 30px; box-shadow: var(--shadow); transition: box-shadow 0.2s; }
+    .calc-card:hover { box-shadow: var(--shadow-lg); }
+
+    .mode-switch { display: flex; background: var(--light-gray); border-radius: 12px; padding: 4px; margin-bottom: 28px; gap: 4px; }
+    .mode-btn { flex: 1; padding: 10px 8px; border: none; border-radius: 9px; font-family: var(--font); font-size: 0.82rem; font-weight: 700; cursor: pointer; background: transparent; color: var(--gray); transition: all 0.2s; text-align: center; line-height: 1.35; }
+    .mode-btn.active { background: var(--white); color: var(--pink); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .mode-btn:hover:not(.active) { color: var(--dark); }
+    .mode-pane { display: none; }
+    .mode-pane.active { display: block; }
+
+    .calc-subtitle { font-size: 0.85rem; color: var(--gray); margin-bottom: 22px; line-height: 1.55; }
+    .formula-strip { background: var(--light-gray); border-left: 4px solid var(--pink); border-radius: 0 8px 8px 0; padding: 10px 16px; font-size: 0.84rem; color: var(--mid); font-family: 'Courier New', monospace; font-weight: 600; margin-bottom: 24px; }
+    .input-group { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .fg { display: flex; flex-direction: column; gap: 6px; }
+    .fg label { font-size: 0.75rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; }
+    .fg input { padding: 14px 16px; border: 2px solid var(--border); border-radius: var(--radius); font-size: 1rem; font-family: var(--font); color: var(--black); background: var(--white); width: 100%; transition: border-color 0.18s, box-shadow 0.18s; -webkit-appearance: none; }
+    .fg input::placeholder { color: #d1d5db; }
+    .fg input:focus { outline: none; border-color: var(--pink); box-shadow: 0 0 0 4px rgba(218,37,118,0.09); }
+
+    .calc-btn { width: 100%; padding: 16px; background: var(--pink); color: white; border: none; border-radius: var(--radius); font-size: 1.02rem; font-weight: 800; font-family: var(--font); cursor: pointer; letter-spacing: 0.3px; transition: background 0.18s, transform 0.1s, box-shadow 0.18s; margin-top: 4px; }
+    .calc-btn:hover { background: var(--pink-dark); box-shadow: 0 6px 20px rgba(218,37,118,0.28); }
+    .calc-btn:active { transform: scale(0.99); }
+
+    .result-box { display: none; margin-top: 22px; border-radius: var(--radius); overflow: hidden; animation: fadeIn 0.28s ease; }
+    .result-box.show { display: block; }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+    .res-main { padding: 24px 22px; text-align: center; }
+    .res-main.increase { background: linear-gradient(135deg, #059669 0%, #047857 100%); }
+    .res-main.decrease { background: linear-gradient(135deg, var(--pink) 0%, var(--pink-dark) 100%); }
+    .res-main.neutral  { background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%); }
+
+    .res-label { font-size: 0.73rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: rgba(255,255,255,0.75); margin-bottom: 6px; }
+    .res-value { font-size: 2.8rem; font-weight: 900; color: white; letter-spacing: -2px; line-height: 1; }
+    .res-sub { font-size: 0.83rem; color: rgba(255,255,255,0.72); margin-top: 8px; }
+
+    .res-dir-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.18); border-radius: 100px; padding: 4px 14px; font-size: 0.8rem; font-weight: 800; color: white; margin-top: 10px; }
+
+    .res-steps { background: var(--light-gray); padding: 18px 22px; border: 2px solid var(--border); border-top: none; border-radius: 0 0 var(--radius) var(--radius); }
+    .res-steps-title { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 10px; }
+    .res-steps ol { list-style: none; display: flex; flex-direction: column; gap: 7px; counter-reset: step; padding: 0; }
+    .res-steps ol li { counter-increment: step; display: flex; gap: 10px; font-size: 0.85rem; color: var(--dark); line-height: 1.55; }
+    .res-steps ol li::before { content: counter(step); min-width: 22px; height: 22px; background: var(--pink); color: white; border-radius: 50%; font-size: 0.72rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+
+    .err-msg { display: none; margin-top: 14px; padding: 11px 14px; background: #fef2f2; border: 1.5px solid #fecaca; border-radius: 10px; color: #dc2626; font-size: 0.84rem; font-weight: 500; }
+    .err-msg.show { display: block; }
+
+    /* EXAMPLES */
+    .examples-sec { max-width: 760px; margin: 0 auto; padding: 8px 20px 0; }
+    .examples-title { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray); margin-bottom: 10px; }
+    .examples-grid { display: flex; gap: 8px; flex-wrap: wrap; }
+    .ex-chip { padding: 7px 14px; background: var(--white); border: 1.5px solid var(--border); border-radius: 100px; font-size: 0.8rem; font-weight: 600; color: var(--dark); cursor: pointer; transition: all 0.18s; }
+    .ex-chip:hover { border-color: var(--pink); color: var(--pink); background: var(--pink-xlight); }
+    .ex-chip.inc { border-color: #d1fae5; color: #065f46; background: #f0fdf4; }
+    .ex-chip.inc:hover { border-color: var(--green); background: #d1fae5; }
+    .ex-chip.dec { border-color: #fee2e2; color: #991b1b; background: #fff5f5; }
+    .ex-chip.dec:hover { border-color: var(--red); background: #fee2e2; }
+
+    /* CONTENT */
+    .content-wrap { max-width: 880px; margin: 0 auto; padding: 56px 20px 16px; }
+    .content-wrap h2 { font-size: clamp(1.3rem, 3vw, 1.85rem); font-weight: 900; color: var(--black); letter-spacing: -0.6px; margin-bottom: 16px; }
+    .content-wrap h3 { font-size: 1.08rem; font-weight: 800; color: var(--black); margin: 32px 0 12px; }
+    .content-wrap p { color: var(--dark); line-height: 1.78; margin-bottom: 16px; font-size: 0.97rem; }
+    .content-wrap a { color: var(--pink); text-decoration: none; font-weight: 600; }
+    .content-wrap a:hover { text-decoration: underline; }
+
+    .formula-block { background: var(--light-gray); border: 2px solid var(--border); border-radius: var(--radius); padding: 18px 22px; margin: 20px 0; }
+    .formula-block .fb-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 6px; }
+    .formula-block code { font-size: 1rem; color: var(--black); font-family: 'Courier New', monospace; font-weight: 700; }
+
+    .example-block { background: var(--pink-xlight); border: 2px solid var(--pink-light); border-radius: var(--radius); padding: 22px 24px; margin: 20px 0; }
+    .example-block .eb-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 12px; }
+    .example-block p { margin-bottom: 8px; font-size: 0.92rem; }
+    .example-block p:last-child { margin-bottom: 0; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+
+    .mini-card { padding: 20px; border-radius: var(--radius); border: 2px solid var(--border); }
+    .mini-card.inc-card { background: #f0fdf4; border-color: #bbf7d0; }
+    .mini-card.dec-card { background: #fff5f5; border-color: #fecaca; }
+    .mini-card h4 { font-size: 0.85rem; font-weight: 800; margin-bottom: 8px; }
+    .mini-card.inc-card h4 { color: #065f46; }
+    .mini-card.dec-card h4 { color: #991b1b; }
+    .mini-card p { font-size: 0.83rem; color: var(--dark); margin-bottom: 0; line-height: 1.55; }
+
+    .steps { counter-reset: step; list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 16px 0; }
+    .steps li { display: flex; gap: 14px; align-items: flex-start; counter-increment: step; }
+    .steps li::before { content: counter(step); min-width: 28px; height: 28px; background: var(--pink); color: white; border-radius: 50%; font-size: 0.8rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .steps li span { color: var(--dark); font-size: 0.95rem; line-height: 1.65; }
+
+    .table-wrap { overflow-x: auto; margin: 20px 0; border-radius: var(--radius); border: 2px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.89rem; }
+    thead tr { background: var(--black); color: white; }
+    thead th { padding: 13px 16px; text-align: left; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; }
+    tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: var(--pink-xlight); }
+    tbody td { padding: 13px 16px; color: var(--dark); line-height: 1.5; }
+    tbody td:first-child { font-weight: 700; color: var(--black); }
+    .badge-up { display: inline-block; background: var(--green-light); color: #065f46; font-size: 0.75rem; font-weight: 700; padding: 3px 9px; border-radius: 100px; }
+    .badge-dn { display: inline-block; background: var(--pink-light); color: var(--pink); font-size: 0.75rem; font-weight: 700; padding: 3px 9px; border-radius: 100px; }
+
+    .link-box { background: var(--black); border-radius: var(--radius); padding: 24px 26px; margin: 28px 0; color: white; }
+    .link-box h3 { color: var(--pink); margin-top: 0; margin-bottom: 14px; font-size: 0.97rem; }
+    .link-box ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .link-box ul li { font-size: 0.87rem; color: rgba(255,255,255,0.78); padding-left: 20px; position: relative; }
+    .link-box ul li::before { content: '→'; position: absolute; left: 0; color: var(--pink); font-weight: 700; }
+    .link-box ul li a { color: var(--pink); text-decoration: none; font-weight: 700; }
+    .link-box ul li a:hover { text-decoration: underline; }
+
+    /* FAQ */
+    .faq-sec { max-width: 880px; margin: 0 auto; padding: 0 20px 64px; }
+    .sec-head { text-align: center; margin-bottom: 32px; }
+    .sec-tag { display: inline-block; background: var(--pink-light); color: var(--pink); font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; padding: 4px 12px; border-radius: 100px; margin-bottom: 12px; }
+    .sec-head h2 { font-size: clamp(1.35rem, 3vw, 2rem); font-weight: 900; color: var(--black); letter-spacing: -0.6px; margin-bottom: 6px; }
+    .sec-head p { font-size: 0.96rem; color: var(--gray); }
+    .faq-item { border: 2px solid var(--border); border-radius: var(--radius); margin-bottom: 10px; overflow: hidden; transition: border-color 0.2s; }
+    .faq-item.open { border-color: var(--pink); }
+    .faq-q { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 17px 20px; cursor: pointer; font-weight: 700; font-size: 0.93rem; color: var(--black); user-select: none; transition: background 0.15s; }
+    .faq-q:hover { background: var(--light-gray); }
+    .faq-ico { width: 26px; height: 26px; background: var(--pink-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--pink); font-size: 1.2rem; font-weight: 700; flex-shrink: 0; transition: transform 0.25s; }
+    .faq-item.open .faq-ico { transform: rotate(45deg); background: var(--pink); color: white; }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.32s ease, padding 0.32s; padding: 0 20px; }
+    .faq-item.open .faq-a { max-height: 400px; padding: 0 20px 18px; }
+    .faq-a p { color: var(--dark); font-size: 0.89rem; line-height: 1.72; }
+    .faq-a a { color: var(--pink); font-weight: 600; }
+
+    /* FOOTER */
+    footer { background: var(--black); color: white; padding: 60px 20px 36px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .f-brand .logo { margin-bottom: 14px; }
+    .f-brand .logo .logo-name { color: white; }
+    .f-brand p { font-size: 0.84rem; color: rgba(255,255,255,0.55); line-height: 1.7; max-width: 260px; }
+    .f-col h4 { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+    .f-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .f-col ul li a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.85rem; transition: color 0.18s; }
+    .f-col ul li a:hover { color: var(--pink); }
+    .footer-bottom { padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+    .footer-bottom a { color: var(--pink); text-decoration: none; }
+    .hr-line { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .hr-line hr { border: none; border-top: 1px solid var(--border); }
+
+    @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    @media (max-width: 768px) {
+      .main-nav { display: none; }
+      .hamburger { display: flex; }
+      .hero { padding: 40px 20px 28px; }
+      .calc-card { padding: 24px 18px 20px; }
+      .input-group { grid-template-columns: 1fr; gap: 12px; }
+      .mode-btn { font-size: 0.76rem; padding: 9px 6px; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } .res-value { font-size: 2.2rem; } }
+  </style>
 </head>
 <body>
+
+<!-- HEADER -->
 <header>
-  <nav>
-    <a href="/" class="logo">Calc<span>Percentage</span></a>
-    <button class="mobile-menu-btn" onclick="document.querySelector('nav ul').classList.toggle('open')">☰ Menu</button>
-    <ul>
-      <li><a href="/percentage-increase-calculator">% Increase</a></li>
-      <li><a href="/percentage-decrease-calculator">% Decrease</a></li>
-      <li><a href="/percentage-change-calculator">% Change</a></li>
-      <li><a href="/percentage-off-calculator">% Off</a></li>
-      <li><a href="/percent-error-calculator">% Error</a></li>
-      <li><a href="/discount-calculator">Discount</a></li>
-      <li><a href="/fraction-to-percentage">Fraction→%</a></li>
-    </ul>
+  <div class="header-wrap">
+    <a href="/" class="logo" aria-label="CalcPercentage — Home">
+      <div class="logo-icon">%</div>
+      <span class="logo-name"><span>Calc</span>Percentage</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/percentage-increase-calculator/">% Increase</a>
+      <a href="/percentage-decrease-calculator/">% Decrease</a>
+      <a href="/percentage-change-calculator/" class="active" aria-current="page">% Change</a>
+      <a href="/percentage-difference-calculator/">% Difference</a>
+      <a href="/percent-error-calculator/">% Error</a>
+      <a href="/percent-off-calculator/">% Off</a>
+    </nav>
+    <button class="hamburger" id="hambBtn" aria-label="Open menu" aria-expanded="false" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="/">🏠 Percentage Calculator (Home)</a>
+    <a href="/percentage-increase-calculator/">📈 Percentage Increase Calculator</a>
+    <a href="/percentage-decrease-calculator/">📉 Percentage Decrease Calculator</a>
+    <a href="/percentage-change-calculator/" class="active">🔄 Percentage Change Calculator</a>
+    <a href="/percentage-difference-calculator/">↔️ Percentage Difference Calculator</a>
+    <a href="/percent-error-calculator/">🔬 Percent Error Calculator</a>
+    <a href="/percent-off-calculator/">🏷️ Percent Off / Discount Calculator</a>
+    <a href="/what-is-percentage/">📖 What is a Percentage?</a>
+    <a href="/percentage-formula/">📐 Percentage Formulas</a>
   </nav>
 </header>
 
-<main>
-  <nav class="breadcrumb">
-    <a href="/">Home</a><span class="sep"> › </span><span>Percentage Change Calculator</span>
-  </nav>
+<!-- BREADCRUMB -->
+<div class="breadcrumb-bar">
+  <ol class="breadcrumb" aria-label="Breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><span>Percentage Change Calculator</span></li>
+  </ol>
+</div>
 
-  <div class="page-hero">
-    <h1>Percentage Change Calculator</h1>
-    <p>Calculate the percentage change between two numbers. Shows increase (green) or decrease (red) automatically.</p>
-  </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">🔄 Free Online Calculator</div>
+  <h1>Percentage Change<br><em>Calculator</em></h1>
+  <p class="hero-sub">Calculate the percentage change between any two values. Auto-detects increase or decrease — enter old and new values to get your result with full working shown.</p>
+</section>
 
+<!-- CALCULATOR -->
+<section class="calc-wrap" aria-label="Percentage change calculator">
   <div class="calc-card">
-    <h2><span class="icon">↕</span> Percentage Change</h2>
-    <div class="formula-box"><strong>% Change = ((New − Old) ÷ |Old|) × 100</strong></div>
-    <div class="form-row">
-      <div class="form-group">
-        <label for="pc_old">Old Value</label>
-        <input type="number" id="pc_old" placeholder="e.g. 80" step="any" oninput="calcChange()">
+
+    <div class="mode-switch" role="tablist" aria-label="Calculator mode">
+      <button class="mode-btn active" role="tab" aria-selected="true" onclick="switchMode('find-change', this)">
+        Find % Change<br><small style="font-weight:500;opacity:0.7">Old → New value</small>
+      </button>
+      <button class="mode-btn" role="tab" aria-selected="false" onclick="switchMode('find-new', this)">
+        Find New Value<br><small style="font-weight:500;opacity:0.7">Apply % change</small>
+      </button>
+      <button class="mode-btn" role="tab" aria-selected="false" onclick="switchMode('find-old', this)">
+        Find Original Value<br><small style="font-weight:500;opacity:0.7">Reverse calculate</small>
+      </button>
+    </div>
+
+    <!-- Mode 1: Find % Change -->
+    <div class="mode-pane active" id="mode-find-change">
+      <p class="calc-subtitle">Enter your original (old) value and new value. The calculator auto-detects whether the change is an increase or decrease.</p>
+      <div class="formula-strip">% Change = ((New Value − Old Value) ÷ |Old Value|) × 100</div>
+      <div class="input-group">
+        <div class="fg">
+          <label for="fc-old">Old Value (Original)</label>
+          <input type="number" id="fc-old" placeholder="e.g. 80" step="any" inputmode="decimal">
+        </div>
+        <div class="fg">
+          <label for="fc-new">New Value</label>
+          <input type="number" id="fc-new" placeholder="e.g. 100" step="any" inputmode="decimal">
+        </div>
       </div>
-      <div class="form-group">
-        <label for="pc_new">New Value</label>
-        <input type="number" id="pc_new" placeholder="e.g. 100" step="any" oninput="calcChange()">
+      <button class="calc-btn" onclick="calcFindChange()">Calculate % Change →</button>
+      <div class="err-msg" id="fc-err">⚠ Please enter valid numbers in both fields. Old value cannot be zero.</div>
+      <div class="result-box" id="fc-res">
+        <div class="res-main neutral" id="fc-res-main">
+          <div class="res-label" id="fc-res-label">Percentage Change</div>
+          <div class="res-value" id="fc-res-v">—</div>
+          <div class="res-dir-badge" id="fc-res-badge"></div>
+          <div class="res-sub" id="fc-res-s"></div>
+        </div>
+        <div class="res-steps">
+          <div class="res-steps-title">📐 Step-by-Step Working</div>
+          <ol id="fc-steps-list"></ol>
+        </div>
       </div>
     </div>
-    <div id="pc_result" class="result-box">
-      <div class="result-main" id="pc_ans"></div>
-      <div class="result-label" id="pc_diff"></div>
-      <div class="result-formula" id="pc_formula"></div>
+
+    <!-- Mode 2: Find New Value -->
+    <div class="mode-pane" id="mode-find-new">
+      <p class="calc-subtitle">Enter the original value and the percentage change (use negative values for decreases) to find the resulting new value.</p>
+      <div class="formula-strip">New Value = Old Value × (1 + % Change ÷ 100)</div>
+      <div class="input-group">
+        <div class="fg">
+          <label for="fn-old">Original Value</label>
+          <input type="number" id="fn-old" placeholder="e.g. 400" step="any" inputmode="decimal">
+        </div>
+        <div class="fg">
+          <label for="fn-pct">% Change (use − for decrease)</label>
+          <input type="number" id="fn-pct" placeholder="e.g. 25 or −10" step="any" inputmode="decimal">
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcFindNew()">Find New Value →</button>
+      <div class="err-msg" id="fn-err">⚠ Please enter valid numbers in both fields.</div>
+      <div class="result-box" id="fn-res">
+        <div class="res-main neutral" id="fn-res-main">
+          <div class="res-label">New Value After Change</div>
+          <div class="res-value" id="fn-res-v">—</div>
+          <div class="res-dir-badge" id="fn-res-badge"></div>
+          <div class="res-sub" id="fn-res-s"></div>
+        </div>
+        <div class="res-steps">
+          <div class="res-steps-title">📐 Step-by-Step Working</div>
+          <ol id="fn-steps-list"></ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mode 3: Find Original Value -->
+    <div class="mode-pane" id="mode-find-old">
+      <p class="calc-subtitle">Know the new value and the % change applied? Work backwards to find what the original value was before the change.</p>
+      <div class="formula-strip">Old Value = New Value ÷ (1 + % Change ÷ 100)</div>
+      <div class="input-group">
+        <div class="fg">
+          <label for="fo-new">New Value (After Change)</label>
+          <input type="number" id="fo-new" placeholder="e.g. 500" step="any" inputmode="decimal">
+        </div>
+        <div class="fg">
+          <label for="fo-pct">% Change Applied</label>
+          <input type="number" id="fo-pct" placeholder="e.g. 25 or −10" step="any" inputmode="decimal">
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcFindOld()">Find Original Value →</button>
+      <div class="err-msg" id="fo-err">⚠ Please enter valid numbers. % Change cannot equal −100.</div>
+      <div class="result-box" id="fo-res">
+        <div class="res-main neutral" id="fo-res-main">
+          <div class="res-label">Original Value (Before Change)</div>
+          <div class="res-value" id="fo-res-v">—</div>
+          <div class="res-sub" id="fo-res-s"></div>
+        </div>
+        <div class="res-steps">
+          <div class="res-steps-title">📐 Step-by-Step Working</div>
+          <ol id="fo-steps-list"></ol>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Quick Examples -->
+<div class="examples-sec">
+  <div class="examples-title">⚡ Quick Examples — Click to Try</div>
+  <div class="examples-grid">
+    <button class="ex-chip inc" onclick="loadExample(100, 125)">📈 100 → 125</button>
+    <button class="ex-chip inc" onclick="loadExample(50000, 60000)">📈 Salary $50k→$60k</button>
+    <button class="ex-chip inc" onclick="loadExample(200, 300)">📈 $200 → $300</button>
+    <button class="ex-chip dec" onclick="loadExample(80, 60)">📉 $80 → $60</button>
+    <button class="ex-chip dec" onclick="loadExample(1500, 1200)">📉 $1,500 → $1,200</button>
+    <button class="ex-chip dec" onclick="loadExample(90, 45)">📉 90 → 45</button>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="hr-line" style="margin-top:40px;"><hr></div>
+<section class="content-wrap">
+
+  <h2>How to Calculate Percentage Change</h2>
+
+  <p>A <strong>percentage change</strong> measures how much a value has shifted — up or down — relative to its starting point. It is the most versatile of all percentage calculations because it handles both growth and reduction in a single formula. Percentage change is used in finance (investment returns, inflation), business (month-over-month revenue growth), science (experimental data changes), and everyday life (tracking weight, scores, utility bills, and more).</p>
+
+  <p>The key advantage of our <strong>percentage change calculator</strong> over separate increase/decrease tools is that you don't need to know in advance whether the value went up or down — simply enter the old and new values and the result auto-labels the direction for you.</p>
+
+  <h3>The Percentage Change Formula</h3>
+
+  <div class="formula-block">
+    <div class="fb-label">Percentage Change Formula</div>
+    <code>% Change = ((New Value − Old Value) ÷ |Old Value|) × 100</code>
+  </div>
+
+  <p>The vertical bars (| |) around Old Value mean you use its <em>absolute value</em> as the divisor — this matters when the original value is negative (common in financial loss scenarios). A <strong>positive result</strong> means the value increased. A <strong>negative result</strong> means the value decreased.</p>
+
+  <div class="two-col">
+    <div class="mini-card inc-card">
+      <h4>✅ Positive % Change = Increase</h4>
+      <p>Old = 100, New = 130<br>% Change = ((130−100)÷100)×100 = <strong>+30%</strong></p>
+    </div>
+    <div class="mini-card dec-card">
+      <h4>📉 Negative % Change = Decrease</h4>
+      <p>Old = 100, New = 75<br>% Change = ((75−100)÷100)×100 = <strong>−25%</strong></p>
     </div>
   </div>
 
-  <div class="content-article">
-    <h2>Percentage Change vs Percentage Difference</h2>
-    <p><strong>Percentage change</strong> compares a new value to an old value and has a direction — it tells you whether something increased or decreased, and by how much. It's the most common percentage calculation in everyday life.</p>
-    <p><strong>Percentage difference</strong>, on the other hand, measures the difference between two values without implying direction, using their average as the reference point. For that, see our <a href="/percentage-difference-calculator">percentage difference calculator</a>.</p>
+  <h3>Step-by-Step: How to Calculate Percentage Change</h3>
 
-    <h3>The Percentage Change Formula</h3>
-    <div class="formula-highlight">% Change = ((New Value − Old Value) ÷ Old Value) × 100</div>
-    <p>A <strong>positive result</strong> means an increase. A <strong>negative result</strong> means a decrease.</p>
+  <ol class="steps">
+    <li><span><strong>Identify the old and new values</strong> — old is where you started, new is where you ended.</span></li>
+    <li><span><strong>Find the difference:</strong> New Value − Old Value. This can be positive or negative.</span></li>
+    <li><span><strong>Divide by the absolute old value:</strong> Difference ÷ |Old Value|.</span></li>
+    <li><span><strong>Multiply by 100</strong> to get the percentage. Positive = increase, negative = decrease.</span></li>
+  </ol>
 
-    <h3>Examples of Percentage Change</h3>
-    <div class="table-wrapper">
-      <table class="data-table">
-        <thead><tr><th>Scenario</th><th>Old</th><th>New</th><th>Change</th></tr></thead>
-        <tbody>
-          <tr><td>Revenue growth</td><td>$100,000</td><td>$125,000</td><td style="color:var(--success)">▲ +25%</td></tr>
-          <tr><td>Fuel price (AUD/L)</td><td>$1.80</td><td>$2.10</td><td style="color:var(--error)">▲ +16.7%</td></tr>
-          <tr><td>CPI inflation</td><td>100</td><td>103.2</td><td style="color:var(--error)">▲ +3.2%</td></tr>
-          <tr><td>Population change</td><td>5,000,000</td><td>4,750,000</td><td style="color:var(--success)">▼ −5%</td></tr>
-          <tr><td>Course enrolments</td><td>250</td><td>200</td><td style="color:var(--error)">▼ −20%</td></tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="example-block">
+    <div class="eb-label">✦ Worked Example — Monthly Revenue Change</div>
+    <p><strong>Question:</strong> Revenue was $24,000 in January and $18,000 in February. What is the % change?</p>
+    <p><strong>Step 1:</strong> Difference = $18,000 − $24,000 = <strong>−$6,000</strong></p>
+    <p><strong>Step 2:</strong> Divide: −$6,000 ÷ $24,000 = <strong>−0.25</strong></p>
+    <p><strong>Step 3:</strong> Multiply: −0.25 × 100 = <strong>−25% (a 25% decrease)</strong></p>
+  </div>
 
-    <h3>When to Use Percentage Change</h3>
-    <ul style="margin: 0 0 14px 20px; line-height: 2;">
-      <li>Tracking financial performance over time (revenue, profit, costs)</li>
-      <li>Monitoring price changes in products or services</li>
-      <li>Measuring growth in population, subscribers, or users</li>
-      <li>Comparing exam scores or athletic performance</li>
-      <li>Calculating year-over-year business metrics</li>
+  <h3>Percentage Change vs Percentage Increase / Decrease</h3>
+
+  <p><a href="/percentage-increase-calculator/">Percentage increase</a> and <a href="/percentage-decrease-calculator/">percentage decrease</a> are specialised versions of percentage change — they each apply only to one direction. Percentage change is the umbrella formula that covers both. If you know the direction in advance, use the dedicated calculator for cleaner results. If you're unsure, use this percentage change calculator and it will label the result automatically.</p>
+
+  <h3>Percentage Change vs Percentage Difference</h3>
+
+  <p><strong>Percentage change</strong> always has a clear reference point (the old/original value) and the result is directional. <a href="/percentage-difference-calculator/">Percentage difference</a>, however, treats both values as equal — it has no "before" or "after," and always produces a positive result. Use percentage change for time-series or before/after comparisons. Use percentage difference when comparing two independent measurements of equal standing, such as two lab readings or two competitors' prices.</p>
+
+  <h3>Real-World Examples of Percentage Change</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Scenario</th><th>Old Value</th><th>New Value</th><th>% Change</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Monthly sales</td><td>$18,000</td><td>$22,500</td><td><span class="badge-up">+25%</span></td></tr>
+        <tr><td>Annual inflation</td><td>$1.80/L petrol</td><td>$2.07/L</td><td><span class="badge-up">+15%</span></td></tr>
+        <tr><td>Weight loss</td><td>95 kg</td><td>80.75 kg</td><td><span class="badge-dn">−15%</span></td></tr>
+        <tr><td>Stock value drop</td><td>$250</td><td>$187.50</td><td><span class="badge-dn">−25%</span></td></tr>
+        <tr><td>Website traffic growth</td><td>8,000 visits</td><td>11,200 visits</td><td><span class="badge-up">+40%</span></td></tr>
+        <tr><td>Energy bill reduction</td><td>$320</td><td>$256</td><td><span class="badge-dn">−20%</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Percentage Change With Negative Starting Values</h3>
+
+  <p>When the old value is negative (e.g., a business loss improving from −$5,000 to −$2,000), the formula still works — you divide by the <em>absolute</em> value of the old number: ((−2,000 − (−5,000)) ÷ |−5,000|) × 100 = (3,000 ÷ 5,000) × 100 = <strong>+60%</strong>, meaning the loss improved by 60%. According to standard accounting and <a href="https://www.investopedia.com/terms/p/percentage-change.asp" target="_blank" rel="noopener noreferrer">financial reporting conventions (Investopedia)</a>, the absolute value denominator is the accepted approach for such edge cases.</p>
+
+  <div class="link-box">
+    <h3>🔗 Related Calculators</h3>
+    <ul>
+      <li>Value went up only? Use the <a href="/percentage-increase-calculator/">Percentage Increase Calculator</a></li>
+      <li>Value went down only? Use the <a href="/percentage-decrease-calculator/">Percentage Decrease Calculator</a></li>
+      <li>Comparing two independent values? Use the <a href="/percentage-difference-calculator/">Percentage Difference Calculator</a></li>
+      <li>Shopping discount? Use the <a href="/percent-off-calculator/">Percent Off / Discount Calculator</a></li>
+      <li>Lab accuracy? Use the <a href="/percent-error-calculator/">Percent Error Calculator</a></li>
+      <li>Back to the main tool — <a href="/">Percentage Calculator (Home)</a></li>
     </ul>
-
-    <div class="tip-box"><strong>💡 Tip:</strong> When the old value is negative, percentage change can seem counterintuitive. For example, a change from −$50 to −$25 would show a 50% "increase" even though the loss halved. Always check both values for context.</div>
   </div>
 
-  <div class="faq-section">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <div class="faq-q">How do I calculate percentage change?</div>
-      <div class="faq-a"><code>% Change = ((New − Old) ÷ Old) × 100</code>. Positive = increase, negative = decrease.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">What's the difference between percentage change and percentage difference?</div>
-      <div class="faq-a">Percentage change uses the original (old) value as the reference and implies direction. Percentage difference uses the average of both values and is symmetric — neither value is "original." See our <a href="/percentage-difference-calculator">percentage difference calculator</a>.</div>
-    </div>
+</section>
+
+<!-- FAQ -->
+<div class="hr-line"><hr></div>
+<section class="faq-sec" aria-label="FAQ Percentage Change">
+  <div class="sec-head">
+    <div class="sec-tag">FAQ</div>
+    <h2>Percentage Change — FAQs</h2>
+    <p>Common questions about calculating percentage change</p>
   </div>
 
-  <div class="related-section">
-    <h3>Related Calculators</h3>
-    <div class="related-links">
-      <a href="/">Percentage Calculator</a>
-      <a href="/percentage-increase-calculator">Percentage Increase</a>
-      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
-      <a href="/percentage-difference-calculator">Percentage Difference</a>
-      <a href="/percentage-formula">Percentage Formulas</a>
-      <a href="/how-to-calculate-percentage">How to Calculate %</a>
-    </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What is the percentage change formula?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p><strong>% Change = ((New Value − Old Value) ÷ |Old Value|) × 100</strong>. A positive result means an increase; a negative result means a decrease. The formula divides by the absolute value of the old number to handle negative starting values correctly.</p></div>
   </div>
-</main>
 
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do you calculate percentage change?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>1. Subtract the old value from the new value to get the difference. 2. Divide the difference by the old value. 3. Multiply by 100. Example: old = 50, new = 65 → ((65 − 50) ÷ 50) × 100 = <strong>+30%</strong>. Use the calculator above for instant results.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">Can percentage change be negative?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Yes — a negative percentage change means the value decreased. Example: old = 200, new = 150 → ((150 − 200) ÷ 200) × 100 = <strong>−25%</strong>. This is equivalent to a 25% decrease. Our calculator displays the direction label automatically.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What is the difference between percentage change and percentage difference?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Percentage change requires a clear old/new reference — it's directional and divides by the original value. <a href="/percentage-difference-calculator/">Percentage difference</a> has no reference point, uses the average of both values as the denominator, and always gives a positive result. Use change for before/after; use difference for two independent equal-standing values.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What is the difference between percentage change and percentage increase?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Percentage increase only applies when the value went up and is always expressed as a positive number. Percentage change covers both directions — a positive % change is an increase; a negative % change is a decrease. Both use the same formula but percentage change labels the direction in the result automatically.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do I find the new value after a percentage change?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Formula: <strong>New Value = Old Value × (1 + % Change ÷ 100)</strong>. Use negative % for decreases. Example: increase $400 by 20% → $400 × 1.20 = $480. Decrease $400 by 15% → $400 × 0.85 = $340. Use the "Find New Value" tab in the calculator above.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">Does percentage change work with zero as the old value?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>No — division by zero is mathematically undefined, so percentage change cannot be calculated when the old value is zero. In such cases (e.g., going from $0 revenue to $1,000), the change is described as "new" or "infinite" rather than as a percentage. Our calculator will flag this as an error and ask you to enter a non-zero old value.</p></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-links">
-      <a href="/">Percentage Calculator</a>
-      <a href="/percentage-increase-calculator">Percentage Increase</a>
-      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
-      <a href="/percentage-change-calculator">Percentage Change</a>
-      <a href="/percentage-difference-calculator">Percentage Difference</a>
-      <a href="/percentage-off-calculator">Percentage Off</a>
-      <a href="/percent-error-calculator">Percent Error</a>
-      <a href="/what-percentage-of">What Percentage Of</a>
-      <a href="/percentage-of-number">Percentage of a Number</a>
-      <a href="/money-percentage-calculator">Money Calculator</a>
-      <a href="/discount-calculator">Discount Calculator</a>
-      <a href="/fraction-to-percentage">Fraction to %</a>
-      <a href="/sales-percentage-calculator">Sales Calculator</a>
-      <a href="/percentage-formula">Percentage Formula</a>
-      <a href="/how-to-calculate-percentage">How to Calculate %</a>
-      <a href="/sitemap.xml">Sitemap</a>
+    <div class="footer-grid">
+      <div class="f-brand">
+        <a href="/" class="logo" aria-label="CalcPercentage Home">
+          <div class="logo-icon">%</div>
+          <span class="logo-name"><span style="color:var(--pink)">Calc</span>Percentage</span>
+        </a>
+        <p>Free online percentage calculators for every percentage problem. Fast, accurate, mobile-friendly — no ads blocking your results.</p>
+      </div>
+      <div class="f-col">
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/">Percentage Calculator</a></li>
+          <li><a href="/percentage-increase-calculator/">% Increase Calculator</a></li>
+          <li><a href="/percentage-decrease-calculator/">% Decrease Calculator</a></li>
+          <li><a href="/percentage-change-calculator/">% Change Calculator</a></li>
+          <li><a href="/percentage-difference-calculator/">% Difference Calculator</a></li>
+          <li><a href="/percent-error-calculator/">% Error Calculator</a></li>
+          <li><a href="/percent-off-calculator/">% Off / Discount Calculator</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/what-is-percentage/">What is a Percentage?</a></li>
+          <li><a href="/percentage-formula/">Percentage Formulas</a></li>
+          <li><a href="/how-to-calculate-percentage/">How to Calculate %</a></li>
+          <li><a href="/percentage-increase-calculator/">How to Calculate % Increase</a></li>
+          <li><a href="/percent-error-calculator/">How to Calculate % Error</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>More</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <p>© 2026 CalcPercentage.vercel.app — Free Online Percentage Calculator</p>
+    <div class="footer-bottom">
+      <p>© <span id="yr"></span> CalcPercentage.vercel.app — All rights reserved.</p>
+      <p>Made with ♥ for fast, free percentage calculations.</p>
+    </div>
   </div>
 </footer>
 
 <script>
-function fmt(n) {
-  if (n === null || isNaN(n) || !isFinite(n)) return null;
-  return parseFloat(n.toFixed(6)).toLocaleString('en-AU', {maximumFractionDigits: 4});
-}
-function calcChange() {
-  var oldV = parseFloat(document.getElementById('pc_old').value);
-  var newV = parseFloat(document.getElementById('pc_new').value);
-  var box = document.getElementById('pc_result');
-  if (isNaN(oldV) || isNaN(newV) || oldV === 0) { box.classList.remove('show'); return; }
-  var change = ((newV - oldV) / Math.abs(oldV)) * 100;
-  var isInc = change >= 0;
-  var ans = document.getElementById('pc_ans');
-  ans.className = 'result-main ' + (isInc ? 'green' : 'red');
-  ans.textContent = (isInc ? '▲ Increased by ' : '▼ Decreased by ') + Math.abs(parseFloat(change.toFixed(4))).toLocaleString('en-AU', {maximumFractionDigits: 4}) + '%';
-  document.getElementById('pc_diff').textContent = 'Difference: ' + (change >= 0 ? '+' : '') + fmt(newV - oldV) + ' (' + fmt(oldV) + ' → ' + fmt(newV) + ')';
-  document.getElementById('pc_formula').textContent = '((' + newV + ' − ' + oldV + ') ÷ ' + Math.abs(oldV) + ') × 100 = ' + fmt(change) + '%';
-  box.className = 'result-box show ' + (isInc ? 'increase' : 'decrease');
-}
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  function toggleNav() {
+    const nav = document.getElementById('mobileNav'), btn = document.getElementById('hambBtn');
+    const isOpen = nav.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen);
+  }
+
+  document.addEventListener('click', function(e) {
+    const nav = document.getElementById('mobileNav'), btn = document.getElementById('hambBtn');
+    if (!nav.contains(e.target) && !btn.contains(e.target)) {
+      nav.classList.remove('open'); btn.classList.remove('open'); btn.setAttribute('aria-expanded','false');
+    }
+  });
+
+  function switchMode(id, btn) {
+    document.querySelectorAll('.mode-pane').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.mode-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+    document.getElementById('mode-' + id).classList.add('active');
+    btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+  }
+
+  function fmt(n) {
+    let r = parseFloat(n.toPrecision(8));
+    return parseFloat(r.toFixed(6)).toString().replace(/\.?0+$/, '') || '0';
+  }
+
+  function renderSteps(id, steps) {
+    const ol = document.getElementById(id);
+    if (ol) ol.innerHTML = steps.map(s => `<li>${s}</li>`).join('');
+  }
+
+  function setResultTheme(mainId, badgeId, pct) {
+    const main = document.getElementById(mainId);
+    const badge = document.getElementById(badgeId);
+    main.className = 'res-main ' + (pct > 0 ? 'increase' : pct < 0 ? 'decrease' : 'neutral');
+    if (badge) badge.innerHTML = pct > 0 ? '▲ Increase' : pct < 0 ? '▼ Decrease' : '= No Change';
+  }
+
+  // Mode 1
+  function calcFindChange() {
+    const oldV = parseFloat(document.getElementById('fc-old').value);
+    const newV = parseFloat(document.getElementById('fc-new').value);
+    if (isNaN(oldV) || isNaN(newV) || oldV === 0) { showErr('fc-res','fc-err'); return; }
+    const diff = newV - oldV;
+    const pct  = (diff / Math.abs(oldV)) * 100;
+    document.getElementById('fc-err').classList.remove('show');
+    document.getElementById('fc-res').classList.add('show');
+    document.getElementById('fc-res-v').textContent = (pct >= 0 ? '+' : '') + fmt(pct) + '%';
+    document.getElementById('fc-res-s').textContent = fmt(oldV) + ' → ' + fmt(newV) + ' = ' + fmt(Math.abs(pct)) + '% ' + (pct >= 0 ? 'increase' : 'decrease');
+    setResultTheme('fc-res-main','fc-res-badge', pct);
+    renderSteps('fc-steps-list', [
+      `Difference = New − Old = ${fmt(newV)} − ${fmt(oldV)} = <strong>${fmt(diff)}</strong>`,
+      `Divide by |old value|: ${fmt(diff)} ÷ ${fmt(Math.abs(oldV))} = <strong>${fmt(diff/Math.abs(oldV))}</strong>`,
+      `Multiply by 100: = <strong>${(pct>=0?'+':'')+fmt(pct)}%</strong>`,
+      `Direction: <strong>${pct > 0 ? '▲ Increase' : pct < 0 ? '▼ Decrease' : '= No Change'}</strong>`
+    ]);
+  }
+
+  function showErr(resId, errId) {
+    document.getElementById(errId).classList.add('show');
+    document.getElementById(resId).classList.remove('show');
+  }
+
+  // Mode 2
+  function calcFindNew() {
+    const oldV = parseFloat(document.getElementById('fn-old').value);
+    const pct  = parseFloat(document.getElementById('fn-pct').value);
+    if (isNaN(oldV) || isNaN(pct)) { showErr('fn-res','fn-err'); return; }
+    const factor = 1 + pct / 100;
+    const newV   = oldV * factor;
+    const diff   = newV - oldV;
+    document.getElementById('fn-err').classList.remove('show');
+    document.getElementById('fn-res').classList.add('show');
+    document.getElementById('fn-res-v').textContent = fmt(newV);
+    document.getElementById('fn-res-s').textContent = `${fmt(oldV)} after ${pct>=0?'+':''}${fmt(pct)}% change = ${fmt(newV)} (${diff>=0?'+':''}${fmt(diff)})`;
+    setResultTheme('fn-res-main','fn-res-badge', pct);
+    renderSteps('fn-steps-list', [
+      `Multiplier = 1 + (${fmt(pct)} ÷ 100) = <strong>${fmt(factor)}</strong>`,
+      `New Value = ${fmt(oldV)} × ${fmt(factor)} = <strong>${fmt(newV)}</strong>`,
+      `Difference = ${fmt(newV)} − ${fmt(oldV)} = <strong>${fmt(diff)}</strong>`
+    ]);
+  }
+
+  // Mode 3
+  function calcFindOld() {
+    const newV = parseFloat(document.getElementById('fo-new').value);
+    const pct  = parseFloat(document.getElementById('fo-pct').value);
+    if (isNaN(newV) || isNaN(pct) || (1 + pct/100) === 0) { showErr('fo-res','fo-err'); return; }
+    const divisor = 1 + pct / 100;
+    const oldV    = newV / divisor;
+    document.getElementById('fo-err').classList.remove('show');
+    document.getElementById('fo-res').classList.add('show');
+    document.getElementById('fo-res-v').textContent = fmt(oldV);
+    document.getElementById('fo-res-s').textContent = `Original before ${pct>=0?'+':''}${fmt(pct)}% change = ${fmt(oldV)}`;
+    renderSteps('fo-steps-list', [
+      `Divisor = 1 + (${fmt(pct)} ÷ 100) = <strong>${fmt(divisor)}</strong>`,
+      `Old Value = ${fmt(newV)} ÷ ${fmt(divisor)} = <strong>${fmt(oldV)}</strong>`,
+      `Verify: ${fmt(oldV)} × ${fmt(divisor)} = <strong>${fmt(newV)} ✓</strong>`
+    ]);
+  }
+
+  function loadExample(oldV, newV) {
+    switchMode('find-change', document.querySelectorAll('.mode-btn')[0]);
+    document.getElementById('fc-old').value = oldV;
+    document.getElementById('fc-new').value = newV;
+    calcFindChange();
+    document.querySelector('.calc-wrap').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  document.querySelectorAll('.fg input').forEach(inp => {
+    inp.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') { const p = this.closest('.mode-pane'); if (p) p.querySelector('.calc-btn').click(); }
+    });
+  });
+
+  function toggleFaq(item) {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
 </script>
 </body>
 </html>
