@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About CalcPercentage — Free Percentage Calculator Tools</title>
+  <meta name="description" content="CalcPercentage is a free, fast, and accurate percentage calculator website. Learn about our mission, the tools we offer, and why we built the most complete percentage calculator on the web.">
+  <meta name="keywords" content="about calcpercentage, percentage calculator website, free percent calculator, percentage tools online">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/about/">
+
+  <meta property="og:title" content="About CalcPercentage — Free Percentage Calculator Tools">
+  <meta property="og:description" content="CalcPercentage provides free, fast, step-by-step percentage calculators for everyone. No ads. No sign-up. Just instant percentage answers.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/about/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CalcPercentage">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About CalcPercentage — Free Percentage Calculator Tools">
+  <meta name="twitter:description" content="Free percentage calculators with step-by-step working. No ads, no sign-up. Built for students, shoppers, and professionals.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23DA2576'/%3E%3Ctext x='12' y='78' font-size='72' font-family='Arial,sans-serif' font-weight='900' fill='white'%3E%25%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23DA2576'/%3E%3Ctext x='12' y='78' font-size='72' font-family='Arial,sans-serif' font-weight='900' fill='white'%3E%25%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://calcpercentage.vercel.app/#website",
+        "url": "https://calcpercentage.vercel.app/",
+        "name": "CalcPercentage",
+        "publisher": { "@type": "Organization", "name": "CalcPercentage", "url": "https://calcpercentage.vercel.app/" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
+          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://calcpercentage.vercel.app/about/" }
+        ]
+      },
+      {
+        "@type": "AboutPage",
+        "@id": "https://calcpercentage.vercel.app/about/#page",
+        "name": "About CalcPercentage",
+        "url": "https://calcpercentage.vercel.app/about/",
+        "description": "CalcPercentage is a free percentage calculator website offering step-by-step solutions for every type of percentage problem.",
+        "publisher": { "@type": "Organization", "name": "CalcPercentage" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://calcpercentage.vercel.app/#org",
+        "name": "CalcPercentage",
+        "url": "https://calcpercentage.vercel.app/",
+        "logo": { "@type": "ImageObject", "url": "https://calcpercentage.vercel.app/logo.svg" },
+        "description": "Free online percentage calculators with step-by-step working for every percentage problem type.",
+        "foundingDate": "2024",
+        "sameAs": []
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink: #DA2576;
+      --pink-dark: #b81e62;
+      --pink-light: #fce7f3;
+      --pink-xlight: #fff0f7;
+      --black: #0d0d0d;
+      --near-black: #111827;
+      --dark: #1f2937;
+      --gray: #6b7280;
+      --light-gray: #f3f4f6;
+      --border: #e5e7eb;
+      --white: #ffffff;
+      --green: #059669;
+      --green-light: #d1fae5;
+      --green-bg: #f0fdf4;
+      --blue: #2563eb;
+      --blue-light: #dbeafe;
+      --blue-bg: #eff6ff;
+      --amber: #d97706;
+      --amber-light: #fef3c7;
+      --shadow: 0 4px 24px rgba(218,37,118,0.10);
+      --radius: 14px;
+      --radius-lg: 20px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); color: var(--near-black); background: var(--white); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: var(--pink); text-decoration: none; }
+    a:hover { color: var(--pink-dark); text-decoration: underline; }
+
+    /* ===== HEADER ===== */
+    header { background: var(--white); border-bottom: 1.5px solid var(--border); position: sticky; top: 0; z-index: 999; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
+    .header-wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 38px; height: 38px; background: var(--pink); border-radius: 10px; color: white; font-size: 1.15rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .logo-name { font-size: 1.15rem; font-weight: 800; color: var(--black); letter-spacing: -0.4px; }
+    .logo-name span { color: var(--pink); }
+    .main-nav { display: flex; align-items: center; gap: 2px; }
+    .main-nav a { text-decoration: none; color: var(--dark); font-size: 0.83rem; font-weight: 600; padding: 7px 11px; border-radius: 8px; transition: background 0.18s, color 0.18s; white-space: nowrap; }
+    .main-nav a:hover, .main-nav a.active { background: var(--pink-light); color: var(--pink); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; border-radius: 8px; flex-shrink: 0; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+    .mobile-nav { display: none; flex-direction: column; background: var(--white); border-top: 1px solid var(--border); padding: 8px 20px 16px; gap: 2px; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { display: block; padding: 11px 12px; text-decoration: none; color: var(--dark); font-size: 0.9rem; font-weight: 600; border-radius: 8px; transition: background 0.15s; }
+    .mobile-nav a:hover, .mobile-nav a.active { background: var(--pink-xlight); color: var(--pink); }
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb-bar { max-width: 1200px; margin: 0 auto; padding: 14px 20px 0; }
+    .breadcrumb { display: flex; align-items: center; gap: 6px; list-style: none; flex-wrap: wrap; }
+    .breadcrumb li { display: flex; align-items: center; gap: 6px; }
+    .breadcrumb li + li::before { content: '/'; color: var(--gray); font-size: 0.78rem; }
+    .breadcrumb a { font-size: 0.78rem; color: var(--gray); text-decoration: none; font-weight: 500; }
+    .breadcrumb a:hover { color: var(--pink); }
+    .breadcrumb span { font-size: 0.78rem; color: var(--near-black); font-weight: 600; }
+
+    /* ===== HERO ===== */
+    .hero { background: linear-gradient(160deg, #fff 0%, var(--pink-xlight) 55%, #fff 100%); padding: 64px 20px 52px; text-align: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--pink-light); color: var(--pink); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 5px 14px; border-radius: 100px; margin-bottom: 20px; }
+    .hero-logo { width: 80px; height: 80px; background: var(--pink); border-radius: 22px; color: white; font-size: 2.4rem; font-weight: 900; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; box-shadow: 0 8px 32px rgba(218,37,118,0.28); }
+    .hero h1 { font-size: clamp(1.9rem, 5vw, 3rem); font-weight: 900; color: var(--black); line-height: 1.1; letter-spacing: -1.2px; margin-bottom: 16px; }
+    .hero h1 em { font-style: normal; color: var(--pink); }
+    .hero-sub { font-size: 1.08rem; color: var(--gray); max-width: 580px; margin: 0 auto 32px; line-height: 1.7; }
+    .hero-stats { display: flex; align-items: center; justify-content: center; gap: 0; flex-wrap: wrap; background: var(--white); border: 2px solid var(--border); border-radius: var(--radius-lg); max-width: 600px; margin: 0 auto; overflow: hidden; box-shadow: var(--shadow); }
+    .stat-item { flex: 1; min-width: 120px; padding: 18px 14px; text-align: center; border-right: 1px solid var(--border); }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-size: 1.65rem; font-weight: 900; color: var(--pink); letter-spacing: -0.8px; line-height: 1; margin-bottom: 4px; }
+    .stat-label { font-size: 0.73rem; font-weight: 600; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    /* ===== MAIN WRAP ===== */
+    .page-wrap { max-width: 900px; margin: 0 auto; padding: 64px 20px 0; }
+
+    /* ===== SECTION STYLES ===== */
+    .section-block { margin-bottom: 60px; }
+    h2.section-h { font-size: clamp(1.3rem, 3vw, 1.85rem); font-weight: 900; color: var(--black); letter-spacing: -0.6px; margin-bottom: 16px; line-height: 1.2; }
+    h2.section-h em { font-style: normal; color: var(--pink); }
+    h3.sub-h { font-size: 1.05rem; font-weight: 800; color: var(--black); margin: 24px 0 10px; }
+    p.body-p { color: var(--dark); line-height: 1.82; margin-bottom: 16px; font-size: 0.97rem; }
+    p.body-p strong { color: var(--black); }
+    p.body-p:last-child { margin-bottom: 0; }
+    .sec-divider { border: none; border-top: 2px solid var(--border); margin: 52px 0; }
+
+    /* ===== MISSION BLOCK ===== */
+    .mission-block { background: var(--black); border-radius: var(--radius-lg); padding: 36px 32px; margin: 28px 0; }
+    .mission-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.4); margin-bottom: 14px; }
+    .mission-text { font-size: clamp(1.05rem, 2.5vw, 1.3rem); font-weight: 700; color: white; line-height: 1.65; }
+    .mission-text span { color: var(--pink); }
+
+    /* ===== VALUES GRID ===== */
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0; }
+    .value-card { background: var(--white); border: 2px solid var(--border); border-radius: var(--radius); padding: 20px 18px; transition: border-color 0.2s, box-shadow 0.2s; }
+    .value-card:hover { border-color: var(--pink); box-shadow: var(--shadow); }
+    .vc-icon { font-size: 1.9rem; margin-bottom: 10px; }
+    .vc-title { font-size: 0.9rem; font-weight: 800; color: var(--black); margin-bottom: 7px; }
+    .vc-desc { font-size: 0.82rem; color: var(--gray); line-height: 1.6; }
+
+    /* ===== TOOLS GRID ===== */
+    .tools-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 24px 0; }
+    .tool-card { display: flex; align-items: flex-start; gap: 14px; background: var(--light-gray); border: 2px solid var(--border); border-radius: var(--radius); padding: 16px 16px; text-decoration: none; transition: all 0.18s; }
+    .tool-card:hover { border-color: var(--pink); background: var(--pink-xlight); text-decoration: none; box-shadow: var(--shadow); }
+    .tc-icon { font-size: 1.6rem; flex-shrink: 0; margin-top: 1px; }
+    .tc-title { font-size: 0.88rem; font-weight: 800; color: var(--black); margin-bottom: 3px; }
+    .tc-desc { font-size: 0.77rem; color: var(--gray); line-height: 1.5; }
+
+    /* ===== WHO WE HELP ===== */
+    .who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 22px 0; }
+    .who-card { display: flex; gap: 14px; align-items: flex-start; padding: 16px 16px; background: var(--white); border: 2px solid var(--border); border-radius: var(--radius); }
+    .who-icon { font-size: 1.7rem; flex-shrink: 0; }
+    .who-title { font-size: 0.88rem; font-weight: 800; color: var(--black); margin-bottom: 4px; }
+    .who-desc { font-size: 0.8rem; color: var(--gray); line-height: 1.55; }
+
+    /* ===== PRINCIPLE LIST ===== */
+    .principle-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 18px 0; }
+    .principle-list li { display: flex; gap: 14px; align-items: flex-start; padding: 14px 16px; background: var(--light-gray); border-radius: var(--radius); border: 2px solid var(--border); }
+    .pl-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 1px; }
+    .pl-title { font-size: 0.9rem; font-weight: 800; color: var(--black); margin-bottom: 3px; }
+    .pl-desc { font-size: 0.82rem; color: var(--gray); line-height: 1.55; }
+
+    /* ===== ACCURACY BANNER ===== */
+    .accuracy-banner { background: var(--green-bg); border: 2px solid var(--green-light); border-radius: var(--radius-lg); padding: 28px 28px; margin: 24px 0; display: flex; gap: 20px; align-items: flex-start; }
+    .ab-icon { font-size: 2.2rem; flex-shrink: 0; }
+    .ab-title { font-size: 1rem; font-weight: 800; color: #064e3b; margin-bottom: 6px; }
+    .ab-desc { font-size: 0.88rem; color: #065f46; line-height: 1.68; }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section { background: var(--black); border-radius: var(--radius-lg); padding: 40px 32px; text-align: center; margin: 0 0 60px; }
+    .cta-section h2 { font-size: clamp(1.3rem, 3vw, 1.9rem); font-weight: 900; color: white; letter-spacing: -0.6px; margin-bottom: 12px; }
+    .cta-section h2 span { color: var(--pink); }
+    .cta-section p { color: rgba(255,255,255,0.6); font-size: 0.95rem; margin-bottom: 28px; line-height: 1.65; }
+    .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .cta-btn { display: inline-flex; align-items: center; gap: 7px; padding: 13px 24px; border-radius: 100px; font-size: 0.9rem; font-weight: 800; text-decoration: none; transition: all 0.2s; }
+    .cta-btn.primary { background: var(--pink); color: white; }
+    .cta-btn.primary:hover { background: var(--pink-dark); color: white; text-decoration: none; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(218,37,118,0.35); }
+    .cta-btn.secondary { background: rgba(255,255,255,0.08); color: white; border: 1.5px solid rgba(255,255,255,0.15); }
+    .cta-btn.secondary:hover { background: rgba(255,255,255,0.15); color: white; text-decoration: none; }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact-section { background: var(--light-gray); border: 2px solid var(--border); border-radius: var(--radius-lg); padding: 32px 28px; margin-bottom: 60px; }
+    .cs-head { font-size: 1rem; font-weight: 900; color: var(--black); margin-bottom: 10px; }
+    .cs-desc { font-size: 0.9rem; color: var(--gray); line-height: 1.7; margin-bottom: 18px; }
+    .cs-channels { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .cs-item { display: flex; gap: 12px; align-items: center; background: var(--white); border: 2px solid var(--border); border-radius: var(--radius); padding: 14px 16px; }
+    .cs-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .cs-label { font-size: 0.78rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+    .cs-val { font-size: 0.86rem; font-weight: 700; color: var(--black); }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--black); color: white; padding: 60px 20px 36px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .f-brand .logo { margin-bottom: 14px; }
+    .f-brand .logo .logo-name { color: white; }
+    .f-brand p { font-size: 0.84rem; color: rgba(255,255,255,0.55); line-height: 1.7; max-width: 260px; }
+    .f-col h4 { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+    .f-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .f-col ul li a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.85rem; transition: color 0.18s; }
+    .f-col ul li a:hover { color: var(--pink); }
+    .footer-bottom { padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+
+    @media (max-width: 768px) {
+      .main-nav { display: none; }
+      .hamburger { display: flex; }
+      .values-grid { grid-template-columns: 1fr 1fr; }
+      .tools-grid { grid-template-columns: 1fr; }
+      .who-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .hero-stats { border-radius: var(--radius); }
+      .stat-item { padding: 14px 10px; }
+      .cs-channels { grid-template-columns: 1fr; }
+      .mission-block { padding: 24px 20px; }
+    }
+    @media (max-width: 480px) {
+      .values-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .cta-btns { flex-direction: column; align-items: center; }
+      .hero { padding: 44px 20px 36px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header>
+  <div class="header-wrap">
+    <a href="/" class="logo" aria-label="CalcPercentage — Home">
+      <div class="logo-icon">%</div>
+      <span class="logo-name"><span>Calc</span>Percentage</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/percentage-increase-calculator/">% Increase</a>
+      <a href="/percentage-decrease-calculator/">% Decrease</a>
+      <a href="/percentage-change-calculator/">% Change</a>
+      <a href="/discount-calculator/">🏷️ Discount</a>
+      <a href="/percentage-formula/">📐 Formulas</a>
+      <a href="/how-to-calculate-percentage/">📖 How To</a>
+      <a href="/about/" class="active" aria-current="page">About</a>
+    </nav>
+    <button class="hamburger" id="hambBtn" aria-label="Open menu" aria-expanded="false" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="/">🏠 Percentage Calculator</a>
+    <a href="/how-to-calculate-percentage/">📖 How to Calculate Percentage</a>
+    <a href="/percentage-formula/">📐 Percentage Formulas</a>
+    <a href="/what-is-percentage/">💡 What is a Percentage?</a>
+    <a href="/percentage-increase-calculator/">📈 % Increase Calculator</a>
+    <a href="/percentage-decrease-calculator/">📉 % Decrease Calculator</a>
+    <a href="/percentage-change-calculator/">🔄 % Change Calculator</a>
+    <a href="/discount-calculator/">🏷️ Discount Calculator</a>
+    <a href="/money-percentage-calculator/">💰 Money % Calculator</a>
+    <a href="/about/" class="active">ℹ️ About</a>
+  </nav>
+</header>
+
+<!-- ========== BREADCRUMB ========== -->
+<div class="breadcrumb-bar">
+  <ol class="breadcrumb" aria-label="Breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><span>About</span></li>
+  </ol>
+</div>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-badge">ℹ️ About This Site</div>
+  <div class="hero-logo">%</div>
+  <h1>About <em>CalcPercentage</em></h1>
+  <p class="hero-sub">A free, fast, and accurate percentage calculator built for students, shoppers, professionals, and anyone who works with numbers every day.</p>
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num">10+</div>
+      <div class="stat-label">Free Tools</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Free Forever</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">0</div>
+      <div class="stat-label">Sign-ups Needed</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">∞</div>
+      <div class="stat-label">Calculations</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== MAIN CONTENT ========== -->
+<div class="page-wrap">
+
+  <!-- MISSION -->
+  <div class="section-block" id="mission">
+    <h2 class="section-h">Our <em>Mission</em></h2>
+    <p class="body-p">Percentage calculations are used by everyone — students checking exam scores, shoppers comparing discounts, business analysts measuring growth, scientists reporting errors. Yet most people either reach for a general-purpose calculator that shows no working, or struggle to remember the right formula.</p>
+    <p class="body-p">We built CalcPercentage to fix that: one dedicated, beautifully clear website where you can solve <strong>any percentage problem</strong> in seconds, understand <em>how</em> the answer was reached, and never have to memorise a formula again.</p>
+
+    <div class="mission-block">
+      <div class="mission-label">Our Mission</div>
+      <div class="mission-text">
+        Make percentage calculations <span>instant, transparent, and free</span> for every person on the planet — with clear step-by-step working so you learn as you calculate, not just get an answer.
+      </div>
+    </div>
+  </div>
+
+  <hr class="sec-divider">
+
+  <!-- WHAT MAKES US DIFFERENT -->
+  <div class="section-block" id="difference">
+    <h2 class="section-h">What Makes CalcPercentage <em>Different</em></h2>
+    <p class="body-p">Most percentage calculators online give you a plain number and nothing else. We built every tool around three principles that we believe make the difference between a tool that merely answers and one that actually helps.</p>
+
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="vc-icon">🪜</div>
+        <div class="vc-title">Step-by-Step Working</div>
+        <div class="vc-desc">Every calculation shows the full formula, each arithmetic step, and the final answer — so you understand the "why," not just the "what."</div>
+      </div>
+      <div class="value-card">
+        <div class="vc-icon">⚡</div>
+        <div class="vc-title">Instant Results</div>
+        <div class="vc-desc">Results appear as you type — no submit button, no page reload. The answer is there before you lift your fingers from the keyboard.</div>
+      </div>
+      <div class="value-card">
+        <div class="vc-icon">🎯</div>
+        <div class="vc-title">Purpose-Built Tools</div>
+        <div class="vc-desc">Each calculator is designed for its specific problem type — not a generic calculator forced into a percentage mould.</div>
+      </div>
+      <div class="value-card">
+        <div class="vc-icon">📱</div>
+        <div class="vc-title">Mobile-First Design</div>
+        <div class="vc-desc">Every tool is fully responsive and works perfectly on any phone, tablet, or desktop. Calculated on the go, just as easily as at a desk.</div>
+      </div>
+      <div class="value-card">
+        <div class="vc-icon">🔒</div>
+        <div class="vc-title">No Sign-Up, Ever</div>
+        <div class="vc-desc">No account, no email, no paywall. Every tool is completely free and accessible instantly — nothing between you and your answer.</div>
+      </div>
+      <div class="value-card">
+        <div class="vc-icon">📚</div>
+        <div class="vc-title">Education First</div>
+        <div class="vc-desc">We pair every calculator with clear formula guides, worked examples, and how-to articles — so users leave understanding more than when they arrived.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="sec-divider">
+
+  <!-- OUR TOOLS -->
+  <div class="section-block" id="tools">
+    <h2 class="section-h">Our <em>Free Tools</em></h2>
+    <p class="body-p">Every calculator on CalcPercentage is purpose-built for a specific type of percentage problem — with its own formula display, live preview, step-by-step solution, and real-world examples.</p>
+
+    <div class="tools-grid">
+      <a href="/" class="tool-card">
+        <div class="tc-icon">🏠</div>
+        <div>
+          <div class="tc-title">Percentage Calculator</div>
+          <div class="tc-desc">All 3 core types: find the part, find the %, find the whole. The complete all-in-one tool.</div>
+        </div>
+      </a>
+      <a href="/percentage-increase-calculator/" class="tool-card">
+        <div class="tc-icon">📈</div>
+        <div>
+          <div class="tc-title">Percentage Increase Calculator</div>
+          <div class="tc-desc">How much did it grow? Enter old and new values, get the % increase instantly.</div>
+        </div>
+      </a>
+      <a href="/percentage-decrease-calculator/" class="tool-card">
+        <div class="tc-icon">📉</div>
+        <div>
+          <div class="tc-title">Percentage Decrease Calculator</div>
+          <div class="tc-desc">Measure a drop in price, headcount, traffic, or any value — with step-by-step working.</div>
+        </div>
+      </a>
+      <a href="/percentage-change-calculator/" class="tool-card">
+        <div class="tc-icon">🔄</div>
+        <div>
+          <div class="tc-title">Percentage Change Calculator</div>
+          <div class="tc-desc">One unified calculator for increases and decreases — shows direction and magnitude.</div>
+        </div>
+      </a>
+      <a href="/percentage-difference-calculator/" class="tool-card">
+        <div class="tc-icon">↔️</div>
+        <div>
+          <div class="tc-title">Percentage Difference Calculator</div>
+          <div class="tc-desc">Compare any two values symmetrically — perfect for peer comparisons with no reference direction.</div>
+        </div>
+      </a>
+      <a href="/discount-calculator/" class="tool-card">
+        <div class="tc-icon">🏷️</div>
+        <div>
+          <div class="tc-title">Discount Calculator</div>
+          <div class="tc-desc">Find sale price, original price, discount %, or double-stacked discounts with a single calculator.</div>
+        </div>
+      </a>
+      <a href="/percent-off-calculator/" class="tool-card">
+        <div class="tc-icon">🎯</div>
+        <div>
+          <div class="tc-title">Percent Off Calculator</div>
+          <div class="tc-desc">Quick sale price from any percentage off — with bulk discount comparison table for 5%–80%.</div>
+        </div>
+      </a>
+      <a href="/money-percentage-calculator/" class="tool-card">
+        <div class="tc-icon">💰</div>
+        <div>
+          <div class="tc-title">Money Percentage Calculator</div>
+          <div class="tc-desc">Tips, tax, salary raises, profit margin — all money percentage calculations in one place.</div>
+        </div>
+      </a>
+      <a href="/fraction-to-percentage/" class="tool-card">
+        <div class="tc-icon">½</div>
+        <div>
+          <div class="tc-title">Fraction to Percentage</div>
+          <div class="tc-desc">Convert any fraction to a percentage instantly — with decimal and simplified fraction output.</div>
+        </div>
+      </a>
+      <a href="/percent-error-calculator/" class="tool-card">
+        <div class="tc-icon">🔬</div>
+        <div>
+          <div class="tc-title">Percent Error Calculator</div>
+          <div class="tc-desc">Science and engineering accuracy tool — enter experimental and theoretical values for instant % error.</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <hr class="sec-divider">
+
+  <!-- WHO WE HELP -->
+  <div class="section-block" id="who">
+    <h2 class="section-h">Who We <em>Help</em></h2>
+    <p class="body-p">CalcPercentage is built for anyone who needs a fast, reliable percentage answer — whether you're in a classroom, a store, or a boardroom.</p>
+
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-icon">🎓</div>
+        <div>
+          <div class="who-title">Students</div>
+          <div class="who-desc">Check exam scores, solve maths homework, understand percentages step by step, and prepare for standardised tests.</div>
+        </div>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">🛍️</div>
+        <div>
+          <div class="who-title">Shoppers</div>
+          <div class="who-desc">Quickly calculate sale prices, compare discounts, figure out how much you're actually saving, and spot misleading deals.</div>
+        </div>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">💼</div>
+        <div>
+          <div class="who-title">Business & Finance</div>
+          <div class="who-desc">Measure revenue growth, profit margins, ROI, salary changes, and KPI targets — with accurate step-by-step calculations.</div>
+        </div>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">🧪</div>
+        <div>
+          <div class="who-title">Scientists & Engineers</div>
+          <div class="who-desc">Calculate percent error, measurement accuracy, experimental deviation, and comparative efficiency.</div>
+        </div>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">🍽️</div>
+        <div>
+          <div class="who-title">Everyday Use</div>
+          <div class="who-desc">Split restaurant bills, calculate tips, work out tax-inclusive prices, or check any daily number in seconds.</div>
+        </div>
+      </div>
+      <div class="who-card">
+        <div class="who-icon">👨‍💻</div>
+        <div>
+          <div class="who-title">Developers & Analysts</div>
+          <div class="who-desc">Quickly verify data percentage changes, growth rates, and error margins without switching to a spreadsheet.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="sec-divider">
+
+  <!-- HOW WE WORK -->
+  <div class="section-block" id="how">
+    <h2 class="section-h">How We <em>Work</em></h2>
+    <p class="body-p">Every calculation on CalcPercentage follows the same transparent process: show the formula, substitute the numbers, compute each step, and display the answer — with a plain-language explanation alongside. We never show just a number.</p>
+
+    <ul class="principle-list">
+      <li>
+        <div class="pl-icon">✅</div>
+        <div>
+          <div class="pl-title">Mathematically Verified Formulas</div>
+          <div class="pl-desc">Every formula is cross-verified against academic, financial, and scientific standards. No shortcuts, no approximations unless explicitly stated.</div>
+        </div>
+      </li>
+      <li>
+        <div class="pl-icon">🔢</div>
+        <div>
+          <div class="pl-title">Full Decimal Precision</div>
+          <div class="pl-desc">Results are displayed to sufficient decimal places to be useful in real-world applications — with rounding only applied to the final displayed output, not intermediate calculations.</div>
+        </div>
+      </li>
+      <li>
+        <div class="pl-icon">⚡</div>
+        <div>
+          <div class="pl-title">Client-Side Calculation Only</div>
+          <div class="pl-desc">All calculations happen entirely in your browser using JavaScript — no servers, no data storage, no network requests. Your numbers never leave your device.</div>
+        </div>
+      </li>
+      <li>
+        <div class="pl-icon">🌐</div>
+        <div>
+          <div class="pl-title">Works Offline</div>
+          <div class="pl-desc">Because all computation is client-side, the calculators continue to work even with a poor or intermittent connection once the page has loaded.</div>
+        </div>
+      </li>
+      <li>
+        <div class="pl-icon">♿</div>
+        <div>
+          <div class="pl-title">Accessibility-First</div>
+          <div class="pl-desc">All tools use semantic HTML, proper ARIA labels, sufficient colour contrast, and keyboard-navigable interfaces — designed to work for every user.</div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="accuracy-banner">
+      <div class="ab-icon">🛡️</div>
+      <div>
+        <div class="ab-title">Our Accuracy Commitment</div>
+        <div class="ab-desc">We take numerical accuracy seriously. If you ever find a calculation that appears to be incorrect or a formula that seems wrong, please let us know and we will investigate and correct it within 24 hours. Accuracy is the only thing we will never compromise on.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="sec-divider">
+
+  <!-- PRIVACY COMMITMENT -->
+  <div class="section-block" id="privacy">
+    <h2 class="section-h">Privacy & <em>No Tracking</em></h2>
+    <p class="body-p">We believe a calculator website should be a utility — not a data collection product. CalcPercentage is built with that principle baked in from day one.</p>
+
+    <ul class="principle-list">
+      <li>
+        <div class="pl-icon">🔐</div>
+        <div>
+          <div class="pl-title">No Personal Data Collected</div>
+          <div class="pl-desc">We do not ask for your name, email, location, or any personally identifiable information. None is required to use any tool on this site.</div>
+        </div>
+      </li>
+      <li>
+        <div class="pl-icon">🍪</div>
+        <div>
+          <div class="pl-title">No Tracking Cookies</div>
+          <div class="pl-desc">We do not place advertising cookies or third-party tracking scripts on your device. No remarketing, no behavioural profiling.</div>
+        </div>
+      </li>
+      <li>
+        <div class="pl-icon">💾</div>
+        <div>
+          <div class="pl-title">Your Numbers Stay on Your Device</div>
+          <div class="pl-desc">Every calculation is performed locally in your browser. The values you enter are never transmitted to any server.</div>
+        </div>
+      </li>
+      <li>
+        <div class="pl-icon">📊</div>
+        <div>
+          <div class="pl-title">Anonymous Analytics Only</div>
+          <div class="pl-desc">We may use privacy-respecting, anonymised analytics to understand which tools are most used — no individual-level tracking, no cross-site data sharing.</div>
+        </div>
+      </li>
+    </ul>
+
+    <p class="body-p" style="margin-top:18px;">For full details, see our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+  </div>
+
+  <hr class="sec-divider">
+
+  <!-- CONTENT STANDARDS -->
+  <div class="section-block" id="content">
+    <h2 class="section-h">Our Content <em>Standards</em></h2>
+    <p class="body-p">Beyond the calculators, CalcPercentage publishes educational guides — including <a href="/how-to-calculate-percentage/">how to calculate percentage</a>, a complete <a href="/percentage-formula/">percentage formula reference</a>, and explanation articles. Every piece of content we publish follows these standards:</p>
+
+    <ul class="principle-list">
+      <li>
+        <div class="pl-icon">📖</div>
+        <div>
+          <div class="pl-title">Accurate and Verifiable</div>
+          <div class="pl-desc">Every formula, method, and example is verified against standard mathematical and financial references before publication.</div>
+        </div>
+      </li>
+      <li>
+        <div class="pl-icon">🧩</div>
+        <div>
+          <div class="pl-title">Practical and Example-Driven</div>
+          <div class="pl-desc">Concepts are explained through real-world worked examples, not abstract theory. If you can't picture how to use it, the explanation isn't done yet.</div>
+        </div>
+      </li>
+      <li>
+        <div class="pl-icon">🔄</div>
+        <div>
+          <div class="pl-title">Kept Up to Date</div>
+          <div class="pl-desc">We review and update content regularly. If a formula explanation could be clearer or a calculator is missing a common use case, we improve it.</div>
+        </div>
+      </li>
+      <li>
+        <div class="pl-icon">🌍</div>
+        <div>
+          <div class="pl-title">Written for a Global Audience</div>
+          <div class="pl-desc">Examples use formats that are clear across regions — we note where conventions differ (e.g., UK vs US tax terminology) so no one is left guessing.</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <hr class="sec-divider">
+
+  <!-- CONTACT -->
+  <div class="contact-section" id="contact">
+    <div class="cs-head">📬 Get in Touch</div>
+    <div class="cs-desc">Found a bug? Have a suggestion for a new calculator? Think a formula explanation could be clearer? We genuinely want to hear from you. Every message is read personally and we respond to every report about calculation accuracy.</div>
+    <div class="cs-channels">
+      <div class="cs-item">
+        <div class="cs-icon">✉️</div>
+        <div>
+          <div class="cs-label">Email</div>
+          <div class="cs-val">hello@calcpercentage.app</div>
+        </div>
+      </div>
+      <div class="cs-item">
+        <div class="cs-icon">🐛</div>
+        <div>
+          <div class="cs-label">Bug Reports</div>
+          <div class="cs-val">bugs@calcpercentage.app</div>
+        </div>
+      </div>
+      <div class="cs-item">
+        <div class="cs-icon">💡</div>
+        <div>
+          <div class="cs-label">Feature Requests</div>
+          <div class="cs-val">ideas@calcpercentage.app</div>
+        </div>
+      </div>
+      <div class="cs-item">
+        <div class="cs-icon">⚖️</div>
+        <div>
+          <div class="cs-label">Legal / Privacy</div>
+          <div class="cs-val">legal@calcpercentage.app</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <h2>Ready to Calculate? <span>It's Free.</span></h2>
+    <p>Use any of our 10+ free percentage calculators — no sign-up, no ads blocking your results, no limits.</p>
+    <div class="cta-btns">
+      <a href="/" class="cta-btn primary">🏠 Open Calculator</a>
+      <a href="/percentage-formula/" class="cta-btn secondary">📐 Browse All Formulas</a>
+      <a href="/how-to-calculate-percentage/" class="cta-btn secondary">📖 How-To Guide</a>
+    </div>
+  </div>
+
+</div><!-- end page-wrap -->
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <a href="/" class="logo" aria-label="CalcPercentage Home">
+          <div class="logo-icon">%</div>
+          <span class="logo-name"><span style="color:var(--pink)">Calc</span>Percentage</span>
+        </a>
+        <p>Free online percentage calculators for every percentage problem. Fast, accurate, mobile-friendly — no ads blocking your results.</p>
+      </div>
+      <div class="f-col">
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/">Percentage Calculator</a></li>
+          <li><a href="/percentage-increase-calculator/">% Increase</a></li>
+          <li><a href="/percentage-decrease-calculator/">% Decrease</a></li>
+          <li><a href="/percentage-change-calculator/">% Change</a></li>
+          <li><a href="/percentage-difference-calculator/">% Difference</a></li>
+          <li><a href="/discount-calculator/">Discount</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>More Tools</h4>
+        <ul>
+          <li><a href="/percent-off-calculator/">% Off</a></li>
+          <li><a href="/money-percentage-calculator/">Money %</a></li>
+          <li><a href="/fraction-to-percentage/">Fraction → %</a></li>
+          <li><a href="/percent-error-calculator/">% Error</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Learn & Info</h4>
+        <ul>
+          <li><a href="/how-to-calculate-percentage/">How to Calculate %</a></li>
+          <li><a href="/what-is-percentage/">What is a Percentage?</a></li>
+          <li><a href="/percentage-formula/">Percentage Formulas</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="yr"></span> CalcPercentage.vercel.app — All rights reserved.</p>
+      <p>Made with ♥ for fast, free percentage calculations.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  function toggleNav() {
+    const n = document.getElementById('mobileNav'), b = document.getElementById('hambBtn');
+    const o = n.classList.toggle('open');
+    b.classList.toggle('open', o);
+    b.setAttribute('aria-expanded', o);
+  }
+  document.addEventListener('click', e => {
+    const n = document.getElementById('mobileNav'), b = document.getElementById('hambBtn');
+    if (!n.contains(e.target) && !b.contains(e.target)) {
+      n.classList.remove('open');
+      b.classList.remove('open');
+      b.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 86, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
