@@ -3,260 +3,1006 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Percentage Off Calculator — Calculate Discounts &amp; Sale Prices</title>
-  <meta name="description" content="Calculate percentage off a price instantly. Find the discounted price and how much you save. Free discount and percentage off calculator for shopping and sales.">
-  <meta name="keywords" content="percentage off calculator, percent off calculator, discount calculator, percentage off, discount calculator australia, sales percentage calculator, percentage off price, percentage discount calculator">
-  <link rel="canonical" href="https://calcpercentage.vercel.app/percentage-off-calculator">
-  <meta property="og:title" content="Percentage Off Calculator — Calculate Discounts &amp; Sale Prices">
-  <meta property="og:description" content="Calculate percentage off a price instantly. Find the discounted price and how much you save.">
-  <meta property="og:url" content="https://calcpercentage.vercel.app/percentage-off-calculator">
+  <title>Percent Off Calculator — Calculate Discount Price Instantly</title>
+  <meta name="description" content="Free percent off calculator. Find the discounted price, amount saved, and final price after any percentage discount. Includes reverse calculator, bulk discounts, and real shopping examples.">
+  <meta name="keywords" content="percent off calculator, percentage off calculator, discount calculator, sale price calculator, how to calculate percent off, calculate discount price, percentage discount calculator">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/percent-off-calculator/">
+
+  <meta property="og:title" content="Percent Off Calculator — Calculate Discount Price Instantly">
+  <meta property="og:description" content="Find the sale price, amount saved and discount % instantly. Free tool with reverse calculator, bulk discount table & step-by-step working.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/percent-off-calculator/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CalcPercentage">
+
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Percentage Off Calculator">
-  <meta name="twitter:description" content="Calculate percentage off — find sale price and savings instantly.">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="CalcPercentage">
-  <link rel="stylesheet" href="/css/style.css">
+  <meta name="twitter:title" content="Percent Off Calculator — Calculate Discount Price Instantly">
+  <meta name="twitter:description" content="Free percent off / discount calculator. Find sale price, savings amount, and original price before discount.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23DA2576'/%3E%3Ctext x='12' y='78' font-size='72' font-family='Arial,sans-serif' font-weight='900' fill='white'%3E%25%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23DA2576'/%3E%3Ctext x='12' y='78' font-size='72' font-family='Arial,sans-serif' font-weight='900' fill='white'%3E%25%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <script type="application/ld+json">
-  [
-    { "@context": "https://schema.org", "@type": "WebApplication", "name": "Percentage Off Calculator", "url": "https://calcpercentage.vercel.app/percentage-off-calculator", "description": "Calculate the sale price after a percentage discount. Find how much you save on any purchase.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
-    { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-      { "@type": "Question", "name": "How do I calculate percentage off a price?", "acceptedAnswer": { "@type": "Answer", "text": "Discounted Price = Original Price × (1 - Discount%/100). Saving = Original Price × (Discount%/100). Example: 20% off $80 = $16 saved. Final price = $64." } },
-      { "@type": "Question", "name": "How do I calculate 30% off a price?", "acceptedAnswer": { "@type": "Answer", "text": "Multiply the original price by 0.70 (1 - 30/100). For example, 30% off $120 = $120 × 0.70 = $84." } },
-      { "@type": "Question", "name": "What is a discount calculator?", "acceptedAnswer": { "@type": "Answer", "text": "A discount calculator helps you find the final price after applying a percentage discount. Enter the original price and the discount percentage to instantly see the sale price and savings amount." } }
-    ]},
-    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
-      { "@type": "ListItem", "position": 2, "name": "Percentage Off Calculator", "item": "https://calcpercentage.vercel.app/percentage-off-calculator" }
-    ]}
-  ]
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://calcpercentage.vercel.app/#website",
+        "url": "https://calcpercentage.vercel.app/",
+        "name": "CalcPercentage",
+        "publisher": { "@type": "Organization", "name": "CalcPercentage", "logo": { "@type": "ImageObject", "url": "https://calcpercentage.vercel.app/logo.svg" } }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Percent Off Calculator", "item": "https://calcpercentage.vercel.app/percent-off-calculator/" }
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://calcpercentage.vercel.app/percent-off-calculator/#app",
+        "name": "Percent Off Calculator",
+        "url": "https://calcpercentage.vercel.app/percent-off-calculator/",
+        "description": "Calculate the discounted sale price, amount saved, and final price after any percentage off. Includes reverse calculator to find original price and what % off was applied.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": [
+          "Sale Price After % Off",
+          "Amount Saved Calculator",
+          "What % Off Was Applied?",
+          "Find Original Price Before Discount",
+          "Bulk Discount Comparison Table",
+          "Step-by-Step Working"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do you calculate percent off?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sale Price = Original Price × (1 − % Off ÷ 100). For example, 30% off $80: $80 × (1 − 30/100) = $80 × 0.70 = $56. The amount saved is $80 − $56 = $24." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the formula for percent off?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sale Price = Original Price × (1 − Discount% ÷ 100). Amount Saved = Original Price × (Discount% ÷ 100). Or simply: Amount Saved = Original Price − Sale Price." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I find the original price before a discount?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Original Price = Sale Price ÷ (1 − Discount% ÷ 100). For example, if a product costs $63 after a 30% discount: $63 ÷ 0.70 = $90 original price." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate what percentage off was applied?",
+            "acceptedAnswer": { "@type": "Answer", "text": "% Off = ((Original Price − Sale Price) ÷ Original Price) × 100. For example, original $120, sale $90: ((120−90) ÷ 120) × 100 = 25% off." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is percent off the same as percentage decrease?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes — mathematically they are identical. A 25% price decrease is the same as 25% off. The term 'percent off' is used in retail and shopping contexts, while 'percentage decrease' is used in general mathematical and business contexts." }
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to Calculate Percent Off",
+        "description": "Step-by-step guide to calculating the sale price and savings after a percentage discount",
+        "totalTime": "PT1M",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Note the Original Price and Discount %", "text": "Identify the original (full) price and the percentage discount being offered." },
+          { "@type": "HowToStep", "position": 2, "name": "Calculate the Discount Amount", "text": "Discount Amount = Original Price × (% Off ÷ 100)." },
+          { "@type": "HowToStep", "position": 3, "name": "Subtract to Get Sale Price", "text": "Sale Price = Original Price − Discount Amount." },
+          { "@type": "HowToStep", "position": 4, "name": "Verify", "text": "Alternatively: Sale Price = Original Price × (1 − % Off ÷ 100)." }
+        ]
+      }
+    ]
+  }
   </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink: #DA2576;
+      --pink-dark: #b81e62;
+      --pink-light: #fce7f3;
+      --pink-xlight: #fff0f7;
+      --black: #0d0d0d;
+      --near-black: #111827;
+      --dark: #1f2937;
+      --mid: #4b5563;
+      --gray: #6b7280;
+      --light-gray: #f3f4f6;
+      --border: #e5e7eb;
+      --white: #ffffff;
+      --green: #059669;
+      --green-light: #d1fae5;
+      --green-bg: #f0fdf4;
+      --shadow: 0 4px 24px rgba(218,37,118,0.10);
+      --shadow-lg: 0 12px 40px rgba(218,37,118,0.15);
+      --radius: 14px;
+      --radius-lg: 20px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); color: var(--near-black); background: var(--white); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: var(--pink); }
+    a:hover { color: var(--pink-dark); }
+
+    /* ===== HEADER ===== */
+    header { background: var(--white); border-bottom: 1.5px solid var(--border); position: sticky; top: 0; z-index: 999; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
+    .header-wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 38px; height: 38px; background: var(--pink); border-radius: 10px; color: white; font-size: 1.15rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .logo-name { font-size: 1.15rem; font-weight: 800; color: var(--black); letter-spacing: -0.4px; }
+    .logo-name span { color: var(--pink); }
+    .main-nav { display: flex; align-items: center; gap: 2px; }
+    .main-nav a { text-decoration: none; color: var(--dark); font-size: 0.83rem; font-weight: 600; padding: 7px 11px; border-radius: 8px; transition: background 0.18s, color 0.18s; white-space: nowrap; }
+    .main-nav a:hover, .main-nav a.active { background: var(--pink-light); color: var(--pink); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; border-radius: 8px; flex-shrink: 0; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    .mobile-nav { display: none; flex-direction: column; background: var(--white); border-top: 1px solid var(--border); padding: 8px 20px 16px; gap: 2px; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { display: block; padding: 11px 12px; text-decoration: none; color: var(--dark); font-size: 0.9rem; font-weight: 600; border-radius: 8px; transition: background 0.15s; }
+    .mobile-nav a:hover, .mobile-nav a.active { background: var(--pink-xlight); color: var(--pink); }
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb-bar { max-width: 1200px; margin: 0 auto; padding: 14px 20px 0; }
+    .breadcrumb { display: flex; align-items: center; gap: 6px; list-style: none; flex-wrap: wrap; }
+    .breadcrumb li { display: flex; align-items: center; gap: 6px; }
+    .breadcrumb li + li::before { content: '/'; color: var(--gray); font-size: 0.78rem; }
+    .breadcrumb a { font-size: 0.78rem; color: var(--gray); text-decoration: none; font-weight: 500; }
+    .breadcrumb a:hover { color: var(--pink); }
+    .breadcrumb span { font-size: 0.78rem; color: var(--near-black); font-weight: 600; }
+
+    /* ===== HERO ===== */
+    .hero { background: linear-gradient(160deg, #fff 0%, var(--pink-xlight) 55%, #fff 100%); padding: 52px 20px 40px; text-align: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--pink-light); color: var(--pink); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 5px 14px; border-radius: 100px; margin-bottom: 18px; }
+    .hero h1 { font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 900; color: var(--black); line-height: 1.12; letter-spacing: -1.5px; max-width: 700px; margin: 0 auto 16px; }
+    .hero h1 em { font-style: normal; color: var(--pink); }
+    .hero-sub { font-size: 1.02rem; color: var(--gray); max-width: 560px; margin: 0 auto; line-height: 1.65; }
+
+    /* ===== CALCULATOR ===== */
+    .calc-wrap { max-width: 760px; margin: 0 auto; padding: 36px 20px 16px; }
+    .calc-card { background: var(--white); border: 2px solid var(--border); border-radius: var(--radius-lg); padding: 36px 32px 30px; box-shadow: var(--shadow); transition: box-shadow 0.2s; }
+    .calc-card:hover { box-shadow: var(--shadow-lg); }
+
+    /* Mode Switcher */
+    .mode-switch { display: flex; background: var(--light-gray); border-radius: 12px; padding: 4px; margin-bottom: 28px; gap: 4px; }
+    .mode-btn { flex: 1; padding: 10px 8px; border: none; border-radius: 9px; font-family: var(--font); font-size: 0.82rem; font-weight: 700; cursor: pointer; background: transparent; color: var(--gray); transition: all 0.2s; text-align: center; line-height: 1.35; }
+    .mode-btn.active { background: var(--white); color: var(--pink); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .mode-btn:hover:not(.active) { color: var(--dark); }
+    .mode-pane { display: none; }
+    .mode-pane.active { display: block; }
+
+    .calc-subtitle { font-size: 0.85rem; color: var(--gray); margin-bottom: 22px; line-height: 1.55; }
+    .formula-strip { background: var(--light-gray); border-left: 4px solid var(--pink); border-radius: 0 8px 8px 0; padding: 10px 16px; font-size: 0.84rem; color: var(--mid); font-family: 'Courier New', monospace; font-weight: 600; margin-bottom: 24px; }
+    .input-group { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .fg { display: flex; flex-direction: column; gap: 6px; }
+    .fg label { font-size: 0.75rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; }
+    .fg input { padding: 14px 16px; border: 2px solid var(--border); border-radius: var(--radius); font-size: 1rem; font-family: var(--font); color: var(--black); background: var(--white); width: 100%; transition: border-color 0.18s, box-shadow 0.18s; -webkit-appearance: none; }
+    .fg input::placeholder { color: #d1d5db; }
+    .fg input:focus { outline: none; border-color: var(--pink); box-shadow: 0 0 0 4px rgba(218,37,118,0.09); }
+
+    .calc-btn { width: 100%; padding: 16px; background: var(--pink); color: white; border: none; border-radius: var(--radius); font-size: 1.02rem; font-weight: 800; font-family: var(--font); cursor: pointer; letter-spacing: 0.3px; transition: background 0.18s, transform 0.1s, box-shadow 0.18s; margin-top: 4px; }
+    .calc-btn:hover { background: var(--pink-dark); box-shadow: 0 6px 20px rgba(218,37,118,0.28); }
+    .calc-btn:active { transform: scale(0.99); }
+
+    /* Results */
+    .result-box { display: none; margin-top: 22px; border-radius: var(--radius); overflow: hidden; animation: fadeIn 0.28s ease; }
+    .result-box.show { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Split result panel for main mode */
+    .res-split { display: grid; grid-template-columns: 1fr 1fr; }
+    .res-panel { padding: 22px 20px; text-align: center; }
+    .res-panel.sale  { background: linear-gradient(135deg, var(--pink) 0%, var(--pink-dark) 100%); }
+    .res-panel.saved { background: linear-gradient(135deg, #059669 0%, #047857 100%); }
+    .res-panel-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: rgba(255,255,255,0.72); margin-bottom: 5px; }
+    .res-panel-val   { font-size: 2.1rem; font-weight: 900; color: white; letter-spacing: -1.5px; line-height: 1; }
+    .res-panel-sub   { font-size: 0.75rem; color: rgba(255,255,255,0.65); margin-top: 6px; }
+
+    /* Standard single result (modes 2 & 3) */
+    .res-main { background: linear-gradient(135deg, var(--pink) 0%, var(--pink-dark) 100%); padding: 24px 22px; text-align: center; }
+    .res-label { font-size: 0.73rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: rgba(255,255,255,0.75); margin-bottom: 6px; }
+    .res-value { font-size: 2.8rem; font-weight: 900; color: white; letter-spacing: -2px; line-height: 1; }
+    .res-sub   { font-size: 0.83rem; color: rgba(255,255,255,0.72); margin-top: 8px; }
+
+    .res-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 2px solid var(--border); border-top: none; }
+    .res-meta-item { background: var(--light-gray); padding: 12px 14px; text-align: center; }
+    .res-meta-label { font-size: 0.67rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray); margin-bottom: 4px; }
+    .res-meta-val { font-size: 0.95rem; font-weight: 800; color: var(--black); }
+
+    .res-steps { background: var(--light-gray); padding: 18px 22px; border: 2px solid var(--border); border-top: none; border-radius: 0 0 var(--radius) var(--radius); }
+    .res-steps-title { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 10px; }
+    .res-steps ol { list-style: none; display: flex; flex-direction: column; gap: 7px; counter-reset: step; padding: 0; }
+    .res-steps ol li { counter-increment: step; display: flex; gap: 10px; font-size: 0.85rem; color: var(--dark); line-height: 1.55; }
+    .res-steps ol li::before { content: counter(step); min-width: 22px; height: 22px; background: var(--pink); color: white; border-radius: 50%; font-size: 0.72rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+
+    .err-msg { display: none; margin-top: 14px; padding: 11px 14px; background: #fef2f2; border: 1.5px solid #fecaca; border-radius: 10px; color: #dc2626; font-size: 0.84rem; font-weight: 500; }
+    .err-msg.show { display: block; }
+
+    /* ===== BULK DISCOUNT TABLE ===== */
+    .bulk-sec { max-width: 760px; margin: 0 auto; padding: 8px 20px 0; }
+    .bulk-toggle { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
+    .bulk-title { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray); }
+    .bulk-price-wrap { display: flex; align-items: center; gap: 8px; }
+    .bulk-price-wrap label { font-size: 0.78rem; font-weight: 700; color: var(--gray); }
+    .bulk-price-wrap input { padding: 8px 12px; border: 2px solid var(--border); border-radius: 9px; font-size: 0.88rem; font-family: var(--font); color: var(--black); width: 100px; }
+    .bulk-price-wrap input:focus { outline: none; border-color: var(--pink); }
+    .bulk-table-wrap { overflow-x: auto; border-radius: var(--radius); border: 2px solid var(--border); }
+    .bulk-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    .bulk-table thead tr { background: var(--black); color: white; }
+    .bulk-table thead th { padding: 11px 14px; text-align: left; font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .bulk-table tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+    .bulk-table tbody tr:last-child { border-bottom: none; }
+    .bulk-table tbody tr:hover { background: var(--pink-xlight); }
+    .bulk-table tbody td { padding: 11px 14px; color: var(--dark); }
+    .bulk-table tbody td:first-child { font-weight: 800; color: var(--pink); }
+    .bulk-table .savings-col { color: var(--green); font-weight: 700; }
+
+    /* ===== EXAMPLES ===== */
+    .examples-sec { max-width: 760px; margin: 0 auto; padding: 16px 20px 0; }
+    .examples-title { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray); margin-bottom: 10px; }
+    .examples-grid { display: flex; gap: 8px; flex-wrap: wrap; }
+    .ex-chip { padding: 7px 14px; background: var(--white); border: 1.5px solid var(--border); border-radius: 100px; font-size: 0.8rem; font-weight: 600; color: var(--dark); cursor: pointer; transition: all 0.18s; }
+    .ex-chip:hover { border-color: var(--pink); color: var(--pink); background: var(--pink-xlight); }
+
+    /* ===== CONTENT ===== */
+    .content-wrap { max-width: 880px; margin: 0 auto; padding: 56px 20px 16px; }
+    .content-wrap h2 { font-size: clamp(1.3rem, 3vw, 1.85rem); font-weight: 900; color: var(--black); letter-spacing: -0.6px; margin-bottom: 16px; }
+    .content-wrap h3 { font-size: 1.08rem; font-weight: 800; color: var(--black); margin: 32px 0 12px; }
+    .content-wrap p { color: var(--dark); line-height: 1.78; margin-bottom: 16px; font-size: 0.97rem; }
+    .content-wrap a { color: var(--pink); text-decoration: none; font-weight: 600; }
+    .content-wrap a:hover { text-decoration: underline; }
+
+    .formula-block { background: var(--light-gray); border: 2px solid var(--border); border-radius: var(--radius); padding: 18px 22px; margin: 20px 0; }
+    .formula-block .fb-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 6px; }
+    .formula-block code { font-size: 1rem; color: var(--black); font-family: 'Courier New', monospace; font-weight: 700; }
+    .formula-block p { font-size: 0.84rem; color: var(--gray); margin: 8px 0 0; line-height: 1.55; }
+
+    .example-block { background: var(--pink-xlight); border: 2px solid var(--pink-light); border-radius: var(--radius); padding: 22px 24px; margin: 20px 0; }
+    .example-block .eb-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 12px; }
+    .example-block p { margin-bottom: 8px; font-size: 0.92rem; }
+    .example-block p:last-child { margin-bottom: 0; }
+
+    .steps { counter-reset: step; list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 16px 0; }
+    .steps li { display: flex; gap: 14px; align-items: flex-start; counter-increment: step; }
+    .steps li::before { content: counter(step); min-width: 28px; height: 28px; background: var(--pink); color: white; border-radius: 50%; font-size: 0.8rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .steps li span { color: var(--dark); font-size: 0.95rem; line-height: 1.65; }
+
+    .table-wrap { overflow-x: auto; margin: 20px 0; border-radius: var(--radius); border: 2px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.89rem; }
+    thead tr { background: var(--black); color: white; }
+    thead th { padding: 13px 16px; text-align: left; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; }
+    tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: var(--pink-xlight); }
+    tbody td { padding: 13px 16px; color: var(--dark); line-height: 1.5; }
+    tbody td:first-child { font-weight: 700; color: var(--black); }
+    .badge-pink  { display: inline-block; background: var(--pink-light); color: var(--pink); font-size: 0.75rem; font-weight: 700; padding: 3px 9px; border-radius: 100px; }
+    .badge-green { display: inline-block; background: var(--green-light); color: #065f46; font-size: 0.75rem; font-weight: 700; padding: 3px 9px; border-radius: 100px; }
+
+    /* Double discount info box */
+    .info-box { background: #eff6ff; border: 2px solid #bfdbfe; border-radius: var(--radius); padding: 20px 24px; margin: 20px 0; }
+    .info-box .ib-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: #1d4ed8; margin-bottom: 10px; }
+    .info-box p { font-size: 0.91rem; color: #1e3a5f; margin-bottom: 8px; line-height: 1.65; }
+    .info-box p:last-child { margin-bottom: 0; }
+
+    .link-box { background: var(--black); border-radius: var(--radius); padding: 24px 26px; margin: 28px 0; color: white; }
+    .link-box h3 { color: var(--pink); margin-top: 0; margin-bottom: 14px; font-size: 0.97rem; }
+    .link-box ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .link-box ul li { font-size: 0.87rem; color: rgba(255,255,255,0.78); padding-left: 20px; position: relative; }
+    .link-box ul li::before { content: '→'; position: absolute; left: 0; color: var(--pink); font-weight: 700; }
+    .link-box ul li a { color: var(--pink); text-decoration: none; font-weight: 700; }
+    .link-box ul li a:hover { text-decoration: underline; }
+
+    /* ===== FAQ ===== */
+    .faq-sec { max-width: 880px; margin: 0 auto; padding: 0 20px 64px; }
+    .sec-head { text-align: center; margin-bottom: 32px; }
+    .sec-tag { display: inline-block; background: var(--pink-light); color: var(--pink); font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; padding: 4px 12px; border-radius: 100px; margin-bottom: 12px; }
+    .sec-head h2 { font-size: clamp(1.35rem, 3vw, 2rem); font-weight: 900; color: var(--black); letter-spacing: -0.6px; margin-bottom: 6px; }
+    .sec-head p { font-size: 0.96rem; color: var(--gray); }
+    .faq-item { border: 2px solid var(--border); border-radius: var(--radius); margin-bottom: 10px; overflow: hidden; transition: border-color 0.2s; }
+    .faq-item.open { border-color: var(--pink); }
+    .faq-q { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 17px 20px; cursor: pointer; font-weight: 700; font-size: 0.93rem; color: var(--black); user-select: none; transition: background 0.15s; }
+    .faq-q:hover { background: var(--light-gray); }
+    .faq-ico { width: 26px; height: 26px; background: var(--pink-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--pink); font-size: 1.2rem; font-weight: 700; flex-shrink: 0; transition: transform 0.25s; }
+    .faq-item.open .faq-ico { transform: rotate(45deg); background: var(--pink); color: white; }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.32s ease, padding 0.32s; padding: 0 20px; }
+    .faq-item.open .faq-a { max-height: 500px; padding: 0 20px 18px; }
+    .faq-a p { color: var(--dark); font-size: 0.89rem; line-height: 1.72; }
+    .faq-a a { color: var(--pink); font-weight: 600; }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--black); color: white; padding: 60px 20px 36px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .f-brand .logo { margin-bottom: 14px; }
+    .f-brand .logo .logo-name { color: white; }
+    .f-brand p { font-size: 0.84rem; color: rgba(255,255,255,0.55); line-height: 1.7; max-width: 260px; }
+    .f-col h4 { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+    .f-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .f-col ul li a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.85rem; transition: color 0.18s; }
+    .f-col ul li a:hover { color: var(--pink); }
+    .footer-bottom { padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+    .footer-bottom a { color: var(--pink); text-decoration: none; }
+    .hr-line { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .hr-line hr { border: none; border-top: 1px solid var(--border); }
+
+    @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    @media (max-width: 768px) {
+      .main-nav { display: none; }
+      .hamburger { display: flex; }
+      .hero { padding: 40px 20px 28px; }
+      .calc-card { padding: 24px 18px 20px; }
+      .input-group { grid-template-columns: 1fr; gap: 12px; }
+      .mode-btn { font-size: 0.76rem; padding: 9px 6px; }
+      .res-split { grid-template-columns: 1fr; }
+      .res-meta { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } .res-panel-val { font-size: 1.7rem; } .res-value { font-size: 2.2rem; } }
+  </style>
 </head>
 <body>
+
+<!-- ========== HEADER ========== -->
 <header>
-  <nav>
-    <a href="/" class="logo">Calc<span>Percentage</span></a>
-    <button class="mobile-menu-btn" onclick="document.querySelector('nav ul').classList.toggle('open')">☰ Menu</button>
-    <ul>
-      <li><a href="/percentage-increase-calculator">% Increase</a></li>
-      <li><a href="/percentage-decrease-calculator">% Decrease</a></li>
-      <li><a href="/percentage-change-calculator">% Change</a></li>
-      <li><a href="/percentage-off-calculator">% Off</a></li>
-      <li><a href="/percent-error-calculator">% Error</a></li>
-      <li><a href="/discount-calculator">Discount</a></li>
-      <li><a href="/fraction-to-percentage">Fraction→%</a></li>
-    </ul>
+  <div class="header-wrap">
+    <a href="/" class="logo" aria-label="CalcPercentage — Home">
+      <div class="logo-icon">%</div>
+      <span class="logo-name"><span>Calc</span>Percentage</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/percentage-increase-calculator/">% Increase</a>
+      <a href="/percentage-decrease-calculator/">% Decrease</a>
+      <a href="/percentage-change-calculator/">% Change</a>
+      <a href="/percentage-difference-calculator/">% Difference</a>
+      <a href="/percent-error-calculator/">% Error</a>
+      <a href="/percent-off-calculator/" class="active" aria-current="page">% Off</a>
+    </nav>
+    <button class="hamburger" id="hambBtn" aria-label="Open menu" aria-expanded="false" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="/">🏠 Percentage Calculator (Home)</a>
+    <a href="/percentage-increase-calculator/">📈 Percentage Increase Calculator</a>
+    <a href="/percentage-decrease-calculator/">📉 Percentage Decrease Calculator</a>
+    <a href="/percentage-change-calculator/">🔄 Percentage Change Calculator</a>
+    <a href="/percentage-difference-calculator/">↔️ Percentage Difference Calculator</a>
+    <a href="/percent-error-calculator/">🔬 Percent Error Calculator</a>
+    <a href="/percent-off-calculator/" class="active">🏷️ Percent Off / Discount Calculator</a>
+    <a href="/what-is-percentage/">📖 What is a Percentage?</a>
+    <a href="/percentage-formula/">📐 Percentage Formulas</a>
   </nav>
 </header>
 
-<main>
-  <nav class="breadcrumb">
-    <a href="/">Home</a><span class="sep"> › </span><span>Percentage Off Calculator</span>
-  </nav>
+<!-- ========== BREADCRUMB ========== -->
+<div class="breadcrumb-bar">
+  <ol class="breadcrumb" aria-label="Breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><span>Percent Off / Discount Calculator</span></li>
+  </ol>
+</div>
 
-  <div class="page-hero">
-    <h1>Percentage Off Calculator</h1>
-    <p>Find the sale price and savings amount after any percentage discount. Perfect for shopping, Black Friday sales, and everyday bargains in Australia and worldwide.</p>
-  </div>
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-badge">🏷️ Shopping & Discount Calculator</div>
+  <h1>Percent Off<br><em>Calculator</em></h1>
+  <p class="hero-sub">Find the sale price, amount saved, original price before discount, and what % off was applied — instantly, with full step-by-step working and a bulk discount table.</p>
+</section>
 
+<!-- ========== CALCULATOR ========== -->
+<section class="calc-wrap" aria-label="Percent off discount calculator">
   <div class="calc-card">
-    <div class="tabs">
-      <button class="tab-btn active" onclick="switchTab('off','tab1')">Find Sale Price</button>
-      <button class="tab-btn" onclick="switchTab('off','tab2')">What % Off?</button>
+
+    <div class="mode-switch" role="tablist" aria-label="Calculator mode">
+      <button class="mode-btn active" role="tab" aria-selected="true" onclick="switchMode('sale-price', this)">
+        Find Sale Price<br><small style="font-weight:500;opacity:0.7">Price + % Off → Savings</small>
+      </button>
+      <button class="mode-btn" role="tab" aria-selected="false" onclick="switchMode('find-pct', this)">
+        Find % Off Applied<br><small style="font-weight:500;opacity:0.7">Original + Sale → %</small>
+      </button>
+      <button class="mode-btn" role="tab" aria-selected="false" onclick="switchMode('find-orig', this)">
+        Find Original Price<br><small style="font-weight:500;opacity:0.7">Sale price + % → Original</small>
+      </button>
     </div>
 
-    <div id="off_tab1" class="tab-content active">
-      <div class="formula-box"><strong>Sale Price = Original × (1 − Discount% ÷ 100)</strong></div>
-      <div class="form-group" style="margin-bottom:12px;">
-        <label>Quick Discount</label>
-        <div class="quick-btns">
-          <button class="quick-btn" onclick="setDiscount(10)">10% off</button>
-          <button class="quick-btn" onclick="setDiscount(20)">20% off</button>
-          <button class="quick-btn" onclick="setDiscount(25)">25% off</button>
-          <button class="quick-btn" onclick="setDiscount(30)">30% off</button>
-          <button class="quick-btn" onclick="setDiscount(50)">50% off</button>
-          <button class="quick-btn" onclick="setDiscount(70)">70% off</button>
+    <!-- MODE 1: Find Sale Price + Savings -->
+    <div class="mode-pane active" id="mode-sale-price">
+      <p class="calc-subtitle">Enter the original price and the discount percentage to find the final sale price and exactly how much you save.</p>
+      <div class="formula-strip">Sale Price = Original Price × (1 − % Off ÷ 100)</div>
+      <div class="input-group">
+        <div class="fg">
+          <label for="sp-price">Original Price</label>
+          <input type="number" id="sp-price" placeholder="e.g. 120" step="any" min="0" inputmode="decimal">
+        </div>
+        <div class="fg">
+          <label for="sp-pct">Discount (% Off)</label>
+          <input type="number" id="sp-pct" placeholder="e.g. 30" step="any" min="0" max="100" inputmode="decimal">
         </div>
       </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="off_price">Original Price ($)</label>
-          <div class="input-with-symbol">
-            <span class="symbol">$</span>
-            <input type="number" id="off_price" placeholder="e.g. 80.00" step="any" oninput="calcOff()">
+      <button class="calc-btn" onclick="calcSalePrice()">Calculate Sale Price →</button>
+      <div class="err-msg" id="sp-err">⚠ Please enter a valid price and a discount between 0 and 100%.</div>
+      <div class="result-box" id="sp-res">
+        <div class="res-split">
+          <div class="res-panel sale">
+            <div class="res-panel-label">🏷️ Sale Price</div>
+            <div class="res-panel-val" id="sp-sale-val">—</div>
+            <div class="res-panel-sub" id="sp-sale-sub"></div>
+          </div>
+          <div class="res-panel saved">
+            <div class="res-panel-label">💰 You Save</div>
+            <div class="res-panel-val" id="sp-save-val">—</div>
+            <div class="res-panel-sub" id="sp-save-sub"></div>
           </div>
         </div>
-        <div class="form-group">
-          <label for="off_pct">Discount (%)</label>
-          <div class="input-with-symbol has-right">
-            <input type="number" id="off_pct" placeholder="e.g. 20" step="any" oninput="calcOff()">
-            <span class="symbol-right">%</span>
+        <div class="res-meta">
+          <div class="res-meta-item">
+            <div class="res-meta-label">Original Price</div>
+            <div class="res-meta-val" id="sp-meta-orig">—</div>
+          </div>
+          <div class="res-meta-item">
+            <div class="res-meta-label">Discount %</div>
+            <div class="res-meta-val" id="sp-meta-pct">—</div>
+          </div>
+          <div class="res-meta-item">
+            <div class="res-meta-label">You Pay</div>
+            <div class="res-meta-val" id="sp-meta-pay">—</div>
           </div>
         </div>
-      </div>
-      <div id="off_result" class="result-box success">
-        <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;">
-          <div>
-            <div class="result-label">Sale Price</div>
-            <div class="result-main green" id="off_sale" style="font-size:2.2rem;"></div>
-          </div>
-          <div>
-            <div class="result-label">You Save</div>
-            <div class="result-main" id="off_save" style="font-size:1.6rem; color:var(--accent);"></div>
-          </div>
+        <div class="res-steps">
+          <div class="res-steps-title">📐 Step-by-Step Working</div>
+          <ol id="sp-steps-list"></ol>
         </div>
-        <div class="result-formula" id="off_formula"></div>
       </div>
     </div>
 
-    <div id="off_tab2" class="tab-content">
-      <div class="formula-box"><strong>Discount % = ((Original − Sale Price) ÷ Original) × 100</strong></div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="off2_orig">Original Price ($)</label>
-          <div class="input-with-symbol">
-            <span class="symbol">$</span>
-            <input type="number" id="off2_orig" placeholder="e.g. 100" step="any" oninput="calcOffReverse()">
-          </div>
+    <!-- MODE 2: Find % Off Applied -->
+    <div class="mode-pane" id="mode-find-pct">
+      <p class="calc-subtitle">Know the original price and what you paid? Find out exactly what percentage off was applied to the item.</p>
+      <div class="formula-strip">% Off = ((Original Price − Sale Price) ÷ Original Price) × 100</div>
+      <div class="input-group">
+        <div class="fg">
+          <label for="fp-orig">Original Price</label>
+          <input type="number" id="fp-orig" placeholder="e.g. 200" step="any" min="0" inputmode="decimal">
         </div>
-        <div class="form-group">
-          <label for="off2_sale">Sale Price ($)</label>
-          <div class="input-with-symbol">
-            <span class="symbol">$</span>
-            <input type="number" id="off2_sale" placeholder="e.g. 75" step="any" oninput="calcOffReverse()">
-          </div>
+        <div class="fg">
+          <label for="fp-sale">Sale Price (What You Paid)</label>
+          <input type="number" id="fp-sale" placeholder="e.g. 150" step="any" min="0" inputmode="decimal">
         </div>
       </div>
-      <div id="off2_result" class="result-box neutral">
-        <div class="result-main blue" id="off2_ans"></div>
-        <div class="result-label" id="off2_detail"></div>
-        <div class="result-formula" id="off2_formula"></div>
+      <button class="calc-btn" onclick="calcFindPct()">Find % Off →</button>
+      <div class="err-msg" id="fp-err">⚠ Please enter valid prices. Original price must be greater than zero and sale price must not exceed original.</div>
+      <div class="result-box" id="fp-res">
+        <div class="res-main">
+          <div class="res-label">Discount Applied</div>
+          <div class="res-value" id="fp-res-v">—</div>
+          <div class="res-sub" id="fp-res-s"></div>
+        </div>
+        <div class="res-meta">
+          <div class="res-meta-item">
+            <div class="res-meta-label">Original Price</div>
+            <div class="res-meta-val" id="fp-meta-orig">—</div>
+          </div>
+          <div class="res-meta-item">
+            <div class="res-meta-label">Amount Saved</div>
+            <div class="res-meta-val" id="fp-meta-saved">—</div>
+          </div>
+          <div class="res-meta-item">
+            <div class="res-meta-label">You Paid</div>
+            <div class="res-meta-val" id="fp-meta-paid">—</div>
+          </div>
+        </div>
+        <div class="res-steps">
+          <div class="res-steps-title">📐 Step-by-Step Working</div>
+          <ol id="fp-steps-list"></ol>
+        </div>
       </div>
+    </div>
+
+    <!-- MODE 3: Find Original Price -->
+    <div class="mode-pane" id="mode-find-orig">
+      <p class="calc-subtitle">Know the sale price and the discount % applied? Reverse-calculate to find the original price before the discount.</p>
+      <div class="formula-strip">Original Price = Sale Price ÷ (1 − % Off ÷ 100)</div>
+      <div class="input-group">
+        <div class="fg">
+          <label for="fo-sale">Sale Price (What You Paid)</label>
+          <input type="number" id="fo-sale" placeholder="e.g. 84" step="any" min="0" inputmode="decimal">
+        </div>
+        <div class="fg">
+          <label for="fo-pct">Discount Applied (% Off)</label>
+          <input type="number" id="fo-pct" placeholder="e.g. 30" step="any" min="0" max="99.99" inputmode="decimal">
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcFindOrig()">Find Original Price →</button>
+      <div class="err-msg" id="fo-err">⚠ Please enter valid values. % Off must be between 0 and 99.99.</div>
+      <div class="result-box" id="fo-res">
+        <div class="res-main">
+          <div class="res-label">Original Price (Before Discount)</div>
+          <div class="res-value" id="fo-res-v">—</div>
+          <div class="res-sub" id="fo-res-s"></div>
+        </div>
+        <div class="res-meta">
+          <div class="res-meta-item">
+            <div class="res-meta-label">Sale Price</div>
+            <div class="res-meta-val" id="fo-meta-sale">—</div>
+          </div>
+          <div class="res-meta-item">
+            <div class="res-meta-label">Amount Saved</div>
+            <div class="res-meta-val" id="fo-meta-saved">—</div>
+          </div>
+          <div class="res-meta-item">
+            <div class="res-meta-label">Discount %</div>
+            <div class="res-meta-val" id="fo-meta-pct">—</div>
+          </div>
+        </div>
+        <div class="res-steps">
+          <div class="res-steps-title">📐 Step-by-Step Working</div>
+          <ol id="fo-steps-list"></ol>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== BULK DISCOUNT TABLE ========== -->
+<div class="bulk-sec">
+  <div class="bulk-toggle">
+    <div class="bulk-title">📊 Bulk Discount Table — Common % Off Values</div>
+    <div class="bulk-price-wrap">
+      <label for="bulk-base">Base Price:</label>
+      <input type="number" id="bulk-base" value="100" min="0" step="any" oninput="renderBulkTable()">
     </div>
   </div>
+  <div class="bulk-table-wrap">
+    <table class="bulk-table">
+      <thead>
+        <tr>
+          <th>% Off</th>
+          <th>Multiplier</th>
+          <th>Amount Saved</th>
+          <th>Sale Price</th>
+        </tr>
+      </thead>
+      <tbody id="bulk-tbody"></tbody>
+    </table>
+  </div>
+</div>
 
-  <div class="content-article">
-    <h2>How to Calculate Percentage Off</h2>
-    <p>Whether you're shopping at Kmart, JB Hi-Fi, or any online retailer, knowing how to calculate percentage off helps you compare deals and understand your true savings.</p>
+<!-- Quick Examples -->
+<div class="examples-sec">
+  <div class="examples-title">⚡ Quick Examples — Click to Try</div>
+  <div class="examples-grid">
+    <button class="ex-chip" onclick="loadExample(100, 20)">🛍️ $100 — 20% off</button>
+    <button class="ex-chip" onclick="loadExample(250, 30)">👟 $250 — 30% off</button>
+    <button class="ex-chip" onclick="loadExample(59.99, 15)">📱 $59.99 — 15% off</button>
+    <button class="ex-chip" onclick="loadExample(1200, 40)">💻 $1,200 — 40% off</button>
+    <button class="ex-chip" onclick="loadExample(85, 50)">👗 $85 — 50% off</button>
+    <button class="ex-chip" onclick="loadExample(45, 10)">🍕 $45 — 10% off</button>
+  </div>
+</div>
 
-    <h3>The Formula</h3>
-    <div class="formula-highlight">Sale Price = Original Price × (1 − Discount% ÷ 100)</div>
-    <div class="formula-highlight" style="margin-top:8px;">Savings = Original Price × (Discount% ÷ 100)</div>
+<!-- ========== CONTENT ========== -->
+<div class="hr-line" style="margin-top:40px;"><hr></div>
+<section class="content-wrap">
 
-    <h3>Common Discount Examples (AUD)</h3>
-    <div class="table-wrapper">
-      <table class="data-table">
-        <thead><tr><th>Original Price</th><th>Discount</th><th>You Save</th><th>Sale Price</th></tr></thead>
-        <tbody>
-          <tr><td>$50</td><td>10% off</td><td>$5.00</td><td>$45.00</td></tr>
-          <tr><td>$120</td><td>20% off</td><td>$24.00</td><td>$96.00</td></tr>
-          <tr><td>$80</td><td>25% off</td><td>$20.00</td><td>$60.00</td></tr>
-          <tr><td>$200</td><td>30% off</td><td>$60.00</td><td>$140.00</td></tr>
-          <tr><td>$150</td><td>50% off</td><td>$75.00</td><td>$75.00</td></tr>
-          <tr><td>$300</td><td>70% off</td><td>$210.00</td><td>$90.00</td></tr>
-        </tbody>
-      </table>
-    </div>
+  <h2>How to Calculate Percent Off</h2>
 
-    <h3>Quick Mental Math</h3>
-    <p>To calculate 20% off in your head: find 10% (move decimal left), then double it. Subtract from original. For 25% off: divide by 4, then subtract.</p>
+  <p>A <strong>percent off</strong> (or percentage discount) calculation tells you the final price after a reduction, how much money you save, and what fraction of the original price you're actually paying. Whether you're comparing sale tags in a store, evaluating an online deal, applying a coupon code, or budgeting for a purchase, our <strong>percent off calculator</strong> gives you the complete picture in one step.</p>
 
-    <div class="tip-box"><strong>🛍️ Shopping Tip:</strong> Always compare the <em>sale price</em>, not just the discount percentage. A 50% off item that was overpriced may still be more expensive than a competing product at full price.</div>
+  <p>The tool has three modes: find the sale price from the original price and discount %, find what % off was applied when you know both prices, and reverse-calculate the original price before a discount was applied.</p>
+
+  <h3>The Percent Off Formula</h3>
+
+  <div class="formula-block">
+    <div class="fb-label">Sale Price Formula</div>
+    <code>Sale Price = Original Price × (1 − % Off ÷ 100)</code>
+    <p>Equivalent: Sale Price = Original Price − (Original Price × % Off ÷ 100)</p>
   </div>
 
-  <div class="faq-section">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <div class="faq-q">How do I calculate 20% off?</div>
-      <div class="faq-a">Multiply the price by 0.80 (1 − 20/100). Example: 20% off $75 = $75 × 0.80 = $60. Or: find 20% = $75 × 0.20 = $15, then $75 − $15 = $60.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How do I find what % off a price is?</div>
-      <div class="faq-a">Use: <code>Discount % = ((Original − Sale) ÷ Original) × 100</code>. Use the "What % Off?" tab above.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Is this the same as a discount calculator?</div>
-      <div class="faq-a">Yes — also see our dedicated <a href="/discount-calculator">discount calculator</a> which includes a reverse calculator: "What discount is needed to go from $X to $Y?"</div>
-    </div>
+  <div class="formula-block">
+    <div class="fb-label">Amount Saved Formula</div>
+    <code>Amount Saved = Original Price × (% Off ÷ 100)</code>
+    <p>Or simply: Amount Saved = Original Price − Sale Price</p>
   </div>
 
-  <div class="related-section">
-    <h3>Related Calculators</h3>
-    <div class="related-links">
-      <a href="/discount-calculator">Discount Calculator</a>
-      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
-      <a href="/money-percentage-calculator">Money Percentage</a>
-      <a href="/sales-percentage-calculator">Sales Calculator</a>
-      <a href="/">Percentage Calculator</a>
-    </div>
+  <div class="formula-block">
+    <div class="fb-label">Reverse: Find Original Price Before Discount</div>
+    <code>Original Price = Sale Price ÷ (1 − % Off ÷ 100)</code>
+    <p>Use this when you see a sale tag and want to know what the item originally cost.</p>
   </div>
-</main>
 
+  <h3>Step-by-Step: How to Calculate a Discount</h3>
+
+  <ol class="steps">
+    <li><span><strong>Note the original price</strong> (the "before" price, sometimes crossed out on a sale tag).</span></li>
+    <li><span><strong>Note the discount percentage</strong> (e.g., "30% off").</span></li>
+    <li><span><strong>Multiply:</strong> Original Price × (% Off ÷ 100) = Amount Saved.</span></li>
+    <li><span><strong>Subtract:</strong> Original Price − Amount Saved = Sale Price.</span></li>
+  </ol>
+
+  <div class="example-block">
+    <div class="eb-label">✦ Worked Example — 30% Off a $120 Jacket</div>
+    <p><strong>Original price:</strong> $120 &nbsp;|&nbsp; <strong>Discount:</strong> 30% off</p>
+    <p><strong>Step 1 — Amount saved:</strong> $120 × (30 ÷ 100) = $120 × 0.30 = <strong>$36</strong></p>
+    <p><strong>Step 2 — Sale price:</strong> $120 − $36 = <strong>$84</strong></p>
+    <p><strong>Or directly:</strong> $120 × (1 − 0.30) = $120 × 0.70 = <strong>$84</strong></p>
+  </div>
+
+  <div class="example-block">
+    <div class="eb-label">✦ Worked Example — Find Original Price (Reverse)</div>
+    <p><strong>Sale price:</strong> $63 &nbsp;|&nbsp; <strong>Discount applied:</strong> 30% off</p>
+    <p><strong>Original:</strong> $63 ÷ (1 − 30 ÷ 100) = $63 ÷ 0.70 = <strong>$90</strong></p>
+    <p><strong>Verify:</strong> $90 × 0.70 = <strong>$63 ✓</strong></p>
+  </div>
+
+  <h3>Double Discounts — Are They as Good as They Look?</h3>
+
+  <p>A common retail trick is applying two successive discounts — for example, "20% off, then an extra 15% off." Many shoppers assume this equals 35% off total. It doesn't — sequential discounts are not additive.</p>
+
+  <div class="info-box">
+    <div class="ib-label">💡 How Double Discounts Actually Work</div>
+    <p><strong>Example:</strong> $200 item — 20% off, then 15% off on the reduced price.</p>
+    <p><strong>Step 1:</strong> $200 × 0.80 = <strong>$160</strong> (after first 20% off)</p>
+    <p><strong>Step 2:</strong> $160 × 0.85 = <strong>$136</strong> (after second 15% off)</p>
+    <p><strong>Total saved:</strong> $200 − $136 = $64 &nbsp;|&nbsp; <strong>Effective discount:</strong> $64 ÷ $200 × 100 = <strong>32% total</strong> — not 35%.</p>
+    <p>Formula: Combined % Off = 100 − ((1 − D1÷100) × (1 − D2÷100) × 100)</p>
+  </div>
+
+  <h3>Percent Off vs Percentage Decrease</h3>
+
+  <p>These are mathematically identical. A product marked "25% off" has undergone a <a href="/percentage-decrease-calculator/">25% price decrease</a>. The only difference is context: "percent off" is the retail/shopping term, while "percentage decrease" is the general mathematical term. The formulas, results, and step-by-step working are the same for both.</p>
+
+  <h3>Common Discount Percentages — Quick Reference</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Discount</th><th>You Pay</th><th>On $100</th><th>On $200</th><th>On $500</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>10% off</td><td>90% of price</td><td>$90</td><td>$180</td><td>$450</td></tr>
+        <tr><td>15% off</td><td>85% of price</td><td>$85</td><td>$170</td><td>$425</td></tr>
+        <tr><td>20% off</td><td>80% of price</td><td>$80</td><td>$160</td><td>$400</td></tr>
+        <tr><td>25% off</td><td>75% of price</td><td>$75</td><td>$150</td><td>$375</td></tr>
+        <tr><td>30% off</td><td>70% of price</td><td>$70</td><td>$140</td><td>$350</td></tr>
+        <tr><td>40% off</td><td>60% of price</td><td>$60</td><td>$120</td><td>$300</td></tr>
+        <tr><td>50% off</td><td>50% of price</td><td>$50</td><td>$100</td><td>$250</td></tr>
+        <tr><td>60% off</td><td>40% of price</td><td>$40</td><td>$80</td><td>$200</td></tr>
+        <tr><td>75% off</td><td>25% of price</td><td>$25</td><td>$50</td><td>$125</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Real-World Shopping Examples</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Item</th><th>Original Price</th><th>% Off</th><th>Sale Price</th><th>You Save</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Running shoes</td><td>$150</td><td>30%</td><td>$105</td><td><span class="badge-green">$45</span></td></tr>
+        <tr><td>Laptop</td><td>$999</td><td>15%</td><td>$849.15</td><td><span class="badge-green">$149.85</span></td></tr>
+        <tr><td>Winter jacket</td><td>$280</td><td>40%</td><td>$168</td><td><span class="badge-green">$112</span></td></tr>
+        <tr><td>Annual software plan</td><td>$120/yr</td><td>25%</td><td>$90/yr</td><td><span class="badge-green">$30/yr</span></td></tr>
+        <tr><td>Restaurant bill</td><td>$85</td><td>10%</td><td>$76.50</td><td><span class="badge-green">$8.50</span></td></tr>
+        <tr><td>Furniture set</td><td>$1,800</td><td>35%</td><td>$1,170</td><td><span class="badge-green">$630</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="link-box">
+    <h3>🔗 Related Calculators</h3>
+    <ul>
+      <li>Price went up instead? Use the <a href="/percentage-increase-calculator/">Percentage Increase Calculator</a></li>
+      <li>General price reduction? Use the <a href="/percentage-decrease-calculator/">Percentage Decrease Calculator</a></li>
+      <li>Month-over-month change? Use the <a href="/percentage-change-calculator/">Percentage Change Calculator</a></li>
+      <li>Comparing two prices? Use the <a href="/percentage-difference-calculator/">Percentage Difference Calculator</a></li>
+      <li>Lab measurement accuracy? Use the <a href="/percent-error-calculator/">Percent Error Calculator</a></li>
+      <li>Back to the main tool — <a href="/">Percentage Calculator (Home)</a></li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- ========== FAQ ========== -->
+<div class="hr-line"><hr></div>
+<section class="faq-sec" aria-label="FAQ Percent Off Calculator">
+  <div class="sec-head">
+    <div class="sec-tag">FAQ</div>
+    <h2>Percent Off — FAQs</h2>
+    <p>Common questions about calculating discounts and sale prices</p>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do you calculate percent off?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p><strong>Sale Price = Original Price × (1 − % Off ÷ 100)</strong>. Example: 30% off $80 → $80 × (1 − 0.30) = $80 × 0.70 = <strong>$56</strong>. Amount saved = $80 − $56 = <strong>$24</strong>. Use the calculator above for instant results with full working shown.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do I find the original price before a discount?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Formula: <strong>Original Price = Sale Price ÷ (1 − % Off ÷ 100)</strong>. Example: a product costs $70 after a 30% discount → $70 ÷ 0.70 = <strong>$100</strong>. Switch to the "Find Original Price" tab in the calculator above to do this instantly.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do I find what percentage off was applied?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Formula: <strong>% Off = ((Original − Sale Price) ÷ Original) × 100</strong>. Example: original $120, paid $90 → ((120−90) ÷ 120) × 100 = <strong>25% off</strong>. Use the "Find % Off Applied" tab in the calculator above.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">Is 20% off the same as paying 80%?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Yes — exactly. When something is 20% off, you pay 100% − 20% = 80% of the original price. This is the multiplier method: Sale Price = Original × 0.80. For 30% off you pay 70%, for 50% off you pay 50%, and so on. The multiplier = 1 − (% Off ÷ 100).</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">Do two discounts of 20% and 10% equal 30% off?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>No — sequential discounts are not additive. 20% off followed by 10% off equals: (1 − 0.20) × (1 − 0.10) = 0.80 × 0.90 = 0.72 → you pay 72%, which means <strong>28% off total</strong>, not 30%. The combined formula is: Combined % Off = 100 − ((1−D1÷100) × (1−D2÷100) × 100).</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">Is percent off the same as percentage decrease?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Yes — mathematically identical. A 25% price decrease = 25% off. "Percent off" is the retail/shopping term; "percentage decrease" is the general mathematical term. Both use the same formula and produce the same results. See our dedicated <a href="/percentage-decrease-calculator/">percentage decrease calculator</a> for general (non-shopping) contexts.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What is 50% off in simple terms?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>50% off means the price is halved. You pay exactly half the original price. A $200 item at 50% off costs $100. Amount saved = $100. It is the simplest discount to calculate mentally — just divide the original price by 2.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do I calculate 20% off mentally without a calculator?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>For 20% off: find 10% first (move decimal one place left), then double it. Example: $85 → 10% = $8.50 → 20% = $17.00 → Sale price = $85 − $17 = <strong>$68</strong>. For 15% off: find 10% + half of 10% (5%). For 25% off: divide by 4. For 30%: find 10% and multiply by 3.</p></div>
+  </div>
+
+</section>
+
+<!-- ========== FOOTER ========== -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-links">
-      <a href="/">Percentage Calculator</a>
-      <a href="/percentage-increase-calculator">Percentage Increase</a>
-      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
-      <a href="/percentage-change-calculator">Percentage Change</a>
-      <a href="/percentage-difference-calculator">Percentage Difference</a>
-      <a href="/percentage-off-calculator">Percentage Off</a>
-      <a href="/percent-error-calculator">Percent Error</a>
-      <a href="/what-percentage-of">What Percentage Of</a>
-      <a href="/percentage-of-number">Percentage of a Number</a>
-      <a href="/money-percentage-calculator">Money Calculator</a>
-      <a href="/discount-calculator">Discount Calculator</a>
-      <a href="/fraction-to-percentage">Fraction to %</a>
-      <a href="/sales-percentage-calculator">Sales Calculator</a>
-      <a href="/percentage-formula">Percentage Formula</a>
-      <a href="/how-to-calculate-percentage">How to Calculate %</a>
-      <a href="/sitemap.xml">Sitemap</a>
+    <div class="footer-grid">
+      <div class="f-brand">
+        <a href="/" class="logo" aria-label="CalcPercentage Home">
+          <div class="logo-icon">%</div>
+          <span class="logo-name"><span style="color:var(--pink)">Calc</span>Percentage</span>
+        </a>
+        <p>Free online percentage calculators for every percentage problem. Fast, accurate, mobile-friendly — no ads blocking your results.</p>
+      </div>
+      <div class="f-col">
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/">Percentage Calculator</a></li>
+          <li><a href="/percentage-increase-calculator/">% Increase Calculator</a></li>
+          <li><a href="/percentage-decrease-calculator/">% Decrease Calculator</a></li>
+          <li><a href="/percentage-change-calculator/">% Change Calculator</a></li>
+          <li><a href="/percentage-difference-calculator/">% Difference Calculator</a></li>
+          <li><a href="/percent-error-calculator/">% Error Calculator</a></li>
+          <li><a href="/percent-off-calculator/">% Off / Discount Calculator</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/what-is-percentage/">What is a Percentage?</a></li>
+          <li><a href="/percentage-formula/">Percentage Formulas</a></li>
+          <li><a href="/how-to-calculate-percentage/">How to Calculate %</a></li>
+          <li><a href="/percentage-increase-calculator/">How to Calculate % Increase</a></li>
+          <li><a href="/percent-error-calculator/">How to Calculate % Error</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>More</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <p>© 2026 CalcPercentage.vercel.app — Free Online Percentage Calculator</p>
+    <div class="footer-bottom">
+      <p>© <span id="yr"></span> CalcPercentage.vercel.app — All rights reserved.</p>
+      <p>Made with ♥ for fast, free percentage calculations.</p>
+    </div>
   </div>
 </footer>
 
+<!-- ========== JAVASCRIPT ========== -->
 <script>
-function fmt(n, currency) {
-  if (n === null || isNaN(n) || !isFinite(n)) return null;
-  if (currency) return '$' + parseFloat(n.toFixed(2)).toLocaleString('en-AU', {minimumFractionDigits:2, maximumFractionDigits:2});
-  return parseFloat(n.toFixed(6)).toLocaleString('en-AU', {maximumFractionDigits: 4});
-}
-function switchTab(group, tab) {
-  document.querySelectorAll('#' + group + '_tab1, #' + group + '_tab2').forEach(el => el.classList.remove('active'));
-  document.getElementById(group + '_' + tab).classList.add('active');
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.getAttribute('onclick').includes(tab));
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // ---- NAV ----
+  function toggleNav() {
+    const nav = document.getElementById('mobileNav'), btn = document.getElementById('hambBtn');
+    const isOpen = nav.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen);
+  }
+  document.addEventListener('click', function(e) {
+    const nav = document.getElementById('mobileNav'), btn = document.getElementById('hambBtn');
+    if (!nav.contains(e.target) && !btn.contains(e.target)) {
+      nav.classList.remove('open'); btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
   });
-}
-function setDiscount(pct) {
-  document.getElementById('off_pct').value = pct;
-  document.querySelectorAll('.quick-btn').forEach(b => b.classList.toggle('active', b.textContent.includes(pct+'%')));
-  calcOff();
-}
-function calcOff() {
-  var price = parseFloat(document.getElementById('off_price').value);
-  var pct = parseFloat(document.getElementById('off_pct').value);
-  var box = document.getElementById('off_result');
-  if (isNaN(price) || isNaN(pct)) { box.classList.remove('show'); return; }
-  var sale = price * (1 - pct/100);
-  var save = price - sale;
-  document.getElementById('off_sale').textContent = fmt(sale, true);
-  document.getElementById('off_save').textContent = '−' + fmt(save, true);
-  document.getElementById('off_formula').textContent = '$' + price + ' × (1 − ' + pct + '/100) = ' + fmt(sale, true) + '  |  Savings: ' + fmt(save, true);
-  box.classList.add('show');
-}
-function calcOffReverse() {
-  var orig = parseFloat(document.getElementById('off2_orig').value);
-  var sale = parseFloat(document.getElementById('off2_sale').value);
-  var box = document.getElementById('off2_result');
-  if (isNaN(orig) || isNaN(sale) || orig === 0) { box.classList.remove('show'); return; }
-  var pct = ((orig - sale) / orig) * 100;
-  document.getElementById('off2_ans').textContent = 'Discount: ' + fmt(pct) + '% off';
-  document.getElementById('off2_detail').textContent = 'Savings: ' + fmt(orig - sale, true);
-  document.getElementById('off2_formula').textContent = '((' + orig + ' − ' + sale + ') ÷ ' + orig + ') × 100 = ' + fmt(pct) + '%';
-  box.classList.add('show');
-}
+
+  // ---- MODE SWITCHER ----
+  function switchMode(id, btn) {
+    document.querySelectorAll('.mode-pane').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.mode-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+    document.getElementById('mode-' + id).classList.add('active');
+    btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+  }
+
+  // ---- HELPERS ----
+  function fmt(n, dec = 2) {
+    if (Math.floor(n) === n) return n.toString();
+    return parseFloat(n.toFixed(dec)).toString();
+  }
+
+  function fmtCurrency(n) {
+    return '$' + parseFloat(n.toFixed(2)).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function renderSteps(id, steps) {
+    const ol = document.getElementById(id);
+    if (ol) ol.innerHTML = steps.map(s => `<li>${s}</li>`).join('');
+  }
+
+  function showErr(resId, errId) {
+    document.getElementById(errId).classList.add('show');
+    document.getElementById(resId).classList.remove('show');
+  }
+
+  // ---- MODE 1: Find Sale Price ----
+  function calcSalePrice() {
+    const price = parseFloat(document.getElementById('sp-price').value);
+    const pct   = parseFloat(document.getElementById('sp-pct').value);
+    if (isNaN(price) || isNaN(pct) || price < 0 || pct < 0 || pct > 100) {
+      showErr('sp-res', 'sp-err'); return;
+    }
+    document.getElementById('sp-err').classList.remove('show');
+
+    const saved    = price * (pct / 100);
+    const salePrice = price - saved;
+    const multiplier = 1 - pct / 100;
+
+    document.getElementById('sp-res').classList.add('show');
+    document.getElementById('sp-sale-val').textContent = fmtCurrency(salePrice);
+    document.getElementById('sp-sale-sub').textContent = `After ${fmt(pct)}% off`;
+    document.getElementById('sp-save-val').textContent = fmtCurrency(saved);
+    document.getElementById('sp-save-sub').textContent = `${fmt(pct)}% of ${fmtCurrency(price)}`;
+    document.getElementById('sp-meta-orig').textContent = fmtCurrency(price);
+    document.getElementById('sp-meta-pct').textContent  = fmt(pct) + '% Off';
+    document.getElementById('sp-meta-pay').textContent  = fmtCurrency(salePrice);
+
+    renderSteps('sp-steps-list', [
+      `Multiplier = 1 − (${fmt(pct)} ÷ 100) = <strong>${fmt(multiplier, 4)}</strong>`,
+      `Amount saved = ${fmtCurrency(price)} × ${fmt(pct/100, 2)} = <strong>${fmtCurrency(saved)}</strong>`,
+      `Sale Price = ${fmtCurrency(price)} − ${fmtCurrency(saved)} = <strong>${fmtCurrency(salePrice)}</strong>`,
+      `Or directly: ${fmtCurrency(price)} × ${fmt(multiplier, 2)} = <strong>${fmtCurrency(salePrice)}</strong>`,
+      `You pay <strong>${fmt((100 - pct), 1)}%</strong> of the original price`
+    ]);
+  }
+
+  // ---- MODE 2: Find % Off Applied ----
+  function calcFindPct() {
+    const orig = parseFloat(document.getElementById('fp-orig').value);
+    const sale = parseFloat(document.getElementById('fp-sale').value);
+    if (isNaN(orig) || isNaN(sale) || orig <= 0 || sale < 0 || sale > orig) {
+      showErr('fp-res', 'fp-err'); return;
+    }
+    document.getElementById('fp-err').classList.remove('show');
+
+    const saved = orig - sale;
+    const pct   = (saved / orig) * 100;
+
+    document.getElementById('fp-res').classList.add('show');
+    document.getElementById('fp-res-v').textContent  = fmt(pct) + '% Off';
+    document.getElementById('fp-res-s').textContent  = `${fmtCurrency(orig)} → ${fmtCurrency(sale)} — saved ${fmtCurrency(saved)}`;
+    document.getElementById('fp-meta-orig').textContent  = fmtCurrency(orig);
+    document.getElementById('fp-meta-saved').textContent = fmtCurrency(saved);
+    document.getElementById('fp-meta-paid').textContent  = fmtCurrency(sale);
+
+    renderSteps('fp-steps-list', [
+      `Amount saved = Original − Sale = ${fmtCurrency(orig)} − ${fmtCurrency(sale)} = <strong>${fmtCurrency(saved)}</strong>`,
+      `% Off = (${fmtCurrency(saved)} ÷ ${fmtCurrency(orig)}) × 100 = <strong>${fmt(pct)}%</strong>`,
+      `You paid ${fmt(100 - pct, 1)}% of the original price`,
+      `Multiplier used = <strong>${fmt(sale / orig, 4)}</strong>`
+    ]);
+  }
+
+  // ---- MODE 3: Find Original Price ----
+  function calcFindOrig() {
+    const sale = parseFloat(document.getElementById('fo-sale').value);
+    const pct  = parseFloat(document.getElementById('fo-pct').value);
+    if (isNaN(sale) || isNaN(pct) || sale < 0 || pct < 0 || pct >= 100) {
+      showErr('fo-res', 'fo-err'); return;
+    }
+    document.getElementById('fo-err').classList.remove('show');
+
+    const divisor = 1 - pct / 100;
+    const orig    = sale / divisor;
+    const saved   = orig - sale;
+
+    document.getElementById('fo-res').classList.add('show');
+    document.getElementById('fo-res-v').textContent  = fmtCurrency(orig);
+    document.getElementById('fo-res-s').textContent  = `Before ${fmt(pct)}% off → ${fmtCurrency(sale)} (saved ${fmtCurrency(saved)})`;
+    document.getElementById('fo-meta-sale').textContent  = fmtCurrency(sale);
+    document.getElementById('fo-meta-saved').textContent = fmtCurrency(saved);
+    document.getElementById('fo-meta-pct').textContent   = fmt(pct) + '% Off';
+
+    renderSteps('fo-steps-list', [
+      `Divisor = 1 − (${fmt(pct)} ÷ 100) = <strong>${fmt(divisor, 4)}</strong>`,
+      `Original = ${fmtCurrency(sale)} ÷ ${fmt(divisor, 4)} = <strong>${fmtCurrency(orig)}</strong>`,
+      `Amount saved = ${fmtCurrency(orig)} − ${fmtCurrency(sale)} = <strong>${fmtCurrency(saved)}</strong>`,
+      `Verify: ${fmtCurrency(orig)} × ${fmt(divisor, 4)} = <strong>${fmtCurrency(sale)} ✓</strong>`
+    ]);
+  }
+
+  // ---- QUICK EXAMPLES ----
+  function loadExample(price, pct) {
+    switchMode('sale-price', document.querySelectorAll('.mode-btn')[0]);
+    document.getElementById('sp-price').value = price;
+    document.getElementById('sp-pct').value   = pct;
+    calcSalePrice();
+    document.querySelector('.calc-wrap').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  // ---- BULK DISCOUNT TABLE ----
+  const BULK_PCTS = [5, 10, 15, 20, 25, 30, 35, 40, 50, 60, 70, 75];
+
+  function renderBulkTable() {
+    const base = parseFloat(document.getElementById('bulk-base').value) || 100;
+    const tbody = document.getElementById('bulk-tbody');
+    tbody.innerHTML = BULK_PCTS.map(pct => {
+      const saved = base * pct / 100;
+      const sale  = base - saved;
+      const mult  = (1 - pct / 100).toFixed(2);
+      return `<tr>
+        <td>${pct}% off</td>
+        <td>× ${mult}</td>
+        <td class="savings-col">${fmtCurrency(saved)}</td>
+        <td><strong>${fmtCurrency(sale)}</strong></td>
+      </tr>`;
+    }).join('');
+  }
+
+  renderBulkTable();
+
+  // ---- ENTER KEY ----
+  document.querySelectorAll('.fg input, .bulk-price-wrap input').forEach(inp => {
+    inp.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        const pane = this.closest('.mode-pane');
+        if (pane) pane.querySelector('.calc-btn').click();
+      }
+    });
+  });
+
+  // ---- FAQ ----
+  function toggleFaq(item) {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
 </script>
 </body>
 </html>
