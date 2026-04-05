@@ -3,275 +3,1014 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Percent Error Calculator — Calculate Experimental vs Theoretical Error</title>
-  <meta name="description" content="Calculate percent error between experimental and theoretical values. Free percent error calculator used in chemistry, physics, and science. Shows formula and step-by-step solution.">
-  <meta name="keywords" content="percent error calculator, percent error formula, percent error calculator chemistry, percent error formula calculator, average percent error calculator, calculate percent error, relative percent error calculator, absolute percent error calculator, percent error calculator with sig figs">
-  <link rel="canonical" href="https://calcpercentage.vercel.app/percent-error-calculator">
-  <meta property="og:title" content="Percent Error Calculator — Experimental vs Theoretical Error">
-  <meta property="og:description" content="Calculate percent error for chemistry, physics and science. Free tool with formula, sig figs, and step-by-step solution.">
-  <meta property="og:url" content="https://calcpercentage.vercel.app/percent-error-calculator">
+  <title>Percent Error Calculator — Calculate % Error Instantly</title>
+  <meta name="description" content="Free percent error calculator. Find the percentage error between an experimental and theoretical value. Includes formula, step-by-step working, signed vs unsigned error & real-world examples.">
+  <meta name="keywords" content="percent error calculator, percentage error calculator, how to calculate percent error, percent error formula, experimental value theoretical value, calculate percentage error">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/percent-error-calculator/">
+
+  <meta property="og:title" content="Percent Error Calculator — Calculate % Error Instantly">
+  <meta property="og:description" content="Calculate percent error between experimental and theoretical values. Free tool with formula, signed/unsigned error, step-by-step working & chemistry/physics examples.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/percent-error-calculator/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CalcPercentage">
+
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Percent Error Calculator">
-  <meta name="twitter:description" content="Calculate percent error for chemistry and physics experiments with step-by-step solution.">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="CalcPercentage">
-  <link rel="stylesheet" href="/css/style.css">
+  <meta name="twitter:title" content="Percent Error Calculator — Calculate % Error Instantly">
+  <meta name="twitter:description" content="Free percent error calculator with signed & unsigned modes, step-by-step working and real chemistry/physics examples.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23DA2576'/%3E%3Ctext x='12' y='78' font-size='72' font-family='Arial,sans-serif' font-weight='900' fill='white'%3E%25%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23DA2576'/%3E%3Ctext x='12' y='78' font-size='72' font-family='Arial,sans-serif' font-weight='900' fill='white'%3E%25%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <script type="application/ld+json">
-  [
-    { "@context": "https://schema.org", "@type": "WebApplication", "name": "Percent Error Calculator", "url": "https://calcpercentage.vercel.app/percent-error-calculator", "description": "Calculate percent error between an experimental value and a theoretical (accepted) value. Used in chemistry, physics, and scientific experiments.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
-    { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-      { "@type": "Question", "name": "What is the percent error formula?", "acceptedAnswer": { "@type": "Answer", "text": "Percent Error = |(Experimental Value − Theoretical Value)| / |Theoretical Value| × 100%. The absolute value ensures a positive result." } },
-      { "@type": "Question", "name": "How do I calculate percent error in chemistry?", "acceptedAnswer": { "@type": "Answer", "text": "In chemistry, percent error = |measured value − accepted value| / accepted value × 100%. Example: accepted density = 1.00 g/mL, measured = 0.97 g/mL: |0.97 − 1.00| / 1.00 × 100 = 3%." } },
-      { "@type": "Question", "name": "What is a good percent error in a science experiment?", "acceptedAnswer": { "@type": "Answer", "text": "Less than 5% is generally acceptable in most high school and undergraduate labs. Physics may require less than 1%, while some chemistry experiments allow up to 10%." } },
-      { "@type": "Question", "name": "What is the difference between percent error and percent difference?", "acceptedAnswer": { "@type": "Answer", "text": "Percent error compares an experimental value to a known theoretical value. Percent difference compares two experimental values without a known reference." } },
-      { "@type": "Question", "name": "How do I calculate average percent error?", "acceptedAnswer": { "@type": "Answer", "text": "Calculate percent error for each measurement, add them all, then divide by the number of measurements." } }
-    ]},
-    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
-      { "@type": "ListItem", "position": 2, "name": "Percent Error Calculator", "item": "https://calcpercentage.vercel.app/percent-error-calculator" }
-    ]}
-  ]
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://calcpercentage.vercel.app/#website",
+        "url": "https://calcpercentage.vercel.app/",
+        "name": "CalcPercentage",
+        "publisher": { "@type": "Organization", "name": "CalcPercentage", "logo": { "@type": "ImageObject", "url": "https://calcpercentage.vercel.app/logo.svg" } }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Percent Error Calculator", "item": "https://calcpercentage.vercel.app/percent-error-calculator/" }
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://calcpercentage.vercel.app/percent-error-calculator/#app",
+        "name": "Percent Error Calculator",
+        "url": "https://calcpercentage.vercel.app/percent-error-calculator/",
+        "description": "Calculate the percent error between an experimental (measured) value and a theoretical (accepted) value. Supports both signed and unsigned modes with full step-by-step working.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": [
+          "Unsigned Percent Error (standard)",
+          "Signed Percent Error (directional)",
+          "Step-by-Step Working",
+          "Over/Under Estimation Detection",
+          "Chemistry and Physics Examples"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the percent error formula?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Percent Error = (|Experimental Value − Theoretical Value| ÷ |Theoretical Value|) × 100. The absolute values ensure the result is always positive (unsigned). For signed percent error, remove the absolute value brackets: % Error = ((Experimental − Theoretical) ÷ |Theoretical|) × 100."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you calculate percent error?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Step 1: Subtract the theoretical value from the experimental value. Step 2: Take the absolute value of the result. Step 3: Divide by the absolute value of the theoretical value. Step 4: Multiply by 100. Example: experimental = 9.5, theoretical = 10 → |9.5−10| ÷ |10| × 100 = 5% error."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a good percent error?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In most school and university science labs, a percent error under 5% is considered acceptable. Professional and analytical chemistry labs often require under 1–2%. The acceptable threshold depends on the precision of equipment used and the context of the experiment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between percent error and percent difference?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Percent error requires one value to be the accepted/theoretical standard — it divides by the theoretical value. Percent difference treats both values symmetrically (no reference standard) and divides by their average. Use percent error when comparing a measurement to a known correct value; use percent difference when comparing two independent measurements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can percent error be negative?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Standard (unsigned) percent error is always positive. However, signed percent error can be negative — a negative result means your experimental value was lower than the theoretical value (an underestimate). A positive signed error means your measurement was higher (an overestimate). Our calculator supports both modes."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to Calculate Percent Error",
+        "description": "Step-by-step guide to calculating percent error between experimental and theoretical values",
+        "totalTime": "PT1M",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Identify Both Values", "text": "Note your experimental (measured) value and the theoretical (accepted/exact) value." },
+          { "@type": "HowToStep", "position": 2, "name": "Find the Difference", "text": "Subtract the theoretical value from the experimental value: Experimental − Theoretical." },
+          { "@type": "HowToStep", "position": 3, "name": "Take the Absolute Value", "text": "For unsigned error, use |Experimental − Theoretical|. For signed, keep the sign." },
+          { "@type": "HowToStep", "position": 4, "name": "Divide by Theoretical Value", "text": "Divide the difference by the absolute value of the theoretical value." },
+          { "@type": "HowToStep", "position": 5, "name": "Multiply by 100", "text": "Multiply by 100 to express as a percentage." }
+        ]
+      }
+    ]
+  }
   </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink: #DA2576;
+      --pink-dark: #b81e62;
+      --pink-light: #fce7f3;
+      --pink-xlight: #fff0f7;
+      --black: #0d0d0d;
+      --near-black: #111827;
+      --dark: #1f2937;
+      --mid: #4b5563;
+      --gray: #6b7280;
+      --light-gray: #f3f4f6;
+      --border: #e5e7eb;
+      --white: #ffffff;
+      --green: #059669;
+      --green-light: #d1fae5;
+      --green-bg: #f0fdf4;
+      --amber: #d97706;
+      --amber-light: #fef3c7;
+      --amber-bg: #fffbeb;
+      --red: #dc2626;
+      --red-light: #fee2e2;
+      --shadow: 0 4px 24px rgba(218,37,118,0.10);
+      --shadow-lg: 0 12px 40px rgba(218,37,118,0.15);
+      --radius: 14px;
+      --radius-lg: 20px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); color: var(--near-black); background: var(--white); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: var(--pink); }
+    a:hover { color: var(--pink-dark); }
+
+    /* ===== HEADER ===== */
+    header { background: var(--white); border-bottom: 1.5px solid var(--border); position: sticky; top: 0; z-index: 999; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
+    .header-wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 38px; height: 38px; background: var(--pink); border-radius: 10px; color: white; font-size: 1.15rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .logo-name { font-size: 1.15rem; font-weight: 800; color: var(--black); letter-spacing: -0.4px; }
+    .logo-name span { color: var(--pink); }
+    .main-nav { display: flex; align-items: center; gap: 2px; }
+    .main-nav a { text-decoration: none; color: var(--dark); font-size: 0.83rem; font-weight: 600; padding: 7px 11px; border-radius: 8px; transition: background 0.18s, color 0.18s; white-space: nowrap; }
+    .main-nav a:hover, .main-nav a.active { background: var(--pink-light); color: var(--pink); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; border-radius: 8px; flex-shrink: 0; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    .mobile-nav { display: none; flex-direction: column; background: var(--white); border-top: 1px solid var(--border); padding: 8px 20px 16px; gap: 2px; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { display: block; padding: 11px 12px; text-decoration: none; color: var(--dark); font-size: 0.9rem; font-weight: 600; border-radius: 8px; transition: background 0.15s; }
+    .mobile-nav a:hover, .mobile-nav a.active { background: var(--pink-xlight); color: var(--pink); }
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb-bar { max-width: 1200px; margin: 0 auto; padding: 14px 20px 0; }
+    .breadcrumb { display: flex; align-items: center; gap: 6px; list-style: none; flex-wrap: wrap; }
+    .breadcrumb li { display: flex; align-items: center; gap: 6px; }
+    .breadcrumb li + li::before { content: '/'; color: var(--gray); font-size: 0.78rem; }
+    .breadcrumb a { font-size: 0.78rem; color: var(--gray); text-decoration: none; font-weight: 500; }
+    .breadcrumb a:hover { color: var(--pink); }
+    .breadcrumb span { font-size: 0.78rem; color: var(--near-black); font-weight: 600; }
+
+    /* ===== HERO ===== */
+    .hero { background: linear-gradient(160deg, #fff 0%, var(--pink-xlight) 55%, #fff 100%); padding: 52px 20px 40px; text-align: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--pink-light); color: var(--pink); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 5px 14px; border-radius: 100px; margin-bottom: 18px; }
+    .hero h1 { font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 900; color: var(--black); line-height: 1.12; letter-spacing: -1.5px; max-width: 700px; margin: 0 auto 16px; }
+    .hero h1 em { font-style: normal; color: var(--pink); }
+    .hero-sub { font-size: 1.02rem; color: var(--gray); max-width: 560px; margin: 0 auto; line-height: 1.65; }
+
+    /* ===== CALCULATOR ===== */
+    .calc-wrap { max-width: 760px; margin: 0 auto; padding: 36px 20px 16px; }
+    .calc-card { background: var(--white); border: 2px solid var(--border); border-radius: var(--radius-lg); padding: 36px 32px 30px; box-shadow: var(--shadow); transition: box-shadow 0.2s; }
+    .calc-card:hover { box-shadow: var(--shadow-lg); }
+
+    /* Signed / Unsigned toggle */
+    .sign-toggle { display: flex; background: var(--light-gray); border-radius: 12px; padding: 4px; margin-bottom: 24px; gap: 4px; }
+    .sign-btn { flex: 1; padding: 10px 8px; border: none; border-radius: 9px; font-family: var(--font); font-size: 0.82rem; font-weight: 700; cursor: pointer; background: transparent; color: var(--gray); transition: all 0.2s; text-align: center; line-height: 1.35; }
+    .sign-btn.active { background: var(--white); color: var(--pink); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .sign-btn:hover:not(.active) { color: var(--dark); }
+
+    .calc-subtitle { font-size: 0.85rem; color: var(--gray); margin-bottom: 22px; line-height: 1.55; }
+    .formula-strip { background: var(--light-gray); border-left: 4px solid var(--pink); border-radius: 0 8px 8px 0; padding: 10px 16px; font-size: 0.84rem; color: var(--mid); font-family: 'Courier New', monospace; font-weight: 600; margin-bottom: 24px; }
+
+    .input-group { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .fg { display: flex; flex-direction: column; gap: 6px; }
+    .fg label { font-size: 0.75rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; }
+    .fg .label-hint { font-size: 0.68rem; color: var(--gray); font-weight: 400; text-transform: none; letter-spacing: 0; margin-top: 1px; }
+    .fg input { padding: 14px 16px; border: 2px solid var(--border); border-radius: var(--radius); font-size: 1rem; font-family: var(--font); color: var(--black); background: var(--white); width: 100%; transition: border-color 0.18s, box-shadow 0.18s; -webkit-appearance: none; }
+    .fg input::placeholder { color: #d1d5db; }
+    .fg input:focus { outline: none; border-color: var(--pink); box-shadow: 0 0 0 4px rgba(218,37,118,0.09); }
+
+    .input-role { display: flex; align-items: center; gap: 8px; margin-top: 5px; }
+    .role-pill { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 9px; border-radius: 100px; }
+    .role-exp { background: #dbeafe; color: #1d4ed8; }
+    .role-theo { background: #fef9c3; color: #92400e; }
+
+    .calc-btn { width: 100%; padding: 16px; background: var(--pink); color: white; border: none; border-radius: var(--radius); font-size: 1.02rem; font-weight: 800; font-family: var(--font); cursor: pointer; letter-spacing: 0.3px; transition: background 0.18s, transform 0.1s, box-shadow 0.18s; margin-top: 4px; }
+    .calc-btn:hover { background: var(--pink-dark); box-shadow: 0 6px 20px rgba(218,37,118,0.28); }
+    .calc-btn:active { transform: scale(0.99); }
+
+    .result-box { display: none; margin-top: 22px; border-radius: var(--radius); overflow: hidden; animation: fadeIn 0.28s ease; }
+    .result-box.show { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+    .res-main { padding: 24px 22px; text-align: center; }
+    .res-main.good    { background: linear-gradient(135deg, #059669 0%, #047857 100%); }
+    .res-main.ok      { background: linear-gradient(135deg, #d97706 0%, #b45309 100%); }
+    .res-main.poor    { background: linear-gradient(135deg, var(--pink) 0%, var(--pink-dark) 100%); }
+    .res-main.neutral { background: linear-gradient(135deg, var(--pink) 0%, var(--pink-dark) 100%); }
+
+    .res-label { font-size: 0.73rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: rgba(255,255,255,0.75); margin-bottom: 6px; }
+    .res-value { font-size: 2.8rem; font-weight: 900; color: white; letter-spacing: -2px; line-height: 1; }
+    .res-sub { font-size: 0.83rem; color: rgba(255,255,255,0.75); margin-top: 8px; }
+
+    .res-dir-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.18); border-radius: 100px; padding: 4px 14px; font-size: 0.8rem; font-weight: 800; color: white; margin-top: 10px; }
+
+    .res-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 2px solid var(--border); border-top: none; }
+    .res-meta-item { background: var(--light-gray); padding: 12px 14px; text-align: center; }
+    .res-meta-label { font-size: 0.67rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray); margin-bottom: 4px; }
+    .res-meta-val { font-size: 0.95rem; font-weight: 800; color: var(--black); }
+
+    .res-steps { background: var(--light-gray); padding: 18px 22px; border: 2px solid var(--border); border-top: none; border-radius: 0 0 var(--radius) var(--radius); }
+    .res-steps-title { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 10px; }
+    .res-steps ol { list-style: none; display: flex; flex-direction: column; gap: 7px; counter-reset: step; padding: 0; }
+    .res-steps ol li { counter-increment: step; display: flex; gap: 10px; font-size: 0.85rem; color: var(--dark); line-height: 1.55; }
+    .res-steps ol li::before { content: counter(step); min-width: 22px; height: 22px; background: var(--pink); color: white; border-radius: 50%; font-size: 0.72rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+
+    .err-msg { display: none; margin-top: 14px; padding: 11px 14px; background: #fef2f2; border: 1.5px solid #fecaca; border-radius: 10px; color: #dc2626; font-size: 0.84rem; font-weight: 500; }
+    .err-msg.show { display: block; }
+
+    /* ===== QUALITY SCALE ===== */
+    .quality-scale { margin-top: 22px; padding: 18px 20px; background: var(--light-gray); border: 2px solid var(--border); border-radius: var(--radius); }
+    .qs-title { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray); margin-bottom: 12px; }
+    .qs-bar { height: 10px; border-radius: 100px; background: linear-gradient(to right, #059669 0%, #65a30d 30%, #d97706 60%, #dc2626 100%); margin-bottom: 8px; position: relative; }
+    .qs-marker { position: absolute; top: -4px; width: 18px; height: 18px; border-radius: 50%; background: var(--black); border: 3px solid white; box-shadow: 0 2px 6px rgba(0,0,0,0.3); transform: translateX(-50%); transition: left 0.4s ease; }
+    .qs-labels { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--gray); font-weight: 600; }
+    .qs-verdict { margin-top: 10px; font-size: 0.83rem; font-weight: 700; color: var(--dark); }
+
+    /* ===== EXAMPLES ===== */
+    .examples-sec { max-width: 760px; margin: 0 auto; padding: 8px 20px 0; }
+    .examples-title { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray); margin-bottom: 10px; }
+    .examples-grid { display: flex; gap: 8px; flex-wrap: wrap; }
+    .ex-chip { padding: 7px 14px; background: var(--white); border: 1.5px solid var(--border); border-radius: 100px; font-size: 0.8rem; font-weight: 600; color: var(--dark); cursor: pointer; transition: all 0.18s; }
+    .ex-chip:hover { border-color: var(--pink); color: var(--pink); background: var(--pink-xlight); }
+
+    /* ===== CONTENT ===== */
+    .content-wrap { max-width: 880px; margin: 0 auto; padding: 56px 20px 16px; }
+    .content-wrap h2 { font-size: clamp(1.3rem, 3vw, 1.85rem); font-weight: 900; color: var(--black); letter-spacing: -0.6px; margin-bottom: 16px; }
+    .content-wrap h3 { font-size: 1.08rem; font-weight: 800; color: var(--black); margin: 32px 0 12px; }
+    .content-wrap p { color: var(--dark); line-height: 1.78; margin-bottom: 16px; font-size: 0.97rem; }
+    .content-wrap a { color: var(--pink); text-decoration: none; font-weight: 600; }
+    .content-wrap a:hover { text-decoration: underline; }
+
+    .formula-block { background: var(--light-gray); border: 2px solid var(--border); border-radius: var(--radius); padding: 18px 22px; margin: 20px 0; }
+    .formula-block .fb-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 6px; }
+    .formula-block code { font-size: 1rem; color: var(--black); font-family: 'Courier New', monospace; font-weight: 700; }
+    .formula-block p { font-size: 0.85rem; color: var(--gray); margin: 8px 0 0; line-height: 1.55; }
+
+    .example-block { background: var(--pink-xlight); border: 2px solid var(--pink-light); border-radius: var(--radius); padding: 22px 24px; margin: 20px 0; }
+    .example-block .eb-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 12px; }
+    .example-block p { margin-bottom: 8px; font-size: 0.92rem; }
+    .example-block p:last-child { margin-bottom: 0; }
+
+    .steps { counter-reset: step; list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 16px 0; }
+    .steps li { display: flex; gap: 14px; align-items: flex-start; counter-increment: step; }
+    .steps li::before { content: counter(step); min-width: 28px; height: 28px; background: var(--pink); color: white; border-radius: 50%; font-size: 0.8rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .steps li span { color: var(--dark); font-size: 0.95rem; line-height: 1.65; }
+
+    /* Accuracy tier table */
+    .tier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0; }
+    .tier-card { padding: 16px; border-radius: var(--radius); border: 2px solid; text-align: center; }
+    .tier-card.t-good  { background: var(--green-bg); border-color: #bbf7d0; }
+    .tier-card.t-ok    { background: var(--amber-bg); border-color: #fde68a; }
+    .tier-card.t-poor  { background: #fff5f5; border-color: #fecaca; }
+    .tier-card .tc-pct { font-size: 1.3rem; font-weight: 900; margin-bottom: 4px; }
+    .tier-card.t-good .tc-pct  { color: var(--green); }
+    .tier-card.t-ok .tc-pct    { color: var(--amber); }
+    .tier-card.t-poor .tc-pct  { color: var(--red); }
+    .tier-card .tc-label { font-size: 0.78rem; font-weight: 700; color: var(--dark); }
+    .tier-card .tc-desc  { font-size: 0.72rem; color: var(--gray); margin-top: 4px; line-height: 1.4; }
+
+    .table-wrap { overflow-x: auto; margin: 20px 0; border-radius: var(--radius); border: 2px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.89rem; }
+    thead tr { background: var(--black); color: white; }
+    thead th { padding: 13px 16px; text-align: left; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; }
+    tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: var(--pink-xlight); }
+    tbody td { padding: 13px 16px; color: var(--dark); line-height: 1.5; vertical-align: middle; }
+    tbody td:first-child { font-weight: 700; color: var(--black); }
+    .badge-good { display: inline-block; background: var(--green-light); color: #065f46; font-size: 0.75rem; font-weight: 700; padding: 3px 9px; border-radius: 100px; }
+    .badge-ok   { display: inline-block; background: var(--amber-light); color: #92400e; font-size: 0.75rem; font-weight: 700; padding: 3px 9px; border-radius: 100px; }
+    .badge-poor { display: inline-block; background: var(--pink-light); color: var(--pink); font-size: 0.75rem; font-weight: 700; padding: 3px 9px; border-radius: 100px; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+    .mini-card { padding: 20px; border-radius: var(--radius); border: 2px solid var(--border); }
+    .mini-card h4 { font-size: 0.85rem; font-weight: 800; margin-bottom: 8px; color: var(--black); }
+    .mini-card p  { font-size: 0.83rem; color: var(--dark); margin-bottom: 0; line-height: 1.55; }
+    .mini-card.blue-card { background: #eff6ff; border-color: #bfdbfe; }
+    .mini-card.yell-card { background: var(--amber-bg); border-color: #fde68a; }
+
+    .link-box { background: var(--black); border-radius: var(--radius); padding: 24px 26px; margin: 28px 0; color: white; }
+    .link-box h3 { color: var(--pink); margin-top: 0; margin-bottom: 14px; font-size: 0.97rem; }
+    .link-box ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .link-box ul li { font-size: 0.87rem; color: rgba(255,255,255,0.78); padding-left: 20px; position: relative; }
+    .link-box ul li::before { content: '→'; position: absolute; left: 0; color: var(--pink); font-weight: 700; }
+    .link-box ul li a { color: var(--pink); text-decoration: none; font-weight: 700; }
+    .link-box ul li a:hover { text-decoration: underline; }
+
+    /* ===== FAQ ===== */
+    .faq-sec { max-width: 880px; margin: 0 auto; padding: 0 20px 64px; }
+    .sec-head { text-align: center; margin-bottom: 32px; }
+    .sec-tag { display: inline-block; background: var(--pink-light); color: var(--pink); font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; padding: 4px 12px; border-radius: 100px; margin-bottom: 12px; }
+    .sec-head h2 { font-size: clamp(1.35rem, 3vw, 2rem); font-weight: 900; color: var(--black); letter-spacing: -0.6px; margin-bottom: 6px; }
+    .sec-head p { font-size: 0.96rem; color: var(--gray); }
+    .faq-item { border: 2px solid var(--border); border-radius: var(--radius); margin-bottom: 10px; overflow: hidden; transition: border-color 0.2s; }
+    .faq-item.open { border-color: var(--pink); }
+    .faq-q { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 17px 20px; cursor: pointer; font-weight: 700; font-size: 0.93rem; color: var(--black); user-select: none; transition: background 0.15s; }
+    .faq-q:hover { background: var(--light-gray); }
+    .faq-ico { width: 26px; height: 26px; background: var(--pink-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--pink); font-size: 1.2rem; font-weight: 700; flex-shrink: 0; transition: transform 0.25s; }
+    .faq-item.open .faq-ico { transform: rotate(45deg); background: var(--pink); color: white; }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.32s ease, padding 0.32s; padding: 0 20px; }
+    .faq-item.open .faq-a { max-height: 400px; padding: 0 20px 18px; }
+    .faq-a p { color: var(--dark); font-size: 0.89rem; line-height: 1.72; }
+    .faq-a a { color: var(--pink); font-weight: 600; }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--black); color: white; padding: 60px 20px 36px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .f-brand .logo { margin-bottom: 14px; }
+    .f-brand .logo .logo-name { color: white; }
+    .f-brand p { font-size: 0.84rem; color: rgba(255,255,255,0.55); line-height: 1.7; max-width: 260px; }
+    .f-col h4 { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+    .f-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .f-col ul li a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.85rem; transition: color 0.18s; }
+    .f-col ul li a:hover { color: var(--pink); }
+    .footer-bottom { padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+    .footer-bottom a { color: var(--pink); text-decoration: none; }
+    .hr-line { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .hr-line hr { border: none; border-top: 1px solid var(--border); }
+
+    @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } .tier-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) {
+      .main-nav { display: none; }
+      .hamburger { display: flex; }
+      .hero { padding: 40px 20px 28px; }
+      .calc-card { padding: 24px 18px 20px; }
+      .input-group { grid-template-columns: 1fr; gap: 12px; }
+      .sign-btn { font-size: 0.76rem; padding: 9px 6px; }
+      .res-meta { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } .res-value { font-size: 2.2rem; } }
+  </style>
 </head>
 <body>
+
+<!-- ========== HEADER ========== -->
 <header>
-  <nav>
-    <a href="/" class="logo">Calc<span>Percentage</span></a>
-    <button class="mobile-menu-btn" onclick="document.querySelector('nav ul').classList.toggle('open')">☰ Menu</button>
-    <ul>
-      <li><a href="/percentage-increase-calculator">% Increase</a></li>
-      <li><a href="/percentage-decrease-calculator">% Decrease</a></li>
-      <li><a href="/percentage-change-calculator">% Change</a></li>
-      <li><a href="/percentage-off-calculator">% Off</a></li>
-      <li><a href="/percent-error-calculator">% Error</a></li>
-      <li><a href="/discount-calculator">Discount</a></li>
-      <li><a href="/fraction-to-percentage">Fraction→%</a></li>
-    </ul>
+  <div class="header-wrap">
+    <a href="/" class="logo" aria-label="CalcPercentage — Home">
+      <div class="logo-icon">%</div>
+      <span class="logo-name"><span>Calc</span>Percentage</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/percentage-increase-calculator/">% Increase</a>
+      <a href="/percentage-decrease-calculator/">% Decrease</a>
+      <a href="/percentage-change-calculator/">% Change</a>
+      <a href="/percentage-difference-calculator/">% Difference</a>
+      <a href="/percent-error-calculator/" class="active" aria-current="page">% Error</a>
+      <a href="/percent-off-calculator/">% Off</a>
+    </nav>
+    <button class="hamburger" id="hambBtn" aria-label="Open menu" aria-expanded="false" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="/">🏠 Percentage Calculator (Home)</a>
+    <a href="/percentage-increase-calculator/">📈 Percentage Increase Calculator</a>
+    <a href="/percentage-decrease-calculator/">📉 Percentage Decrease Calculator</a>
+    <a href="/percentage-change-calculator/">🔄 Percentage Change Calculator</a>
+    <a href="/percentage-difference-calculator/">↔️ Percentage Difference Calculator</a>
+    <a href="/percent-error-calculator/" class="active">🔬 Percent Error Calculator</a>
+    <a href="/percent-off-calculator/">🏷️ Percent Off / Discount Calculator</a>
+    <a href="/what-is-percentage/">📖 What is a Percentage?</a>
+    <a href="/percentage-formula/">📐 Percentage Formulas</a>
   </nav>
 </header>
 
-<main>
-  <nav class="breadcrumb">
-    <a href="/">Home</a><span class="sep"> › </span><span>Percent Error Calculator</span>
-  </nav>
+<!-- ========== BREADCRUMB ========== -->
+<div class="breadcrumb-bar">
+  <ol class="breadcrumb" aria-label="Breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><span>Percent Error Calculator</span></li>
+  </ol>
+</div>
 
-  <div class="page-hero">
-    <h1>Percent Error Calculator</h1>
-    <p>Calculate the percent error between an experimental measurement and the theoretical (accepted) value. Used in chemistry, physics, biology, and all science experiments.</p>
-  </div>
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-badge">🔬 Science & Lab Calculator</div>
+  <h1>Percent Error<br><em>Calculator</em></h1>
+  <p class="hero-sub">Calculate the percent error between your experimental (measured) value and the theoretical (accepted) value — with signed or unsigned result, accuracy rating, and full step-by-step working.</p>
+</section>
 
-  <!-- Main Calculator -->
+<!-- ========== CALCULATOR ========== -->
+<section class="calc-wrap" aria-label="Percent error calculator">
   <div class="calc-card">
-    <div class="tabs">
-      <button class="tab-btn active" onclick="switchTab('err','tab1')">Percent Error</button>
-      <button class="tab-btn" onclick="switchTab('err','tab2')">Average Percent Error</button>
+
+    <!-- Signed / Unsigned Mode -->
+    <div class="sign-toggle" role="tablist" aria-label="Error mode">
+      <button class="sign-btn active" role="tab" aria-selected="true" onclick="setMode('unsigned', this)">
+        Unsigned (Standard)<br><small style="font-weight:500;opacity:0.7">Always positive · most common</small>
+      </button>
+      <button class="sign-btn" role="tab" aria-selected="false" onclick="setMode('signed', this)">
+        Signed (Directional)<br><small style="font-weight:500;opacity:0.7">+ = over · − = under estimate</small>
+      </button>
     </div>
 
-    <div id="err_tab1" class="tab-content active">
-      <div class="formula-box"><strong>% Error = |Experimental − Theoretical| ÷ |Theoretical| × 100</strong></div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="pe_exp">Experimental Value (Measured)</label>
-          <input type="number" id="pe_exp" placeholder="e.g. 0.97" step="any" oninput="calcPercentError()">
-        </div>
-        <div class="form-group">
-          <label for="pe_theo">Theoretical Value (Accepted)</label>
-          <input type="number" id="pe_theo" placeholder="e.g. 1.00" step="any" oninput="calcPercentError()">
-        </div>
-      </div>
-      <div class="form-group">
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer; font-weight:400;">
-          <input type="checkbox" id="pe_sigfig" onchange="calcPercentError()" style="width:16px;height:16px;">
-          <span>Round to significant figures</span>
+    <p class="calc-subtitle" id="calc-subtitle-text">Enter your measured (experimental) value and the accepted (theoretical) value. The calculator will show your % error and an accuracy rating.</p>
+
+    <div class="formula-strip" id="formula-display">
+      % Error = (|Experimental − Theoretical| ÷ |Theoretical|) × 100
+    </div>
+
+    <div class="input-group">
+      <div class="fg">
+        <label for="pe-exp">
+          Experimental Value
+          <div class="label-hint">Your measured / observed result</div>
         </label>
+        <input type="number" id="pe-exp" placeholder="e.g. 9.5" step="any" inputmode="decimal">
+        <div class="input-role"><span class="role-pill role-exp">Measured</span></div>
       </div>
-      <div id="pe_result" class="result-box neutral">
-        <div class="result-main blue" id="pe_ans"></div>
-        <div style="margin-top:14px; padding:14px; background:rgba(255,255,255,0.7); border-radius:6px;">
-          <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:6px;font-weight:600;">STEP-BY-STEP SOLUTION</div>
-          <div id="pe_steps" style="font-family:monospace;font-size:0.88rem;line-height:2;color:var(--text);"></div>
+      <div class="fg">
+        <label for="pe-theo">
+          Theoretical Value
+          <div class="label-hint">The accepted / exact / expected value</div>
+        </label>
+        <input type="number" id="pe-theo" placeholder="e.g. 10" step="any" inputmode="decimal">
+        <div class="input-role"><span class="role-pill role-theo">Theoretical</span></div>
+      </div>
+    </div>
+
+    <button class="calc-btn" onclick="calcError()">Calculate % Error →</button>
+    <div class="err-msg" id="pe-err">⚠ Please enter valid numbers in both fields. Theoretical value cannot be zero.</div>
+
+    <div class="result-box" id="pe-res">
+      <div class="res-main neutral" id="pe-res-main">
+        <div class="res-label" id="pe-res-label">Percent Error</div>
+        <div class="res-value" id="pe-res-v">—</div>
+        <div class="res-dir-badge" id="pe-res-badge" style="display:none"></div>
+        <div class="res-sub" id="pe-res-s"></div>
+      </div>
+
+      <div class="res-meta">
+        <div class="res-meta-item">
+          <div class="res-meta-label">Absolute Error</div>
+          <div class="res-meta-val" id="pe-meta-abs">—</div>
         </div>
-        <div class="result-label" id="pe_quality" style="margin-top:12px;font-weight:600;"></div>
+        <div class="res-meta-item">
+          <div class="res-meta-label">Direction</div>
+          <div class="res-meta-val" id="pe-meta-dir">—</div>
+        </div>
+        <div class="res-meta-item">
+          <div class="res-meta-label">Accuracy Rating</div>
+          <div class="res-meta-val" id="pe-meta-rating">—</div>
+        </div>
+      </div>
+
+      <div class="res-steps">
+        <div class="res-steps-title">📐 Step-by-Step Working</div>
+        <ol id="pe-steps-list"></ol>
       </div>
     </div>
 
-    <div id="err_tab2" class="tab-content">
-      <div class="formula-box"><strong>Average % Error = Sum of all % Errors ÷ Number of Measurements</strong></div>
-      <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:16px;">Enter one measurement per line (format: <code>experimental, theoretical</code>)</p>
-      <div class="form-group">
-        <label for="avg_inputs">Measurements (experimental, theoretical — one per line)</label>
-        <textarea id="avg_inputs" rows="5" placeholder="0.97, 1.00&#10;1.02, 1.00&#10;0.98, 1.00" oninput="calcAvgError()" style="width:100%;padding:12px;border:2px solid var(--border);border-radius:var(--radius);font-size:0.9rem;resize:vertical;font-family:monospace;"></textarea>
+    <!-- Quality Scale — shown after result -->
+    <div class="quality-scale" id="quality-scale" style="display:none">
+      <div class="qs-title">📊 Accuracy Scale — Where Does Your Result Land?</div>
+      <div class="qs-bar">
+        <div class="qs-marker" id="qs-marker" style="left:0%"></div>
       </div>
-      <div id="avg_result" class="result-box neutral">
-        <div class="result-main blue" id="avg_ans"></div>
-        <div id="avg_detail" style="font-size:0.85rem;margin-top:10px;color:var(--text-muted);"></div>
+      <div class="qs-labels">
+        <span>0% (Perfect)</span>
+        <span>5%</span>
+        <span>10%</span>
+        <span>20%+</span>
       </div>
+      <div class="qs-verdict" id="qs-verdict"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Quick Examples -->
+<div class="examples-sec">
+  <div class="examples-title">⚡ Quick Examples — Click to Try</div>
+  <div class="examples-grid">
+    <button class="ex-chip" onclick="loadExample(9.5, 10)">🧪 Exp: 9.5 / Theo: 10</button>
+    <button class="ex-chip" onclick="loadExample(29.8, 30.2)">⚗️ Chemistry: 29.8 / 30.2</button>
+    <button class="ex-chip" onclick="loadExample(9.6, 9.8)">🔭 Physics: 9.6 / 9.8</button>
+    <button class="ex-chip" onclick="loadExample(11.5, 10)">📐 Over-estimate: 11.5 / 10</button>
+    <button class="ex-chip" onclick="loadExample(3.0, 3.14159)">π Approximation: 3.0 / π</button>
+    <button class="ex-chip" onclick="loadExample(2.65, 2.70)">🧫 Bio: 2.65 / 2.70</button>
+  </div>
+</div>
+
+<!-- ========== CONTENT ========== -->
+<div class="hr-line" style="margin-top:40px;"><hr></div>
+<section class="content-wrap">
+
+  <h2>How to Calculate Percent Error</h2>
+
+  <p><strong>Percent error</strong> measures how close an experimental (measured) result is to the theoretically expected or accepted value — expressed as a percentage of the theoretical value. It is the standard accuracy metric used in chemistry, physics, biology, and engineering labs worldwide. A small percent error means your measurement is highly accurate; a large one signals significant deviation from the expected result.</p>
+
+  <p>Unlike <a href="/percentage-difference-calculator/">percentage difference</a> — which treats both values equally — percent error has a clear asymmetry: one value is the <em>known correct reference</em> (theoretical), and the other is your <em>measurement</em> (experimental). The theoretical value always goes in the denominator.</p>
+
+  <h3>The Percent Error Formula</h3>
+
+  <div class="formula-block">
+    <div class="fb-label">Unsigned Percent Error (Standard — Most Common)</div>
+    <code>% Error = (|Experimental − Theoretical| ÷ |Theoretical|) × 100</code>
+    <p>The absolute value bars | | ensure the result is always positive — you only care about <em>how far off</em> you were, not which direction.</p>
+  </div>
+
+  <div class="formula-block">
+    <div class="fb-label">Signed Percent Error (Directional)</div>
+    <code>% Error = ((Experimental − Theoretical) ÷ |Theoretical|) × 100</code>
+    <p>Positive = your measurement was <strong>higher</strong> than expected (overestimate). Negative = your measurement was <strong>lower</strong> than expected (underestimate).</p>
+  </div>
+
+  <h3>Step-by-Step: How to Calculate Percent Error</h3>
+
+  <ol class="steps">
+    <li><span><strong>Identify both values:</strong> Your experimental (measured) value and the theoretical (accepted/exact) value.</span></li>
+    <li><span><strong>Subtract:</strong> Experimental − Theoretical. Keep the sign if using signed mode; take the absolute value for unsigned.</span></li>
+    <li><span><strong>Divide by the theoretical value:</strong> Result ÷ |Theoretical Value|.</span></li>
+    <li><span><strong>Multiply by 100</strong> to convert to a percentage.</span></li>
+    <li><span><strong>Interpret:</strong> Is your % error within acceptable range for your experiment?</span></li>
+  </ol>
+
+  <div class="example-block">
+    <div class="eb-label">✦ Worked Example — Chemistry Lab (Density of Water)</div>
+    <p><strong>Experimental value:</strong> 0.985 g/mL &nbsp;|&nbsp; <strong>Theoretical value:</strong> 1.000 g/mL</p>
+    <p><strong>Step 1 — Difference:</strong> |0.985 − 1.000| = <strong>0.015</strong></p>
+    <p><strong>Step 2 — Divide:</strong> 0.015 ÷ 1.000 = <strong>0.015</strong></p>
+    <p><strong>Step 3 — Multiply:</strong> 0.015 × 100 = <strong>1.5% error</strong></p>
+    <p><strong>Verdict:</strong> ✅ Excellent — well within the accepted &lt;5% lab threshold.</p>
+  </div>
+
+  <div class="example-block">
+    <div class="eb-label">✦ Worked Example — Physics (Gravitational Acceleration)</div>
+    <p><strong>Experimental value:</strong> 9.4 m/s² &nbsp;|&nbsp; <strong>Theoretical value:</strong> 9.81 m/s²</p>
+    <p><strong>Step 1 — Difference:</strong> |9.4 − 9.81| = <strong>0.41</strong></p>
+    <p><strong>Step 2 — Divide:</strong> 0.41 ÷ 9.81 = <strong>0.0418</strong></p>
+    <p><strong>Step 3 — Multiply:</strong> 0.0418 × 100 = <strong>4.18% error</strong></p>
+    <p><strong>Signed direction:</strong> Experimental &lt; Theoretical → <strong>underestimate</strong> (−4.18% signed)</p>
+  </div>
+
+  <h3>What is a Good Percent Error?</h3>
+
+  <p>The acceptable percent error threshold depends on the context — equipment precision, the nature of the experiment, and the level of education. Here are common benchmarks:</p>
+
+  <div class="tier-grid">
+    <div class="tier-card t-good">
+      <div class="tc-pct">< 5%</div>
+      <div class="tc-label">✅ Excellent / Acceptable</div>
+      <div class="tc-desc">Standard school & university lab threshold. Considered a successful experiment.</div>
+    </div>
+    <div class="tier-card t-ok">
+      <div class="tc-pct">5% – 10%</div>
+      <div class="tc-label">⚠️ Moderate / Borderline</div>
+      <div class="tc-desc">Acceptable in some contexts. Review technique and identify sources of error.</div>
+    </div>
+    <div class="tier-card t-poor">
+      <div class="tc-pct">> 10%</div>
+      <div class="tc-label">❌ High Error</div>
+      <div class="tc-desc">Significant deviation. Re-examine method, equipment calibration, and data collection.</div>
     </div>
   </div>
 
-  <div class="content-article">
-    <h2>What is Percent Error?</h2>
-    <p>Percent error (also written as percentage error or % error) is a measure of how far an experimental or measured value deviates from the accepted theoretical value. It is widely used in chemistry, physics, biology, and engineering to evaluate the accuracy of experimental results.</p>
+  <p>Professional analytical chemistry and industrial quality control labs often require percent errors under <strong>1–2%</strong>. Physics experiments involving fundamental constants may have published acceptable error ranges of <strong>0.1–0.5%</strong>. Always check your instructor's or organisation's specified threshold.</p>
 
-    <h3>The Percent Error Formula</h3>
-    <div class="formula-highlight">% Error = |Experimental Value − Theoretical Value| ÷ |Theoretical Value| × 100%</div>
-    <p>The vertical bars <code>| |</code> denote absolute value — this ensures the result is always positive regardless of whether the experimental value was higher or lower than the theoretical value.</p>
+  <h3>Signed vs Unsigned Percent Error</h3>
 
-    <h3>Worked Example: Density of Water</h3>
-    <ul class="step-list">
-      <li>Theoretical (accepted) density of water at 20°C: <strong>0.998 g/mL</strong></li>
-      <li>Your experimental measurement: <strong>0.975 g/mL</strong></li>
-      <li>Difference: |0.975 − 0.998| = <strong>0.023</strong></li>
-      <li>Divide by theoretical: 0.023 ÷ 0.998 = <strong>0.02304</strong></li>
-      <li>Multiply by 100: <strong>2.31% error</strong></li>
+  <div class="two-col">
+    <div class="mini-card blue-card">
+      <h4>🔵 Unsigned (Absolute) — Standard</h4>
+      <p>Always positive. Tells you <em>how much</em> you were off. Used in most school labs, textbooks, and standard reports. Formula uses |absolute value| of the difference.</p>
+    </div>
+    <div class="mini-card yell-card">
+      <h4>🟡 Signed (Directional)</h4>
+      <p>Can be positive (overestimate) or negative (underestimate). Useful in science research to identify systematic bias — whether your method consistently measures too high or too low.</p>
+    </div>
+  </div>
+
+  <h3>Percent Error vs Percent Difference vs Percent Change</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Formula</th><th>Denominator</th><th>Direction?</th><th>Use When</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Percent Error</td>
+          <td>|Theoretical value|</td>
+          <td>Optional (signed/unsigned)</td>
+          <td>Measured vs known correct value</td>
+        </tr>
+        <tr>
+          <td><a href="/percentage-difference-calculator/">% Difference</a></td>
+          <td>Average of both values</td>
+          <td>No — always positive</td>
+          <td>Two independent equal-standing values</td>
+        </tr>
+        <tr>
+          <td><a href="/percentage-change-calculator/">% Change</a></td>
+          <td>Old (original) value</td>
+          <td>Yes — + increase / − decrease</td>
+          <td>Before-and-after time comparison</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Real-World Percent Error Examples</h3>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Experiment</th><th>Experimental</th><th>Theoretical</th><th>% Error</th><th>Rating</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Density of aluminium</td>
+          <td>2.64 g/cm³</td>
+          <td>2.70 g/cm³</td>
+          <td>2.22%</td>
+          <td><span class="badge-good">Excellent</span></td>
+        </tr>
+        <tr>
+          <td>Boiling point of ethanol</td>
+          <td>76.5°C</td>
+          <td>78.4°C</td>
+          <td>2.42%</td>
+          <td><span class="badge-good">Excellent</span></td>
+        </tr>
+        <tr>
+          <td>Gravitational acceleration</td>
+          <td>9.4 m/s²</td>
+          <td>9.81 m/s²</td>
+          <td>4.18%</td>
+          <td><span class="badge-good">Acceptable</span></td>
+        </tr>
+        <tr>
+          <td>Speed of sound (room temp)</td>
+          <td>360 m/s</td>
+          <td>343 m/s</td>
+          <td>4.96%</td>
+          <td><span class="badge-ok">Borderline</span></td>
+        </tr>
+        <tr>
+          <td>π approximation (22/7)</td>
+          <td>3.1429</td>
+          <td>3.14159</td>
+          <td>0.04%</td>
+          <td><span class="badge-good">Excellent</span></td>
+        </tr>
+        <tr>
+          <td>Molar mass experiment</td>
+          <td>44.5 g/mol</td>
+          <td>44.0 g/mol</td>
+          <td>1.14%</td>
+          <td><span class="badge-good">Excellent</span></td>
+        </tr>
+        <tr>
+          <td>Resistance (Ohm's Law lab)</td>
+          <td>52 Ω</td>
+          <td>47 Ω</td>
+          <td>10.64%</td>
+          <td><span class="badge-poor">High Error</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Sources of Percent Error in Experiments</h3>
+
+  <p>Understanding <em>why</em> your percent error is high is as important as calculating it. Common sources of experimental error include:</p>
+
+  <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;margin:16px 0;">
+    <li style="display:flex;gap:12px;align-items:flex-start;font-size:0.95rem;color:var(--dark);">
+      <span style="min-width:28px;height:28px;background:var(--pink);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:800;flex-shrink:0;">1</span>
+      <span><strong>Instrumental error</strong> — imprecise or uncalibrated equipment (thermometers, balances, rulers).</span>
+    </li>
+    <li style="display:flex;gap:12px;align-items:flex-start;font-size:0.95rem;color:var(--dark);">
+      <span style="min-width:28px;height:28px;background:var(--pink);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:800;flex-shrink:0;">2</span>
+      <span><strong>Human error</strong> — misreading measurements, parallax, or timing errors.</span>
+    </li>
+    <li style="display:flex;gap:12px;align-items:flex-start;font-size:0.95rem;color:var(--dark);">
+      <span style="min-width:28px;height:28px;background:var(--pink);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:800;flex-shrink:0;">3</span>
+      <span><strong>Environmental factors</strong> — temperature, humidity, or air pressure fluctuations during the experiment.</span>
+    </li>
+    <li style="display:flex;gap:12px;align-items:flex-start;font-size:0.95rem;color:var(--dark);">
+      <span style="min-width:28px;height:28px;background:var(--pink);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:800;flex-shrink:0;">4</span>
+      <span><strong>Impure substances</strong> — chemicals with contaminants will deviate from theoretical values.</span>
+    </li>
+    <li style="display:flex;gap:12px;align-items:flex-start;font-size:0.95rem;color:var(--dark);">
+      <span style="min-width:28px;height:28px;background:var(--pink);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:800;flex-shrink:0;">5</span>
+      <span><strong>Systematic bias</strong> — the same directional error repeated across all measurements (consistently over or under).</span>
+    </li>
+  </ul>
+
+  <div class="link-box">
+    <h3>🔗 Related Calculators</h3>
+    <ul>
+      <li>Comparing two equal-standing measurements? Use the <a href="/percentage-difference-calculator/">Percentage Difference Calculator</a></li>
+      <li>Before-and-after comparison? Use the <a href="/percentage-change-calculator/">Percentage Change Calculator</a></li>
+      <li>Value went up? Use the <a href="/percentage-increase-calculator/">Percentage Increase Calculator</a></li>
+      <li>Value went down? Use the <a href="/percentage-decrease-calculator/">Percentage Decrease Calculator</a></li>
+      <li>Shopping discount? Use the <a href="/percent-off-calculator/">Percent Off / Discount Calculator</a></li>
+      <li>Back to the main tool — <a href="/">Percentage Calculator (Home)</a></li>
     </ul>
-
-    <h3>What Is a Good Percent Error?</h3>
-    <div class="table-wrapper">
-      <table class="data-table">
-        <thead><tr><th>Field</th><th>Acceptable % Error</th><th>Notes</th></tr></thead>
-        <tbody>
-          <tr><td>High school chemistry</td><td>≤ 5%</td><td>Standard lab tolerance</td></tr>
-          <tr><td>University chemistry</td><td>≤ 2–3%</td><td>More precise equipment</td></tr>
-          <tr><td>Physics experiments</td><td>≤ 1%</td><td>High precision required</td></tr>
-          <tr><td>Engineering</td><td>≤ 0.1–1%</td><td>Depends on application</td></tr>
-          <tr><td>Biology experiments</td><td>≤ 5–10%</td><td>Biological variability</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3>Percent Error vs Percent Difference</h3>
-    <p><strong>Percent error</strong> uses a known theoretical value as the reference. <strong>Percent difference</strong> compares two experimental values without a known "correct" answer — see our <a href="/percentage-difference-calculator">percentage difference calculator</a>.</p>
-
-    <h3>Significant Figures and Percent Error</h3>
-    <p>In scientific reporting, percent error is typically expressed to the same number of significant figures as your measurements. If your data has 3 sig figs, report your percent error to 3 sig figs as well. Use the "Round to significant figures" checkbox in our calculator above.</p>
-
-    <h3>Sources of Percent Error</h3>
-    <ul style="margin: 0 0 14px 20px; line-height: 2;">
-      <li><strong>Systematic errors:</strong> Consistently off in one direction (e.g., uncalibrated scale)</li>
-      <li><strong>Random errors:</strong> Unpredictable variations in measurement</li>
-      <li><strong>Human error:</strong> Misreading instruments or recording mistakes</li>
-      <li><strong>Environmental factors:</strong> Temperature, pressure, humidity changes</li>
-    </ul>
   </div>
 
-  <div class="faq-section">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <div class="faq-q">What is the percent error formula?</div>
-      <div class="faq-a"><code>% Error = |Experimental − Theoretical| ÷ |Theoretical| × 100%</code></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Can percent error be negative?</div>
-      <div class="faq-a">The standard percent error formula uses absolute values, making the result always positive. Some formulas omit the absolute value to show whether the experimental value was above or below theoretical — check with your teacher or textbook.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">How do I calculate average percent error?</div>
-      <div class="faq-a">Calculate the percent error for each individual measurement, sum them all up, then divide by the total number of measurements. Use the "Average Percent Error" tab above.</div>
-    </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<div class="hr-line"><hr></div>
+<section class="faq-sec" aria-label="FAQ Percent Error">
+  <div class="sec-head">
+    <div class="sec-tag">FAQ</div>
+    <h2>Percent Error — FAQs</h2>
+    <p>Common questions about calculating and interpreting percent error</p>
   </div>
 
-  <div class="related-section">
-    <h3>Related Calculators</h3>
-    <div class="related-links">
-      <a href="/">Percentage Calculator</a>
-      <a href="/percentage-difference-calculator">Percentage Difference</a>
-      <a href="/percentage-change-calculator">Percentage Change</a>
-      <a href="/percentage-formula">Percentage Formulas</a>
-      <a href="/what-percentage-of">What Percentage Of</a>
-    </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What is the percent error formula?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p><strong>% Error = (|Experimental − Theoretical| ÷ |Theoretical|) × 100</strong>. Subtract the theoretical value from the experimental value, take the absolute value, divide by the absolute theoretical value, and multiply by 100. The theoretical value always goes in the denominator — never the experimental one.</p></div>
   </div>
-</main>
 
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What is a good percent error in science?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>In most school and university labs, a percent error <strong>under 5%</strong> is considered acceptable. Professional analytical labs often require under 1–2%. The threshold depends on the experiment, equipment used, and your instructor's requirements. Use the accuracy scale in our calculator above to see where your result lands.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">Can percent error be negative?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Standard (unsigned) percent error is always positive. However, <strong>signed percent error can be negative</strong> — a negative result means your experimental value was lower than the theoretical value (an underestimate). A positive signed error means your measurement was higher (an overestimate). Toggle "Signed" mode in the calculator above to get a directional result.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">Why do you divide by the theoretical value and not the experimental value?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>The theoretical value is the <em>accepted correct reference</em> — the standard you are comparing against. Dividing by it measures the error as a fraction of what the result <em>should have been</em>. Dividing by the experimental value would be meaningless in context, since the experimental value is the one that contains the error.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What is the difference between percent error and percent difference?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Percent error has one value designated as the accepted/correct reference (theoretical) and divides by it. <a href="/percentage-difference-calculator/">Percent difference</a> treats both values as equal, has no reference standard, and divides by their average — making the result symmetric. Use percent error when one value is a known correct standard; use percent difference when both values are independent observations.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">Can percent error be over 100%?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Yes — percent error can exceed 100% if the experimental value is more than double (or nearly zero compared to) the theoretical value. For example: experimental = 25, theoretical = 10 → % error = (|25−10| ÷ 10) × 100 = <strong>150%</strong>. This is mathematically valid, though it indicates a very significant measurement error in practice.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do I reduce percent error in an experiment?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Key strategies: (1) Calibrate all instruments before use. (2) Take multiple readings and average them to reduce random errors. (3) Control environmental variables like temperature and humidity. (4) Use higher-precision equipment where possible. (5) Identify and eliminate sources of systematic bias — if your signed error is consistently negative, your method is systematically underestimating.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What if the theoretical value is zero?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Percent error is mathematically undefined when the theoretical value is zero — because you would be dividing by zero. In such cases, use <strong>absolute error</strong> (simply the difference between the two values) rather than percent error. Our calculator will flag this scenario and display an error message asking for a non-zero theoretical value.</p></div>
+  </div>
+
+</section>
+
+<!-- ========== FOOTER ========== -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-links">
-      <a href="/">Percentage Calculator</a>
-      <a href="/percentage-increase-calculator">Percentage Increase</a>
-      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
-      <a href="/percentage-change-calculator">Percentage Change</a>
-      <a href="/percentage-difference-calculator">Percentage Difference</a>
-      <a href="/percentage-off-calculator">Percentage Off</a>
-      <a href="/percent-error-calculator">Percent Error</a>
-      <a href="/what-percentage-of">What Percentage Of</a>
-      <a href="/percentage-of-number">Percentage of a Number</a>
-      <a href="/money-percentage-calculator">Money Calculator</a>
-      <a href="/discount-calculator">Discount Calculator</a>
-      <a href="/fraction-to-percentage">Fraction to %</a>
-      <a href="/sales-percentage-calculator">Sales Calculator</a>
-      <a href="/percentage-formula">Percentage Formula</a>
-      <a href="/how-to-calculate-percentage">How to Calculate %</a>
-      <a href="/sitemap.xml">Sitemap</a>
+    <div class="footer-grid">
+      <div class="f-brand">
+        <a href="/" class="logo" aria-label="CalcPercentage Home">
+          <div class="logo-icon">%</div>
+          <span class="logo-name"><span style="color:var(--pink)">Calc</span>Percentage</span>
+        </a>
+        <p>Free online percentage calculators for every percentage problem. Fast, accurate, mobile-friendly — no ads blocking your results.</p>
+      </div>
+      <div class="f-col">
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/">Percentage Calculator</a></li>
+          <li><a href="/percentage-increase-calculator/">% Increase Calculator</a></li>
+          <li><a href="/percentage-decrease-calculator/">% Decrease Calculator</a></li>
+          <li><a href="/percentage-change-calculator/">% Change Calculator</a></li>
+          <li><a href="/percentage-difference-calculator/">% Difference Calculator</a></li>
+          <li><a href="/percent-error-calculator/">% Error Calculator</a></li>
+          <li><a href="/percent-off-calculator/">% Off / Discount Calculator</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/what-is-percentage/">What is a Percentage?</a></li>
+          <li><a href="/percentage-formula/">Percentage Formulas</a></li>
+          <li><a href="/how-to-calculate-percentage/">How to Calculate %</a></li>
+          <li><a href="/percentage-increase-calculator/">How to Calculate % Increase</a></li>
+          <li><a href="/percent-error-calculator/">How to Calculate % Error</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>More</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <p>© 2026 CalcPercentage.vercel.app — Free Online Percentage Calculator</p>
+    <div class="footer-bottom">
+      <p>© <span id="yr"></span> CalcPercentage.vercel.app — All rights reserved.</p>
+      <p>Made with ♥ for fast, free percentage calculations.</p>
+    </div>
   </div>
 </footer>
 
+<!-- ========== JAVASCRIPT ========== -->
 <script>
-function fmt(n, d) {
-  if (n === null || isNaN(n) || !isFinite(n)) return null;
-  var dp = d !== undefined ? d : 4;
-  return parseFloat(n.toFixed(dp)).toLocaleString('en-AU', {maximumFractionDigits: dp});
-}
-function sigFig(n, sf) {
-  if (n === 0) return '0';
-  var d = Math.ceil(Math.log10(Math.abs(n)));
-  var p = sf - d;
-  var m = Math.pow(10, p);
-  return (Math.round(n * m) / m).toString();
-}
-function switchTab(group, tab) {
-  document.querySelectorAll('#' + group + '_tab1, #' + group + '_tab2').forEach(el => el.classList.remove('active'));
-  document.getElementById(group + '_' + tab).classList.add('active');
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.getAttribute('onclick').includes(tab));
-  });
-}
-function calcPercentError() {
-  var exp = parseFloat(document.getElementById('pe_exp').value);
-  var theo = parseFloat(document.getElementById('pe_theo').value);
-  var useSigFig = document.getElementById('pe_sigfig').checked;
-  var box = document.getElementById('pe_result');
-  if (isNaN(exp) || isNaN(theo) || theo === 0) { box.classList.remove('show'); return; }
-  var diff = Math.abs(exp - theo);
-  var err = (diff / Math.abs(theo)) * 100;
-  var displayErr = useSigFig ? sigFig(err, 3) : fmt(err);
-  document.getElementById('pe_ans').textContent = 'Percent Error: ' + displayErr + '%';
-  document.getElementById('pe_steps').innerHTML =
-    'Step 1: |Experimental − Theoretical| = |' + exp + ' − ' + theo + '| = ' + diff + '<br>' +
-    'Step 2: Divide by |Theoretical|: ' + diff + ' ÷ ' + Math.abs(theo) + ' = ' + fmt(diff/Math.abs(theo), 6) + '<br>' +
-    'Step 3: Multiply by 100: ' + fmt(diff/Math.abs(theo), 6) + ' × 100 = <strong>' + displayErr + '%</strong>';
-  var q = '';
-  if (err < 1) q = '✅ Excellent accuracy (< 1% error)';
-  else if (err < 5) q = '✅ Good accuracy (< 5% error — acceptable for most labs)';
-  else if (err < 10) q = '⚠️ Moderate accuracy (5–10% error)';
-  else q = '❌ High error (> 10% — review your experimental method)';
-  document.getElementById('pe_quality').textContent = q;
-  box.classList.add('show');
-}
-function calcAvgError() {
-  var lines = document.getElementById('avg_inputs').value.trim().split('\n');
-  var errors = [], details = [];
-  for (var i = 0; i < lines.length; i++) {
-    var parts = lines[i].split(',');
-    if (parts.length >= 2) {
-      var exp = parseFloat(parts[0].trim());
-      var theo = parseFloat(parts[1].trim());
-      if (!isNaN(exp) && !isNaN(theo) && theo !== 0) {
-        var e = Math.abs(exp - theo) / Math.abs(theo) * 100;
-        errors.push(e);
-        details.push('Measurement ' + (i+1) + ': ' + fmt(e) + '%');
-      }
-    }
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  let currentMode = 'unsigned';
+
+  // ---- NAV ----
+  function toggleNav() {
+    const nav = document.getElementById('mobileNav'), btn = document.getElementById('hambBtn');
+    const isOpen = nav.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen);
   }
-  var box = document.getElementById('avg_result');
-  if (errors.length === 0) { box.classList.remove('show'); return; }
-  var avg = errors.reduce((a,b) => a+b, 0) / errors.length;
-  document.getElementById('avg_ans').textContent = 'Average Percent Error: ' + fmt(avg) + '%';
-  document.getElementById('avg_detail').innerHTML = details.join('<br>') + '<br><strong>Sum: ' + fmt(errors.reduce((a,b)=>a+b,0)) + '% ÷ ' + errors.length + ' measurements = ' + fmt(avg) + '%</strong>';
-  box.classList.add('show');
-}
+  document.addEventListener('click', function(e) {
+    const nav = document.getElementById('mobileNav'), btn = document.getElementById('hambBtn');
+    if (!nav.contains(e.target) && !btn.contains(e.target)) {
+      nav.classList.remove('open'); btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // ---- MODE TOGGLE ----
+  function setMode(mode, btn) {
+    currentMode = mode;
+    document.querySelectorAll('.sign-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+    btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+
+    if (mode === 'unsigned') {
+      document.getElementById('formula-display').textContent = '% Error = (|Experimental − Theoretical| ÷ |Theoretical|) × 100';
+      document.getElementById('calc-subtitle-text').textContent = 'Enter your measured (experimental) value and the accepted (theoretical) value. The result is always positive — showing how far off you were.';
+      document.getElementById('pe-res-label').textContent = 'Percent Error (Unsigned)';
+    } else {
+      document.getElementById('formula-display').textContent = '% Error = ((Experimental − Theoretical) ÷ |Theoretical|) × 100';
+      document.getElementById('calc-subtitle-text').textContent = 'Signed mode: a positive result means your measurement was higher than expected (overestimate); negative means lower (underestimate).';
+      document.getElementById('pe-res-label').textContent = 'Percent Error (Signed)';
+    }
+    // Re-calculate if values already filled
+    const exp  = document.getElementById('pe-exp').value;
+    const theo = document.getElementById('pe-theo').value;
+    if (exp !== '' && theo !== '') calcError();
+  }
+
+  // ---- HELPERS ----
+  function fmt(n) {
+    let r = parseFloat(n.toPrecision(8));
+    return parseFloat(r.toFixed(6)).toString().replace(/\.?0+$/, '') || '0';
+  }
+
+  function renderSteps(id, steps) {
+    const ol = document.getElementById(id);
+    if (ol) ol.innerHTML = steps.map(s => `<li>${s}</li>`).join('');
+  }
+
+  function getAccuracyRating(pct) {
+    const abs = Math.abs(pct);
+    if (abs <= 2)  return { label: '⭐ Excellent', cls: 'good',    verdict: '⭐ Excellent accuracy — well within the accepted < 5% lab threshold.' };
+    if (abs <= 5)  return { label: '✅ Acceptable', cls: 'good',   verdict: '✅ Acceptable — meets the standard < 5% school/university lab threshold.' };
+    if (abs <= 10) return { label: '⚠️ Moderate', cls: 'ok',      verdict: '⚠️ Moderate error — review technique and identify sources of measurement error.' };
+    return           { label: '❌ High Error',  cls: 'poor',     verdict: '❌ High error — significantly above 10%. Re-examine method, equipment, and data.' };
+  }
+
+  function updateQualityScale(pct) {
+    const abs = Math.abs(pct);
+    // Map 0–20%+ to 0–100% bar position (cap at 20)
+    const capped = Math.min(abs, 20);
+    const pos = (capped / 20) * 100;
+    document.getElementById('qs-marker').style.left = pos + '%';
+    const rating = getAccuracyRating(abs);
+    document.getElementById('qs-verdict').textContent = rating.verdict;
+    document.getElementById('quality-scale').style.display = 'block';
+  }
+
+  // ---- MAIN CALC ----
+  function calcError() {
+    const exp  = parseFloat(document.getElementById('pe-exp').value);
+    const theo = parseFloat(document.getElementById('pe-theo').value);
+
+    if (isNaN(exp) || isNaN(theo) || theo === 0) {
+      document.getElementById('pe-err').classList.add('show');
+      document.getElementById('pe-res').classList.remove('show');
+      document.getElementById('quality-scale').style.display = 'none';
+      return;
+    }
+
+    document.getElementById('pe-err').classList.remove('show');
+
+    const diff     = exp - theo;
+    const absDiff  = Math.abs(diff);
+    const absTheo  = Math.abs(theo);
+    const unsignedPct = (absDiff / absTheo) * 100;
+    const signedPct   = (diff / absTheo) * 100;
+    const displayPct  = currentMode === 'signed' ? signedPct : unsignedPct;
+
+    const rating = getAccuracyRating(unsignedPct);
+    const direction = diff > 0 ? '▲ Overestimate' : diff < 0 ? '▼ Underestimate' : '= Exact Match';
+
+    // Theme
+    const main = document.getElementById('pe-res-main');
+    main.className = 'res-main ' + rating.cls;
+
+    // Badge (signed only)
+    const badge = document.getElementById('pe-res-badge');
+    if (currentMode === 'signed') {
+      badge.style.display = 'inline-flex';
+      badge.textContent = direction;
+    } else {
+      badge.style.display = 'none';
+    }
+
+    document.getElementById('pe-res').classList.add('show');
+    document.getElementById('pe-res-v').textContent = (currentMode === 'signed' && signedPct > 0 ? '+' : '') + fmt(displayPct) + '%';
+    document.getElementById('pe-res-s').textContent = `Experimental: ${fmt(exp)} | Theoretical: ${fmt(theo)}`;
+    document.getElementById('pe-meta-abs').textContent   = fmt(absDiff);
+    document.getElementById('pe-meta-dir').textContent   = direction;
+    document.getElementById('pe-meta-rating').textContent = rating.label;
+
+    const steps = currentMode === 'unsigned' ? [
+      `Difference = |Experimental − Theoretical| = |${fmt(exp)} − ${fmt(theo)}| = <strong>${fmt(absDiff)}</strong>`,
+      `Divide by |theoretical|: ${fmt(absDiff)} ÷ ${fmt(absTheo)} = <strong>${fmt(absDiff / absTheo)}</strong>`,
+      `Multiply by 100: <strong>${fmt(unsignedPct)}%</strong>`,
+      `Direction: ${direction}`,
+      `Accuracy rating: <strong>${rating.label}</strong>`
+    ] : [
+      `Difference = Experimental − Theoretical = ${fmt(exp)} − ${fmt(theo)} = <strong>${fmt(diff)}</strong>`,
+      `Divide by |theoretical|: ${fmt(diff)} ÷ ${fmt(absTheo)} = <strong>${fmt(diff / absTheo)}</strong>`,
+      `Multiply by 100: <strong>${(signedPct >= 0 ? '+' : '') + fmt(signedPct)}%</strong>`,
+      `Sign interpretation: ${signedPct > 0 ? '▲ Positive = overestimate (experimental > theoretical)' : signedPct < 0 ? '▼ Negative = underestimate (experimental < theoretical)' : '= Exact match'}`,
+      `Accuracy rating: <strong>${rating.label}</strong>`
+    ];
+
+    renderSteps('pe-steps-list', steps);
+    updateQualityScale(unsignedPct);
+  }
+
+  // ---- QUICK EXAMPLES ----
+  function loadExample(exp, theo) {
+    document.getElementById('pe-exp').value  = exp;
+    document.getElementById('pe-theo').value = theo;
+    calcError();
+    document.querySelector('.calc-wrap').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  // ---- ENTER KEY ----
+  document.querySelectorAll('.fg input').forEach(inp => {
+    inp.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') calcError();
+    });
+  });
+
+  // ---- FAQ ----
+  function toggleFaq(item) {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
 </script>
 </body>
 </html>
