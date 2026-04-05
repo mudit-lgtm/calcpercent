@@ -1,3 +1,54 @@
+# ================================
+# robots.txt — calcpercentage.vercel.app
+# Last updated: 2026-04-06
+# ================================
+
+# Allow all well-behaved crawlers
 User-agent: *
 Allow: /
+
+# Block access to any internal/build paths (Vercel internals)
+Disallow: /_next/
+Disallow: /api/
+Disallow: /.vercel/
+
+# No need to crawl these non-content assets
+Disallow: /static/chunks/
+Disallow: /static/css/
+Disallow: /static/js/
+Disallow: /static/media/
+
+# ── Sitemap location ──
 Sitemap: https://calcpercentage.vercel.app/sitemap.xml
+
+# ── Specific crawler rules ──
+
+# Google — full access
+User-agent: Googlebot
+Allow: /
+
+# Bing — full access
+User-agent: Bingbot
+Allow: /
+
+# Block AI training scrapers that don't respect content
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
