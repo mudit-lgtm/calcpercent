@@ -3,182 +3,781 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Percentage Difference Calculator — Find % Difference Between Two Numbers</title>
-  <meta name="description" content="Calculate the percentage difference between two numbers. Free online tool using the correct percentage difference formula — not change, but symmetric difference.">
-  <meta name="keywords" content="percentage difference calculator, percentage difference, percent difference calculator, percentage difference between two numbers, percentage difference formula">
-  <link rel="canonical" href="https://calcpercentage.vercel.app/percentage-difference-calculator">
-  <meta property="og:title" content="Percentage Difference Calculator — Find % Difference Between Two Numbers">
-  <meta property="og:description" content="Calculate the percentage difference between two numbers using the correct symmetric formula.">
-  <meta property="og:url" content="https://calcpercentage.vercel.app/percentage-difference-calculator">
+  <title>Percentage Difference Calculator — Calculate % Difference Between Two Values</title>
+  <meta name="description" content="Free percentage difference calculator. Find the percentage difference between two numbers symmetrically. Includes formula, step-by-step working, examples and comparison with % change.">
+  <meta name="keywords" content="percentage difference calculator, calculate percentage difference, percent difference calculator, percentage difference formula, difference between two numbers percentage, percentage difference between two values">
+  <link rel="canonical" href="https://calcpercentage.vercel.app/percentage-difference-calculator/">
+
+  <meta property="og:title" content="Percentage Difference Calculator — Calculate % Difference Between Two Values">
+  <meta property="og:description" content="Find the percentage difference between two numbers. Free tool with formula, step-by-step working & clear explanation of how % difference differs from % change.">
+  <meta property="og:url" content="https://calcpercentage.vercel.app/percentage-difference-calculator/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CalcPercentage">
+
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Percentage Difference Calculator">
-  <meta name="twitter:description" content="Calculate percentage difference between two numbers using the symmetric formula.">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="CalcPercentage">
-  <link rel="stylesheet" href="/css/style.css">
+  <meta name="twitter:title" content="Percentage Difference Calculator — Calculate % Difference Between Two Values">
+  <meta name="twitter:description" content="Free percentage difference calculator with formula and step-by-step working. Understand % difference vs % change.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23DA2576'/%3E%3Ctext x='12' y='78' font-size='72' font-family='Arial,sans-serif' font-weight='900' fill='white'%3E%25%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23DA2576'/%3E%3Ctext x='12' y='78' font-size='72' font-family='Arial,sans-serif' font-weight='900' fill='white'%3E%25%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <script type="application/ld+json">
-  [
-    { "@context": "https://schema.org", "@type": "WebApplication", "name": "Percentage Difference Calculator", "url": "https://calcpercentage.vercel.app/percentage-difference-calculator", "description": "Calculate the percentage difference between two values using the symmetric percentage difference formula.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "All", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
-    { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
-      { "@type": "Question", "name": "What is percentage difference?", "acceptedAnswer": { "@type": "Answer", "text": "Percentage difference measures the difference between two values relative to their average. Formula: |V1 - V2| / ((V1 + V2)/2) × 100. It is symmetric — unlike percentage change, order does not matter." } },
-      { "@type": "Question", "name": "What is the difference between percentage change and percentage difference?", "acceptedAnswer": { "@type": "Answer", "text": "Percentage change compares a new value to an old value and has direction. Percentage difference compares two values without implying direction, using their average as the reference." } }
-    ]},
-    { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
-      { "@type": "ListItem", "position": 2, "name": "Percentage Difference Calculator", "item": "https://calcpercentage.vercel.app/percentage-difference-calculator" }
-    ]}
-  ]
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://calcpercentage.vercel.app/#website",
+        "url": "https://calcpercentage.vercel.app/",
+        "name": "CalcPercentage",
+        "publisher": { "@type": "Organization", "name": "CalcPercentage", "logo": { "@type": "ImageObject", "url": "https://calcpercentage.vercel.app/logo.svg" } }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://calcpercentage.vercel.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Percentage Difference Calculator", "item": "https://calcpercentage.vercel.app/percentage-difference-calculator/" }
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://calcpercentage.vercel.app/percentage-difference-calculator/#app",
+        "name": "Percentage Difference Calculator",
+        "url": "https://calcpercentage.vercel.app/percentage-difference-calculator/",
+        "description": "Calculate the percentage difference between two numbers symmetrically using the average as the reference. Shows full step-by-step working.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": ["Percentage Difference Calculation", "Symmetric Comparison", "Step-by-Step Working", "Comparison With % Change"]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the percentage difference formula?",
+            "acceptedAnswer": { "@type": "Answer", "text": "% Difference = (|Value1 − Value2| ÷ ((Value1 + Value2) ÷ 2)) × 100. This uses the average of both values as the reference point, making the result the same regardless of which value is listed first." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you calculate percentage difference between two numbers?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Step 1: Find the absolute difference: |V1 − V2|. Step 2: Find the average: (V1 + V2) ÷ 2. Step 3: Divide the difference by the average and multiply by 100. Example: 40 and 60 → |60−40| = 20, average = 50, % difference = (20÷50)×100 = 40%." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the difference between percentage difference and percentage change?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Percentage change requires a defined 'before' (old) and 'after' (new) value — it is directional and divides by the original. Percentage difference treats both values symmetrically with no reference point, dividing by their average. Swap the two values and the % difference stays the same; swap them in % change and the result changes." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is percentage difference always positive?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes — percentage difference is always a positive number because it uses the absolute (non-negative) difference in its formula. It has no directionality (increase or decrease); it simply measures how far apart two values are as a percentage of their average." }
+          },
+          {
+            "@type": "Question",
+            "name": "When should I use percentage difference instead of percentage change?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Use percentage difference when comparing two values that have no clear 'before' or 'after' relationship — for example, comparing two suppliers' prices, two lab measurements, or two products' dimensions. Use percentage change when one value clearly came before the other in time or sequence." }
+          }
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to Calculate Percentage Difference",
+        "description": "Step-by-step guide to calculating the percentage difference between two values",
+        "totalTime": "PT1M",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Find the Absolute Difference", "text": "Calculate |Value1 − Value2| — the absolute (always positive) difference between the two values." },
+          { "@type": "HowToStep", "position": 2, "name": "Find the Average", "text": "Calculate the average of both values: (Value1 + Value2) ÷ 2." },
+          { "@type": "HowToStep", "position": 3, "name": "Divide and Multiply", "text": "Divide the absolute difference by the average, then multiply by 100." }
+        ]
+      }
+    ]
+  }
   </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink: #DA2576;
+      --pink-dark: #b81e62;
+      --pink-light: #fce7f3;
+      --pink-xlight: #fff0f7;
+      --black: #0d0d0d;
+      --near-black: #111827;
+      --dark: #1f2937;
+      --mid: #4b5563;
+      --gray: #6b7280;
+      --light-gray: #f3f4f6;
+      --border: #e5e7eb;
+      --white: #ffffff;
+      --shadow: 0 4px 24px rgba(218,37,118,0.10);
+      --shadow-lg: 0 12px 40px rgba(218,37,118,0.15);
+      --radius: 14px;
+      --radius-lg: 20px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); color: var(--near-black); background: var(--white); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    a { color: var(--pink); }
+    a:hover { color: var(--pink-dark); }
+
+    /* HEADER */
+    header { background: var(--white); border-bottom: 1.5px solid var(--border); position: sticky; top: 0; z-index: 999; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
+    .header-wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 38px; height: 38px; background: var(--pink); border-radius: 10px; color: white; font-size: 1.15rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .logo-name { font-size: 1.15rem; font-weight: 800; color: var(--black); letter-spacing: -0.4px; }
+    .logo-name span { color: var(--pink); }
+    .main-nav { display: flex; align-items: center; gap: 2px; }
+    .main-nav a { text-decoration: none; color: var(--dark); font-size: 0.83rem; font-weight: 600; padding: 7px 11px; border-radius: 8px; transition: background 0.18s, color 0.18s; white-space: nowrap; }
+    .main-nav a:hover, .main-nav a.active { background: var(--pink-light); color: var(--pink); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; border-radius: 8px; flex-shrink: 0; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    .mobile-nav { display: none; flex-direction: column; background: var(--white); border-top: 1px solid var(--border); padding: 8px 20px 16px; gap: 2px; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { display: block; padding: 11px 12px; text-decoration: none; color: var(--dark); font-size: 0.9rem; font-weight: 600; border-radius: 8px; transition: background 0.15s; }
+    .mobile-nav a:hover, .mobile-nav a.active { background: var(--pink-xlight); color: var(--pink); }
+
+    /* BREADCRUMB */
+    .breadcrumb-bar { max-width: 1200px; margin: 0 auto; padding: 14px 20px 0; }
+    .breadcrumb { display: flex; align-items: center; gap: 6px; list-style: none; flex-wrap: wrap; }
+    .breadcrumb li { display: flex; align-items: center; gap: 6px; }
+    .breadcrumb li + li::before { content: '/'; color: var(--gray); font-size: 0.78rem; }
+    .breadcrumb a { font-size: 0.78rem; color: var(--gray); text-decoration: none; font-weight: 500; }
+    .breadcrumb a:hover { color: var(--pink); }
+    .breadcrumb span { font-size: 0.78rem; color: var(--near-black); font-weight: 600; }
+
+    /* HERO */
+    .hero { background: linear-gradient(160deg, #fff 0%, var(--pink-xlight) 55%, #fff 100%); padding: 52px 20px 40px; text-align: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--pink-light); color: var(--pink); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 5px 14px; border-radius: 100px; margin-bottom: 18px; }
+    .hero h1 { font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 900; color: var(--black); line-height: 1.12; letter-spacing: -1.5px; max-width: 740px; margin: 0 auto 16px; }
+    .hero h1 em { font-style: normal; color: var(--pink); }
+    .hero-sub { font-size: 1.02rem; color: var(--gray); max-width: 560px; margin: 0 auto; line-height: 1.65; }
+
+    /* CALCULATOR */
+    .calc-wrap { max-width: 760px; margin: 0 auto; padding: 36px 20px 16px; }
+    .calc-card { background: var(--white); border: 2px solid var(--border); border-radius: var(--radius-lg); padding: 36px 32px 30px; box-shadow: var(--shadow); transition: box-shadow 0.2s; }
+    .calc-card:hover { box-shadow: var(--shadow-lg); }
+
+    .calc-head { margin-bottom: 6px; }
+    .calc-head h2 { font-size: 1.05rem; font-weight: 800; color: var(--black); }
+    .calc-subtitle { font-size: 0.85rem; color: var(--gray); margin-bottom: 22px; line-height: 1.55; }
+
+    .formula-strip { background: var(--light-gray); border-left: 4px solid var(--pink); border-radius: 0 8px 8px 0; padding: 10px 16px; font-size: 0.84rem; color: var(--mid); font-family: 'Courier New', monospace; font-weight: 600; margin-bottom: 24px; }
+    .input-group { display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; gap: 12px; margin-bottom: 16px; }
+    .vs-sep { font-size: 1rem; font-weight: 800; color: var(--gray); padding-bottom: 14px; text-align: center; }
+    .fg { display: flex; flex-direction: column; gap: 6px; }
+    .fg label { font-size: 0.75rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; }
+    .fg input { padding: 14px 16px; border: 2px solid var(--border); border-radius: var(--radius); font-size: 1rem; font-family: var(--font); color: var(--black); background: var(--white); width: 100%; transition: border-color 0.18s, box-shadow 0.18s; -webkit-appearance: none; }
+    .fg input::placeholder { color: #d1d5db; }
+    .fg input:focus { outline: none; border-color: var(--pink); box-shadow: 0 0 0 4px rgba(218,37,118,0.09); }
+
+    .calc-btn { width: 100%; padding: 16px; background: var(--pink); color: white; border: none; border-radius: var(--radius); font-size: 1.02rem; font-weight: 800; font-family: var(--font); cursor: pointer; letter-spacing: 0.3px; transition: background 0.18s, transform 0.1s, box-shadow 0.18s; margin-top: 4px; }
+    .calc-btn:hover { background: var(--pink-dark); box-shadow: 0 6px 20px rgba(218,37,118,0.28); }
+    .calc-btn:active { transform: scale(0.99); }
+
+    /* Results: 2-part layout */
+    .result-box { display: none; margin-top: 22px; border-radius: var(--radius); overflow: hidden; animation: fadeIn 0.28s ease; }
+    .result-box.show { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+    .res-main { background: linear-gradient(135deg, var(--pink) 0%, var(--pink-dark) 100%); padding: 24px 22px; text-align: center; }
+    .res-label { font-size: 0.73rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: rgba(255,255,255,0.75); margin-bottom: 6px; }
+    .res-value { font-size: 2.8rem; font-weight: 900; color: white; letter-spacing: -2px; line-height: 1; }
+    .res-sub { font-size: 0.83rem; color: rgba(255,255,255,0.72); margin-top: 8px; }
+
+    .res-meta { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--border); border: 2px solid var(--border); border-top: none; }
+    .res-meta-item { background: var(--light-gray); padding: 12px 14px; text-align: center; }
+    .res-meta-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray); margin-bottom: 4px; }
+    .res-meta-val { font-size: 0.95rem; font-weight: 800; color: var(--black); }
+
+    .res-steps { background: var(--light-gray); padding: 18px 22px; border: 2px solid var(--border); border-top: none; border-radius: 0 0 var(--radius) var(--radius); }
+    .res-steps-title { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 10px; }
+    .res-steps ol { list-style: none; display: flex; flex-direction: column; gap: 7px; counter-reset: step; padding: 0; }
+    .res-steps ol li { counter-increment: step; display: flex; gap: 10px; font-size: 0.85rem; color: var(--dark); line-height: 1.55; }
+    .res-steps ol li::before { content: counter(step); min-width: 22px; height: 22px; background: var(--pink); color: white; border-radius: 50%; font-size: 0.72rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+
+    .err-msg { display: none; margin-top: 14px; padding: 11px 14px; background: #fef2f2; border: 1.5px solid #fecaca; border-radius: 10px; color: #dc2626; font-size: 0.84rem; font-weight: 500; }
+    .err-msg.show { display: block; }
+
+    /* EXAMPLES */
+    .examples-sec { max-width: 760px; margin: 0 auto; padding: 8px 20px 0; }
+    .examples-title { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--gray); margin-bottom: 10px; }
+    .examples-grid { display: flex; gap: 8px; flex-wrap: wrap; }
+    .ex-chip { padding: 7px 14px; background: var(--white); border: 1.5px solid var(--border); border-radius: 100px; font-size: 0.8rem; font-weight: 600; color: var(--dark); cursor: pointer; transition: all 0.18s; }
+    .ex-chip:hover { border-color: var(--pink); color: var(--pink); background: var(--pink-xlight); }
+
+    /* CONTENT */
+    .content-wrap { max-width: 880px; margin: 0 auto; padding: 56px 20px 16px; }
+    .content-wrap h2 { font-size: clamp(1.3rem, 3vw, 1.85rem); font-weight: 900; color: var(--black); letter-spacing: -0.6px; margin-bottom: 16px; }
+    .content-wrap h3 { font-size: 1.08rem; font-weight: 800; color: var(--black); margin: 32px 0 12px; }
+    .content-wrap p { color: var(--dark); line-height: 1.78; margin-bottom: 16px; font-size: 0.97rem; }
+    .content-wrap a { color: var(--pink); text-decoration: none; font-weight: 600; }
+    .content-wrap a:hover { text-decoration: underline; }
+
+    .formula-block { background: var(--light-gray); border: 2px solid var(--border); border-radius: var(--radius); padding: 18px 22px; margin: 20px 0; }
+    .formula-block .fb-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 6px; }
+    .formula-block code { font-size: 1rem; color: var(--black); font-family: 'Courier New', monospace; font-weight: 700; }
+
+    .example-block { background: var(--pink-xlight); border: 2px solid var(--pink-light); border-radius: var(--radius); padding: 22px 24px; margin: 20px 0; }
+    .example-block .eb-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; color: var(--pink); margin-bottom: 12px; }
+    .example-block p { margin-bottom: 8px; font-size: 0.92rem; }
+    .example-block p:last-child { margin-bottom: 0; }
+
+    .steps { counter-reset: step; list-style: none; display: flex; flex-direction: column; gap: 12px; margin: 16px 0; }
+    .steps li { display: flex; gap: 14px; align-items: flex-start; counter-increment: step; }
+    .steps li::before { content: counter(step); min-width: 28px; height: 28px; background: var(--pink); color: white; border-radius: 50%; font-size: 0.8rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .steps li span { color: var(--dark); font-size: 0.95rem; line-height: 1.65; }
+
+    /* Comparison table */
+    .table-wrap { overflow-x: auto; margin: 20px 0; border-radius: var(--radius); border: 2px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    thead tr { background: var(--black); color: white; }
+    thead th { padding: 13px 16px; text-align: left; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; }
+    tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: var(--pink-xlight); }
+    tbody td { padding: 13px 16px; color: var(--dark); line-height: 1.5; vertical-align: top; }
+    tbody td:first-child { font-weight: 700; color: var(--black); }
+    .tick { color: #059669; font-weight: 800; }
+    .cross { color: var(--pink); font-weight: 800; }
+
+    .highlight-box { background: var(--light-gray); border: 2px solid var(--border); border-radius: var(--radius); padding: 22px 24px; margin: 24px 0; }
+    .highlight-box h4 { font-size: 0.88rem; font-weight: 800; color: var(--black); margin-bottom: 12px; }
+    .highlight-box .hb-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .hb-item { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+    .hb-item .hb-label { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.6px; color: var(--gray); margin-bottom: 4px; }
+    .hb-item .hb-val { font-size: 1.1rem; font-weight: 900; color: var(--pink); }
+    .hb-item .hb-sub { font-size: 0.78rem; color: var(--gray); margin-top: 2px; }
+
+    .link-box { background: var(--black); border-radius: var(--radius); padding: 24px 26px; margin: 28px 0; color: white; }
+    .link-box h3 { color: var(--pink); margin-top: 0; margin-bottom: 14px; font-size: 0.97rem; }
+    .link-box ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .link-box ul li { font-size: 0.87rem; color: rgba(255,255,255,0.78); padding-left: 20px; position: relative; }
+    .link-box ul li::before { content: '→'; position: absolute; left: 0; color: var(--pink); font-weight: 700; }
+    .link-box ul li a { color: var(--pink); text-decoration: none; font-weight: 700; }
+    .link-box ul li a:hover { text-decoration: underline; }
+
+    /* FAQ */
+    .faq-sec { max-width: 880px; margin: 0 auto; padding: 0 20px 64px; }
+    .sec-head { text-align: center; margin-bottom: 32px; }
+    .sec-tag { display: inline-block; background: var(--pink-light); color: var(--pink); font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; padding: 4px 12px; border-radius: 100px; margin-bottom: 12px; }
+    .sec-head h2 { font-size: clamp(1.35rem, 3vw, 2rem); font-weight: 900; color: var(--black); letter-spacing: -0.6px; margin-bottom: 6px; }
+    .sec-head p { font-size: 0.96rem; color: var(--gray); }
+    .faq-item { border: 2px solid var(--border); border-radius: var(--radius); margin-bottom: 10px; overflow: hidden; transition: border-color 0.2s; }
+    .faq-item.open { border-color: var(--pink); }
+    .faq-q { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 17px 20px; cursor: pointer; font-weight: 700; font-size: 0.93rem; color: var(--black); user-select: none; transition: background 0.15s; }
+    .faq-q:hover { background: var(--light-gray); }
+    .faq-ico { width: 26px; height: 26px; background: var(--pink-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--pink); font-size: 1.2rem; font-weight: 700; flex-shrink: 0; transition: transform 0.25s; }
+    .faq-item.open .faq-ico { transform: rotate(45deg); background: var(--pink); color: white; }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.32s ease, padding 0.32s; padding: 0 20px; }
+    .faq-item.open .faq-a { max-height: 400px; padding: 0 20px 18px; }
+    .faq-a p { color: var(--dark); font-size: 0.89rem; line-height: 1.72; }
+    .faq-a a { color: var(--pink); font-weight: 600; }
+
+    /* FOOTER */
+    footer { background: var(--black); color: white; padding: 60px 20px 36px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .f-brand .logo { margin-bottom: 14px; }
+    .f-brand .logo .logo-name { color: white; }
+    .f-brand p { font-size: 0.84rem; color: rgba(255,255,255,0.55); line-height: 1.7; max-width: 260px; }
+    .f-col h4 { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.2px; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+    .f-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .f-col ul li a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.85rem; transition: color 0.18s; }
+    .f-col ul li a:hover { color: var(--pink); }
+    .footer-bottom { padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+    .footer-bottom a { color: var(--pink); text-decoration: none; }
+    .hr-line { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .hr-line hr { border: none; border-top: 1px solid var(--border); }
+
+    @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+    @media (max-width: 768px) {
+      .main-nav { display: none; }
+      .hamburger { display: flex; }
+      .hero { padding: 40px 20px 28px; }
+      .calc-card { padding: 24px 18px 20px; }
+      .input-group { grid-template-columns: 1fr; gap: 12px; }
+      .vs-sep { padding-bottom: 0; text-align: left; }
+      .res-meta { grid-template-columns: 1fr; }
+      .hb-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } .res-value { font-size: 2.2rem; } }
+  </style>
 </head>
 <body>
+
+<!-- HEADER -->
 <header>
-  <nav>
-    <a href="/" class="logo">Calc<span>Percentage</span></a>
-    <button class="mobile-menu-btn" onclick="document.querySelector('nav ul').classList.toggle('open')">☰ Menu</button>
-    <ul>
-      <li><a href="/percentage-increase-calculator">% Increase</a></li>
-      <li><a href="/percentage-decrease-calculator">% Decrease</a></li>
-      <li><a href="/percentage-change-calculator">% Change</a></li>
-      <li><a href="/percentage-off-calculator">% Off</a></li>
-      <li><a href="/percent-error-calculator">% Error</a></li>
-      <li><a href="/discount-calculator">Discount</a></li>
-      <li><a href="/fraction-to-percentage">Fraction→%</a></li>
-    </ul>
+  <div class="header-wrap">
+    <a href="/" class="logo" aria-label="CalcPercentage — Home">
+      <div class="logo-icon">%</div>
+      <span class="logo-name"><span>Calc</span>Percentage</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <a href="/percentage-increase-calculator/">% Increase</a>
+      <a href="/percentage-decrease-calculator/">% Decrease</a>
+      <a href="/percentage-change-calculator/">% Change</a>
+      <a href="/percentage-difference-calculator/" class="active" aria-current="page">% Difference</a>
+      <a href="/percent-error-calculator/">% Error</a>
+      <a href="/percent-off-calculator/">% Off</a>
+    </nav>
+    <button class="hamburger" id="hambBtn" aria-label="Open menu" aria-expanded="false" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="/">🏠 Percentage Calculator (Home)</a>
+    <a href="/percentage-increase-calculator/">📈 Percentage Increase Calculator</a>
+    <a href="/percentage-decrease-calculator/">📉 Percentage Decrease Calculator</a>
+    <a href="/percentage-change-calculator/">🔄 Percentage Change Calculator</a>
+    <a href="/percentage-difference-calculator/" class="active">↔️ Percentage Difference Calculator</a>
+    <a href="/percent-error-calculator/">🔬 Percent Error Calculator</a>
+    <a href="/percent-off-calculator/">🏷️ Percent Off / Discount Calculator</a>
+    <a href="/what-is-percentage/">📖 What is a Percentage?</a>
+    <a href="/percentage-formula/">📐 Percentage Formulas</a>
   </nav>
 </header>
 
-<main>
-  <nav class="breadcrumb">
-    <a href="/">Home</a><span class="sep"> › </span><span>Percentage Difference Calculator</span>
-  </nav>
+<!-- BREADCRUMB -->
+<div class="breadcrumb-bar">
+  <ol class="breadcrumb" aria-label="Breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><span>Percentage Difference Calculator</span></li>
+  </ol>
+</div>
 
-  <div class="page-hero">
-    <h1>Percentage Difference Calculator</h1>
-    <p>Find the percentage difference between two numbers using the symmetric formula — order doesn't matter.</p>
-  </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">↔️ Free Online Calculator</div>
+  <h1>Percentage Difference     <br><em>Calculator</em></h1>
+  <p class="hero-sub">Find the percentage difference between any two numbers symmetrically. No "before" or "after" — just enter both values and get the result with full step-by-step working.</p>
+</section>
 
+<!-- CALCULATOR -->
+<section class="calc-wrap" aria-label="Percentage difference calculator">
   <div class="calc-card">
-    <h2><span class="icon">↔</span> Percentage Difference</h2>
-    <div class="formula-box"><strong>% Difference = |V1 − V2| ÷ ((V1 + V2) ÷ 2) × 100</strong></div>
-    <div class="form-row">
-      <div class="form-group">
-        <label for="pd_v1">Value 1</label>
-        <input type="number" id="pd_v1" placeholder="e.g. 40" step="any" oninput="calcDiff()">
+
+    <p class="calc-subtitle">Enter any two values — order doesn't matter. The percentage difference result is always the same regardless of which value is entered first.</p>
+    <div class="formula-strip">% Difference = (|V1 − V2| ÷ ((V1 + V2) ÷ 2)) × 100</div>
+
+    <div class="input-group">
+      <div class="fg">
+        <label for="pd-v1">Value 1</label>
+        <input type="number" id="pd-v1" placeholder="e.g. 40" step="any" inputmode="decimal">
       </div>
-      <div class="form-group">
-        <label for="pd_v2">Value 2</label>
-        <input type="number" id="pd_v2" placeholder="e.g. 60" step="any" oninput="calcDiff()">
+      <div class="vs-sep">↔</div>
+      <div class="fg">
+        <label for="pd-v2">Value 2</label>
+        <input type="number" id="pd-v2" placeholder="e.g. 60" step="any" inputmode="decimal">
       </div>
     </div>
-    <div id="pd_result" class="result-box neutral">
-      <div class="result-main blue" id="pd_ans"></div>
-      <div class="result-label" id="pd_detail"></div>
-      <div class="result-formula" id="pd_formula"></div>
+
+    <button class="calc-btn" onclick="calcDiff()">Calculate % Difference →</button>
+    <div class="err-msg" id="pd-err">⚠ Please enter valid numbers in both fields. Both values cannot be zero simultaneously.</div>
+
+    <div class="result-box" id="pd-res">
+      <div class="res-main">
+        <div class="res-label">Percentage Difference</div>
+        <div class="res-value" id="pd-res-v">—</div>
+        <div class="res-sub" id="pd-res-s"></div>
+      </div>
+
+      <div class="res-meta">
+        <div class="res-meta-item">
+          <div class="res-meta-label">Absolute Difference</div>
+          <div class="res-meta-val" id="pd-meta-diff">—</div>
+        </div>
+        <div class="res-meta-item">
+          <div class="res-meta-label">Average (Midpoint)</div>
+          <div class="res-meta-val" id="pd-meta-avg">—</div>
+        </div>
+        <div class="res-meta-item">
+          <div class="res-meta-label">Ratio (V1 : V2)</div>
+          <div class="res-meta-val" id="pd-meta-ratio">—</div>
+        </div>
+      </div>
+
+      <div class="res-steps">
+        <div class="res-steps-title">📐 Step-by-Step Working</div>
+        <ol id="pd-steps-list"></ol>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Quick Examples -->
+<div class="examples-sec">
+  <div class="examples-title">⚡ Quick Examples — Click to Try</div>
+  <div class="examples-grid">
+    <button class="ex-chip" onclick="loadExample(40, 60)">40 ↔ 60</button>
+    <button class="ex-chip" onclick="loadExample(100, 150)">$100 ↔ $150</button>
+    <button class="ex-chip" onclick="loadExample(80, 120)">$80 ↔ $120</button>
+    <button class="ex-chip" onclick="loadExample(25, 75)">25 ↔ 75</button>
+    <button class="ex-chip" onclick="loadExample(1200, 1600)">1200 ↔ 1600</button>
+    <button class="ex-chip" onclick="loadExample(9, 16)">9 ↔ 16</button>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="hr-line" style="margin-top:40px;"><hr></div>
+<section class="content-wrap">
+
+  <h2>How to Calculate Percentage Difference</h2>
+
+  <p><strong>Percentage difference</strong> measures how far apart two values are relative to their average — with no implied direction, no "before" or "after," and no reference point. It is the correct tool whenever you are comparing two independent, equal-standing measurements: two product prices, two competing lab readings, two branches' sales figures, or any two values where neither is the "original." The result is always a positive number.</p>
+
+  <p>This is what makes it fundamentally different from <a href="/percentage-change-calculator/">percentage change</a> — which requires knowing which value came first in time and always has a direction (increase or decrease). Percentage difference is symmetric: swap Value 1 and Value 2, and the answer stays exactly the same.</p>
+
+  <h3>The Percentage Difference Formula</h3>
+
+  <div class="formula-block">
+    <div class="fb-label">Percentage Difference Formula</div>
+    <code>% Difference = (|V1 − V2| ÷ ((V1 + V2) ÷ 2)) × 100</code>
+  </div>
+
+  <p>Breaking the formula down: the numerator is the <strong>absolute difference</strong> between the two values (always positive). The denominator is their <strong>average</strong> (also called the midpoint). Dividing by the average — rather than by one of the values — is what makes the result symmetric and direction-neutral.</p>
+
+  <div class="example-block">
+    <div class="eb-label">✦ Proof of Symmetry</div>
+    <p><strong>V1 = 40, V2 = 60:</strong> |40−60| = 20, Average = 50, % Diff = (20÷50)×100 = <strong>40%</strong></p>
+    <p><strong>Swapped — V1 = 60, V2 = 40:</strong> |60−40| = 20, Average = 50, % Diff = (20÷50)×100 = <strong>40% ✓ Same answer</strong></p>
+    <p>Compare this to % change: 40→60 = +50%, but 60→40 = −33.3%. Very different — because % change uses the first value as the reference, not the average.</p>
+  </div>
+
+  <h3>Step-by-Step: How to Calculate Percentage Difference</h3>
+
+  <ol class="steps">
+    <li><span><strong>Find the absolute difference:</strong> Subtract the smaller value from the larger (or use |V1 − V2| if unsure).</span></li>
+    <li><span><strong>Find the average:</strong> Add both values and divide by 2: (V1 + V2) ÷ 2.</span></li>
+    <li><span><strong>Divide:</strong> Absolute Difference ÷ Average.</span></li>
+    <li><span><strong>Multiply by 100</strong> to get the percentage difference.</span></li>
+  </ol>
+
+  <div class="example-block">
+    <div class="eb-label">✦ Worked Example — Comparing Two Supplier Prices</div>
+    <p><strong>Supplier A:</strong> $480 per unit &nbsp;|&nbsp; <strong>Supplier B:</strong> $600 per unit</p>
+    <p><strong>Step 1 — Difference:</strong> |$600 − $480| = <strong>$120</strong></p>
+    <p><strong>Step 2 — Average:</strong> ($480 + $600) ÷ 2 = <strong>$540</strong></p>
+    <p><strong>Step 3 — Divide:</strong> $120 ÷ $540 = <strong>0.2222…</strong></p>
+    <p><strong>Step 4 — Multiply:</strong> 0.2222 × 100 = <strong>22.22% difference</strong></p>
+  </div>
+
+  <div class="example-block">
+    <div class="eb-label">✦ Worked Example — Two Lab Measurements</div>
+    <p><strong>Reading A:</strong> 9.4 g &nbsp;|&nbsp; <strong>Reading B:</strong> 10.6 g</p>
+    <p><strong>Difference:</strong> |10.6 − 9.4| = 1.2 &nbsp;|&nbsp; <strong>Average:</strong> (9.4+10.6)÷2 = 10</p>
+    <p><strong>% Difference:</strong> (1.2 ÷ 10) × 100 = <strong>12%</strong></p>
+  </div>
+
+  <h3>Percentage Difference vs Percentage Change — Full Comparison</h3>
+
+  <p>This is the most searched distinction about percentage difference. Here is a clear side-by-side breakdown:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Feature</th><th>% Difference</th><th>% Change</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reference base</td>
+          <td>Average of both values</td>
+          <td>The original (old) value</td>
+        </tr>
+        <tr>
+          <td>Direction</td>
+          <td><span class="cross">✗ No direction — always positive</span></td>
+          <td><span class="tick">✓ Positive = increase, negative = decrease</span></td>
+        </tr>
+        <tr>
+          <td>Symmetric?</td>
+          <td><span class="tick">✓ Swap values — same result</span></td>
+          <td><span class="cross">✗ Swap values — different result</span></td>
+        </tr>
+        <tr>
+          <td>Needs a "before/after"?</td>
+          <td><span class="cross">✗ No — both values are equal standing</span></td>
+          <td><span class="tick">✓ Yes — needs old and new value</span></td>
+        </tr>
+        <tr>
+          <td>Best used for</td>
+          <td>Comparing two independent values (prices, measurements)</td>
+          <td>Before-and-after scenarios (revenue, weight, scores)</td>
+        </tr>
+        <tr>
+          <td>Example (40 vs 60)</td>
+          <td><strong>40%</strong> difference</td>
+          <td>+50% (40→60) or −33.3% (60→40)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Percentage Difference vs Percent Error</h3>
+
+  <p>Both percentage difference and <a href="/percent-error-calculator/">percent error</a> use an absolute difference in the numerator. The key distinction is in the denominator: percentage difference uses the <em>average</em> of both values, while percent error divides by the <em>exact/theoretical value</em>. Use percent error when one value is a known standard (theoretical or accepted value) and the other is your measurement. Use percentage difference when both values are independent observations with no established "correct" reference.</p>
+
+  <div class="highlight-box">
+    <h4>📊 Same Numbers, Three Different Tools — Compare the Results</h4>
+    <p style="font-size:0.84rem;color:var(--gray);margin-bottom:14px;">Values: <strong>40</strong> and <strong>60</strong> — notice how each formula gives a different answer</p>
+    <div class="hb-row">
+      <div class="hb-item">
+        <div class="hb-label">% Difference (symmetric)</div>
+        <div class="hb-val">40%</div>
+        <div class="hb-sub">|60−40| ÷ avg(50) × 100</div>
+      </div>
+      <div class="hb-item">
+        <div class="hb-label">% Change (40 → 60)</div>
+        <div class="hb-val">+50%</div>
+        <div class="hb-sub">(60−40) ÷ 40 × 100</div>
+      </div>
+      <div class="hb-item">
+        <div class="hb-label">% Change (60 → 40)</div>
+        <div class="hb-val">−33.3%</div>
+        <div class="hb-sub">(40−60) ÷ 60 × 100</div>
+      </div>
+      <div class="hb-item">
+        <div class="hb-label">% Error (exact = 60)</div>
+        <div class="hb-val">33.3%</div>
+        <div class="hb-sub">|40−60| ÷ 60 × 100</div>
+      </div>
     </div>
   </div>
 
-  <div class="content-article">
-    <h2>Percentage Difference vs Percentage Change</h2>
-    <p>Many people confuse <strong>percentage difference</strong> with <strong>percentage change</strong>. Here's the key distinction:</p>
+  <h3>Real-World Uses of Percentage Difference</h3>
 
-    <div class="table-wrapper">
-      <table class="data-table">
-        <thead><tr><th>Property</th><th>Percentage Change</th><th>Percentage Difference</th></tr></thead>
-        <tbody>
-          <tr><td>Reference value</td><td>Old/original value</td><td>Average of both values</td></tr>
-          <tr><td>Direction</td><td>Yes (+ or −)</td><td>No (always positive)</td></tr>
-          <tr><td>Order matters?</td><td>Yes</td><td>No (symmetric)</td></tr>
-          <tr><td>Best used for</td><td>Comparing old vs new</td><td>Comparing two equal values</td></tr>
-          <tr><td>Formula</td><td>((New−Old)/Old)×100</td><td>|V1−V2|/avg×100</td></tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Scenario</th><th>Value 1</th><th>Value 2</th><th>% Difference</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Comparing two supplier quotes</td><td>$480</td><td>$600</td><td><strong>22.2%</strong></td></tr>
+        <tr><td>Two lab instrument readings</td><td>9.4 g</td><td>10.6 g</td><td><strong>12%</strong></td></tr>
+        <tr><td>Two city house prices</td><td>₹45L</td><td>₹65L</td><td><strong>36.4%</strong></td></tr>
+        <tr><td>Two competitor product prices</td><td>$199</td><td>$249</td><td><strong>22.2%</strong></td></tr>
+        <tr><td>Two employees' salaries (same role)</td><td>$52,000</td><td>$68,000</td><td><strong>26.7%</strong></td></tr>
+        <tr><td>Two route distances</td><td>18 km</td><td>24 km</td><td><strong>28.6%</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
 
-    <h3>The Percentage Difference Formula</h3>
-    <div class="formula-highlight">% Difference = |V1 − V2| ÷ ((V1 + V2) ÷ 2) × 100</div>
-
-    <h3>Example: 40 vs 60</h3>
-    <p>Using the formula: |40 − 60| ÷ ((40 + 60) ÷ 2) × 100 = 20 ÷ 50 × 100 = <strong>40%</strong></p>
-    <p>Notice that if you swapped the values (60 and 40), you get the same result — that's what "symmetric" means.</p>
-
-    <h3>When to Use Percentage Difference</h3>
-    <ul style="margin: 0 0 14px 20px; line-height: 2;">
-      <li>Comparing two survey results or poll outcomes</li>
-      <li>Comparing prices from two different suppliers</li>
-      <li>Comparing test scores from two different methods</li>
-      <li>Scientific measurements without a "true" reference value</li>
+  <div class="link-box">
+    <h3>🔗 Related Calculators</h3>
+    <ul>
+      <li>Have a before/after? Use the <a href="/percentage-change-calculator/">Percentage Change Calculator</a></li>
+      <li>Value went up? Use the <a href="/percentage-increase-calculator/">Percentage Increase Calculator</a></li>
+      <li>Value went down? Use the <a href="/percentage-decrease-calculator/">Percentage Decrease Calculator</a></li>
+      <li>Experimental accuracy? Use the <a href="/percent-error-calculator/">Percent Error Calculator</a></li>
+      <li>Shopping discount? Use the <a href="/percent-off-calculator/">Percent Off / Discount Calculator</a></li>
+      <li>Back to the main tool — <a href="/">Percentage Calculator (Home)</a></li>
     </ul>
-
-    <div class="tip-box"><strong>💡 Key point:</strong> Use percentage difference when neither value is the "original" — you're just comparing two things side by side. If one value is clearly the starting point, use <a href="/percentage-change-calculator">percentage change</a> instead.</div>
   </div>
 
-  <div class="faq-section">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <div class="faq-q">What is the percentage difference formula?</div>
-      <div class="faq-a"><code>|V1 − V2| ÷ ((V1 + V2) ÷ 2) × 100</code>. The result is always positive and symmetric.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">Why is percentage difference always positive?</div>
-      <div class="faq-a">Because we take the absolute value of the difference (|V1 − V2|). This means neither value is considered "higher" or "lower" — they're just different.</div>
-    </div>
+</section>
+
+<!-- FAQ -->
+<div class="hr-line"><hr></div>
+<section class="faq-sec" aria-label="FAQ Percentage Difference">
+  <div class="sec-head">
+    <div class="sec-tag">FAQ</div>
+    <h2>Percentage Difference — FAQs</h2>
+    <p>Common questions about calculating percentage difference between two numbers</p>
   </div>
 
-  <div class="related-section">
-    <h3>Related Calculators</h3>
-    <div class="related-links">
-      <a href="/">Percentage Calculator</a>
-      <a href="/percentage-change-calculator">Percentage Change</a>
-      <a href="/percentage-increase-calculator">Percentage Increase</a>
-      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
-      <a href="/percent-error-calculator">Percent Error</a>
-      <a href="/percentage-formula">Percentage Formulas</a>
-    </div>
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What is the percentage difference formula?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p><strong>% Difference = (|V1 − V2| ÷ ((V1 + V2) ÷ 2)) × 100</strong>. You divide the absolute difference by the average of both values, then multiply by 100. The result is always a positive number and stays the same regardless of which value you enter first.</p></div>
   </div>
-</main>
 
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">How do you calculate percentage difference between two numbers?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>1. Find the absolute difference: |V1 − V2|. 2. Find the average: (V1+V2)÷2. 3. Divide: difference ÷ average. 4. Multiply by 100. Example: 40 and 60 → difference = 20, average = 50, % difference = (20÷50)×100 = <strong>40%</strong>. Use the calculator above for instant results.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What is the difference between percentage difference and percentage change?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p><strong>Percentage change</strong> requires a clear old/new order — it divides by the original value and produces a directional (+/−) result. <strong>Percentage difference</strong> treats both values symmetrically, divides by their average, and always gives a positive result. Use change for before/after scenarios; use difference when comparing two independent equal-standing values.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">Is percentage difference always positive?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Yes — percentage difference is always a positive number because it uses the absolute (non-negative) value of the difference. It has no concept of direction (up or down). If you need to express whether a value went up or down, use the <a href="/percentage-change-calculator/">percentage change calculator</a> instead.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">Why does percentage difference use the average as the denominator?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Using the average (midpoint) as the reference means neither value is "privileged" over the other — the result is symmetric. If you divided by V1, swapping V1 and V2 would give a different answer. Using the average ensures the formula treats both values equally, which is the defining property of percentage difference.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">When should I use percentage difference instead of percentage change?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Use percentage difference when there is no logical "before" or "after" — for example: comparing two suppliers' quotes, two lab measurements, two competing products' prices, or two cities' populations. Use <a href="/percentage-change-calculator/">percentage change</a> when one value clearly precedes the other in time or sequence, such as last month vs this month revenue.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">What is the difference between percentage difference and percent error?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Both use an absolute difference in the numerator. The distinction is the denominator: percentage difference divides by the <em>average</em> of both values; <a href="/percent-error-calculator/">percent error</a> divides by the <em>exact or theoretical value</em>. Use percent error when one value is a known standard. Use percentage difference when both values are independent observations with no established "correct" reference.</p></div>
+  </div>
+
+  <div class="faq-item" onclick="toggleFaq(this)">
+    <div class="faq-q">Can percentage difference be more than 100%?<span class="faq-ico">+</span></div>
+    <div class="faq-a"><p>Yes — percentage difference can exceed 100% when two values are very far apart relative to their average. For example: V1 = 10, V2 = 1000 → difference = 990, average = 505, % difference = (990÷505)×100 ≈ <strong>196%</strong>. This is mathematically valid and means the two values are nearly double their average apart from each other.</p></div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-links">
-      <a href="/">Percentage Calculator</a>
-      <a href="/percentage-increase-calculator">Percentage Increase</a>
-      <a href="/percentage-decrease-calculator">Percentage Decrease</a>
-      <a href="/percentage-change-calculator">Percentage Change</a>
-      <a href="/percentage-difference-calculator">Percentage Difference</a>
-      <a href="/percentage-off-calculator">Percentage Off</a>
-      <a href="/percent-error-calculator">Percent Error</a>
-      <a href="/what-percentage-of">What Percentage Of</a>
-      <a href="/percentage-of-number">Percentage of a Number</a>
-      <a href="/money-percentage-calculator">Money Calculator</a>
-      <a href="/discount-calculator">Discount Calculator</a>
-      <a href="/fraction-to-percentage">Fraction to %</a>
-      <a href="/sales-percentage-calculator">Sales Calculator</a>
-      <a href="/percentage-formula">Percentage Formula</a>
-      <a href="/how-to-calculate-percentage">How to Calculate %</a>
-      <a href="/sitemap.xml">Sitemap</a>
+    <div class="footer-grid">
+      <div class="f-brand">
+        <a href="/" class="logo" aria-label="CalcPercentage Home">
+          <div class="logo-icon">%</div>
+          <span class="logo-name"><span style="color:var(--pink)">Calc</span>Percentage</span>
+        </a>
+        <p>Free online percentage calculators for every percentage problem. Fast, accurate, mobile-friendly — no ads blocking your results.</p>
+      </div>
+      <div class="f-col">
+        <h4>Calculators</h4>
+        <ul>
+          <li><a href="/">Percentage Calculator</a></li>
+          <li><a href="/percentage-increase-calculator/">% Increase Calculator</a></li>
+          <li><a href="/percentage-decrease-calculator/">% Decrease Calculator</a></li>
+          <li><a href="/percentage-change-calculator/">% Change Calculator</a></li>
+          <li><a href="/percentage-difference-calculator/">% Difference Calculator</a></li>
+          <li><a href="/percent-error-calculator/">% Error Calculator</a></li>
+          <li><a href="/percent-off-calculator/">% Off / Discount Calculator</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/what-is-percentage/">What is a Percentage?</a></li>
+          <li><a href="/percentage-formula/">Percentage Formulas</a></li>
+          <li><a href="/how-to-calculate-percentage/">How to Calculate %</a></li>
+          <li><a href="/percentage-increase-calculator/">How to Calculate % Increase</a></li>
+          <li><a href="/percent-error-calculator/">How to Calculate % Error</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>More</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <p>© 2026 CalcPercentage.vercel.app — Free Online Percentage Calculator</p>
+    <div class="footer-bottom">
+      <p>© <span id="yr"></span> CalcPercentage.vercel.app — All rights reserved.</p>
+      <p>Made with ♥ for fast, free percentage calculations.</p>
+    </div>
   </div>
 </footer>
 
+<!-- JAVASCRIPT -->
 <script>
-function fmt(n) {
-  if (n === null || isNaN(n) || !isFinite(n)) return null;
-  return parseFloat(n.toFixed(6)).toLocaleString('en-AU', {maximumFractionDigits: 4});
-}
-function calcDiff() {
-  var v1 = parseFloat(document.getElementById('pd_v1').value);
-  var v2 = parseFloat(document.getElementById('pd_v2').value);
-  var box = document.getElementById('pd_result');
-  if (isNaN(v1) || isNaN(v2) || (v1 + v2) === 0) { box.classList.remove('show'); return; }
-  var avg = (v1 + v2) / 2;
-  var diff = Math.abs(v1 - v2) / avg * 100;
-  document.getElementById('pd_ans').textContent = 'Percentage Difference: ' + fmt(diff) + '%';
-  document.getElementById('pd_detail').textContent = '|' + v1 + ' − ' + v2 + '| = ' + fmt(Math.abs(v1-v2)) + '  |  Average = ' + fmt(avg);
-  document.getElementById('pd_formula').textContent = Math.abs(v1-v2).toLocaleString() + ' ÷ ' + avg + ' × 100 = ' + fmt(diff) + '%';
-  box.classList.add('show');
-}
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  function toggleNav() {
+    const nav = document.getElementById('mobileNav'), btn = document.getElementById('hambBtn');
+    const isOpen = nav.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen);
+  }
+
+  document.addEventListener('click', function(e) {
+    const nav = document.getElementById('mobileNav'), btn = document.getElementById('hambBtn');
+    if (!nav.contains(e.target) && !btn.contains(e.target)) {
+      nav.classList.remove('open'); btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  function fmt(n) {
+    let r = parseFloat(n.toPrecision(8));
+    return parseFloat(r.toFixed(6)).toString().replace(/\.?0+$/, '') || '0';
+  }
+
+  function renderSteps(id, steps) {
+    const ol = document.getElementById(id);
+    if (ol) ol.innerHTML = steps.map(s => `<li>${s}</li>`).join('');
+  }
+
+  function calcDiff() {
+    const v1 = parseFloat(document.getElementById('pd-v1').value);
+    const v2 = parseFloat(document.getElementById('pd-v2').value);
+
+    if (isNaN(v1) || isNaN(v2) || (v1 === 0 && v2 === 0)) {
+      document.getElementById('pd-err').classList.add('show');
+      document.getElementById('pd-res').classList.remove('show');
+      return;
+    }
+
+    const absDiff = Math.abs(v1 - v2);
+    const avg     = (Math.abs(v1) + Math.abs(v2)) / 2;
+    const pct     = avg === 0 ? 0 : (absDiff / avg) * 100;
+
+    // Ratio in simplified form
+    const gcd = (a, b) => b < 0.0001 ? a : gcd(b, a % b);
+    let ratioStr = '—';
+    if (v1 !== 0 && v2 !== 0) {
+      const g = gcd(Math.abs(v1), Math.abs(v2));
+      const r1 = fmt(Math.abs(v1) / g), r2 = fmt(Math.abs(v2) / g);
+      ratioStr = r1 + ' : ' + r2;
+    }
+
+    document.getElementById('pd-err').classList.remove('show');
+    document.getElementById('pd-res').classList.add('show');
+    document.getElementById('pd-res-v').textContent = fmt(pct) + '%';
+    document.getElementById('pd-res-s').textContent =
+      fmt(v1) + ' ↔ ' + fmt(v2) + ' — symmetric, order-independent result';
+    document.getElementById('pd-meta-diff').textContent = fmt(absDiff);
+    document.getElementById('pd-meta-avg').textContent  = fmt(avg);
+    document.getElementById('pd-meta-ratio').textContent = ratioStr;
+
+    renderSteps('pd-steps-list', [
+      `Absolute difference = |${fmt(v1)} − ${fmt(v2)}| = <strong>${fmt(absDiff)}</strong>`,
+      `Average = (${fmt(v1)} + ${fmt(v2)}) ÷ 2 = <strong>${fmt(avg)}</strong>`,
+      `Divide: ${fmt(absDiff)} ÷ ${fmt(avg)} = <strong>${fmt(absDiff / avg)}</strong>`,
+      `Multiply by 100: <strong>${fmt(pct)}%</strong> difference`,
+      `Verify symmetry: swap values → same answer <strong>✓</strong>`
+    ]);
+  }
+
+  function loadExample(v1, v2) {
+    document.getElementById('pd-v1').value = v1;
+    document.getElementById('pd-v2').value = v2;
+    calcDiff();
+    document.querySelector('.calc-wrap').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  document.querySelectorAll('.fg input').forEach(inp => {
+    inp.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') calcDiff();
+    });
+  });
+
+  function toggleFaq(item) {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
 </script>
 </body>
 </html>
