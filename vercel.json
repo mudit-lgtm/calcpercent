@@ -1,13 +1,38 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/about/", "destination": "/about", "permanent": true },
+    { "source": "/percentage-increase-calculator/", "destination": "/percentage-increase-calculator", "permanent": true },
+    { "source": "/percentage-decrease-calculator/", "destination": "/percentage-decrease-calculator", "permanent": true },
+    { "source": "/percentage-change-calculator/", "destination": "/percentage-change-calculator", "permanent": true },
+    { "source": "/percentage-difference-calculator/", "destination": "/percentage-difference-calculator", "permanent": true },
+    { "source": "/percent-error-calculator/", "destination": "/percent-error-calculator", "permanent": true },
+    { "source": "/percent-off-calculator/", "destination": "/percent-off-calculator", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
+        { "key": "Cache-Control", "value": "public, max-age=3600" },
+        { "key": "X-Robots-Tag", "value": "index, follow" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml" },
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
     }
   ]
