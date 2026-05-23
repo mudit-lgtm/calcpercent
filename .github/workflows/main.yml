@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Run SEO fix script
-        run: python3 fix_calcpercent.py
+        run: python3 fix_australia_v2.py
 
       - name: Commit and push fixes
         run: |
