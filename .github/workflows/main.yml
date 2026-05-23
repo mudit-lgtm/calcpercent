@@ -1,0 +1,19 @@
+name: Fix SEO Issues
+on: workflow_dispatch
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run SEO fix script
+        run: python3 fix_calcpercent.py
+
+      - name: Commit and push fixes
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git add -A
+          git commit -m "fix: trailing slash, og:url, Australia geo-targeting, 404 fix"
+          git push
